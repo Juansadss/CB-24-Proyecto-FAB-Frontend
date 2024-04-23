@@ -1,0 +1,76 @@
+import { Link } from "react-router-dom"
+import { IoIosArrowBack } from "react-icons/io";
+import { GoGear } from "react-icons/go";
+import { LiaHelicopterSolid } from "react-icons/lia";
+import { TbChecklist } from "react-icons/tb";
+import { FaRegBell } from "react-icons/fa";
+import { AiOutlineInbox } from "react-icons/ai";
+import { LuBookCopy } from "react-icons/lu";
+import { CiMenuKebab } from "react-icons/ci";
+import './menu.css'
+
+export default function Menu() {
+
+    return <>
+        <div className="maintenance-menu-container">
+            <header>
+                <Link className="back-icon" to={"/menu-principal"}>
+                    <IoIosArrowBack fontSize={32} />
+                </Link>
+                MANTENIMIENTO
+            </header>
+            <main>
+                <img src="/FAB.png" width={400} height={250} />
+                <h1>Fuerza Aérea</h1>
+                <span>                    
+                    <div className="menu-options main-options">
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <GoGear fontSize={52} />
+                                <span>PROGRAMA DE<br />MANTENIMIENTO</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <LiaHelicopterSolid fontSize={64} />
+                                <span>ESTADO DE<br />AERONAVES</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <TbChecklist fontSize={62} />
+                                <span>CONTROL DE<br />COMPONENTES</span>
+                            </p>
+                        </Link>
+                    </div>
+                    <div className="menu-options">
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <FaRegBell fontSize={40} />
+                                <span>ALERTAS</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <AiOutlineInbox fontSize={48} />
+                                <span>STOCK EN ALMACENES</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <LuBookCopy fontSize={48} />
+                                <span>MANUALES</span>
+                            </p>
+                        </Link>
+                    </div>
+                </span>
+            </main>
+            <footer>
+                USER76234
+                <button>
+                    <CiMenuKebab fontSize={24} />
+                </button>
+            </footer>
+        </div>
+    </>
+}

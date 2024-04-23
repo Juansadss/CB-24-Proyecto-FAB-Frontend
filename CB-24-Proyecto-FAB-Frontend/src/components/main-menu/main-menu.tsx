@@ -13,7 +13,7 @@ export default function MainMenu() {
                     <TbManualGearbox />
                     <span>Operaciones</span>
                 </Link>
-                <Link className="card" to={"/"}>
+                <Link className="card" to={"/menu-principal/mantenimiento"}>
                     <AiOutlineTool />
                     <span>Mantenimiento</span>
                 </Link>
