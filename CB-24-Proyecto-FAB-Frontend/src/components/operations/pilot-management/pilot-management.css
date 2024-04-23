@@ -1,0 +1,23 @@
+.pilot-management-container{
+    background-color: aliceblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* Add horizontal border */
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Gray background color for table header */
+  }
+  
+  tr:hover {
+    background-color: #f2f2f2; /* Light gray background color on hover */
+  }
+  
