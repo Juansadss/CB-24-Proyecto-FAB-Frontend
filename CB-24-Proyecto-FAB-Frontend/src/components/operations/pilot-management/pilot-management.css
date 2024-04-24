@@ -1,23 +1,56 @@
 .pilot-management-container{
-    background-color: aliceblue;
+    height: 90vh;
+    width: 95%;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    color: #000;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
   }
   
-  th, td {
+th, td {
     text-align: center;
     padding: 8px;
     border-bottom: 1px solid #ddd; /* Add horizontal border */
   }
   
-  th {
+th {
     background-color: #f2f2f2; /* Gray background color for table header */
   }
   
-  tr:hover {
+tr:hover {
     background-color: #f2f2f2; /* Light gray background color on hover */
   }
-  
+
+.edit-button{
+    color: blue;
+    font-size: 20px;
+}
+
+.delete-button{
+    color: red;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+.goback-arrow{
+  color: #000;
+  margin-right: 50px;
+}
+
+.add-button-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.add-button-icon{
+  margin-right: 5px;
+  font-size: 20px;
+}

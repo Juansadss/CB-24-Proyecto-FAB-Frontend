@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { IoIosArrowBack } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
 import "./pilot-management.css"
 
 export default function PilotManagement() {
@@ -15,10 +16,20 @@ export default function PilotManagement() {
     return <>
         <div className="pilot-management-container">
             {/* Title */}
-            <h1>Pilot Management</h1>
+            <div>
+                <h1>
+                    <Link to={"/menu-principal"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN PILOTOS
+                </h1>
+            </div>
+            
             
             {/* Add New Pilot Button */}
-            <button>Add New Pilot<FaUser fontSize={20} /></button>
+            <div className="add-button-container">
+                <button>
+                    <FaPlus className="add-button-icon" />
+                    REGISTAR PILOTO
+                </button>
+            </div>
             
             {/* Pilot Table */}
             <table>
@@ -41,12 +52,12 @@ export default function PilotManagement() {
                     <td>{pilot.name}</td>
                     <td>{pilot.lastname}</td>
                     <td>{pilot.birthdate}</td>
-                    <td>{pilot.total_hours}</td>
-                    <td>{pilot.weight}</td>
+                    <td>{pilot.total_hours} Horas</td>
+                    <td>{pilot.weight} kg</td>
                     <td>{pilot.grade}</td>
                     <td>
-                        <Link to={"*"}><FaEdit /></Link>
-                        <Link to={"*"}><MdDelete /></Link>
+                        <Link to={""}><FaEdit className="edit-button"/></Link>
+                        <Link to={""}><MdDelete className="delete-button"/></Link>
                     </td>
                     </tr>
                 ))}
