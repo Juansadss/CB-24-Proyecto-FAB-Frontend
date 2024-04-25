@@ -6,27 +6,40 @@ import { RiHealthBookLine } from "react-icons/ri";
 import { IoIosArrowBack } from "react-icons/io";
 
 export default function OperationsMenu() {
-    return(
-        <div className="main-menu-container">
-            <div>
-                <h1>
-                    <Link to={"/menu-principal"}><IoIosArrowBack className="goback-arrow" /></Link>MENU OPERACIONES
-                </h1>
-            </div>
-            <div className="main-menu-options">
-                <Link className="card" to={"/menu-principal/menu-operaciones/gestion-pilotos"}>
-                    <GoCopilot />
-                    <span>Gestion Pilotos</span>
+    return <>
+        <div className="operations-menu-container">
+            <header>
+                <Link className="back-icon" to={"/menu-principal"}>
+                    <IoIosArrowBack className="goback-arrow" />
                 </Link>
-                <Link className="card" to={"/"}>
-                    <FaPlane />
-                    <span>Gestion Aeronaves</span>
-                </Link>
-                <Link className="card" to={"/"}>
-                    <RiHealthBookLine />
-                    <span>Gestion Chequeos Medicos</span>
-                </Link>
-            </div>
-        </div> 
-    )
+                OPERACIONES AEREAS
+            </header>
+            <main>
+                <img src="/FAB.png" width={400} height={250} />
+                <h1>Fuerza Aérea</h1>
+                <span>                    
+                    <div className="menu-options main-options">
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <FaPlane fontSize={52} />
+                                <span>AERONAVES</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/menu-principal/menu-operaciones/gestion-pilotos"}>
+                            <p>
+                                <GoCopilot fontSize={64} />
+                                <span>PILOTOS</span>
+                            </p>
+                        </Link>
+                        <Link className="option" to={"/"}>
+                            <p>
+                                <RiHealthBookLine fontSize={62} />
+                                <span>CHEQUEOS MEDICOS</span>
+                            </p>
+                        </Link>
+                    </div>
+                </span>
+            </main>
+        </div>
+    </>
 }
