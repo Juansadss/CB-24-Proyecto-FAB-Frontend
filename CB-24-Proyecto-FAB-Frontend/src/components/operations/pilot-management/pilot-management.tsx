@@ -18,7 +18,7 @@ export default function PilotManagement() {
             {/* Title */}
             <div>
                 <h1>
-                    <Link to={"/menu-principal"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN PILOTOS
+                    <Link to={"/menu-principal/menu-operaciones"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN PILOTOS
                 </h1>
             </div>
             

@@ -9,7 +9,7 @@ export default function MainMenu() {
     return(
         <div className="main-menu-container">
             <div className="main-menu-options">
-                <Link className="card" to={"/menu-principal/gestion-pilotos"}>
+                <Link className="card" to={"/menu-principal/menu-operaciones"}>
                     <TbManualGearbox />
                     <span>Operaciones</span>
                 </Link>
