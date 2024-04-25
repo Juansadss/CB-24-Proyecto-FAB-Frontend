@@ -34,7 +34,7 @@ export default function PerformanceForm() {
                                     <div className='details-weight'>
                                         <span className='text-dark'><b>Peso Total : </b>000KG</span>
                                         <span className='text-dark'><b>HOGE : </b>0000KG</span>
-                                        <span className='text-dark'><b>Peso Disponible : </b> 0000KGSS</span>
+                                        <span className='text-dark'><b>Peso Disponible : </b> 0000KG</span>
                                     </div>
 
                                 </div>
