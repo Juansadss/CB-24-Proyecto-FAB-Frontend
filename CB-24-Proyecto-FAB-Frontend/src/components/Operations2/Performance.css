@@ -1,5 +1,8 @@
 .performance-container{
     background-color: #EEEEEE;
+    width: 75%;
+    height: auto;
+    border-radius: 5px;
 }
 .aircraft-select{
     display: flex;
@@ -7,28 +10,79 @@
     flex-direction: column;
     gap: 2vh;
 }
+.tripulation-check{
+    margin: 2vh;
+}
 select{
     width: 25vh;
     height: 4vh;
 }
 .left-side-from{
     margin: 20px;
+    width: 100%;
+}
+.right-side-from{
+    margin: 20px;
+    width: 50%;
 }
 img{
-    width: 90vh;
+    width: 100%;
     height: auto;
+    display: flex;
 }
 .performance-img-upload{
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    
 }
 .performance-form{
     display: flex;
-    
 }
 .details{
     margin: 3vh;
     padding: 2vh;
     background-color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.details-input{
+    justify-content: center;
+    gap: 5vh;
+}
+.fabLogo{
+    width: 40vh;
+    height: auto;
+}
+.details-weight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+.main-container{
+    width: 100%;
+    height: auto;
+}
+.btn-submit-performance{
+    margin: 3vh auto;
+    width: 50vh;
+    height: auto;
+    display: block;
+}
+.container-img-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3vh;
 }
