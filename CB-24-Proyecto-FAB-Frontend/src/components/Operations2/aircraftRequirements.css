@@ -1,0 +1,23 @@
+.aircraft-from-container{
+    background-color: #EEEEEE;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.btn-submit-requeriments{
+    margin: 3vh auto;
+    width: 50vh;
+    height: auto;
+    display: block;
+}
+.form-container-requirements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 10px;
+}
+.side-form{
+    width: 40%;
+    height: auto;
+}
