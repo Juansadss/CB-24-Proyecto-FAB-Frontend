@@ -3,9 +3,10 @@ import '../main-menu/main-menu.css';
 import '../../index.css';
 import FAB from '../../../public/FAB.png';
 import { LuUpload } from 'react-icons/lu';
+import OperationsLayout from './OperationsLayout';
 import performanceImage from './Images/performance.jpg';
-export default function PerformanceForm() {
-    return(
+const performance: React.FC = () => {
+    return (
         <div className='performance-container'>
             <form action="" method="post">
                 <div className='flex main-container'>
@@ -94,5 +95,10 @@ export default function PerformanceForm() {
                 </div>
             </form>
         </div>
+    );
+}
+export default function PerformanceForm() {
+    return(
+        <OperationsLayout childComponent={performance} message='Tabla de performance'></OperationsLayout>
     )
 };

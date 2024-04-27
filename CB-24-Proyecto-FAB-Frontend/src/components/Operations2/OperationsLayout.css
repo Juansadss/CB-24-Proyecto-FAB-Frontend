@@ -1,0 +1,18 @@
+.container-form{
+    display: flex;
+    flex-direction: column;
+}
+.layout-container{
+    width: 100%;
+    height: auto;
+}
+.container-form{
+    width: 75%;
+    height: auto;
+}
+.side-bar-container{
+    background-color: white;
+    width: 25%;
+    height: auto;
+    margin: 3vh;
+}

@@ -1,8 +1,9 @@
 import './aircraftRequirements.css';
 import '../main-menu/main-menu.css';
 import '../../index.css';
-export default function AircraftRequirementsForm() {
-    return(
+import OperationsLayout from './OperationsLayout';
+const requirementsForm: React.FC = () => {
+    return (
         <div className="aircraft-from-container">
             
             <form action="" method="post">
@@ -25,6 +26,11 @@ export default function AircraftRequirementsForm() {
                 <button className='btn btn-dark-blue btn-submit-requeriments' type='submit'>Registar Requerimientos</button>
             </form>
             
-        </div> 
+        </div>
+    );
+}
+export default function AircraftRequirementsForm() {
+    return(
+         <OperationsLayout childComponent={requirementsForm} message='Requerimientos de aronave'></OperationsLayout>
     )
 }
