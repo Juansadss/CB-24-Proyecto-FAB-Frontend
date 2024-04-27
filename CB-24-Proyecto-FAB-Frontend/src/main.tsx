@@ -4,7 +4,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/user/login/login.tsx';
 import MainMenu from './components/main-menu/main-menu.tsx';
-import MaintenanceMenu from './components/maintenance/menu/menu.tsx';
+import MaintenanceMenu from './components/maintenance/maintenance-menu/maintenance-menu.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },

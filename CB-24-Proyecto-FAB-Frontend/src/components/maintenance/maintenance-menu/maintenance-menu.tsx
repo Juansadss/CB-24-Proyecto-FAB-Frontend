@@ -7,9 +7,9 @@ import { FaRegBell } from "react-icons/fa";
 import { AiOutlineInbox } from "react-icons/ai";
 import { LuBookCopy } from "react-icons/lu";
 import { CiMenuKebab } from "react-icons/ci";
-import './menu.css'
+import './maintenance-menu.css'
 
-export default function Menu() {
+export default function MaintenanceMenu() {
 
     return <>
         <div className="maintenance-menu-container">
@@ -22,7 +22,7 @@ export default function Menu() {
             <main>
                 <img src="/FAB.png" width={400} height={250} />
                 <h1>Fuerza Aérea</h1>
-                <span>                    
+                <span>
                     <div className="menu-options main-options">
                         <Link className="option" to={"/"}>
                             <p>
