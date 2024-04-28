@@ -1,0 +1,156 @@
+/* src/components/AeronaveWindow.css */
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1047px) {
+    .aeronave-base .aeronave-container {
+        width: 750px;
+    }
+}
+
+/* Moviles */
+@media screen and (max-width: 768px) {
+    .aeronave-base .aeronave-container {
+        width: 370px;
+    }
+}
+.aeronave-container {
+    width: 50%;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    
+  }
+  
+  .aeronave-header {
+    text-align: left;
+    font-size: 8px;
+    margin-left: 100px;
+    
+  }
+  
+  .aeronave-content {
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+  
+  .info-section {
+    margin-bottom: 10px;
+    
+    
+  }
+  
+  
+  
+  .register-button {
+    display: block; /* Asegura que el botón sea un bloque para poder centrarlo */
+    margin: 20px auto; /* Establece un margen superior e inferior de 20px y se centra horizontalmente */
+    color: white;
+    background-color: #171A4A;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+  }
+  
+  .headers-table{
+    background-color:#2F2C79;
+    color: white;
+    
+  }
+  .content-table{
+    background-color:white;
+    
+  }
+  input[type="date"] {
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 20%;
+    box-sizing: border-box; 
+    font-family: inherit;
+    font-size: 14px;
+  }
+  
+  select {
+    border-radius: 4px; 
+    padding: 2px;
+    width: 20%;
+    
+  }
+  input[type="text"] {
+    border-radius: 4px; 
+    padding: 2px;
+    width: 20%;
+  }
+  .text-area {
+    border-radius: 4px; 
+    padding: 2px;
+    width: 85%;
+    
+  }
+  .label-section{
+    margin-right: 30px; 
+    margin-left: 30px; 
+  }
+  .label-section2{
+    margin-right: 30px; 
+    
+  }
+  .table-style{
+    border-radius: 4px; 
+    padding: 2px;
+    width: 28%;
+  }
+  .label-header{
+    font-size: 15px;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .aeronave-main {
+    width: 100%;
+    min-height: 95vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border-radius: 10px;
+  }
+  .aeronave-base {
+    width: 100%;
+    min-height: 95vh;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #171A4A;
+    color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  
+  
+  
+  .footer-image {
+    
+    margin-left: 1000px;
+    
+  }
+  .label-user{
+    margin-top: 500px;
+    margin-left: 280px; 
+    color: #171A4A;
+  }
+  .aeronave-header-principal {
+    text-align: center;
+    font-size: 8px;
+    margin-left: 100px;
+    
+  }
+  
+ 
+  
