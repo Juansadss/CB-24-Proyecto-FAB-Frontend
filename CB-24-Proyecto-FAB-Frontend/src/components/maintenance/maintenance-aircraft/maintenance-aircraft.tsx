@@ -8,75 +8,75 @@ import './maintenance-aircraft.css';
 export default function MaintenanceAircraft() {
 
     return <>
-        <div className="aeronave-base">
+        <div className="maintenance-aeronave-base">
        
-       <div className="aeronave-main">
-        <Link to={"/menu-principal/mantenimiento"}>
+       <div className="maintenance-aeronave-main">
+        <Link to={"/menu-principal/mantenimiento/lista-ordenes-trabajo"}>
             <GoArrowLeft color='black' size={30}/>
         </Link>
-        <div className="aeronave-header-principal">
+        <div className="maintenance-aeronave-header-principal">
                    <h1>PROGRAMA DE MANTENIMIENTO</h1>
         </div>
         
           
-           <div className="aeronave-container">
-               <div className="aeronave-header">
+           <div className="maintenance-aeronave-container">
+               <div className="maintenance-aeronave-header">
                    <h1>AERONAVE</h1>
                </div>
-               <div className="aeronave-content">
-                   <div className="info-section">
-                   <label className="label-section">Tipo:</label>
+               <div className="maintenance-aeronave-content">
+                   <div className="maintenance-info-section">
+                   <label className="maintenance-label-section">Tipo:</label>
                    <select>
                        {/* Opciones del tipo */}
                    </select>
                    
-                   <label className="label-section">Matricula:</label>
-                   <input type="text" />
+                   <label className="maintenance-label-section">Matricula:</label>
+                   <input type="text" className="maintenance-input-text"/>
                    
                    </div>
                    
-                   <div className="info-section">
+                   <div className="maintenance-info-section">
                    <label><strong>Descripción:</strong></label>
                    
                    </div>
                    <div>
-                       <textarea className="text-area" rows={4}></textarea>
+                       <textarea className="maintenance-text-area" rows={4}></textarea>
                    </div>
-                   <div className="info-section">
-                   <label className="label-section2"><strong>Inspector asignado:</strong></label>
+                   <div className="maintenance-info-section">
+                   <label className="maintenance-label-section2"><strong>Inspector asignado:</strong></label>
                        
-                           <select className="select">
+                           <select className="maintenance-select">
                                {/* Opciones de inspectores */}
                            </select>
                        
                    
-                   <label className="label-section"><strong>Fecha:</strong></label>
+                   <label className="maintenance-label-section"><strong>Fecha:</strong></label>
                    
-                       <input type="date" />
+                       <input type="date" className="maintenance-input-date"/>
                    
                    
                    </div>
                    
-                   <div className="info-section">
-                       <h2 className="label-header">Tareas Asignadas</h2>
-                   <label className="label-section">Tarea:</label>
-                   <select className="select">
+                   <div className="maintenance-info-section">
+                       <h2 className="maintenance-label-header">Tareas Asignadas</h2>
+                   <label className="maintenance-label-section">Tarea:</label>
+                   <select className="maintenance-select">
                        {/* Opciones de tareas */}
                    </select>
                    <CiCirclePlus color="#171A4A" size={20}/>
                    </div>
-                   <div className="info-section">
+                   <div className="maintenance-info-section">
                    
-                   <table className="table-style">
+                   <table className="maintenance-table-style">
                        <thead>
-                       <tr className="headers-table">
+                       <tr className="maintenance-headers-table">
                            <th>ATA</th>
                            <th>Nombre</th>
                        </tr>
                        </thead>
                        <tbody>
                        
-                       <tr className="content-table">
+                       <tr className="maintenance-content-table">
                            <td>ATA1</td>
                            <td>Nombre</td>
                        </tr>
@@ -84,7 +84,7 @@ export default function MaintenanceAircraft() {
                        </tbody>
                    </table>
                    </div>
-                   <button className="register-button">Registrar Trabajo</button>
+                   <button className="maintenance-register-button">Registrar Trabajo</button>
                </div>
                
                
@@ -97,7 +97,7 @@ export default function MaintenanceAircraft() {
                             <CiMenuKebab fontSize={24} />
                         </button>
                 
-                        <img src="/FAB.png" width={120} height={110} className="footer-image" />
+                        <img src="/FAB.png" width={120} height={110} className="maintenance-footer-image" />
             </div>
        </div>
    </div>

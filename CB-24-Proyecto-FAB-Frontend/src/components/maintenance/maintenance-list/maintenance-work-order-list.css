@@ -19,6 +19,16 @@
     margin-bottom: 20px;
     
   }
+  .maintenance-aeronave-container-1 {
+    width: 50%;
+    margin: 40px auto;
+    border: 1px solid white;
+    padding: 20px;
+    background-color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    
+  }
   
   .maintenance-aeronave-header {
     text-align: left;
@@ -52,7 +62,15 @@
     max-width: 200px;
   }
   
-  
+  .maintenance-headers-table{
+    background-color:#2F2C79;
+    color: white;
+    
+  }
+  .maintenance-content-table{
+    background-color:white;
+    
+  }
   .maintenance-input-date{
     padding: 3px;
     border: 1px solid #ccc;
@@ -88,13 +106,17 @@
     margin-right: 30px; 
     
   }
-  .maintenance-table-style{
-    border-radius: 4px; 
-    padding: 6px;
-    width: 28%;
-    background-color:#2F2C79;
-    color: white;
-  }
+  .maintenance-table-style {
+    width: 100%;
+}
+.maintenance-table-style th,
+.maintenance-table-style td {
+    width: 16.67%; 
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
   .maintenance-label-header{
     font-size: 15px;
   }
@@ -130,11 +152,17 @@
 
   .maintenance-aeronave-header-principal {
     text-align: center;
-    font-size: 8px;
+    font-size: 12px;
     margin-left: 100px;
     
   }
+  .maintenance-footer{
+    margin-top: 220px;
+    text-align: center;
+  }
   
+
+
   
  
   

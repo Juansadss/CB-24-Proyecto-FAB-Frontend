@@ -24,7 +24,7 @@ export default function MaintenanceMenu() {
                 <h1>Fuerza Aérea</h1>
                 <span>
                     <div className="menu-options main-options">
-                        <Link className="option" to={"/menu-principal/mantenimiento/mantenimiento-aeronaves"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/lista-ordenes-trabajo"}>
                             <p>
                                 <GoGear fontSize={52} />
                                 <span>PROGRAMA DE<br />MANTENIMIENTO</span>
