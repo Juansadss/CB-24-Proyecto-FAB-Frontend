@@ -19,7 +19,7 @@ export default function OperationsMenu() {
                 <h1>Fuerza Aérea</h1>
                 <span>                    
                     <div className="menu-options main-options">
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/menu-operaciones/gestion-aereonave"}>
                             <p>
                                 <FaPlane fontSize={52} />
                                 <span>AERONAVES</span>

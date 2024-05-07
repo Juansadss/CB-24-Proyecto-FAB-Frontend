@@ -1,0 +1,135 @@
+
+
+.airship-register-management-container {
+    height: 88vh;
+    width: 95%;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el contenido dentro del contenedor */
+.airship-register-management-container .aeronave-container {
+    width: 90%; /* Cambiar el ancho según sea necesario */
+    margin: 40px auto;
+    border: 1px solid #f3e9e9;
+    padding: 20px 20px 5px;
+    background-color: #8e93922a;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.airship-register-management-container .info-section {
+    display: flex;
+    flex-wrap: wrap; /* Permitir envolver elementos en filas */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.airship-register-management-container .info-section .label-input-container {
+    width: calc(50% - 0px); /* Ajustar el ancho para un elemento en una fila */
+    margin-right: -60px; /* Eliminar el margen derecho */
+    margin-left: -10px; /* Eliminar el margen izquierdo */
+    display: flex;
+    flex-direction: column; /* Mostrar elementos uno encima del otro */
+    
+}
+
+.airship-register-management-container .info-section .label-input-container label {
+    font-size: 25px; /* Ajustar el tamaño de la fuente del label */
+}
+
+.airship-register-management-container .info-section .label-input-container input[type="text"] {
+    width: calc(100% - 20px); /* Ajustar el ancho del input */
+    font-size: 18px; /* Aumentar el tamaño de la fuente del input */
+    padding: 15px 2px; /* Agregar espacio vertical dentro del input */
+}
+
+
+
+.airship-register-management-container .goback-arrow {
+    margin-top: 40px;
+    color: #000000;
+    margin-right: 40px;
+    margin-left: 45px; /* Ajuste del margen izquierdo */
+}
+
+.airship-register-management-container .username {
+    /* Estilos existentes */
+    margin-left: 80px; /* Ajusta el valor según lo necesites */
+    font-size: 22px;
+    
+}
+
+.airship-register-management-container .forma {
+    /* Estilos existentes */
+    font-size: 5px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 1px; /* Ajusta el valor según lo necesites */
+}
+
+.airship-register-management-container .aeronave-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente los elementos */
+}
+
+.airship-register-management-container .aeronave-container .register-button {
+    color: white;
+    background-color: #171A4A;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+    margin-top: 20px; /* Ajuste el margen superior según sea necesario */
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+/* Modificación del CSS */
+
+
+
+.airship-register-management-container .info-section input[type="text"] {
+    width: 100%;
+}
+
+.airship-register-management-container .small-text {
+    font-size: 30px; /* Ajusta el tamaño de la letra según sea necesario */
+    font-weight: normal; /* Elimina la negrita */
+    margin-top: -50px; /* Ajusta el margen superior según sea necesario */
+    vertical-align: middle;
+}
+
+
+
+.airship-register-management-container input[type="text"],
+
+.airship-register-management-container .table-style {
+    border-radius: 10px;
+    padding: 2px;
+    width: 10%; /* Cambiar el ancho según sea necesario */
+}
+
+.airship-register-management-container .footer-image {
+    position: absolute;
+    bottom: 50px;
+    right: 120px;
+    width: 150px; /* o cualquier otro valor que prefieras */
+}
+
+
+
