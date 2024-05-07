@@ -95,6 +95,10 @@
     font-size: 15px;
 }
 
+.airship-register-management-logo{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 

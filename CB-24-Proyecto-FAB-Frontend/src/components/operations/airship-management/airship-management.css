@@ -7,6 +7,8 @@
     color: #000000;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin: auto;
+    overflow-y: auto;
 }
 
 .airship-management-container table {
@@ -76,12 +78,6 @@
     position: relative;
 }
 
-.airship-management-container img {
-    position: absolute;
-    bottom: 50px; /* Ajuste hacia arriba */
-    right: 50px; /* Ajuste hacia la izquierda */
-}
-
 .airship-management-container .username {
     /* Estilos existentes */
     margin-left: 80px; /* Ajusta el valor según lo necesites */
@@ -94,5 +90,9 @@
     font-size: 5px;
     border-radius: 50%;
     margin-left: 20px;
-    margin-top: 70px; /* Ajusta el valor según lo necesites */
+}
+
+.airship-management-logo{
+    display: flex;
+    justify-content: flex-end;
 }

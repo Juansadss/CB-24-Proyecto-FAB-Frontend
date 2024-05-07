@@ -63,8 +63,9 @@ export default function AirshipEditManagement() {
                     <button className="forma">
                         <CiMenuKebab fontSize={24} />
                     </button>
-                    
-                    <img src="/FAB.png" width={120} height={110} className="footer-image" />
+                    <div className="airship-register-management-logo">
+                        <img src="/FAB.png" width={120} height={110} />
+                    </div>
                 </div>
         </div>
     );

@@ -69,3 +69,8 @@
     margin-top: 20px; /* Ajuste el margen superior según sea necesario */
     font-size: 15px;
 }
+
+.register-pilot-logo{
+    display: flex;
+    justify-content: flex-end;
+}

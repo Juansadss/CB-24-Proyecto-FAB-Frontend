@@ -63,7 +63,7 @@ export default function PilotManagement() {
                 </tbody>
             </table>
 
-            <div>
+            <div className="pilot-management-logo">
                 <img width={190} height={115} src="/FAB.png"></img>
             </div>
         </div>

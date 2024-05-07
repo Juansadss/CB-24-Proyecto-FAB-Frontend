@@ -79,7 +79,7 @@ export default function RegisterPilotForm() {
                         
                     </div>
                 </div>
-      <div>
+        <div className="register-pilot-logo">
             <img width={190} height={115} src="/FAB.png"></img>
         </div>
     </div>

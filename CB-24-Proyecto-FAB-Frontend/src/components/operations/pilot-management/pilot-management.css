@@ -54,3 +54,8 @@ tr:hover {
   margin-right: 5px;
   font-size: 20px;
 }
+
+.pilot-management-logo{
+  display: flex;
+  justify-content: flex-end;
+}
