@@ -8,7 +8,7 @@ import PilotManagement from './components/operations/pilot-management/pilot-mana
 import AirshipManagement from './components/operations/airship-management/airship-management.tsx';
 import OperationsMenu from './components/operations/operations-menu/operations-menu.tsx';
 import AirshipEditManagement from './components/operations/airship-register-management/airship-register-management.tsx';
-
+import RegisterPilotForm from './components/operations/pilot-management/pilot-register.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   { path:  "/menu-principal/menu-operaciones/gestion-aereonave",  element: <AirshipManagement /> },
   { path:  "/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-registrar",  element: <AirshipEditManagement /> },
   { path:  "/menu-principal/menu-operaciones",  element: <OperationsMenu /> },
-  
+  { path:  "/menu-principal/menu-operaciones/registro-piloto",  element: <RegisterPilotForm /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

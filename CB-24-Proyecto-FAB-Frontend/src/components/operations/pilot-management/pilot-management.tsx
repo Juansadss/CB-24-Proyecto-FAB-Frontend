@@ -18,17 +18,16 @@ export default function PilotManagement() {
             {/* Title */}
             <div>
                 <h1>
-                    <Link to={"/menu-principal/menu-operaciones"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN PILOTOS
+                    <Link to={"/menu-principal/menu-operaciones"}><IoIosArrowBack className="pilot-management-goback-arrow" /></Link>GESTIÓN PILOTOS
                 </h1>
             </div>
             
             
             {/* Add New Pilot Button */}
-            <div className="add-button-container">
-                <button>
-                    <FaPlus className="add-button-icon" />
+            <div className="pilot-management-add-button-container">
+                <Link to={"/menu-principal/menu-operaciones/registro-piloto"}><FaPlus className="pilot-management-add-button-icon" />
                     REGISTAR PILOTO
-                </button>
+                </Link>
             </div>
             
             {/* Pilot Table */}
@@ -56,8 +55,8 @@ export default function PilotManagement() {
                     <td>{pilot.weight} kg</td>
                     <td>{pilot.grade}</td>
                     <td>
-                        <Link to={""}><FaEdit className="edit-button"/></Link>
-                        <Link to={""}><MdDelete className="delete-button"/></Link>
+                        <Link to={""}><FaEdit className="pilot-management-edit-button"/></Link>
+                        <Link to={""}><MdDelete className="pilot-management-delete-button"/></Link>
                     </td>
                     </tr>
                 ))}

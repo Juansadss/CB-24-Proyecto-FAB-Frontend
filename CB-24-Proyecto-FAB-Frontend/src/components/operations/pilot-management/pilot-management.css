@@ -27,30 +27,30 @@ tr:hover {
     background-color: #f2f2f2; /* Light gray background color on hover */
   }
 
-.edit-button{
+.pilot-management-edit-button{
     color: blue;
     font-size: 20px;
 }
 
-.delete-button{
+.pilot-management-delete-button{
     color: red;
     font-size: 20px;
     margin-left: 15px;
   }
 
-.goback-arrow{
+.pilot-management-goback-arrow{
   color: #000;
   margin-right: 50px;
 }
 
-.add-button-container button {
+.pilot-management-add-button-container button {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 10px;
 }
 
-.add-button-icon{
+.pilot-management-add-button-icon{
   margin-right: 5px;
   font-size: 20px;
 }
