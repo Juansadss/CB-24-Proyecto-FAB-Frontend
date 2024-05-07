@@ -11,7 +11,7 @@
         max-width: 370px;
     }
     .maintenance-aeronave-content{
-      overflow-x: hidden;
+      overflow-x: auto;
     }
     
 }
