@@ -5,11 +5,15 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/user/login/login.tsx';
 import MainMenu from './components/main-menu/main-menu.tsx';
 import MaintenanceMenu from './components/maintenance/maintenance-menu/maintenance-menu.tsx';
+import MaintenanceOrdersList from './components/maintenance/maintenance-ordersList/maintenance-ordersList.tsx';
+import MaintenanceComponentControl from './components/maintenance/maintenance-componentControl/maintenance-componentControl.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path:  "/menu-principal",  element: <MainMenu /> },
   { path:  "/menu-principal/mantenimiento",  element: <MaintenanceMenu /> },
+  { path:  "/menu-principal/mantenimiento/ordenes-trabajo",  element: <MaintenanceOrdersList /> },
+  { path:  "/menu-principal/mantenimiento/control-componentes",  element: <MaintenanceComponentControl /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -1,0 +1,93 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.maintenance-orderslist-container{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: #ffffff;
+}
+h1 {
+  text-align: center;
+  color: #000;
+}
+
+.maintenance-orderslist-table-container {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+table{
+  color: #ffffff;
+}
+
+.maintenance-orderslist-card {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  max-height: 100px;
+  margin: 0 auto;
+}
+
+.maintenance-orderslist-userInfo {
+  margin-right: 20px;
+}
+
+.maintenance-orderslist-userInfo h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #171A4A;
+}
+
+th {
+  background-color: #171A4A;
+  border-color: white;
+}
+tr{
+  background-color: #171A4A;
+}
+tr:hover {
+  background-color: #000;
+}
+
+
+.logo {
+  width: 35pt; 
+  padding-top: 0;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
