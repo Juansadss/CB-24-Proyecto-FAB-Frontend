@@ -5,7 +5,6 @@ import OperationsLayout from './OperationsLayout';
 const requirementsForm: React.FC = () => {
     return (
         <div className="aircraft-from-container">
-            
             <form action="" method="post">
                 <div className='form-container-requirements'>
                     <div className='side-form'>

@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./flightRequest_view.css";
-
+import Logo from './Images/LogoSarFAb.png';
+import { MdHome } from "react-icons/md";
+import { FaClipboardList } from "react-icons/fa";
+import { BiSolidAlarmExclamation } from "react-icons/bi";
+import { FaColumns } from "react-icons/fa";
+import { FaPlaneUp } from "react-icons/fa6";
+import { IoIosLogOut } from "react-icons/io";
+import PerformanceForm from './Performance.tsx';
+import AircraftRequirementsForm from './aircraftRequirements.tsx';
 
 export default function RequestRegister() {
     const [airgroup, setAirGroup] = useState("");
@@ -27,49 +35,52 @@ export default function RequestRegister() {
     }
     
     return <>
-        {/* { <div className="login-container">
-            <div className="login-card">
-                <h2>Bienvenido de nuevo</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" className="form-control" name="user" id="user" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)}/>
-                    <input type={isCheckboxChecked? "text" : "password"} className="form-control" name="password" id="password" placeholder="Contaseña" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                    <input className="checkbox" type="checkbox" id="showPassword" checked={isCheckboxChecked} onChange={handleCheckboxChange}/> Mostrar contaseña
-                    <button className="btn btn-blue"> iniciar sesion </button>                 
-                </form>     
-            </div>            
-        </div> */
+        {
 
 
         <div className="main_fr">
             <div className="side-menu-section">
                 <div>
-                    <img src="../../assets/planeicon.png" alt="" />
+                    <img src={Logo} className="logoSarFab" alt="" />
                     <h1>Fuerza Aerea</h1>
                 </div>
                 <div className="sideMenu">
                     <div>
-                        <img src="./src/assets/profile.png" alt="" />
-                        <h5>Perfil</h5>
+                        <Link to={'/Operaciones/Performance'}>
+                            <MdHome size={'2.5em'}></MdHome>
+                            <h5>Perfil</h5>
+                        </Link>
                     </div>
                     <div>
-                        <img src="./src/assets/solicitud.png" alt="" />
-                        <h5>Solicitudes De Vuelos</h5>
+                        <Link to={'/Operaciones/FlightRequest'}>
+                            <FaClipboardList size={'2.5em'}></FaClipboardList>
+                            <h5>Solicitudes Vuelos</h5>
+                        </Link>
                     </div>
                     <div>
-                        <img src="./src/assets/riesgo.png" alt="" />
-                        <h5>Matrices De Riesgo</h5>
+                        <Link to={'/Operaciones/Performance'}>
+                            <BiSolidAlarmExclamation size={'2.5em'}></BiSolidAlarmExclamation>
+                            <h5>Matrices De Riesgo</h5>
+                        </Link>
+                        
                     </div>
                     <div>
-                        <img src="./src/assets/./src/assets/riesgo.png" alt="" />
-                        <h5>Tablas De Riesgo</h5>
+                        <Link to={'/Operaciones/Performance'}>
+                            <FaColumns size={'2.5em'}></FaColumns>
+                            <h5>Tablas De Riesgo</h5>
+                        </Link>
                     </div>
                     <div>
-                        <img src="./src/assets/piloto.png" alt="" />
-                        <h5>Pilotos</h5>
+                        <Link to={'/Operaciones/Requerimientos-Aeronave'}>
+                            <FaPlaneUp size={'2.5em'}></FaPlaneUp>
+                            <h5>Pilotos</h5>
+                        </Link>
                     </div>
                     <div>
-                        <img src="./src/assets/logout.png" alt="" />
-                        <h5>Cerrar Sesion</h5>
+                        <Link to={'/'}>
+                            <IoIosLogOut size={'2.5em'}></IoIosLogOut>
+                            <h5>Cerrar Sesion</h5>
+                        </Link>
                     </div>
 
                 </div>
