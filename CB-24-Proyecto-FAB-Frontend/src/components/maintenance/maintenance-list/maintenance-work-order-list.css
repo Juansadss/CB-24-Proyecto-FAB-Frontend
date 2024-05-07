@@ -1,13 +1,19 @@
-
-@media screen and (min-width: 768px) and (max-width: 1047px) {
-    .aeronave-base .aeronave-container {
+*{
+  border: solid red 1px;
+}
+@media screen and (min-width: 880px) and (max-width: 1047px) {
+    .maintenance-aeronave-base .maintenance-aeronave-container-list {
         width: 750px;
     }
 }
 @media screen and (max-width: 768px) {
-    .aeronave-base .aeronave-container {
-        width: 370px;
+    .maintenance-aeronave-base .maintenance-aeronave-container-list {
+        max-width: 370px;
     }
+    .maintenance-aeronave-content{
+      overflow-x: hidden;
+    }
+    
 }
 .maintenance-aeronave-container {
     width: 50%;
@@ -19,7 +25,7 @@
     margin-bottom: 20px;
     
   }
-  .maintenance-aeronave-container-1 {
+  .maintenance-aeronave-container-list {
     width: 50%;
     margin: 40px auto;
     border: 1px solid white;
@@ -38,8 +44,8 @@
   }
   
   .maintenance-aeronave-content {
-    margin-top: 20px;
-    margin-left: 100px;
+    margin-top: 0px;
+    
   }
   
   .maintenance-info-section {
