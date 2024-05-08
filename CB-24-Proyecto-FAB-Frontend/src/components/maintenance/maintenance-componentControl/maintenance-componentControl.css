@@ -1,15 +1,37 @@
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1047px) {
+  .maintenance-componentControl-container {
+      width: 800px;
+  }
+  .maintenance-componentControl-container table{
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .maintenance-componentControl-container {
+    width: 90%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+  }
+  .maintenance-componentControl-container table {
+    width: 100%; /* Hace que la tabla ocupe todo el ancho */
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 .maintenance-componentControl-container{
   font-family: Arial, sans-serif;
   margin: 0;
+  border-radius: 8pt;
   padding: 50px;
   background-color: #ffffff;
 }
-h1 {
+.maintenance-componentControl-container h1 {
   text-align: center;
   color: #000;
 }
@@ -20,7 +42,7 @@ h1 {
   margin-top: 20px;
   border: 1px solid white;
 }
-table{
+.maintenance-componentControl-container table{
   color: #ffffff;
 }
 
@@ -50,21 +72,21 @@ table{
   padding: 1em;
 }
 
-th, td {
+.maintenance-componentControl-table-container th, td {
   border: 1px solid white;
   padding: 15px;
   text-align: center;
   border-bottom: 1px solid #171A4A;
 }
 
-th {
+.maintenance-componentControl-table-container th {
   background-color: #171A4A;
   border-color: white;
 }
-tr{
+.maintenance-componentControl-table-container tr{
   background-color: #171A4A;
 }
-tr:hover {
+.maintenance-componentControl-table-container tr:hover {
   background-color: #000;
 }
 
@@ -82,14 +104,6 @@ tr:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -97,4 +111,9 @@ tr:hover {
   }
 }
 
-
+.maintenance-componentControl-container footer,
+.maintenance-componentControl-container footer button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

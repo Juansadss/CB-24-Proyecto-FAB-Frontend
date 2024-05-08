@@ -1,6 +1,7 @@
 import './maintenance-componentControl.css'
 //import { FaUser } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { CiMenuKebab } from "react-icons/ci";
 //import FABImg from '/FAB.png'
 
 function MaintenanceComponentControl() {
@@ -59,7 +60,14 @@ function MaintenanceComponentControl() {
         </table>
       </div>
       <br></br>
+      <footer>
+                USER76234
+                <button>
+                    <CiMenuKebab fontSize={24} />
+                </button>
+      </footer>
     </div>
+    
   )
 }
 

@@ -1,6 +1,7 @@
 import './maintenance-ordersList.css'
 //import { FaUser } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { CiMenuKebab } from "react-icons/ci";
 //import FABImg from '/FAB.png'
 
 function MaintenanceOrdersList() {
@@ -10,7 +11,6 @@ function MaintenanceOrdersList() {
       <IoMdArrowRoundBack/>
         <h1>Lista de Órdenes de Trabajo</h1>
       </div>
-      <div className="maintenance-orderslist-table-container">
         <table>
           <thead>
             <tr>
@@ -74,8 +74,13 @@ function MaintenanceOrdersList() {
 
           </tbody>
         </table>
-      </div>
       <br></br>
+      <footer>
+                USER76234
+                <button>
+                    <CiMenuKebab fontSize={24} />
+                </button>
+            </footer>
     </div>
   )
 }

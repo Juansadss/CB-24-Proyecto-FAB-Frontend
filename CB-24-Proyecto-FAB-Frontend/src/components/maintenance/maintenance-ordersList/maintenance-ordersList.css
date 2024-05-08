@@ -1,15 +1,37 @@
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1047px) {
+  .maintenance-orderslist-container {
+      width: 800px;
+  }
+  .maintenance-orderslist-container table{
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .maintenance-orderslist-container {
+    width: 90%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+  }
+  .maintenance-orderslist-container table {
+    width: 100%; /* Hace que la tabla ocupe todo el ancho */
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 .maintenance-orderslist-container{
   font-family: Arial, sans-serif;
   margin: 0;
+  border-radius: 8pt;
   padding: 30px;
   background-color: #ffffff;
 }
-h1 {
+.maintenance-orderslist-container h1 {
   text-align: center;
   color: #000;
 }
@@ -20,8 +42,9 @@ h1 {
   margin-top: 20px;
   border: 1px solid white;
 }
-table{
+.maintenance-orderslist-container table{
   color: #ffffff;
+
 }
 
 .maintenance-orderslist-card {
@@ -43,21 +66,21 @@ table{
   font-size: 20px;
 }
 
-th, td {
+.maintenance-orderslist-container th, td {
   border: 1px solid white;
   padding: 15px;
   text-align: center;
   border-bottom: 1px solid #171A4A;
 }
 
-th {
+.maintenance-orderslist-container th {
   background-color: #171A4A;
   border-color: white;
 }
-tr{
+.maintenance-orderslist-container tr{
   background-color: #171A4A;
 }
-tr:hover {
+.maintenance-orderslist-container tr:hover {
   background-color: #000;
 }
 
@@ -75,19 +98,15 @@ tr:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-
+.maintenance-orderslist-container footer,
+.maintenance-orderslist-container footer button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
