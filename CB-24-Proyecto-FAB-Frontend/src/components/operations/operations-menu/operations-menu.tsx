@@ -31,7 +31,7 @@ export default function OperationsMenu() {
                                 <span>PILOTOS</span>
                             </p>
                         </Link>
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/menu-operaciones/mc-lista"}>
                             <p>
                                 <RiHealthBookLine fontSize={62} />
                                 <span>CHEQUEOS MEDICOS</span>
