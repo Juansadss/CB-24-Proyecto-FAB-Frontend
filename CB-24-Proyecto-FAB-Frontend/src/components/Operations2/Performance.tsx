@@ -5,6 +5,7 @@ import FAB from '../../../public/FAB.png';
 import { LuUpload } from 'react-icons/lu';
 import OperationsLayout from './OperationsLayout';
 import performanceImage from './Images/performance.jpg';
+
 const performance: React.FC = () => {
     return (
         <div className='performance-container'>

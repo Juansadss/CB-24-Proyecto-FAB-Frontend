@@ -26,6 +26,7 @@
     width: 20rem;
     height: auto;
 }
+
 .buttom-container{
     justify-content: center;
     align-items: center;
@@ -43,3 +44,70 @@
     height: 30rem; 
     margin: 0.5rem auto; 
   }
+  .nvg-container{
+    gap: 3rem;
+  }
+  .op-nvg{
+    width: 20rem;
+    height: auto;
+
+  }
+.moon-op-container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+.moon-angle-container{
+    gap: 1rem;
+
+}
+.moon-angle-container > .option-buttom{
+    width: 12rem;
+    height: auto;
+}
+
+.low-risk-alert{
+    background-color: rgb(73, 185, 73);
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 10rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.medium-risk-alert{
+    background-color: rgb(174, 165, 40);
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 8rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.high-risk-alert{
+    background-color: rgb(240, 38, 38);
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 10rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.risk-result{
+    color: white;
+    font-weight:bolder;
+    font-size: x-large;
+}
+.risk-result-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
