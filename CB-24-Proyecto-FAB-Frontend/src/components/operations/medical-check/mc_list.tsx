@@ -8,8 +8,8 @@ import './mc_list.css'
 
 export default function McList (){
     return <>
-        <div className="container">
-            <div className='mc-container'>
+        <div className="container-list">
+            <div className='mc-container-list'>
                 <div className="mc-header-action">
                     <a href="">
                         <Link to={'/menu-principal/menu-operaciones'}><IoIosArrowBack size={30}/></Link>
@@ -17,24 +17,24 @@ export default function McList (){
                     </a>
                 </div>
             
-                <div className="mc-card-1">
+                <div className="mc-card-1-list">
                     <form action="">
-                        <button type="submit" className="mc-btn-icon">
+                        <button type="submit" className="mc-btn-icon-list">
                             <Link to={'/menu-principal/menu-operaciones/mc-registro'}><FaPlus/></Link>
                         </button>
                     </form>
-                    <div className="mc-group">
+                    <div className="mc-group-list">
                         <p>Tipo personal</p>
-                        <button type="submit" className="mc-button">Ayudadores militares</button>
-                        <button type="submit" className="mc-button">Técnicos Abordo</button>
-                        <input className="mc-textInput" type="text"/>
-                        <button type="submit" className="mc-btn-icon">
+                        <button type="submit" className="mc-button-list">Ayudadores militares</button>
+                        <button type="submit" className="mc-button-list">Técnicos Abordo</button>
+                        <input className="mc-textInput-list" type="text"/>
+                        <button type="submit" className="mc-btn-icon-list">
                             <img width={20} src="/search.png" alt="Search" />
                         </button>
                     </div>
                     <div>
                         <table>
-                            <thead className='mc-thead'>
+                            <thead className='mc-thead-list'>
                                 <tr>
                                     <th>GRADO</th>
                                     <th>APELLIDOS Y NOMBRES</th>
@@ -83,7 +83,7 @@ export default function McList (){
                     </div>
                 </div>
             
-                <div className="mc-footer-user">
+                <div className="mc-footer-user-list">
                     <label>USER76234</label>
                     <a href="">
                         <i className="material-icons"><CiMenuKebab/></i>

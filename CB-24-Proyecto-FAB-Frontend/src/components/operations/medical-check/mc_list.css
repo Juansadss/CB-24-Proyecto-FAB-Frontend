@@ -15,11 +15,11 @@ body {
 }
 
 /* Container */
-.container {
+.container-list {
     margin: 2%;
 }
 
-.mc-container {
+.mc-container-list {
     height: 88vh;
     width: 95%;
     border-radius: 10px;
@@ -33,22 +33,22 @@ body {
 }
 
 /* Header Action */
-.mc-header-action a, p {
+.mc-header-action-list a, p {
     display: inline-block;
 }
 
-.mc-header-action a {
+.mc-header-action-list a {
     text-decoration: none;
 }
 
-.mc-header-action a>span {
+.mc-header-action-list a>span {
     color: #000;
     font-weight: bold;
     margin: 0 6px;
     font-size: 16px;
 }
 
-.mc-header-action p>span {
+.mc-header-action-list p>span {
     color: #414141;
     margin: 0 2px;
     font-weight: bold;
@@ -56,7 +56,7 @@ body {
 }
 
 /* Card 1 */
-.mc-card-1 {
+.mc-card-1-list {
     margin: 20px 0;
     padding: 14px;
     border-radius: 8px;
@@ -103,7 +103,7 @@ tbody>tr:hover {
     background: rgba(12, 14, 141, 0.8);
 }
 
-.mc-btn-icon {
+.mc-btn-icon-list {
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -115,7 +115,7 @@ tbody>tr:hover {
     text-align: center;
 }
 
-.mc-group {
+.mc-group-list {
     display: flex;
     padding: 0;
     margin: 10px 0;
@@ -123,12 +123,12 @@ tbody>tr:hover {
     align-items: center;
 }
 
-.mc-group p {
+.mc-group-list p {
     font-weight: bold;
     font-size: 14px;
 }
 
-.mc-textInput {
+.mc-textInput-list {
     width: 510px;
     padding: 6px;
     font-size: 16px;
@@ -139,7 +139,7 @@ tbody>tr:hover {
     outline: none;
 }
 
-.mc-button {
+.mc-button-list {
     background: #10085c;
     border: 1px solid #074597;
     padding: 10px 20px;
@@ -152,16 +152,16 @@ tbody>tr:hover {
 }
 
 /* Footer User */
-.mc-footer-user {
+.mc-footer-user-list {
     color: #474747;
 }
 
-.mc-footer-user label {
+.mc-footer-user-list label {
     font-weight: bold;
     font-size: 13px;
     margin: 0 4px;
 }
 
-.mc-footer-user a {
+.mc-footer-user-list a {
     text-decoration: none;
 }
