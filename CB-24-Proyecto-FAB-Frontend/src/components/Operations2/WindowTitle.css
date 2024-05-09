@@ -6,4 +6,8 @@
     padding: 30px;
     margin: 3vh auto;
     display: block;
+    
+}
+.title{
+    text-align: start;
 }
