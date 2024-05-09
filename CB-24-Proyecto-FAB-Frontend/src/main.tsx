@@ -8,7 +8,7 @@ import PerformanceForm from './components/Operations2/Performance.tsx';
 import AircraftRequirementsForm from './components/Operations2/aircraftRequirements.tsx';
 import RiskMatrixForm from './components/Operations2/riskMatrix.tsx';
 import FlightRequest from './components/Operations2/Flight_Request.tsx';
-import OperationsLayout from './components/Operations2/OperationsLayout';
+import OperationsView from './components/Operations2/OperationsView.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
   { path:  "/Operaciones/Performance",  element: <PerformanceForm /> },
   { path:  "/Operaciones/FlightRequest",  element: <FlightRequest /> },
   { path:  "/Operaciones/Matriz-Riesgo",  element: <RiskMatrixForm /> },
+  { path:  "/Operaciones/OperationsView",  element: <OperationsView /> },
   { path:  "/Operaciones/Requerimientos-Aeronave",  element: <AircraftRequirementsForm /> }
 ]);
 

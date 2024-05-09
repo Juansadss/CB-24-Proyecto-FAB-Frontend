@@ -58,7 +58,7 @@ export default function RequestRegister() {
                         </Link>
                     </div>
                     <div>
-                        <Link to={'/Operaciones/Performance'}>
+                        <Link to={'/Operaciones/matriz-riesgo'}>
                             <BiSolidAlarmExclamation size={'2.5em'}></BiSolidAlarmExclamation>
                             <h5>Matrices De Riesgo</h5>
                         </Link>
@@ -67,13 +67,13 @@ export default function RequestRegister() {
                     <div>
                         <Link to={'/Operaciones/Performance'}>
                             <FaColumns size={'2.5em'}></FaColumns>
-                            <h5>Tablas De Riesgo</h5>
+                            <h5>Tablas De Performance</h5>
                         </Link>
                     </div>
                     <div>
                         <Link to={'/Operaciones/Requerimientos-Aeronave'}>
                             <FaPlaneUp size={'2.5em'}></FaPlaneUp>
-                            <h5>Pilotos</h5>
+                            <h5>Requerimientos De Aeronave</h5>
                         </Link>
                     </div>
                     <div>

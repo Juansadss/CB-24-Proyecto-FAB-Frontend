@@ -1,0 +1,38 @@
+.OperationContainer{
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.OperationContainer .newOperationSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.newOperationSection .btnNewOperation{
+    background-color: #171A4A;
+    border-radius: 15px;
+    justify-self: start;
+
+}
+.plus{
+    color: white;
+}
+.newOperationSection .ActiveOperations{
+    background-color: black;
+    border-radius: 15px;
+    justify-self: end;
+}
+.ActiveOperations h1,h4{
+    color: white;
+}
+.newOperationSection div{
+    margin: 2em;
+
+}
+.operations-table{
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    width: 900px;
+    justify-self: center; 
+    margin: 1em;
+}
