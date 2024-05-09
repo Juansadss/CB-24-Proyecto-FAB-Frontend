@@ -30,14 +30,29 @@ h5{
     display: grid;
     justify-content: center;
 }
-    .sideMenu div{
+    .sideMenu div a{
         display: flex;
+        text-decoration: none;
+        color: black;
     }
+    .sideMenu div a:hover{
+        opacity: 50%;
+    }
+        .sideMenu div svg{
+            margin-top: 20px;
+        }
+        .sideMenu div h5{
+            margin-top: 30px;
+        }
         .sideMenu div img{
             width: 40px;
             height: 40px;
             align-self: center;
         }
+.logoSarFab{
+    width: 120px;
+    margin-left: 4.2em;
+}
 .Form-section{
     background-color: #EEEEEE;
     display: grid;
