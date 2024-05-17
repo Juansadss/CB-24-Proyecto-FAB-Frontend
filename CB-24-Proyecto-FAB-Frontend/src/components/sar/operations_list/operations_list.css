@@ -1,0 +1,137 @@
+.operations_list-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.operations_listrow1 {
+    display: flex; /* Establece el contenedor como un contenedor de flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+   
+}
+.operations_listrow2 {
+    display: flex; /* Establece el contenedor interno como un contenedor de flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-left: auto; /* Mueve los elementos a la derecha */
+}
+
+.operations_listrow1 .operations_listbtnAgregar{
+    margin-left: 2%; /* Alinea el elemento a la derecha */
+    margin-right: 15px; /* Restaura el margen derecho a 0 para evitar el espacio extra */
+}
+.operations_listbtnBuscar{
+        border-radius: 10px;
+        border: 2px solid black; /* Borde más grueso y de color negro */
+        color: #ffffff;
+        font-size: 17px; /* Tamaño de la letra del signo más (+) */
+        width: 100px;
+        height: 50px;
+        line-height: 40px; /* Centra el texto verticalmente */
+        text-align: center; /* Centra el texto horizontalmente */
+        background: black;
+        margin-right: 15px;
+}
+.operations_listbtnBuscar:hover {
+    background-color: #007bff; /* Cambia el color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto al pasar el cursor */
+  }
+.operations_listtable-card{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Ancho del 100% de la pantalla */
+    height: 90vh; /* Altura del 100% de la pantalla */
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+
+
+    .operations_listtable-card .operations_listform{
+        width: 75%;
+    }
+
+    .operations_listtable-card .operations_listform-control {
+        border-radius: 2rem;
+        height: 3rem;  
+        margin: 0.5rem auto;      
+    }
+
+    .operations_listbtnAgregar {
+        border-radius: 10px;
+        border: 2px solid black; /* Borde más grueso y de color negro */
+        padding: 1px; /* Espaciado interno */
+        margin: 1px auto;
+        color: #171A4A;
+        font-size: 44px; /* Tamaño de la letra del signo más (+) */
+        background-color: transparent; /* Fondo transparente */
+        width: 50px;
+        height: 50px;
+        line-height: 40px; /* Centra el texto verticalmente */
+        text-align: center; /* Centra el texto horizontalmente */
+      }
+      
+      .operations_listbtnAgregar:hover {
+        background-color: #007bff; /* Cambia el color de fondo al pasar el cursor */
+        color: white; /* Cambia el color del texto al pasar el cursor */
+      }
+
+    .operations_listtable-card h2 {
+        color: #171A4A;
+        margin-bottom: 1rem;
+        margin-left: 2%; /* Alinea el elemento a la derecha */
+        margin-right: auto; /* Restaura el margen derecho a 0 para evitar el espacio extra */
+      }
+
+
+.operations_listtable-card .operations_list_span{
+    text-align: center;
+}
+.operations_listtable-container {
+    max-width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.operations_list_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #171A4A;
+    color: #fff;
+}
+
+.operations_list_th, .operations_list_td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid white; /* Establece el borde de las celdas */
+}
+
+.operations_list_th {
+    font-weight: bold;
+}
+
+
+.operaciones_header {
+    display: flex;
+    align-items: center;
+}
+
+.operations_btnReturn {
+    background-color: transparent; 
+    border: none; 
+    margin-right: 10px; 
+    font-size: 45px; 
+    padding: 5px 10px; 
+}
+
+.operations_btnReturn:hover {
+    transform: scale(1.2);
+}
+
+.operaciones_header_h2 {
+    margin-right: 10px; 
+}
