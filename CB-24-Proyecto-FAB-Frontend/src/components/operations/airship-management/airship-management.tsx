@@ -11,6 +11,11 @@ export default function AirshipManagement() {
         { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
         { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "P"},
         { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
+        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
+        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
+        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
+
+
         
     ];
 
@@ -53,7 +58,7 @@ export default function AirshipManagement() {
                     <td>{airship.peso} KG</td>
                     <td>{airship.estado}</td>
                     <td>
-                        <Link to={""}><FaEdit className="edit-button"/></Link>   <br />
+                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-editar"}><FaEdit className="edit-button"/></Link>   <br />
                         <Link to={""}><MdDelete className="delete-button"/></Link>
                     </td>
                     </tr>
@@ -61,16 +66,17 @@ export default function AirshipManagement() {
                 </tbody>
             </table>
 
-            <div>
+            <div className="user-info-container">
                 <span className="username">USER76234</span>
                 <button className="forma">
                     <CiMenuKebab fontSize={24} />
                 </button>
-
                 <div className="airship-management-logo">
-                    <img width={190} height={115} src="/FAB.png" alt="FAB" />
+                    <img width={200} height={150}  src="/FAB.png" alt="FAB" />
                 </div>
+                
             </div>
+            
         </div>
     </>
 }

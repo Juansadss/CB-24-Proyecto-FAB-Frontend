@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
-import './airship-register-management.css';
+import './airship-edit-management.css';
 
-export default function AirshipRegisterManagement() {
+export default function AirshipEditManagement() {
     return (
-        <div className="airship-register-management-container">
+        <div className="airship-edit-management-container">
             {/* Botón de regreso */}
                 <div>
                     <h1>
                         <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AEREONAVES
-                        <span className="small-text"> &gt; Registrar AereoNave</span>
+                        <span className="small-text"> &gt; Editar AereoNave</span>
                     </h1>
                 </div>
                 
@@ -52,18 +52,18 @@ export default function AirshipRegisterManagement() {
                         </div>
                         <br />
                         <div>
-                            <button className="register-button">Registrar AereoNave</button>
+                            <button className="edit-button">Editar AereoNave</button>
                         </div>
                         
                     </div>
                 </div>
                 
-                <div className="airship-user-info-container">
+                <div className="airship-edit-user-info-container">
                     <span className="username">USER76234</span>
                     <button className="forma">
                         <CiMenuKebab fontSize={24} />
                     </button>
-                    <div className="airship-register-management-logo">
+                    <div className="airship-edit-management-logo">
                         <img width={200} height={150}  src="/FAB.png" alt="FAB" />
                     </div>
                 </div>
