@@ -1,0 +1,225 @@
+.Recrutment_Info_Center-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.Recrutment_Info_row1 {
+    display: flex;
+    /* Establece el contenedor como un contenedor de flexbox */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+
+}
+
+.Recrutment_Info_row2 {
+    display: flex;
+    /* Establece el contenedor interno como un contenedor de flexbox */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    margin-left: auto;
+    /* Mueve los elementos a la derecha */
+}
+
+.Recrutment_Info_row1 .Recrutment_Info_btnAgregar {
+    margin-left: 2%;
+    /* Alinea el elemento a la derecha */
+    margin-right: 15px;
+    /* Restaura el margen derecho a 0 para evitar el espacio extra */
+}
+
+.Recrutment_Info_btnBuscar {
+    border-radius: 10px;
+    border: 2px solid black;
+    /* Borde más grueso y de color negro */
+    color: #ffffff;
+    font-size: 17px;
+    /* Tamaño de la letra del signo más (+) */
+    width: 100px;
+    height: 50px;
+    line-height: 40px;
+    /* Centra el texto verticalmente */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    background: black;
+    margin-right: 15px;
+}
+
+.Recrutment_Info_btnBuscar:hover {
+    background-color: #007bff;
+    /* Cambia el color de fondo al pasar el cursor */
+    color: white;
+    /* Cambia el color del texto al pasar el cursor */
+}
+
+.Recrutment_Info_table-card {
+    background-color: #ffffff;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    /* Ancho del 100% de la pantalla */
+    height: 90vh;
+    /* Altura del 100% de la pantalla */
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+
+
+.Recrutment_Info_table-card form {
+    width: 75%;
+}
+
+.Recrutment_Info_table-card .form-control {
+    border-radius: 2rem;
+    height: 3rem;
+    margin: 0.5rem auto;
+}
+
+.Recrutment_Info_btnAgregar {
+    border-radius: 20px;
+    border: 2px solid black;
+    /* Borde más grueso y de color negro */
+    padding: 1px;
+    /* Espaciado interno */
+    margin: 1px auto;
+    color: #171A4A;
+    font-size: 44px;
+    /* Tamaño de la letra del signo más (+) */
+    background-color: transparent;
+    /* Fondo transparente */
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    /* Centra el texto verticalmente */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+.Recrutment_Info_btnAgregar:hover {
+    background-color: #007bff;
+    /* Cambia el color de fondo al pasar el cursor */
+    color: white;
+    /* Cambia el color del texto al pasar el cursor */
+}
+
+.Recrutment_Info_table-card h2 {
+    color: #171A4A;
+    margin-bottom: 1rem;
+    margin-left: 2%;
+    /* Alinea el elemento a la derecha */
+    margin-right: auto;
+    /* Restaura el margen derecho a 0 para evitar el espacio extra */
+}
+
+
+.Recrutment_Info_table-card span {
+    text-align: center;
+}
+
+.Recrutment_Info_table-container {
+    max-width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+
+
+
+.Recrutment_Info_card {
+    background-color: #dfdfdf;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* Ancho del 100% de la pantalla */
+    height: 60%;
+    /* Altura del 100% de la pantalla */
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.Recrutment_Info_FileOne {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.Recrutment_Info_FileOne button {
+    flex: 1; /* Hace que los botones ocupen todo el espacio disponible */
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.Recrutment_Info_form-row {
+    margin-bottom: 10px;
+}
+
+.Recrutment_Info_label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.Recrutment_Info_value {
+    margin-left: 10px;
+}
+
+.Recrutment_Info_btnRed {
+    background: #6E2121;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 25px;
+}
+.Recrutment_Info_btnRed:hover {
+    background-color: #f06464;;
+    /* Cambia el color de fondo al pasar el cursor */
+    color:black;
+    /* Cambia el color del texto al pasar el cursor */
+}
+
+.Recrutment_Info_btnGreen {
+    background: #6A9955;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 25px;
+    
+}
+.Recrutment_Info_btnGreen:hover {
+    background-color: #97fd68;;
+    /* Cambia el color de fondo al pasar el cursor */
+    color: black;
+    /* Cambia el color del texto al pasar el cursor */
+}
+
+
+
+.recruitment_header {
+    display: flex;
+    align-items: center;
+}
+
+.recruitment_btnReturn {
+    background-color: transparent; 
+    border: none; 
+    margin-right: 10px; 
+    font-size: 45px; 
+    padding: 5px 10px; 
+}
+
+.recruitment_btnReturn:hover {
+    transform: scale(1.2);
+}
+
+.recruitment_header_h2 {
+    margin-right: 10px; 
+}
