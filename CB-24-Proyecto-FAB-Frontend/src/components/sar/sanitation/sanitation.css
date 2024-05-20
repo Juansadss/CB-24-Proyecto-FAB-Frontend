@@ -1,0 +1,94 @@
+.sanitation-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sanitation-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
+    width: 100%;
+    max-width: 800px;
+    overflow-y: auto;
+    color: #000000;
+}
+
+.sanitation-form h3 {
+    color: #171A4A;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.sanitation-form h2 {
+    color: #171A4A;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.sanitation-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.sanitation-form label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.sanitation-form input[type="text"],
+.sanitation-form input[type="date"],
+.sanitation-form select {
+    padding: 0.5rem;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sanitation-form .form-group-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.sanitation-form .volver-button,
+.sanitation-form .registrar-button {
+    padding: 0.7rem;
+    background-color: #171A4A;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 150px;
+}
+
+.sanitation-form .volver-button {
+    background-color: #ccc;
+    color: #000;
+}
+
+.sanitation-form .registrar-button {
+    background-color: #171A4A;
+}
+
+.sanitation-form .registrar-button:hover {
+    background-color: #000;
+}
+
+.sanitation-form .volver-button:hover {
+    background-color: #aaa;
+}
