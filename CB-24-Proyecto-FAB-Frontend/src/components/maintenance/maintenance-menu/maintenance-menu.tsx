@@ -56,7 +56,7 @@ export default function MaintenanceMenu() {
                                 <span>STOCK EN ALMACENES</span>
                             </p>
                         </Link>
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/manuales"}>
                             <p>
                                 <LuBookCopy fontSize={48} />
                                 <span>MANUALES</span>
