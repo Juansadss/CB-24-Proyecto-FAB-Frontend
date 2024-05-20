@@ -1,15 +1,15 @@
 .recruitment-form-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Ajuste para columna */
     align-items: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     min-height: 100vh;
     width: 100%;
 }
 
 .recruitment-form {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     padding: 2rem;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
@@ -19,11 +19,13 @@
     color: #000000;
 }
 
-.recruitment-form h3 {
-    color: #171A4A;
+.recruitment-form-container h3 {
+    color: #000000;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
-    text-align: center; /* Centrar el título */
+    text-align: center; 
+    width: 100%; /* Asegura que el ancho sea el 100% */
+    max-width: 800px; /* Alinea con el formulario */
 }
 
 .recruitment-form .form-group {
@@ -52,7 +54,7 @@
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: bold;
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left; 
 }
 
 .recruitment-form input[type="text"],
@@ -61,7 +63,7 @@
 .recruitment-form input[type="file"] {
     padding: 0.5rem;
     border: 1.5px solid #333;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }

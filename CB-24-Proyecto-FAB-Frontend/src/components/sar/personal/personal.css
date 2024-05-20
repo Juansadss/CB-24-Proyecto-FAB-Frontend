@@ -3,15 +3,15 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff; 
     min-height: 100vh;
     width: 100%;
 }
 
 .personal-form {
-    background-color: #ffffff;
+    background-color: #e0e0e0; 
     padding: 2rem;
-    border-radius: 7px;
+    border-radius: 1px;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
     width: 100%;
     max-width: 700px;
@@ -20,7 +20,7 @@
 }
 
 .personal-form h2, .personal-form h3 {
-    color: #171A4A;
+    color: #000000;
 }
 
 .personal-form h2 {
@@ -68,7 +68,7 @@
 .personal-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }

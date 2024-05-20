@@ -1,15 +1,15 @@
 .sanitation-form-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Ajuste para columna */
     align-items: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     min-height: 100vh;
     width: 100%;
 }
 
 .sanitation-form {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     padding: 2rem;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
@@ -19,18 +19,20 @@
     color: #000000;
 }
 
-.sanitation-form h3 {
-    color: #171A4A;
+.sanitation-form-container h3 {
+    color: #000000;
     margin-bottom: 1rem;
     font-size: 1rem;
-    text-align: left; /* Alinear a la izquierda */
+    text-align: left; 
+    width: 100%; /* Asegura que el ancho sea el 100% */
+    max-width: 800px; /* Alinea con el formulario */
 }
 
 .sanitation-form h2 {
-    color: #171A4A;
+    color: #000000;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    text-align: left; /* Alinear a la izquierda */
+    text-align: left;
 }
 
 .sanitation-form .form-group {
@@ -44,7 +46,7 @@
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: bold;
-    text-align: left; /* Alinear a la izquierda */
+    text-align: left; 
 }
 
 .sanitation-form input[type="text"],
@@ -52,7 +54,7 @@
 .sanitation-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }

@@ -1,18 +1,26 @@
 .reportguards-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     min-height: 100vh;
     width: 100%;
 }
 
 .reportguards-container h3 {
-    color: #171A4A;
+    color: #000000;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 100%;
+}
+
+.reportguards-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px; 
 }
 
 .reportguards-form {
@@ -38,7 +46,7 @@
     border-radius: 5px;
     font-size: 1rem;
     width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño */
+    box-sizing: border-box; 
 }
 
 .reportguards-table {
