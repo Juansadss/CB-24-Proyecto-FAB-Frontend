@@ -44,7 +44,7 @@ export default function MaintenanceMenu() {
                         </Link>
                     </div>
                     <div className="menu-options">
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/alertas"}>
                             <p>
                                 <FaRegBell fontSize={40} />
                                 <span>ALERTAS</span>

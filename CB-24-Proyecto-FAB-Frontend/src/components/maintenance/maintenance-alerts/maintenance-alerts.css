@@ -1,0 +1,141 @@
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1047px) {
+    .maintenance-alerts-container .alerts-table {
+        overflow: scroll;
+    }
+}
+
+/* *{
+    border: 1px red solid;
+} */
+
+/* Moviles */
+@media screen and (max-width: 768px) {
+    .maintenance-alerts-container .alerts-table {
+        overflow: scroll;
+    }
+}
+
+.maintenance-alerts-container {
+    height: 90%;
+    width: 95%;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #eee;
+    color: #000;
+}
+
+.maintenance-alerts-container header {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    justify-content: space-between;
+    font-size: 16pt;
+}
+
+.maintenance-alerts-container .back-icon {
+    display: flex;
+    align-items: center;
+}
+
+.maintenance-alerts-container header span {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.maintenance-alerts-container .history-button {
+    display: flex;
+    gap: 8px;
+    background-color: #171A4A;
+    color: #fff;
+    font-size: 16pt;
+    padding: 8px 32px 8px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.maintenance-alerts-container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maintenance-alerts-container .alerts-table {
+    background-color: #171A4A;
+    border-radius: 8px;
+    width: 80%;
+    color: #fff;
+    margin: 32px;
+    padding: 16px;
+    height: 60vh;
+}
+
+.maintenance-alerts-container .alert-row{
+    max-height: 100px;
+}
+
+.maintenance-alerts-container .date-column {
+    width: 15%;
+    text-align: center;
+}
+
+.maintenance-alerts-container .message-column {
+    width: 65%;
+    min-width: 300px;
+}
+
+.maintenance-alerts-container .read-column {
+    width: 20%;
+    text-align: center;
+}
+
+.maintenance-alerts-container .mark-as-read-button {
+    border: #fff 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    padding: 8px 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.maintenance-alerts-container .mark-as-read-button:hover {
+    background-color: #fff;
+    color: #171A4A;
+}
+
+.maintenance-alerts-container thead th {
+    padding: 8px 0;
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+}
+
+.maintenance-alerts-container tr td:nth-child(1) {
+    padding: 0;
+}
+
+.maintenance-alerts-container tr:hover{
+    background-color: #2B2E65;
+    transition: all 0.2s ease-in-out;
+}
+
+.maintenance-alerts-container td {
+    padding: 8px;
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+}
+
+.maintenance-alerts-container footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.maintenance-alerts-container footer span {
+    display: flex;
+    align-items: center;
+}
