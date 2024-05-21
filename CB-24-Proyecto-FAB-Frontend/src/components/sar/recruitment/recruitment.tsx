@@ -40,7 +40,7 @@ const RecruitmentForm: React.FC = () => {
     return (
         <LayoutSar>
             <div className="recruitment-form-container">
-                <h3>FORMULARIO DE RECLUTAMIENTO</h3> {/* Mueve el título aquí */}
+                <h3>FORMULARIO DE RECLUTAMIENTO</h3> 
                 <form className="recruitment-form" onSubmit={handleSubmit}>
                     <div className="form-group-row">
                         <div className="form-group">

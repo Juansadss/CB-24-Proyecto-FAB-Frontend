@@ -9,6 +9,9 @@ import PersonalForm from './components/sar/personal/personal.tsx';
 import RecruitmentForm from './components/sar/recruitment/recruitment.tsx';
 import SanitationForm from './components/sar/sanitation/sanitation.tsx';
 import ReportGuards from './components/sar/reportguards/reportguards.tsx';
+import DonationList from './components/sar/donationlist/donationlist.tsx';
+import ReturnsList from './components/sar/returnslist/returnslist.tsx';
+import DonationInventory from './components/sar/donationinventory/donationinventory.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
@@ -18,6 +21,10 @@ const router = createBrowserRouter([
   { path:  "/sar/reclutamiento",  element: <RecruitmentForm /> },
   { path:  "/sar/sanidad",  element: <SanitationForm /> },
   { path:  "/sar/guardias",  element: <ReportGuards /> },
+  { path:  "/sar/donaciones",  element: <DonationList /> },
+  { path:  "/sar/devoluciones",  element: <ReturnsList /> },
+  { path:  "/sar/donaciones-inventario",  element: <DonationInventory /> },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
