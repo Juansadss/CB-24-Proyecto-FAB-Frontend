@@ -9,12 +9,11 @@
 }
 
 .personal-form {
-    background-color: #e0e0e0; 
+    background-color: #f0f0f0; 
     padding: 2rem;
     border-radius: 1px;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
     width: 100%;
-    max-width: 700px;
+    max-width: 1000px;
     overflow-y: auto;
     color: #000000;
 }
@@ -68,23 +67,33 @@
 .personal-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
 .personal-form input[type="file"] {
-    padding: 0.4rem;
-    font-size: 1rem;
+    display: none; /* Oculta el input de archivo real */
 }
 
 .personal-form .form-group.file-upload {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .personal-form .form-group.file-upload label {
-    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.personal-form .form-group.file-upload label img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
 }
 
 .personal-form button {

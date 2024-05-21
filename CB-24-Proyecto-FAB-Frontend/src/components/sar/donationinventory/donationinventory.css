@@ -9,12 +9,12 @@
 }
 
 .donationinventory-form {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 10px;
     width: 100%;
-    max-width: 700px;
+    max-width: 1000px;
     color: #000000;
 }
 
@@ -54,7 +54,7 @@
 .donationinventory-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -69,7 +69,6 @@
     font-size: 1rem;
     font-weight: bold;
     width: 100px;
-    align-self: flex-end;
 }
 
 .donationinventory-form button:hover {
@@ -77,37 +76,30 @@
 }
 
 .donationinventory-table {
-    width: 100%;
-    max-width: 700px;
+    width: 80%;
     border-collapse: collapse;
-    background-color: #171A4A;
+    background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 1rem;
+    color: #000000;
 }
 
 .donationinventory-table th,
 .donationinventory-table td {
     padding: 0.75rem;
     text-align: left;
-    color: #fff;
+    border: 1px solid #dddddd;
 }
 
 .donationinventory-table th {
     background-color: #24365C;
+    color: #ffffff;
     font-weight: bold;
 }
 
-.donationinventory-table tbody tr {
-    background-color: #24365C;
-}
-
 .donationinventory-table tbody tr:nth-child(even) {
-    background-color: #1A2C48;
-}
-
-.donationinventory-table tbody tr:hover {
-    background-color: #2C4878;
+    background-color: #f2f2f2;
 }
 
 .icon-button {
@@ -116,10 +108,16 @@
     cursor: pointer;
     padding: 0;
     margin: 0;
-    color: #fff;
-    font-size: 1.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
 }
 
 .icon-button:hover {
     color: #ccc;
+}
+
+.donationinventory-form .form-buttons {
+    margin-top: 1rem; /* Espacio entre la tabla y el botón registrar */
+    display: flex;
+    justify-content: center;
 }

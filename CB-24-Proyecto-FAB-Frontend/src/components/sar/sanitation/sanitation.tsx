@@ -26,7 +26,7 @@ const SanitationForm: React.FC = () => {
     return (
         <LayoutSar>
             <div className="sanitation-form-container">
-                <h3>SANIDAD &gt; Crear Tratamiento</h3> {/* Mueve el encabezado aquí */}
+                <h3>SANIDAD &gt; Crear Tratamiento</h3> 
                 <form className="sanitation-form" onSubmit={handleSubmit}>
                     <h2>DATOS PERSONALES</h2>
                     <div className="form-group">

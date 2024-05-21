@@ -67,29 +67,33 @@ const DonationInventory = () => {
                         </div>
                     </div>
                     <button type="button" onClick={handleAddItem}>Agregar</button>
-                    <table className="donationinventory-table">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Cantidad</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {items.map((item, index) => (
-                                <tr key={index}>
-                                    <td>{item.tipo}</td>
-                                    <td>{item.cantidad}</td>
-                                    <td>
-                                        <button type="button" className="icon-button" onClick={() => handleRemoveItem(index)}>
-                                            🗑️
-                                        </button>
-                                    </td>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <table className="donationinventory-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <button type="submit">Registrar</button>
+                            </thead>
+                            <tbody>
+                                {items.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.tipo}</td>
+                                        <td>{item.cantidad}</td>
+                                        <td>
+                                            <button type="button" className="icon-button" onClick={() => handleRemoveItem(index)}>
+                                                🗑️
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="form-buttons">
+                        <button type="submit">Registrar</button>
+                    </div>
                 </form>
             </div>
         </LayoutSar>

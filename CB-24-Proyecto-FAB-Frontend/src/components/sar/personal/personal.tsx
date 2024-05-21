@@ -23,7 +23,8 @@ const PersonalForm = () => {
         parentesco: '',
         direccion: '',
         telefonoEmergencia: '',
-        celularEmergencia: ''
+        celularEmergencia: '',
+        chequeoMedico: null
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -31,6 +32,14 @@ const PersonalForm = () => {
         setFormData(prevState => ({
             ...prevState,
             [name]: value
+        }));
+    };
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, files } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: files ? files[0] : null
         }));
     };
 
@@ -155,8 +164,11 @@ const PersonalForm = () => {
                         </div>
                     </div>
                     <div className="form-group file-upload">
-                        <label>Chequeo Médico:</label>
-                        <input type="file" name="chequeoMedico" />
+                        <label>Chequeo Médico</label>
+                        <label htmlFor="chequeoMedico" className="file-upload-label">
+                            <img src="/subiricon.png" alt="Upload" />
+                        </label>
+                        <input type="file" id="chequeoMedico" name="chequeoMedico" onChange={handleFileChange} />
                     </div>
                     <button type="submit">Registrar</button>
                 </form>

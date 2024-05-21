@@ -79,13 +79,19 @@ const RecruitmentForm: React.FC = () => {
                         </label>
                     </div>
                     <div className="form-group-row">
-                        <div className="form-group">
-                            <label>Fotocopia de carnet de identidad</label>
-                            <input type="file" name="carnetIdentidad" onChange={handleFileChange} />
+                        <div className="form-group file-upload">
+                            <label htmlFor="carnetIdentidad" className="file-upload-label">
+                                Fotocopia de carnet de identidad
+                                <img src="/subiricon.png" alt="Upload" />
+                            </label>
+                            <input type="file" id="carnetIdentidad" name="carnetIdentidad" onChange={handleFileChange} />
                         </div>
-                        <div className="form-group">
-                            <label>Certificado de nacimiento</label>
-                            <input type="file" name="certificadoNacimiento" onChange={handleFileChange} />
+                        <div className="form-group file-upload">
+                            <label htmlFor="certificadoNacimiento" className="file-upload-label">
+                                Certificado de nacimiento
+                                <img src="/subiricon.png" alt="Upload" />
+                            </label>
+                            <input type="file" id="certificadoNacimiento" name="certificadoNacimiento" onChange={handleFileChange} />
                         </div>
                     </div>
                     <button type="submit">Enviar</button>

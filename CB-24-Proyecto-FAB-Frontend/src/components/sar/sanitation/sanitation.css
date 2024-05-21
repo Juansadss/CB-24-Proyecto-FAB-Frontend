@@ -11,10 +11,9 @@
 .sanitation-form {
     background-color: #f0f0f0;
     padding: 2rem;
-    border-radius: 7px;
-    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 10px;
+    border-radius: 1px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     overflow-y: auto;
     color: #000000;
 }
@@ -22,10 +21,10 @@
 .sanitation-form-container h3 {
     color: #000000;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: left; 
-    width: 100%; /* Asegura que el ancho sea el 100% */
-    max-width: 800px; /* Alinea con el formulario */
+    width: 100%; 
+    max-width: 800px; 
 }
 
 .sanitation-form h2 {
