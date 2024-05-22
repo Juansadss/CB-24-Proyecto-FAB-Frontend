@@ -1,9 +1,9 @@
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
   .maintenance-componentControl-container {
-      width: 800px;
+    width: 800px;
   }
-  .maintenance-componentControl-container table{
+  .maintenance-componentControl-container table {
     overflow-x: auto;
     width: 100%;
   }
@@ -19,18 +19,21 @@
     width: 100%; /* Hace que la tabla ocupe todo el ancho */
   }
 }
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-.maintenance-componentControl-container{
+
+.maintenance-componentControl-container {
+  width: 90%;
+  height: 100%; /* Make the container fill the available height */
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto; /* Center the container horizontally */
   border-radius: 8pt;
-  padding: 50px;
+  padding: 30px;
+  padding-bottom: 20px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visual appearance */
 }
+
 .maintenance-componentControl-container h1 {
   text-align: center;
   color: #000;
@@ -40,10 +43,12 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  border: 1px solid white;
 }
-.maintenance-componentControl-container table{
+
+.maintenance-componentControl-container table {
+  width: 100%;
   color: #ffffff;
+  border-collapse: collapse;
 }
 
 .maintenance-componentControl-card {
@@ -72,48 +77,66 @@
   padding: 1em;
 }
 
-.maintenance-componentControl-table-container th, td {
-  border: 1px solid white;
+.maintenance-componentControl-table-container th,
+.maintenance-componentControl-table-container td {
   padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #171A4A;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
 .maintenance-componentControl-table-container th {
   background-color: #171A4A;
+  color: #fff; 
   border-color: white;
+  font-weight: bold;
 }
-.maintenance-componentControl-table-container tr{
+
+.maintenance-componentControl-table-container tr {
   background-color: #171A4A;
 }
+
+.maintenance-componentControl-table-container tr:hover {
+  background-color: #000;
+}
+.maintenance-orderslist-container footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-top: 80px;
+}
+
+.maintenance-orderslist-container footer span {
+  display: flex;
+  align-items: center;
+}
+.maintenance-componentControl-table-container {
+  width: 100%;
+  padding: 10px; 
+}
+
+.maintenance-componentControl-table-container th, 
+.maintenance-componentControl-table-container td {
+  padding: 15px;
+  text-align: center;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.maintenance-componentControl-table-container th {
+  background-color: #171A4A;
+  color: #fff;
+  border-color: white;
+
+}
+
 .maintenance-componentControl-table-container tr:hover {
   background-color: #000;
 }
 
-
-.logo {
-  width: 35pt; 
-  padding-top: 0;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.maintenance-componentControl-container footer,
-.maintenance-componentControl-container footer button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.maintenance-componentControl-table-container td {
+  background-color: #171A4A;
+  color: #fff;
 }

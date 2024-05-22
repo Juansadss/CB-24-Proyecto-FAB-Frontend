@@ -50,7 +50,7 @@ export default function MaintenanceMenu() {
                                 <span>ALERTAS</span>
                             </p>
                         </Link>
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/inventario-almacenes"}>
                             <p>
                                 <AiOutlineInbox fontSize={48} />
                                 <span>STOCK EN ALMACENES</span>
