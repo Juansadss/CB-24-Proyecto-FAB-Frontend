@@ -7,11 +7,11 @@ export default function MaintenanceManuals() {
     return (
         <div className="maintenance-aeronave-base">
             <div className="maintenance-aeronave-main">
-                <Link to={"/menu-principal/mantenimiento"}>
-                    <GoArrowLeft color='black' size={30} />
-                </Link>
-                <div className="maintenance-aeronave-header-principal">
-                    <h1>Manuales</h1>
+                <div className="header-container">
+                    <Link to={"/menu-principal/mantenimiento"} className="back-link">
+                        <GoArrowLeft color='black' size={30} />
+                    </Link>
+                    <h1 className="main-title">MANTENIMIENTO-Manuales</h1>
                 </div>
 
                 <div className="maintenance-aeronave-container">

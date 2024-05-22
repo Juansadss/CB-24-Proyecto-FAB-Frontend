@@ -10,7 +10,7 @@ export default function MaintenanceWorkOrderList() {
             <div className="maintenance-aeronave-main">
                 <Link to={"/menu-principal/mantenimiento"} className="back-link">
                     <GoArrowLeft color='black' size={30} />
-                    <h1>Mantenimiento-Aeronaves</h1>
+                    <h1>MANTENIMIENTO-Aeronaves</h1>
                 </Link>
                 <div className="maintenance-aeronave-container-1">
                     <div className="maintenance-aeronave-header">

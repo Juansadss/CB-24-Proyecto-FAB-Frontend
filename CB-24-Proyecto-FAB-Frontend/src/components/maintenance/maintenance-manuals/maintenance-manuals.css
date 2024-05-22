@@ -81,6 +81,23 @@
     border-radius: 10px;
 }
 
+.back-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    
+  }
+
+  .back-link h1 {
+    margin-left: 210px; /* Ajusta el margen izquierdo según sea necesario */
+  }
+  
+  .back-link h1 {
+    margin-left: 10px; /* Space between icon and text */
+    font-size: 24px; /* Text size */
+  }
+  
 .maintenance-aeronave-base {
     width: 100%;
     min-height: 95vh;
@@ -92,11 +109,22 @@
 }
 
 .maintenance-footer-image {
-    margin-left: 1480px;
+    margin-left: 900px;
 }
 
 .maintenance-aeronave-header-principal {
     text-align: center;
     font-size: 8px;
     margin-left: 100px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta el espacio debajo del encabezado si es necesario */
+}
+
+.main-title {
+    margin-left: 10px; /* Ajusta el espacio entre el ícono y el texto */
+    font-size: 24px; /* Tamaño del texto */
+    color: inherit; /* Hereda el color del contenedor padre */
 }
