@@ -1,3 +1,4 @@
+
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
   .maintenance-warehouseInventory-container {
@@ -18,19 +19,22 @@
   .maintenance-warehouseInventory-container table {
     width: 100%; /* Hace que la tabla ocupe todo el ancho */
   }
-  .maintenance-warehouseInventory-filterContainer{
+  .maintenance-warehouseInventory-filterContainer {
     width: 100%;
     overflow-x: auto; /* Agrega desplazamiento horizontal */
   }
 }
 .maintenance-warehouseInventory-container {
   width: 90%;
-  height: 90%;
+  height: 100%; /* Make the container fill the available height */
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto; /* Center the container horizontally */
   border-radius: 8pt;
   padding: 30px;
+  padding-bottom: 20px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 .maintenance-warehouseInventory-container h1 {
   font-weight: bold;
@@ -71,4 +75,15 @@
   color: #fff;
   padding: 8px;
   text-align: center;
+}
+.maintenance-warehouseInventory-container footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-top: 300px;
+}
+
+.maintenance-warehouseInventory-container footer span {
+  display: flex;
+  align-items: center;
 }

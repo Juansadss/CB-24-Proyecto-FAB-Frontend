@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { CiMenuKebab } from "react-icons/ci";
 import './maintenance-warehouseInventory.css'
 
 function MaintenanceWarehouseInventory() {
@@ -22,7 +23,6 @@ function MaintenanceWarehouseInventory() {
           onChange={(e) => setSelectedAircraft(e.target.value)}
         >
           <option value="JetSam">JetSam</option>
-          {/* Add other aircraft options here */}
         </select>
         <p>Categoria de Repuesto: </p>
         <select
@@ -31,7 +31,6 @@ function MaintenanceWarehouseInventory() {
         >
           <option value="Fungibles">Fungibles</option>
           <option value="Componentes">Componentes</option>
-          {/* Add other category options here */}
         </select>
         <button onClick={clearFilter}>
           Limpiar Filtro
@@ -50,7 +49,17 @@ function MaintenanceWarehouseInventory() {
         <tbody>
         </tbody>
       </table>
+      <footer>
+                <span>
+                    USER76234
+                    <button>
+                        <CiMenuKebab fontSize={24} />
+                    </button>
+                </span>
+                <img src="/FAB.png" width={150} height={100} />
+            </footer>
     </div>
+    
   );
 };
 

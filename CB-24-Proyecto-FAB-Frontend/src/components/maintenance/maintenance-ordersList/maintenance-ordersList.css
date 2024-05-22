@@ -1,9 +1,9 @@
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
   .maintenance-orderslist-container {
-      width: 800px;
+    width: 800px;
   }
-  .maintenance-orderslist-container table{
+  .maintenance-orderslist-container table {
     overflow-x: auto;
     width: 100%;
   }
@@ -19,18 +19,26 @@
     width: 100%; /* Hace que la tabla ocupe todo el ancho */
   }
 }
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
 }
-.maintenance-orderslist-container{
+
+.maintenance-orderslist-container {
+  width: 90%;
+  height: 100%; /* Make the container fill the available height */
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto; /* Center the container horizontally */
   border-radius: 8pt;
   padding: 30px;
+  padding-bottom: 20px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
+
 .maintenance-orderslist-container h1 {
   text-align: center;
   color: #000;
@@ -40,11 +48,11 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  border: 1px solid white;
 }
-.maintenance-orderslist-container table{
-  color: #ffffff;
 
+.maintenance-orderslist-container table {
+  color: #ffffff;
+  background-color: #171A4A;
 }
 
 .maintenance-orderslist-card {
@@ -66,47 +74,37 @@
   font-size: 20px;
 }
 
-.maintenance-orderslist-container th, td {
-  border: 1px solid white;
+.maintenance-orderslist-container th,
+.maintenance-orderslist-container td {
   padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #171A4A;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
 .maintenance-orderslist-container th {
   background-color: #171A4A;
-  border-color: white;
+  border-bottom: 1px solid #fff;
 }
-.maintenance-orderslist-container tr{
+
+.maintenance-orderslist-container tr {
   background-color: #171A4A;
 }
+
 .maintenance-orderslist-container tr:hover {
   background-color: #000;
 }
 
-
-.logo {
-  width: 35pt; 
-  padding-top: 0;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.maintenance-orderslist-container footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.maintenance-orderslist-container footer,
-.maintenance-orderslist-container footer button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.maintenance-orderslist-container footer span {
+  display: flex;
+  align-items: center;
 }

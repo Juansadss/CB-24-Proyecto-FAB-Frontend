@@ -76,10 +76,13 @@ function MaintenanceOrdersList() {
         </table>
       <br></br>
       <footer>
-                USER76234
-                <button>
-                    <CiMenuKebab fontSize={24} />
-                </button>
+                <span>
+                    USER76234
+                    <button>
+                        <CiMenuKebab fontSize={24} />
+                    </button>
+                </span>
+                <img src="/FAB.png" width={150} height={100} />
             </footer>
     </div>
   )
