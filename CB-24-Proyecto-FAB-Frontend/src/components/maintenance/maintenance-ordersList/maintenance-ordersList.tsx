@@ -1,6 +1,7 @@
 import './maintenance-ordersList.css'
-//import { FaUser } from "react-icons/fa";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { CiSquarePlus } from "react-icons/ci";
+import { Link } from "react-router-dom"
+import { GoArrowLeft } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
 //import FABImg from '/FAB.png'
 
@@ -8,9 +9,14 @@ function MaintenanceOrdersList() {
   return (
     <div className="maintenance-orderslist-container">
       <div className="maintenance-orderslist-header">
-      <IoMdArrowRoundBack/>
-        <h1>Lista de Órdenes de Trabajo</h1>
+      <Link to={"/menu-principal/mantenimiento"} className="back-link">
+          <GoArrowLeft color='black' size={30} />
+          <h2>MANTENIMIENTO-Lista de Ordenes de Trabajo</h2>
+      </Link>
       </div>
+      <Link to={"/"}>
+          <CiSquarePlus color="#171A4A" size={40}/>
+      </Link>
         <table>
           <thead>
             <tr>

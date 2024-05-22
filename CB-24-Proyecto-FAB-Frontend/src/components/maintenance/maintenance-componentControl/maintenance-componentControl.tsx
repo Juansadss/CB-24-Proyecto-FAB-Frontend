@@ -1,6 +1,7 @@
 import './maintenance-componentControl.css'
-//import { FaUser } from "react-icons/fa";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { CiSquarePlus } from "react-icons/ci";
+import { Link } from "react-router-dom"
+import { GoArrowLeft } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
 //import FABImg from '/FAB.png'
 
@@ -8,9 +9,14 @@ function MaintenanceComponentControl() {
   return (
     <div className="maintenance-componentControl-container">
       <div className="maintenance-componentControl-header">
-      <IoMdArrowRoundBack/>
-        <h1>Control de Componentes</h1>
+        <Link to={"/menu-principal/mantenimiento"} className="back-link">
+            <GoArrowLeft color='black' size={30} />
+            <h2>MANTENIMIENTO-Control de Componentes</h2>
+        </Link>
       </div>
+      <Link to={"/"}>
+          <CiSquarePlus color="#171A4A" size={40}/>
+      </Link>
       <div className="maintenance-componentControl-table-container">
       <table>
           <thead>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { Link } from "react-router-dom"
+import { GoArrowLeft } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
 import './maintenance-warehouseInventory.css'
 
@@ -14,8 +15,12 @@ function MaintenanceWarehouseInventory() {
 
   return (
     <div className='maintenance-warehouseInventory-container'>
-      <IoMdArrowRoundBack></IoMdArrowRoundBack>
-      <h1>Inventario De Almacenes</h1>
+        <div className="maintenance-warehouseInventory-main">
+        <Link to={"/menu-principal/mantenimiento"} className="back-link">
+                    <GoArrowLeft color='black' size={30} />
+                    <h2>Inventario de Almacenes</h2>
+                </Link>
+        </div>
       <div className='maintenance-warehouseInventory-filterContainer'>
         <p>Aeronave: </p>
         <select

@@ -34,7 +34,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visual appearance */
 }
 
-.maintenance-componentControl-container h1 {
+.maintenance-componentControl-container h2 {
   text-align: center;
   color: #000;
 }
