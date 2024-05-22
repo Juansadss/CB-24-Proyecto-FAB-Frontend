@@ -1,0 +1,180 @@
+.title-text {
+    margin-top: 0px;
+  }
+body {
+    max-width: 1300px; /* Establece el ancho máximo deseado */
+   margin-left: 250px;
+}
+
+  .title-container h1 {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  .search-add-container {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  
+  .search-container {
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+  }
+  
+  .search-box2 {
+    width: 200px;
+    padding: 7px 30px 7px 7px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+    color: #333;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-right: 0px; /* Espacio entre el input y el botón */
+    margin-left: 450px;
+  }
+  
+  .search-button {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-left: 0px;
+  }
+  
+  .select-box {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 150px;
+    margin-left: 30px;
+  }
+  
+  .select-box:focus {
+    border-color: #007bff;
+  }
+  
+  .select-box option {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .personal-container {
+    height: 88vh;
+    width: 95%;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
+  
+  .personal-container table {
+    width: calc(110% - 250px);
+    margin: 50px auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #141c4b;
+    color: #ffffff;
+  }
+  
+  .personal-container th,
+  .personal-container td {
+    text-align: center;
+    padding: 8px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .personal-container th {
+    background-color: #14143e;
+  }
+  
+  .personal-container tr:hover {
+    background-color: #393343;
+  }
+  
+  .personal-container .edit-button {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  
+  .personal-container .delete-button {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  
+  .personal-container .goback-arrow {
+    color: #000000;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+  .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: #000000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 65px;
+    margin-right: 20px;
+  }
+  
+  .personal-container .add-button-icon {
+    margin-right: 0;
+    color: #000000;
+  }
+  
+  .personal-container {
+    position: relative;
+  }
+  
+  .personal-container img {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+  .round-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .round-button:hover {
+    background-color: #ccc;
+  }
+  .additional-button {
+    background-color: #2f2c79;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-left: 65px;
+  }
+  

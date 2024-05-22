@@ -1,0 +1,276 @@
+.title-text {
+  margin-top: 0px;
+}
+body {
+  max-width: 1200px; /* Establece el ancho máximo deseado */
+  margin-left: 450px;
+  height: 100vh;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container h1 {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.personal-container {
+  height: 100%;
+  width: 95%;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.personal-container .goback-arrow {
+  color: #000000;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin-left: 35px;
+  margin-top: 50px;
+}
+
+.input-container input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.dates {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+label {
+  font-weight: bold;
+}
+.label-inf {
+  margin-top: 40px;
+}
+
+
+.labels {
+  margin-right: 20px; 
+  font-weight: bold;
+  margin-left: 500px;
+  
+}
+.labels {
+  margin-right: 20px; 
+  font-weight: bold;
+  
+}
+.additional-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 2px
+}
+
+.input-domicilio{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 35px;
+  width: 1000px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.label-grade{
+  margin-left: 30px;
+}
+.label-date{
+  margin-left: 400px;
+}
+
+.additional-inputs div {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.additional-inputs label {
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+.additional-inputs select{
+  width: 450px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 30px
+}
+.additional-inputs input[type="date"] {
+  width: 470px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.label-ci{
+  margin-left: 335px;
+}
+.input-ci{
+  width: 530px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 16px;
+  margin-left: 45px;
+}
+
+.additional-button {
+  background-color: #2f2c79;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-left: 35px;
+  margin-top: 20px;
+  width: 130px;
+  margin-bottom: 20px;
+}
+.inputs-3{
+  width: 1010px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 35px;
+}
+.input-telefono,
+.input-celular,
+.input-ocupacion {
+  width: calc(33.33% - 20px); 
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.input-telefono,
+.input-celular {
+  width: calc(50% - 10px); 
+}
+.label-cel{
+  margin-left: 315px;
+}
+.label-ocup{
+  margin-left: 320px;
+}
+.label-rel{
+  margin-left: 214px;
+}
+.label-correo{
+  margin-left: 275px;
+}
+
+
+.input-grupo-sanguineo,
+.input-religion,
+.input-correo {
+  width: calc(33.33% - 20px); 
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.input-grupo-sanguineo:focus,
+.input-religion:focus,
+.input-correo:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.input-container2 {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.input-container2 input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.caso{
+  margin-left: 35px;
+}
+.input-container3 {
+  display: flex;
+  align-items: center;
+}
+.label-celular{
+  margin-left: 230px;
+}
+
+.input-container3 input[type="number"] {
+  width: 250px; /* Ajusta el ancho según sea necesario */
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px; /* Espacio entre los inputs */
+  margin-left: 35px;
+}
+.input-container4 {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  margin-left: 35px; 
+}
+
+.input-file-container {
+  display: flex;
+  align-items: center;
+  margin-left: 35px; /* Adjust margin as needed */
+ 
+}
+
+.input-archivo {
+  margin-right: 10px; /* Adjust margin as needed */
+  border: 1px solid black;
+  padding: 8px;
+}
+.input-container5 {
+  display: flex;
+  align-items: center;
+  
+}
+.input-date{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 50px;
+  width: 530px;
+}
+.input-select{
+  width: 400px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 35px
+}
