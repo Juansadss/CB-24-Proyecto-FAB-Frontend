@@ -5,16 +5,16 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/user/login/login.tsx';
 import MainMenu from './components/main-menu/main-menu.tsx';
 import MaintenanceMenu from './components/maintenance/maintenance-menu/maintenance-menu.tsx';
-import MaintenanceAircraft from './components/maintenance/maintenance-aircraft/maintenance-aircraft.tsx';
-import MaintenanceWorkOrderList from './components/maintenance/maintenance-list/maintenance-work-order-list.tsx';
+import MaintenanceAircraft from './components/maintenance/maintenance-aircraft/register-aircraft.tsx';
+import MaintenanceWorkOrderList from './components/maintenance/maintenance-list/maintenance-aircraft.tsx';
 import MaintenanceManuals from './components/maintenance/maintenance-manuals/maintenance-manuals.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path:  "/menu-principal",  element: <MainMenu /> },
   { path:  "/menu-principal/mantenimiento",  element: <MaintenanceMenu /> },
-  { path:  "/menu-principal/mantenimiento/mantenimiento-aeronaves",  element: <MaintenanceAircraft /> },
-  { path:  "/menu-principal/mantenimiento/lista-ordenes-trabajo",  element: <MaintenanceWorkOrderList /> },
+  { path:  "/menu-principal/mantenimiento/registro-aeronaves",  element: <MaintenanceAircraft /> },
+  { path:  "/menu-principal/mantenimiento/mantenimiento-aeronaves",  element: <MaintenanceWorkOrderList /> },
   { path:  "/menu-principal/mantenimiento/manuales",  element: <MaintenanceManuals /> },
 ]);
 

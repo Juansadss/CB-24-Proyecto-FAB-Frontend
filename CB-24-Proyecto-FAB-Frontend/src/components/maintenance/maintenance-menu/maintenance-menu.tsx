@@ -24,13 +24,13 @@ export default function MaintenanceMenu() {
                 <h1>Fuerza Aérea</h1>
                 <span>
                     <div className="menu-options main-options">
-                        <Link className="option" to={"/menu-principal/mantenimiento/lista-ordenes-trabajo"}>
+                        <Link className="option" to={""}>
                             <p>
                                 <GoGear fontSize={52} />
                                 <span>PROGRAMA DE<br />MANTENIMIENTO</span>
                             </p>
                         </Link>
-                        <Link className="option" to={"/"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/mantenimiento-aeronaves"}>
                             <p>
                                 <LiaHelicopterSolid fontSize={64} />
                                 <span>ESTADO DE<br />AERONAVES</span>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiMenuKebab } from "react-icons/ci";
-import './maintenance-work-order-list.css';
+import './maintenance-aircraft.css';
 
 export default function MaintenanceWorkOrderList() {
     return (

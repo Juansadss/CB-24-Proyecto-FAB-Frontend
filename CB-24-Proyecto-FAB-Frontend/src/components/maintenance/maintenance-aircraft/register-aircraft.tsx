@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { CiCirclePlus } from "react-icons/ci";
 import { GoArrowLeft } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
-import './maintenance-aircraft.css';
+import './register-aircraft.css';
 
 
 export default function MaintenanceAircraft() {
