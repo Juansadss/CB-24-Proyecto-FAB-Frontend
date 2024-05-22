@@ -1,172 +1,140 @@
+/* Optimized CSS */
 
 @media screen and (min-width: 880px) and (max-width: 1047px) {
-    .maintenance-aeronave-base .maintenance-aeronave-container-list {
-        width: 750px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .maintenance-aeronave-base .maintenance-aeronave-container-list {
-        max-width: 370px;
-    }
-    .maintenance-aeronave-content{
-      overflow-x: auto;
-    }
-    
-}
-.maintenance-aeronave-container {
-    width: 50%;
-    margin: 40px auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #f0f0f0;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
-    
-  }
   .maintenance-aeronave-container-list {
-    width: 50%;
-    margin: 40px auto;
-    border: 1px solid white;
-    padding: 20px;
-    background-color: white;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
-    
+      width: 750px;
   }
-  
-  .maintenance-aeronave-header {
-    text-align: left;
-    font-size: 8px;
-    margin-left: 100px;
-    
+}
+
+@media screen and (max-width: 768px) {
+  .maintenance-aeronave-container-list {
+      max-width: 370px;
   }
-  
   .maintenance-aeronave-content {
-    margin-right: 100px;
-    
+      overflow-x: auto;
   }
-  
-  .maintenance-info-section {
-    margin-bottom: 10px;
-    
-    
-  }
-  
-  
-  
-  .maintenance-register-button {
-    display: block;
-    margin: 20px auto; 
-    color: white;
-    background-color: #171A4A;
-    text-align: center;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    max-width: 200px;
-  }
-  
-  .maintenance-headers-table{
-    background-color:#2F2C79;
-    color: white;
-    
-  }
-  .maintenance-content-table{
-    background-color:white;
-    
-  }
-  .maintenance-input-date{
-    padding: 3px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width: 20%;
-    box-sizing: border-box; 
-    font-family: inherit;
-    font-size: 14px;
-  }
-  
-  .maintenance-select {
-    border-radius: 4px; 
-    padding: 2px;
-    width: 20%;
-    
-  }
-  .maintenance-input-text{
-    border-radius: 4px; 
-    padding: 2px;
-    width: 20%;
-  }
-  .maintenance-text-area {
-    border-radius: 4px; 
-    padding: 2px;
-    width: 85%;
-    
-  }
-  .maintenance-label-section{
-    margin-right: 30px; 
-    margin-left: 30px; 
-  }
-  .maintenance-label-section2{
-    margin-right: 30px; 
-    
-  }
-  .maintenance-table-style {
-    width: 100%;
 }
-.maintenance-table-style th,
+
+.maintenance-aeronave-base {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #171A4A;
+  color: white;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.maintenance-aeronave-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This ensures the footer stays at the bottom */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.maintenance-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin-top: auto; /* Ensures the footer is pushed to the bottom */
+}
+
+.maintenance-footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.maintenance-footer-left button {
+  margin-left: 10px; /* Espacio entre USER76234 y el botón */
+}
+
+.maintenance-footer img {
+  margin-left: auto; /* Mueve la imagen hacia la derecha */
+}
+
+.maintenance-aeronave-header {
+  text-align: left;
+  font-size: 8px;
+  margin-left: 100px;
+}
+
+.maintenance-aeronave-content {
+  flex: 1;
+  margin-right: 100px;
+}
+
+.maintenance-register-button {
+  display: block;
+  margin: 20px auto;
+  color: white;
+  background-color: #171A4A;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.maintenance-headers-table {
+  background-color: #171A4A;
+  color: white;
+}
+
+.maintenance-content-table {
+  background-color: #171A4A;
+  color: white;
+}
+
+.maintenance-table-style {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.maintenance-table-style th{
+  width: 16.67%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid white;
+  font-weight: 800; 
+}
 .maintenance-table-style td {
-    width: 16.67%; 
-    padding-bottom: 30px;
-    text-align: center;
+  width: 16.67%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid white;
+  font-weight: 600; 
 }
 
+.maintenance-button-style {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Ensure icons are visible */
+}
 
-  .maintenance-label-header{
-    font-size: 15px;
-  }
+.back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
   
+}
+.back-link h1 {
+  margin-left: 210px; /* Ajusta el margen izquierdo según sea necesario */
+}
 
-  .maintenance-aeronave-main {
-    width: 100%;
-    min-height: 95vh; 
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: white;
-    color: black;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    border-radius: 10px;
-  }
-  .maintenance-aeronave-base {
-    width: 100%;
-    min-height: 95vh;
-    padding: 20px;
-    box-sizing: border-box; 
-    background-color: #171A4A;
-    color: white;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  }
-  
-  
-  
-  .maintenance-footer-image {
-    
-    margin-left: 1000px;
-    
-  }
-
-  .maintenance-aeronave-header-principal {
-    text-align: center;
-    font-size: 12px;
-    margin-left: 100px;
-    
-  }
-  .maintenance-footer{
-    margin-top: 220px;
-    text-align: center;
-  }
-  
-
-
-  
- 
-  
+.back-link h1 {
+  margin-left: 10px; /* Space between icon and text */
+  font-size: 24px; /* Text size */
+}
