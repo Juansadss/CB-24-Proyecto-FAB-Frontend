@@ -8,8 +8,7 @@ import MaintenanceMenu from './components/maintenance/maintenance-menu/maintenan
 import MaintenanceOrdersList from './components/maintenance/maintenance-ordersList/maintenance-ordersList.tsx';
 import MaintenanceComponentControl from './components/maintenance/maintenance-componentControl/maintenance-componentControl.tsx';
 import MaintenanceWarehouseInventory from './components/maintenance/maintenance-warehouseInventory/maintenance-warehouseInventory.tsx';
-import MaintenanceAircraft from './components/maintenance/maintenance-aircraft/register-aircraft.tsx';
-import MaintenanceWorkOrderList from './components/maintenance/maintenance-list/maintenance-aircraft.tsx';
+import MaintenanceNewWorkOrder from './components/maintenance/maintenance-new-work-order/maintenance-new-work-order.tsx';
 import MaintenanceManuals from './components/maintenance/maintenance-manuals/maintenance-manuals.tsx';
 import MaintenanceAlerts from './components/maintenance/maintenance-alerts/maintenance-alerts.tsx';
 import MaintenanceAlertsHistory from './components/maintenance/maintenance-alerts-history/maintenance-alerts-history.tsx';
@@ -21,8 +20,7 @@ const router = createBrowserRouter([
   { path:  "/menu-principal/mantenimiento/ordenes-trabajo",  element: <MaintenanceOrdersList /> },
   { path:  "/menu-principal/mantenimiento/control-componentes",  element: <MaintenanceComponentControl /> },
   { path:  "/menu-principal/mantenimiento/inventario-almacenes",  element: <MaintenanceWarehouseInventory /> },
-  { path:  "/menu-principal/mantenimiento/registro-aeronaves",  element: <MaintenanceAircraft /> },
-  { path:  "/menu-principal/mantenimiento/mantenimiento-aeronaves",  element: <MaintenanceWorkOrderList /> },
+  { path:  "/menu-principal/mantenimiento/ordenes-trabajo/programar-orden-trabajo",  element: <MaintenanceNewWorkOrder /> },
   { path:  "/menu-principal/mantenimiento/manuales",  element: <MaintenanceManuals /> },
   { path: "/menu-principal/mantenimiento/alertas", element: <MaintenanceAlerts /> },
   { path: "/menu-principal/mantenimiento/alertas/historial-alertas", element: <MaintenanceAlertsHistory /> },

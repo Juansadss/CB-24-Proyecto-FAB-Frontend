@@ -14,7 +14,7 @@ function MaintenanceOrdersList() {
           <h2>MANTENIMIENTO-Lista de Ordenes de Trabajo</h2>
       </Link>
       </div>
-      <Link to={"/"}>
+      <Link to={"/menu-principal/mantenimiento/ordenes-trabajo/programar-orden-trabajo"}>
           <CiSquarePlus color="#171A4A" size={40}/>
       </Link>
         <table>
