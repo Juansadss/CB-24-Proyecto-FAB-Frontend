@@ -12,6 +12,7 @@ import MaintenanceNewWorkOrder from './components/maintenance/maintenance-new-wo
 import MaintenanceManuals from './components/maintenance/maintenance-manuals/maintenance-manuals.tsx';
 import MaintenanceAlerts from './components/maintenance/maintenance-alerts/maintenance-alerts.tsx';
 import MaintenanceAlertsHistory from './components/maintenance/maintenance-alerts-history/maintenance-alerts-history.tsx';
+import MaintenanceAircraft from './components/maintenance/maintenance-aircraft/maintenance-aircraft.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   { path:  "/menu-principal/mantenimiento/manuales",  element: <MaintenanceManuals /> },
   { path: "/menu-principal/mantenimiento/alertas", element: <MaintenanceAlerts /> },
   { path: "/menu-principal/mantenimiento/alertas/historial-alertas", element: <MaintenanceAlertsHistory /> },
+  { path: "/menu-principal/mantenimiento/aeronaves", element: <MaintenanceAircraft /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

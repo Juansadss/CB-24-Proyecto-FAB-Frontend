@@ -30,7 +30,7 @@ export default function MaintenanceMenu() {
                                 <span>PROGRAMA DE<br />MANTENIMIENTO</span>
                             </p>
                         </Link>
-                        <Link className="option" to={"/menu-principal/mantenimiento/mantenimiento-aeronaves"}>
+                        <Link className="option" to={"/menu-principal/mantenimiento/aeronaves"}>
                             <p>
                                 <LiaHelicopterSolid fontSize={64} />
                                 <span>ESTADO DE<br />AERONAVES</span>
