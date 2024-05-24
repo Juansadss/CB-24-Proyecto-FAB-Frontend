@@ -1,140 +1,111 @@
-
-@media screen and (min-width: 768px) and (max-width: 1047px) {
-    .aeronave-base .aeronave-container {
-        width: 750px;
-    }
+.maintenance-aircraft-container {
+  width: 90%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0 auto; /* Centrar horizontalmente */
+  border-radius: 8pt;
+  padding: 30px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (max-width: 768px) {
-    .aeronave-base .aeronave-container {
-        width: 370px;
-    }
+.maintenance-aircraft-container h3{
+  font-size: 17px;
 }
-.maintenance-aeronave-container {
-    width: 50%;
-    margin: 40px auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #f0f0f0;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
-    
-  }
-  
-  .maintenance-aeronave-header {
-    text-align: left;
-    font-size: 8px;
-    margin-left: 100px;
-    
-  }
-  
-  .maintenance-aeronave-content {
-    margin-top: 20px;
-    margin-left: 100px;
-  }
-  
-  .maintenance-info-section {
-    margin-bottom: 10px;
-    
-    
-  }
-  
-  
-  
-  .maintenance-register-button {
-    display: block;
-    margin: 20px auto; 
-    color: white;
-    background-color: #171A4A;
-    text-align: center;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    max-width: 200px;
-  }
-  
-  
-  .maintenance-input-date{
-    padding: 3px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width: 20%;
-    box-sizing: border-box; 
-    font-family: inherit;
-    font-size: 14px;
-  }
-  
-  .maintenance-select {
-    border-radius: 4px; 
-    padding: 2px;
-    width: 20%;
-    
-  }
-  .maintenance-input-text{
-    border-radius: 4px; 
-    padding: 2px;
-    width: 20%;
-  }
-  .maintenance-text-area {
-    border-radius: 4px; 
-    padding: 2px;
-    width: 85%;
-    
-  }
-  .maintenance-label-section{
-    margin-right: 30px; 
-    margin-left: 30px; 
-  }
-  .maintenance-label-section2{
-    margin-right: 30px; 
-    
-  }
-  .maintenance-table-style{
-    border-radius: 4px; 
-    padding: 6px;
-    width: 28%;
-    background-color:#2F2C79;
-    color: white;
-  }
-  .maintenance-label-header{
-    font-size: 15px;
-  }
-  
+.maintenance-aircraft-container table{
+  color: white;
+  background-color: #2F2C79;
+  margin-left: 35px;
+}
 
-  .maintenance-aeronave-main {
-    width: 100%;
-    min-height: 95vh; 
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: white;
-    color: black;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    border-radius: 10px;
-  }
-  .maintenance-aeronave-base {
-    width: 100%;
-    min-height: 95vh;
-    padding: 20px;
-    box-sizing: border-box; 
-    background-color: #171A4A;
-    color: white;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  }
-  
-  
-  
-  .maintenance-footer-image {
-    
-    margin-left: 1000px;
-    
-  }
+.maintenance-aircraft-header {
+  text-align: center;
+}
 
-  .maintenance-aeronave-header-principal {
-    text-align: center;
-    font-size: 8px;
-    margin-left: 100px;
-    
-  }
-  
-  
- 
-  
+.maintenance-aircraft-content {
+  background-color: #eeee;
+  margin: 0 auto; 
+  padding: 20px 40px; 
+  border-radius: 8px; 
+  width: 60%; 
+}
+
+.maintenance-aircraft-info-section {
+  margin-bottom: 10px;
+}
+
+
+.maintenance-register-button {
+  display: block;
+  margin: 20px auto;
+  color: white;
+  background-color: #171a4a;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.maintenance-input-date {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 38%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.maintenance-select {
+  border-radius: 4px;
+  padding: 2px;
+  width: 20%;
+}
+
+.maintenance-input-text {
+  border-radius: 4px;
+  padding: 2px;
+  width: 20%;
+}
+
+.maintenance-text-area {
+  border-radius: 4px;
+  padding: 2px;
+  width: 85%;
+}
+
+.maintenance-label-section {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.maintenance-label-section2 {
+  margin-right: 30px;
+}
+
+
+.maintenance-label-header {
+  font-size: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-top: 80px;
+}
+
+footer span {
+  display: flex;
+  align-items: center;
+}
+
+.maintenance-aircraft-info-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre elementos */
+}
+
+
