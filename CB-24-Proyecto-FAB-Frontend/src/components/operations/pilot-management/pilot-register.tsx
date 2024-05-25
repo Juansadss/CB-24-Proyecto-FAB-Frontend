@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import "./pilot-register.css";
+import { CiMenuKebab } from "react-icons/ci";
 
 export default function RegisterPilotForm() {
   return <>
@@ -79,9 +80,15 @@ export default function RegisterPilotForm() {
                         
                     </div>
                 </div>
-        <div className="register-pilot-logo">
-            <img width={190} height={115} src="/FAB.png"></img>
-        </div>
+                <div className="pilot-user-info-container">
+                    <span className="username">USER76234</span>
+                    <button className="forma">
+                        <CiMenuKebab fontSize={24} />
+                    </button>
+                    <div className="register-pilot-logo">
+                        <img width={200} height={150}  src="/FAB.png" alt="FAB" />
+                </div>
+            </div>
     </div>
   </>
 }

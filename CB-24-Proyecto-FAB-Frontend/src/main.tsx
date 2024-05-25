@@ -9,6 +9,7 @@ import AirshipManagement from './components/operations/airship-management/airshi
 import OperationsMenu from './components/operations/operations-menu/operations-menu.tsx';
 import AirshipRegisterManagement from './components/operations/airship-register-management/airship-register-management.tsx';
 import RegisterPilotForm from './components/operations/pilot-management/pilot-register.tsx';
+import EditPilotForm from './components/operations/pilot-management/pilot-edit.tsx';
 import McList from './components/operations/medical-check/mc_list.tsx';
 import McRegister from './components/operations/medical-check/mc_register.tsx';
 import McEdit from './components/operations/medical-check/mc_edit.tsx';
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   { path:  "/menu-principal/menu-operaciones/mc-lista",  element: <McList /> },
   { path:  "/menu-principal/menu-operaciones/mc-registro",  element: <McRegister /> },
   { path:  "/menu-principal/menu-operaciones/mc-editar",  element: <McEdit /> },
+  { path:  "/menu-principal/menu-operaciones/editar-piloto",  element: <EditPilotForm /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
