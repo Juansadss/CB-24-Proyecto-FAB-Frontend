@@ -1,30 +1,30 @@
-.inventory-container {
+.inventory-supplies- container {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff; 
   }
   
-  .inventory-title {
+  .inventory-supplies-title {
     color: #000000;
     font-size: 24px;
     text-align: left;
     margin-bottom: 20px;
   }
   
-  .inventory-controls-container {
+  .inventory-supplies-controls-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
   
-  .inventory-tab-buttons {
+  .inventory-supplies-tab-buttons {
     display: flex;
     border-radius: 5px;
     overflow: hidden;
   }
   
-  .inventory-category-button {
+  .inventory-supplies-category-buttons {
     background-color: #EEEEEE;
     color: rgb(0, 0, 0);
     border: none;
@@ -34,12 +34,12 @@
   }
   
   
-  .inventory-category-button.active {
+  .inventory-supplies-category-buttons.active {
     background-color: #2F2C79;
     color: rgb(255, 255, 255);
   }
   
-  .inventory-type-select {
+  .inventory-supplies-type-select {
     width: 200px; 
     padding: 10px;
     border: 1px solid #000000;
@@ -49,7 +49,7 @@
     margin-left: auto;
   }
   
-  .inventory-table {
+  .inventory-supplies-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -59,20 +59,20 @@
     border-color: #171A4A;
   }
   
-  .inventory-table th, .inventory-table td {
+  .inventory-supplies-table th, .inventory-supplies-table td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ffffff;
   }
   
 
-  .inventory-button-group {
+  .inventory-supplies-button-group {
     display: flex;
     justify-content: flex-start; 
     margin-top: 20px;
   }
   
-  .inventory-action-button {
+  .inventory-supplies-action-button {
     background-color: #2F2C79;
     color: white;
     border: none;
