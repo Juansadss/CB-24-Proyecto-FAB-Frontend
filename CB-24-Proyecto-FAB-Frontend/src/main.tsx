@@ -11,6 +11,7 @@ import OperationsCreate from './components/sar/create_operating/create_operation
 import SanidadTratamiento from './components/sar/sanidad_tratamiento/sanidad_tratamiento.tsx';
 import InventoryControl from './components/sar/inventory-control/inventory-control.tsx';
 import InventoryControlSupplies from './components/sar/inventory-control-supplies/inventory-control-supplies.tsx'
+import InventoryControlList from './components/sar/inventory-control-list/inventory-control-list.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   { path:  "/sar/sanidad-tratamiento",  element: <SanidadTratamiento/> },
   { path:  "/sar/inventory-control",  element: <InventoryControl/> },
   { path:  "/sar/inventory-control-supplies",  element: <InventoryControlSupplies/> },
+  { path:  "/sar/inventory-control-list",  element: <InventoryControlList/> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
