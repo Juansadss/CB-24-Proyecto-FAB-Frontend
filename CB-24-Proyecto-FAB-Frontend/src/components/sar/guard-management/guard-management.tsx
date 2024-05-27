@@ -38,17 +38,17 @@ export default function GuardManagement() {
         <h2 className="guard-title">GUARDIA</h2>
         <div className="guard-header">
           <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
-          <form action="" className="search-bar">
+          <form action="" className="sar-search-bar">
             <DropdownInputSearch options={options} />
-            <div className="search-bar-item">
-              <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
-              <button className="search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+            <div className="sar-search-bar-item">
+              <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+              <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
               <FaCalendarAlt />
               </button>
             </div>
-            <div className="search-bar-item">
-              <input type="text" placeholder="Buscar..." className="search-input" />
-              <button className="search-button">
+            <div className="sar-search-bar-item">
+              <input type="text" placeholder="Buscar..." className="sar-search-input" />
+              <button className="sar-search-button">
                 <FaMagnifyingGlass />
               </button>
             </div>

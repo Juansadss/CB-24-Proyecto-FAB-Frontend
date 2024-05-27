@@ -45,11 +45,11 @@ function DropdownInputSearch({ options, onOptionSelect }:DropdownInputSearchProp
 
   return (
     <div className="dropdown-Input-search" ref={selectRef}>
-        <div className='search-bar-item'>
-            <div className="selected-option search-input" onClick={() => setIsOpen(!isOpen)}>
+        <div className='sar-search-bar-item'>
+            <div className="selected-option sar-search-input" onClick={() => setIsOpen(!isOpen)}>
               {selectedOption ? selectedOption.label : "Seleccione una opción"}
             </div>
-            <button className="search-button" onClick={handleIconClick}>
+            <button className="sar-search-button" onClick={handleIconClick}>
               <FaChevronDown />
             </button>
         </div>      
