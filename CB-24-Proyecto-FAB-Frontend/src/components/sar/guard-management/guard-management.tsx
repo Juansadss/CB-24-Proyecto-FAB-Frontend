@@ -7,6 +7,9 @@ import { useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search";
 import '../search-bar-styles.css'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { FaCalendarAlt } from "react-icons/fa";
 
 const options = [
   { value: 'opcion1', label: 'Opción 1' },
@@ -16,11 +19,18 @@ const options = [
 
 export default function GuardManagement() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
 
   const data = [
     { turno: 'Mañana', ci: '123456', comnre: 'Juan Perez', estado: 'Activo' },
     { turno: 'Tarde', ci: '789012', comnre: 'Maria Lopez', estado: 'Inactivo' },
   ];
+
+  const handleDateChange = (date: Date | null) => {
+    setStartDate(date);
+    console.log('Fecha seleccionada:', date);
+  };
 
   return (
     <LayoutSar>
@@ -31,9 +41,9 @@ export default function GuardManagement() {
           <form action="" className="search-bar">
             <DropdownInputSearch options={options} />
             <div className="search-bar-item">
-              <input type="date"  placeholder="Buscar..." className="search-input" />
-              <button className="search-button" >
-                <FaMagnifyingGlass />
+              <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+              <button className="search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+              <FaCalendarAlt />
               </button>
             </div>
             <div className="search-bar-item">
