@@ -17,8 +17,8 @@ export default function OperationsMenu() {
             <main>
                 <img src="/FAB.png" width={400} height={250} />
                 <h1>Fuerza Aérea</h1>
-                <span>                    
-                    <div className="menu-options main-options">
+                <span className="box-oparations1">                    
+                    <div className="container-operations1 menu-options main-options">
                         <Link className="option" to={"/menu-principal/menu-operaciones/gestion-aereonave"}>
                             <p>
                                 <FaPlane fontSize={52} />

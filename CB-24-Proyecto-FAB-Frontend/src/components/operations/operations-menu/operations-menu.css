@@ -7,6 +7,14 @@
     color: #000;
 }
 
+.box-operations1 {
+    transition: opacity 0.6s ease;
+}
+
+.container-operations1:hover > :not(:hover){
+    opacity: 0.4;
+}
+
 .operations-menu-container header {
     display: flex;
     width: 100%;

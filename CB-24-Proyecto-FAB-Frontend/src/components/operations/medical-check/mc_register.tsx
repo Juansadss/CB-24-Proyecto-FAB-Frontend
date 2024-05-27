@@ -9,8 +9,8 @@ export default function McRegister (){
             <div className='mc-container'>
                 <div className="mc-header-action">
                     <a href="">
-                        <Link to={'/menu-principal/menu-operaciones/mc-lista'}><IoIosArrowBack size={20}/></Link>
-                        <span>CHEQUEO MEDICO</span>
+                        <Link className="mc-black" to={'/menu-principal/menu-operaciones/mc-lista'}><IoIosArrowBack size={20}/></Link>
+                        <span>CHEQUEO MÉDICO</span>
                     </a>
                     <p>
                         <i className="material-icons"><img width={10} src="/chevron-right.png" alt=">" /></i>
@@ -23,7 +23,9 @@ export default function McRegister (){
                         <div className="mc-group">
                             <div className="mc-select-field">
                                 <select>
-                                    <option value="">1</option>
+                                    <option value="">Eduardo Perez</option>
+                                    <option value="">Carlos Vargas</option>
+                                    <option value="">Ronal Gonzales</option>
                                 </select>
                                 <label>Personal</label>
                             </div>
@@ -33,7 +35,7 @@ export default function McRegister (){
                             </div>
                         </div>
                         
-                        <h3 className="mc-title">CATEGORIA</h3>
+                        <h3 className="mc-title">CATEGORÍA</h3>
                         <div className="mc-group">
                             <div className="mc-input-field">
                                 <input type="text"/>
@@ -47,11 +49,11 @@ export default function McRegister (){
                         <div className="mc-group">
                             <div className="mc-input-field">
                                 <input type="date"/>
-                                <label>Proximo Chequeo</label>
+                                <label>Próximo Chequeo</label>
                             </div>
                             <div className="mc-text-field">
                                 <textarea rows={6} cols={17}></textarea>
-                                <label>Grado</label>
+                                <label>Observaciones</label>
                             </div>
                         </div>
                         <button className="mc-button" type="submit">Registrar Chequeo</button>

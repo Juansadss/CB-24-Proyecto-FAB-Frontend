@@ -1,26 +1,47 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { CiMenuKebab } from "react-icons/ci";
+import ConfirmationModal from "../pilot-management/pilot-confirmation-delete";
 import './mc_list.css'
 
 export default function McList (){
+    const [showModal, setShowModal] = useState(false);
+    const [mcDelete, setMcToDelete] = useState<number | null>(null);
+
+    const handleDeleteClick = (id: number) => {
+        setMcToDelete(id);
+        setShowModal(true);
+      };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setMcToDelete(null);
+      };
+    
+      const handleConfirmDelete = () => {
+        // Add your delete logic here
+        console.log(`Deleted pilot with id: ${mcDelete}`);
+        handleCloseModal();
+      };
+
     return <>
         <div className="container-list">
             <div className='mc-container-list'>
                 <div className="mc-header-action">
                     <a href="">
-                        <Link to={'/menu-principal/menu-operaciones'}><IoIosArrowBack size={30}/></Link>
-                        <span>CHEQUEO MEDICO</span>
+                        <Link className="mc-black" to={'/menu-principal/menu-operaciones'}><IoIosArrowBack size={30}/></Link>
+                        <span>CHEQUEO MÉDICO</span>
                     </a>
                 </div>
             
                 <div className="mc-card-1-list">
                     <form action="">
                         <button type="submit" className="mc-btn-icon-list">
-                            <Link to={'/menu-principal/menu-operaciones/mc-registro'}><FaPlus/></Link>
+                            <Link className="mc-black" to={'/menu-principal/menu-operaciones/mc-registro'}><FaPlus/></Link>
                         </button>
                     </form>
                     <div className="mc-group-list">
@@ -37,12 +58,12 @@ export default function McList (){
                             <thead className='mc-thead-list'>
                                 <tr>
                                     <th>GRADO</th>
-                                    <th>APELLIDOS Y NOMBRES</th>
+                                    <th>NOMBRES Y APELLIDOS</th>
                                     <th>EC-145</th>
                                     <th>AS350 B3</th>
-                                    <th>PROXIMO CHEQUEO</th>
+                                    <th>PRÓXIMO CHEQUEO</th>
                                     <th>OBSERVACIONES</th>
-                                    <th></th>
+                                    <th>Editar | Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,12 +75,12 @@ export default function McList (){
                                     <td>10-10-23</td>
                                     <td></td>
                                     <td>
-                                        <button type="submit">
-                                            <Link to={''}><MdDelete/></Link>
-                                        </button>
-                                        <button type="submit">
-                                            <Link to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
-                                        </button>
+                                        <p>
+                                            <Link className="mc-edit" to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
+                                        </p>
+                                        <p>
+                                            <button className="mc-delete" onClick={() => handleDeleteClick(1)}><MdDelete /></button>
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -70,12 +91,12 @@ export default function McList (){
                                     <td>05-10-23</td>
                                     <td></td>
                                     <td>
-                                        <button type="submit">
-                                            <Link to={''}><MdDelete/></Link>
-                                        </button>
-                                        <button type="submit">
-                                            <Link to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
-                                        </button>
+                                        <p>
+                                            <Link className="mc-edit" to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
+                                        </p>
+                                        <p>
+                                            <button className="mc-delete" onClick={() => handleDeleteClick(1)}><MdDelete /></button>
+                                        </p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -91,5 +112,12 @@ export default function McList (){
                 </div>
             </div>
         </div>
+        {/* Confirmation Modal */}
+        <ConfirmationModal
+        show={showModal}
+        onClose={handleCloseModal}
+        onConfirm={handleConfirmDelete}
+        message="¿Está seguro de que desea eliminar este Chequeo médico?"
+      />
     </>
 }
