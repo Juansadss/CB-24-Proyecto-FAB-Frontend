@@ -1,0 +1,129 @@
+.inventoryReturn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.inventoryReturn-form {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 10px;
+    width: 100%;
+    max-width: 1000px;
+    color: #000000;
+}
+
+.inventoryReturn-form h2, .inventoryReturn-form h3 {
+    color: #000000;
+}
+
+.inventoryReturn-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.inventoryReturn-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.inventoryReturn-form .form-group-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inventoryReturn-form .form-group-row .form-group {
+    flex: 1;
+}
+
+.inventoryReturn-form label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.inventoryReturn-form input[type="text"],
+.inventoryReturn-form select {
+    padding: 0.5rem;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.inventoryReturn-form button {
+    padding: 0.7rem;
+    background-color: #24365C;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100px;
+}
+
+.inventoryReturn-form button:hover {
+    background-color: #1A2C48;
+}
+
+.inventoryReturn-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1rem;
+    color: #000000;
+}
+
+.inventoryReturn-table th,
+.inventoryReturn-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.inventoryReturn-table th {
+    background-color: #24365C;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.inventoryReturn-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.inventoryReturn_center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.inventoryReturn_icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.inventoryReturn_icon-button:hover {
+    color: #ccc;
+}
+
+.inventoryReturn-form .form-buttons {
+    margin-top: 1rem; /* Espacio entre la tabla y el botón registrar */
+    display: flex;
+    justify-content: center;
+}

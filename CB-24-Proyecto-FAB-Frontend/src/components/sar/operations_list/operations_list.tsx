@@ -1,83 +1,83 @@
+import React, { useState } from 'react';
+import './operations_list.css';
+import LayoutSar from '../layout-sar/layout-sar';
+import { FaAngleLeft } from 'react-icons/fa6';
 
-import { useNavigate } from "react-router-dom";
-import "./operations_list.css";
-import LayoutSar from "../layout-sar/layout-sar";
+const OperationsList = () => {
+    const [formData, setFormData] = useState({
+        institucion: '',
+        fechaInicio: '',
+        fechaFin: ''
+    });
 
-export default function OperationsList() {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
-    const goTo = useNavigate();
-
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        goTo("/menu");
-    }
+        console.log(formData);
+    };
 
     return (
         <LayoutSar>
-
-            <div className="operaciones_header">
-                <button className="operations_btnReturn">&lt;</button>
-                <h2 className="operaciones_header_h2">LISTA DE OPERACIONES</h2>
-            </div>
-
             <div className="operations_list-container">
 
-                <div className="operations_listtable-card">
-
-
-                    <form onSubmit={handleSubmit}>
-                        <div className="operations_listrow1">
-                            <button className="operations_listbtnAgregar">+</button>
-                            <div className="operations_listrow2">
-                                <input type="text" className="operations_listform-control" placeholder="Tipo Operativo" />
-                                <button type="submit" className="operations_listbtnBuscar" >Buscar</button>
-                                <input type="text" className="operations_listform-control" placeholder="Buscar" />
-                                <button type="submit" className="operations_listbtnBuscar" >Buscar</button>
+                <h3> <FaAngleLeft /> LISTA DE OPERACIONES </h3>
+                <div className="operations_list-content">
+                    <form className="operations_list-form" onSubmit={handleSubmit}>
+                        <div className="form-group-row">
+                            <button type="button" >+</button>
+                            <div className="form-group">
+                                <label><b>Tipo Operaciones</b></label>
+                                <select name="institucion" onChange={handleChange} value={formData.institucion}>
+                                    <option value="">Tipo operativo</option>
+                                    <option value="Rescate">Rescate</option>
+                                    <option value="Medica">Seguridad médica</option>
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <label><b>Buscar</b></label>
+                                <input type="text" name="cantidad" placeholder='Buscar...' onChange={handleChange} />
                             </div>
 
                         </div>
-
-                        <div className="operations_listtable-container">
-                            <table className="operations_list_table"  >
-                                <thead>
-                                    <tr>
-                                        <th className="operations_list_th"  >Tipo de Operativo</th>
-                                        <th className="operations_list_th"  >Fecha</th>
-                                        <th className="operations_list_th"  >Lugar</th>
-                                        <th className="operations_list_th"  >Estado</th>
-                                        <th className="operations_list_th"  >Accion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="operations_list_td">Operativo 1</td>
-                                        <td className="operations_list_td">2024-04-27</td>
-                                        <td className="operations_list_td">Ciudad A</td>
-                                        <td className="operations_list_td">Pendiente</td>
-                                        <button>...</button>
-                                    </tr>
-                                    <tr>
-                                        <td className="operations_list_td">Operativo 2</td>
-                                        <td className="operations_list_td">2024-04-28</td>
-                                        <td className="operations_list_td">Ciudad B</td>
-                                        <td className="operations_list_td">En curso</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="operations_list_td">Operativo 3</td>
-                                        <td className="operations_list_td">2024-04-29</td>
-                                        <td className="operations_list_td">Ciudad C</td>
-                                        <td className="operations_list_td">Completado</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
                     </form>
+                    <table className="operations_list-table">
+                        <thead>
+                            <tr>
+                                <th>TIPO OPERATIVO</th>
+                                <th>FECHA</th>
+                                <th>LUGAR</th>
+                                <th>ESTADO</th>
+                                <th>ACCIÓN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rescate</td>
+                                <td>20-06-24</td>
+                                <td>Tiquipaya</td>
+                                <td>En proceso</td>
+                                <td><button className="operations_list-icon-button">👁</button></td>
+                            </tr>
+                            <tr>
+                                <td>Seguridad Médica</td>
+                                <td>12-09-24</td>
+                                <td>Tiquipaya</td>
+                                <td>Finalizado</td>
+                                <td><button className="operations_list-icon-button">👁</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </LayoutSar>
+    );
+};
 
-    )
-
-
-}
+export default OperationsList;

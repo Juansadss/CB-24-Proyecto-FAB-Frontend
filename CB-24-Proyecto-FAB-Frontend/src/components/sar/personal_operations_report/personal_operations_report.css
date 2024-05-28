@@ -1,4 +1,4 @@
-.operations_list-container {
+.personalOperationsReport-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
@@ -8,14 +8,14 @@
     width: 100%;
 }
 
-.operations_list-container h3 {
+.personalOperationsReport-container h3 {
     color: #000000;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 100%;
 }
 
-.operations_list-content {
+.personalOperationsReport-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,25 +23,26 @@
     margin-top: 20px;
 }
 
-.operations_list-form {
+.personalOperationsReport-form {
     width: 100%;
     max-width: 800px;
     margin-bottom: 20px;
 }
 
-.operations_list-form .form-group-row {
+.personalOperationsReport-form .form-group-row {
     display: flex;
     gap: 1rem;
     width: 100%;
     align-items: center;
 }
 
-.operations_list-form .form-group {
+.personalOperationsReport-form .form-group {
     flex: 1;
 }
 
-.operations_list-form input[type="text"],
-.operations_list-form select {
+
+.personalOperationsReport-form input[type="text"],
+.personalOperationsReport-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
     border-radius: 5px;
@@ -51,7 +52,7 @@
     height: 50px;
 }
 
-.operations_list-form button {
+.personalOperationsReport-form button {
     margin: 0;
     padding: 0;
     border: none;
@@ -68,11 +69,11 @@
     
 }
 
-.operations_list-form button:hover {
+.personalOperationsReport-form button:hover {
     background-color: #1A2C48;
 }
 
-.operations_list-table {
+.personalOperationsReport-table {
     width: 100%;
     max-width: 800px;
     border-collapse: collapse;
@@ -81,31 +82,31 @@
     overflow: hidden;
 }
 
-.operations_list-table th,
-.operations_list-table td {
+.personalOperationsReport-table th,
+.personalOperationsReport-table td {
     padding: 0.75rem;
     text-align: left;
     color: #fff;
 }
 
-.operations_list-table th {
+.personalOperationsReport-table th {
     background-color: #171A4A;
     font-weight: bold;
 }
 
-.operations_list-table tbody tr {
+.personalOperationsReport-table tbody tr {
     background-color: #24365C;
 }
 
-.operations_list-table tbody tr:nth-child(even) {
+.personalOperationsReport-table tbody tr:nth-child(even) {
     background-color: #1A2C48;
 }
 
-.operations_list-table tbody tr:hover {
+.personalOperationsReport-table tbody tr:hover {
     background-color: #2C4878;
 }
 
-.operations_list-icon-button {
+.personalOperationsReport-icon-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -115,7 +116,7 @@
     font-size: 1.5rem;
 }
 
-.operations_list-icon-button:hover {
+.personalOperationsReport-icon-button:hover {
     color: #ccc;
 }
 
