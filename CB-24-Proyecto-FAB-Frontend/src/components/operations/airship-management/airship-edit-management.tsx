@@ -1,9 +1,31 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
 import './airship-edit-management.css';
 
 export default function AirshipEditManagement() {
+    const [formData, setFormDat] = useState({
+        matricula: "FAB-754", 
+        aereonave: "AS 350",
+        fabricante: "Nasa",
+        peso: "1361.0",
+        serial: "4547", 
+        versation: "B3",
+        manufactureDate: "1990-01-01",
+        combustible:"120.026   LTS",
+        estado: "Whisky",
+        origin: "Australia",
+       
+      });
+
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormDat({
+          ...formData,
+          [name]: value,
+        });
+      };
     return (
         <div className="airship-edit-management-container">
             {/* Botón de regreso */}
@@ -18,41 +40,66 @@ export default function AirshipEditManagement() {
                     
                     <div className="aeronave-content">
                         <div className="info-section">
-                            <div className="label-input-container">
-                                <label className="label-section"><strong>Tipo</strong></label>
-                                <input type="text" />
+                        <div className="label-input-container">
+                                <label className="label-section"><strong>Matrícula:</strong></label>
+                                <input type="text" name="matricula" value={formData.matricula} onChange={handleChange}/>
                             </div>
                             
                             <div className="label-input-container">
-                                <label className="label-section"><strong>Matrícula</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Modelo:</strong></label>
+                                <input type="text" name="aereonave" value={formData.aereonave} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Tipo AereoNave</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Fabricante:</strong></label>
+                                <input type="text" name="fabricante" value={formData.fabricante} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Peso Definido</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Peso Definido(Kg):</strong></label>
+                                <input type="text" name="peso" value={formData.peso} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Serial</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Serial:</strong></label>
+                                <input type="text" name="serial" value={formData.serial} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Version</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Versión:</strong></label>
+                                <input type="text" name="versation" value={formData.versation} onChange={handleChange}/>
+                            </div>
+                            <div className="register-airshit-label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Fecha de Fabricación:</strong></label>
+                                <input type="date" name="manufactureDate" value={formData.manufactureDate} onChange={handleChange}/>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Capacidad De Combustible:</strong></label>
+                                <input type="text" name="combustible" value={formData.combustible} onChange={handleChange}/>
+                            </div>
+                            
+                            
+                            <div className="register-airshit-estado-label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Estado:</strong></label>
+                                <select name="estado" value={formData.estado} onChange={handleChange}>
+                                    <option value="disponible">Whisky</option>
+                                    <option value="noDisponible">Papa</option>
+                                </select>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
+                                <input type="text" name="origin" value={formData.origin} onChange={handleChange}/>
                             </div>
                             
 
                         </div>
                         <br />
                         <div>
-                            <button className="edit-button">Editar AereoNave</button>
+                            <button className="edit-button">Realizar Cambio</button>
                         </div>
                         
                     </div>

@@ -1,23 +1,41 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
 import { CiMenuKebab } from "react-icons/ci";
+import ConfirmationModal from "./airshit-delete-confirmation";
 import "./airship-management.css";
 
 export default function AirshipManagement() {
+    const [showModal, setShowModal] = useState(false);
+    const [airshitDelete, setAirshitToDelete] = useState<number | null>(null);
+
     const aiships = [
-        { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
-        { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "P"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", peso: "1361.0", estado: "W"},
-
-
+        { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
+        { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "W"},
+        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
+        { id: 4, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
+        { id: 5, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
+        { id: 6, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "W"},
         
     ];
+    const handleDeleteClick = (id: number) => {
+        setAirshitToDelete(id);
+        setShowModal(true);
+      };
+    
+      const handleCloseModal = () => {
+        setShowModal(false);
+        setAirshitToDelete(null);
+      };
+    
+      const handleConfirmDelete = () => {
+        // Add your delete logic here
+        console.log(`Deleted pilot with id: ${airshitDelete}`);
+        handleCloseModal();
+      };
 
     return <>
         <div className="airship-management-container">
@@ -35,17 +53,18 @@ export default function AirshipManagement() {
                 </button>
             </div>
             
-            {/* Pilot Table */}
+            
             <table>
                 <thead>
                 <tr>
-                    <th>MATRICULA</th>
-                    <th>AEREONAVE</th>
-                    <th>VERSION</th>
+                    <th>MATRÍCULA</th>
+                    <th>MODELO</th>
+                    <th>VERSIÓN</th>
                     <th>SERIAL NR</th>
+                    <th>CAPACIDAD - COMBUSTIBLE </th>
                     <th>PESO DEFINIDO</th>
                     <th>ESTADO</th>
-                    <th>EDIT | DELETE</th>
+                    <th>EDITAR | ELIMINAR</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,11 +74,12 @@ export default function AirshipManagement() {
                     <td>{airship.aereonave}</td>
                     <td>{airship.versation}</td>
                     <td>{airship.serial}</td>
-                    <td>{airship.peso} KG</td>
+                    <td>{airship.combustible}</td>
+                    <td>{airship.peso} Kg</td>
                     <td>{airship.estado}</td>
                     <td>
-                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-editar"}><FaEdit className="edit-button"/></Link>   <br />
-                        <Link to={""}><MdDelete className="delete-button"/></Link>
+                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-editar"}><FaEdit className="edit-button"/>           </Link>    
+                        <button className="pilot-management-delete-button" onClick={() => handleDeleteClick(airship.id)}><MdDelete /></button>
                     </td>
                     </tr>
                 ))}
@@ -77,6 +97,13 @@ export default function AirshipManagement() {
                 
             </div>
             
+            
         </div>
+        <ConfirmationModal
+        show={showModal}
+        onClose={handleCloseModal}
+        onConfirm={handleConfirmDelete}
+        message="¿Está seguro de que desea eliminar el AereoNave?"
+      />
     </>
 }

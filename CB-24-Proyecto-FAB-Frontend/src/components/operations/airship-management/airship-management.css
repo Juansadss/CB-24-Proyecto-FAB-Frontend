@@ -16,20 +16,20 @@
     margin: 50px auto; /* Centrar la tabla horizontalmente */
     border-collapse: collapse;
     margin-top: 30px;
-    background-color:  #141c4b;
+    
     color: #ffffff;
 }
 
 .airship-management-container th, .airship-management-container td {
     text-align: center;
-    padding: 8px;
+    
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     
 }
 
 .airship-management-container th {
-    background-color: #14143e;
+    background-color: #10085c;
 }
 
 .airship-management-container tr:hover {
@@ -37,15 +37,18 @@
 }
 
 .airship-management-container .edit-button {
-    color: #ffffff;
+    
+    color: rgb(5, 5, 153);
     font-size: 20px;
-    margin-left: 15px;
 }
 
 .airship-management-container .delete-button {
-    color: #ffffff;
-    font-size: 20px;
-    margin-left: 15px;
+    color: red;
+  font-size: 20px;
+  margin-left: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .airship-management-container .goback-arrow {

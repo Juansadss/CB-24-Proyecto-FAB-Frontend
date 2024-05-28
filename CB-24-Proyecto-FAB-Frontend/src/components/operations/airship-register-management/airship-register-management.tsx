@@ -19,32 +19,57 @@ export default function AirshipRegisterManagement() {
                     <div className="aeronave-content">
                         <div className="info-section">
                             <div className="label-input-container">
-                                <label className="label-section"><strong>Tipo</strong></label>
+                                <label className="label-section"><strong>Matrícula:</strong></label>
                                 <input type="text" />
                             </div>
                             
                             <div className="label-input-container">
-                                <label className="label-section"><strong>Matrícula</strong></label>
+                                <label className="label-section"><strong>Modelo:</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Tipo AereoNave</strong></label>
+                                <label className="label-section"><strong>Fabricante:</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Peso Definido</strong></label>
+                                <label className="label-section"><strong>Peso Definido(Kg):</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Serial</strong></label>
+                                <label className="label-section"><strong>Serial:</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Version</strong></label>
+                                <label className="label-section"><strong>Versión:</strong></label>
+                                <input type="text" />
+                            </div>
+                            <div className="register-airshit-label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Fecha de Fabricación:</strong></label>
+                                <input type="date" />
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Capacidad De Combustible:</strong></label>
+                                <input type="text" />
+                            </div>
+                            
+                            
+                            <div className="register-airshit-estado-label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Estado:</strong></label>
+                                <select>
+                                    <option value="disponible">Whisky</option>
+                                    <option value="noDisponible">Papa</option>
+                                </select>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
                                 <input type="text" />
                             </div>
                             

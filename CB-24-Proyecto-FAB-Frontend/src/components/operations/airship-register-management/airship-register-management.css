@@ -22,6 +22,36 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     margin-bottom: 30px;
 }
+.register-airshit-label-input-container {
+    width: calc(50% - 0px); /* Ajustar el ancho para un elemento en una fila */
+    display: flex;
+    flex-direction: column; /* Mostrar elementos uno encima del otro */
+    
+  }
+  .register-airshit-label-input-container input, select {
+    width: calc(93% - 20px); /* Ajustar el ancho del input */
+    font-size: 18px; /* Aumentar el tamaño de la fuente del input */
+    padding: 15px 2px; /* Agregar espacio vertical dentro del input */
+  }
+  
+  .register-airshit-label-input-container label {
+    font-size: 25px; /* Ajustar el tamaño de la fuente del label */
+  }
+  .register-airshit-estado-label-input-container label {
+    font-size: 25px; /* Ajustar el tamaño de la fuente del label */
+  }
+  .register-airshit-estado-label-input-container{
+    width: calc(93% - 20px); 
+    font-size: 18px; /* Aumentar el tamaño de la fuente del input */
+    padding: 15px 2px;
+  }
+  .register-airshit-estado-label-input-container {
+    width: calc(51% - 0px); /* Ajustar el ancho para un elemento en una fila */
+    display: flex;
+    flex-direction: column; /* Mostrar elementos uno encima del otro */
+    
+  }
+  
 
 
 
