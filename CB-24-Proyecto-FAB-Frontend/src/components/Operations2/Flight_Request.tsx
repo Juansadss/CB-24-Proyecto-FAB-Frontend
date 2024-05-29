@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./flightRequest_view.css";
-import Logo from './Images/LogoSarFAb.png';
-import { MdHome } from "react-icons/md";
-import { FaClipboardList } from "react-icons/fa";
-import { BiSolidAlarmExclamation } from "react-icons/bi";
-import { FaColumns } from "react-icons/fa";
-import { FaPlaneUp } from "react-icons/fa6";
-import { IoIosLogOut } from "react-icons/io";
-import PerformanceForm from './Performance.tsx';
-import AircraftRequirementsForm from './aircraftRequirements.tsx';
+import BingMap from './BingMaps.tsx';
+import OperationsLayout from './OperationsLayout';
+import PlaneImg from './Images/PlaneImg.png';
 
-export default function RequestRegister() {
+const flightForm: React.FC = () => {
     const [airgroup, setAirGroup] = useState("");
     const [date, setDate] = useState("");
     const [Type, setType] = useState("");
@@ -34,69 +28,22 @@ export default function RequestRegister() {
         goTo("/flightRequest");
     }
     
-    return <>
-        {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
 
-        <div className="main_fr">
-            <div className="side-menu-section">
-                <div>
-                    <img src={Logo} className="logoSarFab" alt="" />
-                    <h1>Fuerza Aerea</h1>
-                </div>
-                <div className="sideMenu">
-                    <div>
-                        <Link to={'/Operaciones/Performance'}>
-                            <MdHome size={'2.5em'}></MdHome>
-                            <h5>Perfil</h5>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to={'/Operaciones/FlightRequest'}>
-                            <FaClipboardList size={'2.5em'}></FaClipboardList>
-                            <h5>Solicitudes Vuelos</h5>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to={'/Operaciones/matriz-riesgo'}>
-                            <BiSolidAlarmExclamation size={'2.5em'}></BiSolidAlarmExclamation>
-                            <h5>Matrices De Riesgo</h5>
-                        </Link>
-                        
-                    </div>
-                    <div>
-                        <Link to={'/Operaciones/Performance'}>
-                            <FaColumns size={'2.5em'}></FaColumns>
-                            <h5>Tablas De Performance</h5>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to={'/Operaciones/Requerimientos-Aeronave'}>
-                            <FaPlaneUp size={'2.5em'}></FaPlaneUp>
-                            <h5>Requerimientos De Aeronave</h5>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to={'/'}>
-                            <IoIosLogOut size={'2.5em'}></IoIosLogOut>
-                            <h5>Cerrar Sesion</h5>
-                        </Link>
-                    </div>
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
-                </div>
-
-            </div>
-
-            <div className="Form-section">
+    return (
+        <div className="Form-section">
                 <div className="form">
-                    <div className="form-header">
-                        <h2>Solicitud De Vuelo</h2>
-                        <hr></hr>
-                        <h4>Registrar Solicitud</h4>
-                    </div>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group large-input">
-                            <label htmlFor="">Unidad/grupo aereo</label>
+                            <label htmlFor="">Unidad/grupo Aéreo</label>
                             <input type="text" className="form-control" name="user" id="user" placeholder="" value={airgroup} onChange={(e) => setAirGroup(e.target.value)}/>  
                         </div>
                         <div className="form-group">
@@ -112,11 +59,11 @@ export default function RequestRegister() {
                             </select>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="">Tipo De Nave</label>
+                            <label htmlFor="">Tipo De Aeronave</label>
                             <input type="text" className="form-control" name="user" id="user" placeholder="" value={airplaneType} onChange={(e) => setAirplaneType(e.target.value)}/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="">Matricula</label>
+                            <label htmlFor="">Matrícula</label>
                             <input type={isCheckboxChecked? "text" : "password"} className="form-control" name="password" id="password" placeholder="" value={tuition} onChange={(e) => setTuition(e.target.value)}/>
                         </div>
                         <div className="form-group">
@@ -143,12 +90,10 @@ export default function RequestRegister() {
                             <label htmlFor="">Comentarios</label>
                             <textarea className="form-control coment" name="user" id="user" placeholder="" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         </div>
-                        <button className="btnRiskMatrix">
-                            Calcular Matriz De Riesgo
-                        </button>
-                        <button className="addParameter">
+                        <button className="addParameter" type="button" onClick={openModal}>
                             +
                         </button>
+                        <BingMap isOpen={isModalOpen} onClose={closeModal} />
                         <table className="matrix-table">
                             <tr>
                                 <th>ORIGEN</th>
@@ -221,38 +166,38 @@ export default function RequestRegister() {
                                 <td>Mexico</td>
                             </tr>
                         </table>
-                        <button className="btn btn-blue"> Registrar </button> 
-                        
-                        
-                        
-                        {/* <input className="checkbox" type="checkbox" id="showPassword" checked={isCheckboxChecked} onChange={handleCheckboxChange}/> Mostrar contaseña */}
-
+                        <div className="btn-register-container">
+                            <Link to={'/Operaciones/matriz-riesgo'}>
+                                <button className="btn btn-blue btn-register">Registrar Solicitud De Vuelo </button>
+                            </Link>
+                            
+                            
+                        </div> 
                 </form>
                 </div>
                 <div className="airplane-selection-section">
                     <h3>
                         Informacion De Avion
                     </h3>
-                    <img src="./src/assets/PlaneImg.png" alt="" />
+                    <img src={PlaneImg} alt="" />
                     <h1>F11</h1>
                     <h3>205-6KK</h3>
-                    <hr />
+                    <br />
                     <div>
                         <ul>
                             <li>Destino: Chimore</li>
                             <li>Origen: Samaipata</li>
                             <li>Peso Disponible: 80kg</li>
                         </ul>
-                        <button>Seleccionar Avion</button>
+                        <button className="btn">Seleccionar Avion</button>
                     </div>
                 </div>
 
             </div>
-
-        </div>
-        
-        
-        
-        }
-    </>
+    );
+}
+export default function RequestRegister() {
+    return(
+        <OperationsLayout childComponent={flightForm} message='Solicitudes de vuelo'></OperationsLayout>
+    )
 }

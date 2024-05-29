@@ -111,3 +111,9 @@
     justify-content: center;
     align-items: center;
 }
+.btn-submit-requeriments {
+    text-decoration: none; 
+}
+.mr-link{
+    text-decoration: none;
+}

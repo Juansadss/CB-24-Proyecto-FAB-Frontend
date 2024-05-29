@@ -86,3 +86,6 @@ img{
     justify-content: flex-end;
     margin: 3vh;
 }
+.ra-link{
+    text-decoration: none;
+}

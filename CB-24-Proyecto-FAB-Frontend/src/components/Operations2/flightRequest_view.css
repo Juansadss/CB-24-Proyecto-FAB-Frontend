@@ -120,6 +120,7 @@ table{
 }
 
 .airplane-selection-section{
+    padding: 2rem;
     background-color: white;
     border-radius: 20px;
     display: grid;
@@ -132,4 +133,23 @@ table{
 }
 .airplane-selection-section img{
     justify-self: center;
+}
+.coment{
+    max-width: 20rem;
+    max-height:20rem ; 
+
+}
+.addParameter{
+    margin: 1rem;
+}
+.btn-register-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    
+}
+.btn-register{
+    width: 15rem;
+    height: auto;
 }

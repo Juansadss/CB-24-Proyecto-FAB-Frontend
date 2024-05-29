@@ -10,7 +10,6 @@ const Title: React.FC<TitleProps> = ({ title }) => {
         <div className='title-container'>
             <h1 className='title'>{title}</h1>
             <hr />
-            <span>Registro</span>
         </div>
     );
 }

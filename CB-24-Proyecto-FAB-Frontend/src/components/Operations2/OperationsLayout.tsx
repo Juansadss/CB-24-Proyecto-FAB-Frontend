@@ -20,15 +20,15 @@ const OperationsLayout: React.FC<LayoutProps> = ({ childComponent: ChildComponen
     return (
         <div className='flex layout-container'>
             <div className="side-menu-section">
-                <div>
+                <div className="logo-container">
                     <img src={Logo} className="logoSarFab" alt="" />
-                    <h1>Fuerza Aerea</h1>
+                    <h1>Fuerza Aérea</h1>
                 </div>
                 <div className="sideMenu">
                     <div>
                         <Link to={'/Operaciones/OperationsView'}>
                             <MdHome size={'2.5em'}></MdHome>
-                            <h5>Perfil</h5>
+                            <h5>Operaciones de vuelo</h5>
                         </Link>
                     </div>
                     <div>

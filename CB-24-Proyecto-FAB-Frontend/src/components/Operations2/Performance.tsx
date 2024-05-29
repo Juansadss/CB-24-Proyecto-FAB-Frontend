@@ -4,9 +4,27 @@ import '../../index.css';
 import FAB from '../../../public/FAB.png';
 import { LuUpload } from 'react-icons/lu';
 import OperationsLayout from './OperationsLayout';
-import performanceImage from './Images/performance.jpg';
+import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 const performance: React.FC = () => {
+    
+    
+    const [imageDataUrl, setImageDataUrl] = useState<string | null>(null);
+
+    const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const imageDataUrl = e.target?.result as string;
+                setImageDataUrl(imageDataUrl);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    
+    
     return (
         <div className='performance-container'>
             <form action="" method="post">
@@ -19,8 +37,11 @@ const performance: React.FC = () => {
                                     </select>
                                 </div>
                                 <div className='performance-img-upload'>
-                                    <img src={performanceImage} alt="" />
-                                    <button className='btn btn-dark-blue'><LuUpload></LuUpload></button>
+                                    {imageDataUrl && <img src={imageDataUrl} alt="Uploaded" />}
+                                    <label htmlFor="file-upload" className='btn btn-dark-blue'>
+                                        <LuUpload></LuUpload>
+                                    </label>
+                                    <input id="file-upload" type="file" style={{ display: "none" }} onChange={handleImageUpload} />
                                 </div>
                                 <div className='details'>
                                     <div className='details-input flex'>
@@ -64,7 +85,7 @@ const performance: React.FC = () => {
                                             <input type="number" name="extraCrew" id="extraCrew" placeholder='Kg' />
                                         </div>  
                                         <div className='form-group'>
-                                            <span className='text-dark'><b>Tecnico</b></span>
+                                            <span className='text-dark'><b>Técnico</b></span>
                                             <input type="number" name="technical" id="technical" placeholder='Kg' />
                                         </div>  
                                         <div className='form-group'>
@@ -88,7 +109,10 @@ const performance: React.FC = () => {
                     </div>
                 </div>
                 <div className='footer'>
-                    <button className='btn btn-dark-blue btn-submit-performance' type='submit'>Registar calculo</button>
+                    <Link to={'/Operaciones/Requerimientos-Aeronave'} className='ra-link'>
+                        <button className='btn btn-dark-blue btn-submit-performance' type='submit'>Registar calculo</button>
+                    </Link>
+                    
                     <hr />
                     <div className='container-img-footer'>
                         <img className='fabLogo' src={FAB} alt="" />

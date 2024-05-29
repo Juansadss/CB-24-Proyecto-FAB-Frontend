@@ -2,6 +2,7 @@ import './riskMatrix.css';
 import '../main-menu/main-menu.css';
 import '../../index.css';
 import OperationsLayout from './OperationsLayout';
+import { Link } from "react-router-dom";
 import React from 'react';
 interface OptionProps {
     title: string;
@@ -171,7 +172,9 @@ const form: React.FC = () => {
                     <h1 className='ResultTitle'>Resultado</h1>
                     <ResultAlert color_class='medium-risk-alert' message='Riesgo medio' risk_Result={25}></ResultAlert>
                 </div>
-                <button className='btn btn-dark-blue btn-submit-requeriments' type='submit'>Registar Matriz de riesgo</button>
+                    <Link to={'/Operaciones/performance'} className='mr-link'>
+                        <button className='btn btn-dark-blue btn-submit-requeriments' type='submit'>Registar Matriz de riesgo</button>
+                    </Link>
             </form>
             
         </div>
