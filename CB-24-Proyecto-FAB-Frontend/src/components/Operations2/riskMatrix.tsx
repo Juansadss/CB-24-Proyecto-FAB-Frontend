@@ -21,9 +21,30 @@ const Option: React.FC<OptionProps> = ({title}) => {
                             <div>
                                 <span className='text-dark subtitle-option'>Horas de vuelo en sistema</span>
                                 <div className='flex buttom-container'>
-                                    <button className='btn btn-dark-blue option-buttom' >&gt; 100 horas</button>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="HorasVueloSistema" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> &gt; 100 horas</p>
+                                        </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="HorasVueloSistema" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> &lt; 100 horas</p>
+                                        </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="HorasVueloSistema" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> &lt; 50 horas</p>
+                                        </div>
+                                </label>
+                                    {/* <button className='btn btn-dark-blue option-buttom' >&gt; 100 horas</button>
                                     <button className='btn btn-dark-blue option-buttom' >&lt; 100 horas</button>
-                                    <button className='btn btn-dark-blue option-buttom' >&lt; 50 horas</button>
+                                    <button className='btn btn-dark-blue option-buttom' >&lt; 50 horas</button> */}
                                 </div>
                             </div>
                         </div>
@@ -31,10 +52,43 @@ const Option: React.FC<OptionProps> = ({title}) => {
                             <div>
                                 <span className='text-dark subtitle-option'>Horas de vuelo totales</span>
                                 <div className='flex buttom-container'>
-                                    <button className='btn btn-dark-blue option-buttom' >&gt; 1000</button>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                            <input type="radio" name="HorasVueloTotales" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                            <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                <p> &gt; 1000</p>
+                                            </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                            <input type="radio" name="HorasVueloTotales" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                            <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                <p> &gt; 750</p>
+                                            </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                            <input type="radio" name="HorasVueloTotales" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                            <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                <p> &gt; 500</p>
+                                            </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                            <input type="radio" name="HorasVueloTotales" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                            <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                <p> &lt; 500</p>
+                                            </div>
+                                    </label>
+
+
+
+
+
+                                    {/* <button className='btn btn-dark-blue option-buttom' >&gt; 1000</button>
                                     <button className='btn btn-dark-blue option-buttom' >&gt; 750</button>
                                     <button className='btn btn-dark-blue option-buttom' >&gt; 500</button>
-                                    <button className='btn btn-dark-blue option-buttom' >&lt; 500</button>
+                                    <button className='btn btn-dark-blue option-buttom' >&lt; 500</button> */}
                                 </div>
                             </div>
                         </div>
@@ -51,8 +105,22 @@ const OptionRest: React.FC<OptionProps> = ({title}) => {
                                     <div>
                                         <span className='text-dark subtitle-option'>Horas de vuelo en sistema</span>
                                         <div className='flex buttom-container'>
-                                            <button className='btn btn-dark-blue option-buttom' >&gt; 100 horas</button>
-                                            <button className='btn btn-dark-blue option-buttom' >&lt; 100 horas</button>
+                                            <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloSistemaAC" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &gt; 100 horas</p>
+                                                </div>
+                                            </label>
+                                            <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloSistemaAC" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmall">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &lt; 100 horas</p>
+                                                </div>
+                                            </label>
+                                            {/* <button className='btn btn-dark-blue option-buttom' >&gt; 100 horas</button>
+                                            <button className='btn btn-dark-blue option-buttom' >&lt; 100 horas</button> */}
                                             
                                         </div>
                                     </div>
@@ -61,9 +129,30 @@ const OptionRest: React.FC<OptionProps> = ({title}) => {
                                     <div>
                                         <span className='text-dark subtitle-option'>Horas de vuelo totales</span>
                                         <div className='flex buttom-container'>
-                                            <button className='btn btn-dark-blue option-buttom' >&gt; 1000</button>
+                                            <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &gt; 1000</p>
+                                                </div>
+                                            </label>
+                                            <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &gt; 750</p>
+                                                </div>
+                                            </label>
+                                            <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &gt; 500</p>
+                                                </div>
+                                            </label>
+                                            {/* <button className='btn btn-dark-blue option-buttom' >&gt; 1000</button>
                                             <button className='btn btn-dark-blue option-buttom' >&gt; 750</button>
-                                            <button className='btn btn-dark-blue option-buttom' >&gt; 500</button>
+                                            <button className='btn btn-dark-blue option-buttom' >&gt; 500</button> */}
                                         </div>
                                     </div>
                                 </div>
@@ -106,9 +195,29 @@ const form: React.FC = () => {
                             <div>
                                 <span className='text-dark subtitle-option'>Informacion</span>
                                 <div className='flex buttom-container'>
-                                    <button className='btn btn-dark-blue option-buttom' >Modificacion de ruta</button>
-                                    <button className='btn btn-dark-blue option-buttom' >implicita</button>
-                                    <button className='btn btn-dark-blue option-buttom' >Especifica</button>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="category" className="form-check-input inputStudy" id="inputStudy" value="Study"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> Modificacion De Ruta</p>
+                                        </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="category" className="form-check-input inputStudy" id="inputStudy" value="Study"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> Implicita</p>
+                                        </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="category" className="form-check-input inputStudy" id="inputStudy" value="Study"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p>Especifica</p>
+                                        </div>
+                                    </label>
+                                    {/* <button className='btn btn-dark-blue option-buttom' >implicita</button>
+                                    <button className='btn btn-dark-blue option-buttom' >Especifica</button> */}
                                 </div>
                             </div>
                         </div>
@@ -116,9 +225,30 @@ const form: React.FC = () => {
                             <div>
                                 <span className='text-dark subtitle-option'>Tiempo</span>
                                 <div className='flex buttom-container'>
-                                    <button className='btn btn-dark-blue option-buttom' >Optima(&gt;18hrs)</button>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="Tiempo" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> Optima(&gt;18hrs)</p>
+                                        </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="Tiempo" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> Adecuada(6-18hrs)</p>
+                                        </div>
+                                    </label>
+                                    <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="Tiempo" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> Mínima(&lt;6hrs)</p>
+                                        </div>
+                                    </label>
+                                    {/* <button className='btn btn-dark-blue option-buttom' >Optima(&gt;18hrs)</button>
                                     <button className='btn btn-dark-blue option-buttom' >Adecuada(6-18hrs)</button>
-                                    <button className='btn btn-dark-blue option-buttom' >Mínima(&lt;6hrs)</button>
+                                    <button className='btn btn-dark-blue option-buttom' >Mínima(&lt;6hrs)</button> */}
                                 </div>
                             </div>
                         </div>
@@ -154,15 +284,60 @@ const form: React.FC = () => {
                         <div className='moon-op-container'>
                             <span className='text-dark title-option'>Angulo de la luna :</span>
                             <div className='flex form-group moon-angle-container'>
-                                <button className='btn btn-dark-blue option-buttom' >&gt;30</button>
-                                <button className='btn btn-dark-blue option-buttom' >&lt;30</button>
+                            
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="AnguloLuna" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> &gt;30</p>
+                                        </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                        <input type="radio" name="AnguloLuna" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                        <div className="ratio-title btnsCategories btnStudy">
+                                            <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                            <p> &lt;30</p>
+                                        </div>
+                                </label>
+
+                                {/* <button className='btn btn-dark-blue option-buttom' >&gt;30</button>
+                                <button className='btn btn-dark-blue option-buttom' >&lt;30</button> */}
                             </div>
                             <span className='text-dark title-option'>Porcentaje de iluminacion :</span>
                             <div className='flex form-group moon-angle-container'>
-                                <button className='btn btn-dark-blue option-buttom' >100 - 75</button>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> 100 - 75</p>
+                                                </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> 75 - 50</p>
+                                                </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> 49 - 24</p>
+                                                </div>
+                                </label>
+                                <label className="form-check-label col-xl-4 studyLabel">
+                                                <input type="radio" name="HorasVueloTripulacion" className="form-check-input inputStudy" id="inputStudy" value="Tiempo"></input>
+                                                <div className="ratio-title btnsCategories btnStudy btnSmaller">
+                                                    <img className="studyIcon" src="assets/icons8-book-reading-96.png" alt=""></img>
+                                                    <p> &lt;23</p>
+                                                </div>
+                                </label>
+
+                                {/* <button className='btn btn-dark-blue option-buttom' >100 - 75</button>
                                 <button className='btn btn-dark-blue option-buttom' >75 - 50</button>
                                 <button className='btn btn-dark-blue option-buttom' >49 - 24</button>
-                                <button className='btn btn-dark-blue option-buttom' >&lt;23</button>
+                                <button className='btn btn-dark-blue option-buttom' >&lt;23</button> */}
                             </div>
                         </div>   
                     </div>
