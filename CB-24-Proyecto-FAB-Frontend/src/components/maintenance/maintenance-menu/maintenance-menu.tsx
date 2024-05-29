@@ -14,14 +14,14 @@ export default function MaintenanceMenu() {
     return <>
         <div className="maintenance-menu-container">
             <header>
-                <Link className="back-icon" to={"/menu-principal"}>
+                <Link className="back-icon" to={"./.."}>
                     <IoIosArrowBack fontSize={32} />
                 </Link>
                 MANTENIMIENTO
             </header>
             <main>
                 <img src="/FAB.png" width={400} height={250} />
-                <h1>Fuerza Aérea</h1>
+                <h1>Fuerza Aérea Boliviana</h1>
                 <span>
                     <div className="menu-options main-options">
                         <Link className="option" to={"/menu-principal/mantenimiento/ordenes-trabajo"}>
@@ -66,10 +66,12 @@ export default function MaintenanceMenu() {
                 </span>
             </main>
             <footer>
-                USER76234
-                <button>
-                    <CiMenuKebab fontSize={24} />
-                </button>
+                <span>
+                    USER76234
+                    <button>
+                        <CiMenuKebab fontSize={24} />
+                    </button>
+                </span>
             </footer>
         </div>
     </>

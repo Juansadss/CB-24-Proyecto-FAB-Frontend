@@ -3,6 +3,7 @@
   .maintenance-orderslist-container {
     width: 800px;
   }
+
   .maintenance-orderslist-container table {
     overflow-x: auto;
     width: 100%;
@@ -11,26 +12,21 @@
 
 @media screen and (max-width: 600px) {
   .maintenance-orderslist-container {
-    width: 90%; /* Ajusta el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
   }
-  .maintenance-orderslist-container table {
-    width: 100%; /* Hace que la tabla ocupe todo el ancho */
-  }
-}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
+  .maintenance-orderslist-container table {
+    width: 100%;
+  }
 }
 
 .maintenance-orderslist-container {
   width: 90%;
-  height: 100%; /* Make the container fill the available height */
+  height: 100%;
   font-family: Arial, sans-serif;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto;
   border-radius: 8pt;
   padding: 30px;
   padding-bottom: 20px;
@@ -39,9 +35,44 @@
   flex-direction: column;
 }
 
+.maintenance-orderslist-container header {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  justify-content: space-between;
+  font-size: 14pt;
+}
+
+.maintenance-orderslist-container .back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .maintenance-orderslist-container h2 {
   text-align: center;
   color: #000;
+}
+
+.maintenance-orderslist-container .new-order-section {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.maintenance-orderslist-container .new-work-order-button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 230px;
+  border: 2px solid #171A4A;
+  border-radius: 8px;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.maintenance-orderslist-container .new-work-order-button:hover {
+  background-color: #eee;
 }
 
 .maintenance-orderslist-table-container {
@@ -107,4 +138,42 @@
 .maintenance-orderslist-container footer span {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+
+
+.maintenance-orderslist-container .floating-menu {
+  position: absolute;
+  background: #171A4A;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.maintenance-orderslist-container .floating-menu li:hover {
+  background-color: #000;
+}
+
+.maintenance-orderslist-container .floating-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.maintenance-orderslist-container .floating-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border-top: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+}
+
+.maintenance-orderslist-container .delete-option{
+  background-color: #9a2528;
 }

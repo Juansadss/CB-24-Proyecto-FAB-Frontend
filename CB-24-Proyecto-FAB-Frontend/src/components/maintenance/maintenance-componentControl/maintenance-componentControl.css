@@ -3,6 +3,7 @@
   .maintenance-componentControl-container {
     width: 800px;
   }
+
   .maintenance-componentControl-container table {
     overflow-x: auto;
     width: 100%;
@@ -11,70 +12,123 @@
 
 @media screen and (max-width: 600px) {
   .maintenance-componentControl-container {
-    width: 90%; /* Ajusta el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
   }
+
   .maintenance-componentControl-container table {
-    width: 100%; /* Hace que la tabla ocupe todo el ancho */
+    width: 100%;
   }
 }
 
 .maintenance-componentControl-container {
   width: 90%;
-  height: 100%; /* Make the container fill the available height */
+  height: 100%;
   font-family: Arial, sans-serif;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto;
   border-radius: 8pt;
   padding: 30px;
   padding-bottom: 20px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visual appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.maintenance-componentControl-container header {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14pt;
+  gap: 8px;
+}
+
+.maintenance-componentControl-container .back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .maintenance-componentControl-container h2 {
-  text-align: center;
+  margin: 8px;
+}
+
+.maintenance-componentControl-container .component-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.maintenance-componentControl-container .new-component-option {
+  display: flex;
+  align-items: end;
+  min-width: 135px;
+}
+
+.maintenance-componentControl-container .new-component-button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  border: 2px solid #171A4A;
+  border-radius: 8px;
   color: #000;
+  transition: all 0.2s ease;
+}
+
+.maintenance-componentControl-container .new-component-button:hover {
+  background-color: #eee;
+}
+
+.maintenance-componentControl-container .filter-option {
+  flex-grow: 1;
+  flex-basis: 200;
+  min-width: 215px;
+}
+
+.maintenance-componentControl-container .component-section span {
+  flex-grow: 1;
+  display: flex;
+  flex-basis: 200;
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+.maintenance-componentControl-container .filter-button {
+  padding: 10px 8px;
+  color: #000;
+  background-color: #eee;
+  cursor: pointer;
+  flex: 1;
+  font-size: 12pt;
+  transition: all 0.3s ease;
+}
+
+.maintenance-componentControl-container .filter-button:hover {
+  background-color: #ddd;
+}
+
+.maintenance-componentControl-container .selected-filter {
+  color: #fff;
+  background-color: #171A4A;
+  cursor: auto;
+  font-weight: bold;
+}
+
+.maintenance-componentControl-container .selected-filter:hover {
+  background-color: #171A4A;
 }
 
 .maintenance-componentControl-table-container {
   width: 100%;
-  border-collapse: collapse;
   margin-top: 20px;
 }
 
 .maintenance-componentControl-container table {
   width: 100%;
-  color: #ffffff;
   border-collapse: collapse;
-}
-
-.maintenance-componentControl-card {
-  display: grid;
-  grid-template-columns: 1fr 120px;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 1000px;
-  max-height: 100px;
-  margin: 0 auto;
-}
-
-.maintenance-componentControl-userInfo {
-  margin-right: 20px;
-}
-
-.maintenance-componentControl-userInfo h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.maintenance-componentControl-res {
-  background-color: rgb(8, 186, 8);
-  color: white;
-  border-radius: 5pt;
-  padding: 1em;
 }
 
 .maintenance-componentControl-table-container th,
@@ -85,58 +139,33 @@
   border-bottom: none;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
+  background-color: #171A4A;
+  color: #fff;
 }
 
 .maintenance-componentControl-table-container th {
-  background-color: #171A4A;
-  color: #fff; 
-  border-color: white;
-  font-weight: bold;
-}
-
-.maintenance-componentControl-table-container tr {
-  background-color: #171A4A;
+  border-bottom: 1px solid #fff;
 }
 
 .maintenance-componentControl-table-container tr:hover {
   background-color: #000;
 }
-.maintenance-orderslist-container footer {
+
+.maintenance-componentControl-res {
+  background-color: rgb(8, 186, 8);
+  color: white;
+  border-radius: 5pt;
+  padding: 1em;
+}
+
+.maintenance-componentControl-container footer {
   display: flex;
   justify-content: space-between;
   padding: 0 32px;
-  padding-top: 80px;
 }
 
-.maintenance-orderslist-container footer span {
+.maintenance-componentControl-container footer span {
   display: flex;
   align-items: center;
-}
-.maintenance-componentControl-table-container {
-  width: 100%;
-  padding: 10px; 
-}
-
-.maintenance-componentControl-table-container th, 
-.maintenance-componentControl-table-container td {
-  padding: 15px;
-  text-align: center;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-}
-
-.maintenance-componentControl-table-container th {
-  background-color: #171A4A;
-  color: #fff;
-  border-color: white;
-
-}
-
-.maintenance-componentControl-table-container tr:hover {
-  background-color: #000;
-}
-
-.maintenance-componentControl-table-container td {
-  background-color: #171A4A;
-  color: #fff;
+  gap: 8px;
 }

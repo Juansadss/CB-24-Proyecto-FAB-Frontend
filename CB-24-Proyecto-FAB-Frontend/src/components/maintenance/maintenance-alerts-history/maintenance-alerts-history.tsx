@@ -9,7 +9,7 @@ export default function MaintenanceAlertsHistory() {
         <div className="maintenance-alerts-history-container">
             <header>
                 <span>
-                    <Link className="back-icon" to={"/menu-principal/mantenimiento/alertas"}>
+                    <Link className="back-icon" to={"./.."}>
                         <IoIosArrowBack fontSize={32} />
                     </Link>
                     MANTENIMIENTO - Alertas - Historial
@@ -32,12 +32,11 @@ export default function MaintenanceAlertsHistory() {
                             <th>LEÍDO POR</th>
                             <th>FECHA / HORA DE LECTURA</th>
                         </thead>
-                        <tr>
-                            <td colSpan={4}><hr /></td>
-                        </tr>
                         <tr className="alert-row">
                             <td className="date-column">02/03/24 10:30 AM</td>
-                            <td className="message-column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem possimus rerum sequi ab qui dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt qui similique nihil ullam modi aspernatur?</td>
+                            <td className="message-column">
+                            Se entró al periodo de margen de la aeronave <b>[ EC-145 ]</b> con matrícula <b>[ FAB-004 ]</b>, se recomienda programar un mantenimiento lo más antes posible
+                                </td>
                             <td className="user-column">USER92164</td>
                             <td className="date-read-column">02/03/24 11:00 AM</td>
                         </tr>

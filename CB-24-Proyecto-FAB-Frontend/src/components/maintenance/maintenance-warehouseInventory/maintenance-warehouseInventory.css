@@ -1,10 +1,10 @@
-
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
   .maintenance-warehouseInventory-container {
-      width: 800px;
+    width: 800px;
   }
-  .maintenance-warehouseInventory-container table{
+
+  .maintenance-warehouseInventory-container table {
     overflow-x: auto;
     width: 100%;
   }
@@ -12,23 +12,26 @@
 
 @media screen and (max-width: 600px) {
   .maintenance-warehouseInventory-container {
-    width: 90%; /* Ajusta el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
   }
+
   .maintenance-warehouseInventory-container table {
-    width: 100%; /* Hace que la tabla ocupe todo el ancho */
+    width: 100%;
   }
+
   .maintenance-warehouseInventory-filterContainer {
     width: 100%;
-    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    overflow-x: auto;
   }
 }
+
 .maintenance-warehouseInventory-container {
   width: 90%;
-  height: 100%; /* Make the container fill the available height */
+  height: 100%;
   font-family: Arial, sans-serif;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto;
   border-radius: 8pt;
   padding: 30px;
   padding-bottom: 20px;
@@ -36,45 +39,52 @@
   display: flex;
   flex-direction: column;
 }
-.maintenance-aeronave-main {
+
+.maintenance-warehouseInventory-container header {
+  display: flex;
   width: 100%;
-  min-height: 95vh; 
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: white;
-  color: black;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  border-radius: 10px;
+  font-weight: bold;
+  gap: 8px;
+  margin-bottom: 16px;
 }
+
+.maintenance-warehouseInventory-container .back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .maintenance-warehouseInventory-container h2 {
   font-weight: bold;
-  padding-bottom: 10px;
+  margin: 8px;
 }
-.maintenance-warehouseInventory-header-principal {
-  font-size: 8px;
-  margin-left: 20px;
-  
-}
-.maintenance-warehouseInventory-filterContainer{
+
+.maintenance-warehouseInventory-filterContainer {
   display: flex;
   margin-bottom: 16px;
   align-items: center;
   background-color: lightgrey;
-  border-radius: 5pt;
+  border-radius: 8px;
+  justify-content: space-around;
 }
-.maintenance-warehouseInventory-filterContainer p{
+
+.maintenance-warehouseInventory-filterContainer p {
   padding: 3px;
   font-family: Arial, sans-serif;
 }
-.maintenance-warehouseInventory-container select{
-  flex: 1;
+
+.maintenance-warehouseInventory-container select {
+  width: 25%;
   height: 40px;
   margin-right: 8px;
   padding: 8px;
   font-size: 16px;
   border-radius: 5px;
+  text-align: center;
 }
-.maintenance-warehouseInventory-container button{
+
+.maintenance-warehouseInventory-container .maintenance-warehouseInventory-filterContainer button {
   padding: 10px 20px;
   background-color: #171A4A;
   color: #fff;
@@ -82,24 +92,48 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.maintenance-warehouseInventory-container table {
-  width: 100%;
-  border-collapse: collapse;
+
+.maintenance-warehouseInventory-container .table-container {
+  display: flex;
+  justify-content: center;
+  max-height: 55vh;
 }
-.maintenance-warehouseInventory-container th{
+
+.maintenance-warehouseInventory-container table {
+  width: 90%;
+  border-collapse: collapse;
   background: #171A4A;
   color: #fff;
-  padding: 8px;
-  text-align: center;
+  overflow: scroll;
 }
+
+.maintenance-warehouseInventory-container th,
+.maintenance-warehouseInventory-container td {
+  padding: 15px;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.maintenance-warehouseInventory-container th {
+  background-color: #171A4A;
+  border-bottom: 1px solid #fff;
+}
+
+.maintenance-warehouseInventory-container tr:hover {
+  background-color: #000;
+}
+
 .maintenance-warehouseInventory-container footer {
   display: flex;
   justify-content: space-between;
   padding: 0 32px;
-  padding-top: 300px;
 }
 
 .maintenance-warehouseInventory-container footer span {
   display: flex;
   align-items: center;
+  gap: 8px;
 }

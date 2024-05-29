@@ -72,6 +72,10 @@
     height: 60vh;
 }
 
+.maintenance-alerts-history-container table{
+    border-collapse: collapse;
+}
+
 .maintenance-alerts-history-container .alert-row{
     max-height: 100px;
 }
@@ -97,9 +101,10 @@
 }
 
 .maintenance-alerts-history-container thead th {
-    padding: 8px 0;
+    padding: 16px 0;
     border-left: 1px #fff solid;
     border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
 }
 
 .maintenance-alerts-history-container tr td:nth-child(1) {
@@ -126,4 +131,5 @@
 .maintenance-alerts-history-container footer span {
     display: flex;
     align-items: center;
+    gap: 8px;
 }

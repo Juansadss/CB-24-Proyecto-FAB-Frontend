@@ -1,111 +1,155 @@
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
-    .maintenance-aircraft-container {
-      width: 800px;
-    }
-    .maintenance-aircraft-container table {
-      overflow-x: auto;
-      width: 100%;
-    }
+  .maintenance-aircraft-container {
+    width: 800px;
   }
-  
-  @media screen and (max-width: 600px) {
-    .maintenance-aircraft-container {
-      width: 90%; /* Ajusta el ancho del contenedor */
-      margin: 0 auto; /* Centra el contenedor */
-      overflow-x: auto; /* Agrega desplazamiento horizontal */
-    }
-    .maintenance-aircraft-container table {
-      width: 100%; /* Hace que la tabla ocupe todo el ancho */
-    }
+
+  .maintenance-aircraft-container table {
+    overflow-x: auto;
+    width: 100%;
   }
-  
-  #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
+}
+
+/* Móviles */
+@media screen and (max-width: 600px) {
   .maintenance-aircraft-container {
     width: 90%;
-    height: 100%; /* Make the container fill the available height */
-    font-family: Arial, sans-serif;
-    margin: 0 auto; /* Center the container horizontally */
-    border-radius: 8pt;
-    padding: 30px;
-    padding-bottom: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    overflow-x: auto;
   }
-  
-  .maintenance-aircraft-container h2 {
-    text-align: center;
-    color: #000;
-  }
-  
-  .maintenance-aircraft-table-container {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+
   .maintenance-aircraft-container table {
-    color: #ffffff;
-    background-color: #171A4A;
+    width: 100%;
   }
-  
-  .maintenance-aircraft-card {
-    display: grid;
-    grid-template-columns: 1fr 120px;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 1000px;
-    max-height: 100px;
-    margin: 0 auto;
-  }
-  
-  .maintenance-aircraft-userInfo {
-    margin-right: 20px;
-  }
-  
-  .maintenance-aircraft-userInfo h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
-  }
-  
-  .maintenance-aircraft-container th,
-  .maintenance-aircraft-container td {
-    padding: 15px;
-    text-align: center;
-    border-top: none;
-    border-bottom: none;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-  }
-  
-  .maintenance-aircraft-container th {
-    background-color: #171A4A;
-    border-bottom: 1px solid #fff;
-  }
-  
-  .maintenance-aircraft-container tr {
-    background-color: #171A4A;
-  }
-  
-  .maintenance-aircraft-container tr:hover {
-    background-color: #000;
-  }
-  
-  .maintenance-aircraft-container footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 32px;
-    padding-top: 80px;
-  }
-  
-  .maintenance-aircraft-container footer span {
-    display: flex;
-    align-items: center;
-  }
-  
+}
+
+.maintenance-aircraft-container {
+  width: 90%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  border-radius: 8pt;
+  padding: 16px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.maintenance-aircraft-container header {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  gap: 8px;
+}
+
+.maintenance-aircraft-container .back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.maintenance-aircraft-container h2 {
+  margin: 8px;
+}
+
+.maintenance-aircraft-container main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maintenance-aircraft-container main span {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.maintenance-aircraft-container .new-aircraft-button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 185px;
+  margin-left: 5%;
+  border: 2px solid #171A4A;
+  border-radius: 8px;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.maintenance-aircraft-container .new-aircraft-button:hover {
+  background-color: #eee;
+}
+
+.maintenance-aircraft-container table {
+  color: #ffffff;
+  background-color: #171A4A;
+  margin: 0 0 32px 0;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.maintenance-aircraft-container th,
+.maintenance-aircraft-container td {
+  padding: 15px;
+  text-align: center;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.maintenance-aircraft-container th {
+  background-color: #171A4A;
+  border-bottom: 1px solid #fff;
+}
+
+.maintenance-aircraft-container tr {
+  background-color: #171A4A;
+}
+
+.maintenance-aircraft-container tr:hover {
+  background-color: #000;
+}
+
+.maintenance-aircraft-container footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.maintenance-aircraft-container footer span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.maintenance-aircraft-container .floating-menu {
+  position: absolute;
+  background: #171A4A;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.maintenance-aircraft-container .floating-menu li:hover {
+  background-color: #000;
+}
+
+.maintenance-aircraft-container .floating-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.maintenance-aircraft-container .floating-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border-top: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+}

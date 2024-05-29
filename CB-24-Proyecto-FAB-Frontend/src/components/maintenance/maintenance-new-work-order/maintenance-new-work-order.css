@@ -1,8 +1,8 @@
-.maintenance-aircraft-container {
+.maintenance-new-work-order-container {
   width: 90%;
   height: 100%;
   font-family: Arial, sans-serif;
-  margin: 0 auto; /* Centrar horizontalmente */
+  margin: 0 auto;
   border-radius: 8pt;
   padding: 30px;
   padding-bottom: 20px;
@@ -10,33 +10,90 @@
   display: flex;
   flex-direction: column;
 }
-.maintenance-aircraft-container h3{
+
+.maintenance-new-work-order-container h3 {
   font-size: 17px;
 }
-.maintenance-aircraft-container table{
-  color: white;
-  background-color: #2F2C79;
-  margin-left: 35px;
+
+.maintenance-new-work-order-container header {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12pt;
 }
 
-.maintenance-aircraft-header {
+.maintenance-new-work-order-container h2 {
+  margin: 8px;
+}
+
+.maintenance-new-work-order-container .back-link {
+  display: flex;
+  align-items: center;
+}
+
+.maintenance-new-work-order-container main {
+  background-color: #eeee;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.maintenance-new-work-order-container .aircraft-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.maintenance-new-work-order-container .aircraft-section div {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.maintenance-new-work-order-container .aircraft-section div select {
+  width: 60%;
+}
+
+.maintenance-new-work-order-container .info-section {
+  display: flex;
+  align-items: center;
+  padding-left: 12.5%;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.maintenance-new-work-order-container .task-icon{
+  cursor: pointer;
+}
+
+.maintenance-new-work-order-container table {
+  color: white;
+  background-color: #2F2C79;
+  width: 75%;
   text-align: center;
 }
 
-.maintenance-aircraft-content {
-  background-color: #eeee;
-  margin: 0 auto; 
-  padding: 20px 40px; 
-  border-radius: 8px; 
-  width: 60%; 
-}
-
-.maintenance-aircraft-info-section {
+.maintenance-new-work-order-container .tasks-table {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
+.maintenance-new-work-order-container td {
+  background-color: #fff;
+  color: #000;
+}
 
-.maintenance-register-button {
+.maintenance-new-work-order-container .delete-icon {
+  width: 10%;
+}
+
+.maintenance-new-work-order-container .maintenance-register-button {
   display: block;
   margin: 20px auto;
   color: white;
@@ -46,66 +103,68 @@
   border: none;
   cursor: pointer;
   max-width: 200px;
+  font-weight: 600;
+  font-size: 12pt;
+  border-radius: 8px;
 }
 
-.maintenance-input-date {
-  padding: 3px;
-  border: 1px solid #ccc;
+.maintenance-new-work-order-container .date-section {
+  display: flex;
+  gap: 8px;
+  width: 35%;
+}
+
+.maintenance-new-work-order-container .maintenance-input-date {
   border-radius: 3px;
-  width: 38%;
-  box-sizing: border-box;
+  padding: 4px;
+  width: 70%;
   font-family: inherit;
   font-size: 14px;
+  text-align: center;
 }
 
-.maintenance-select {
+.maintenance-new-work-order-container select {
   border-radius: 4px;
   padding: 2px;
-  width: 20%;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
 }
 
-.maintenance-input-text {
-  border-radius: 4px;
-  padding: 2px;
-  width: 20%;
+.maintenance-new-work-order-container .description-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.maintenance-text-area {
-  border-radius: 4px;
-  padding: 2px;
-  width: 85%;
+.maintenance-new-work-order-container textarea {
+  border-radius: 8px;
+  padding: 8px;
+  width: 80%;
 }
 
-.maintenance-label-section {
+.maintenance-new-work-order-container .inspector-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.maintenance-new-work-order-container .maintenance-label-section2 {
   margin-right: 30px;
-  margin-left: 30px;
-}
-
-.maintenance-label-section2 {
-  margin-right: 30px;
 }
 
 
-.maintenance-label-header {
+.maintenance-new-work-order-container .maintenance-label-header {
   font-size: 15px;
 }
 
-footer {
+.maintenance-new-work-order-container footer {
   display: flex;
   justify-content: space-between;
   padding: 0 32px;
-  padding-top: 80px;
 }
 
-footer span {
+.maintenance-new-work-order-container footer span {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
-
-.maintenance-aircraft-info-section {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre elementos */
-}
-
-

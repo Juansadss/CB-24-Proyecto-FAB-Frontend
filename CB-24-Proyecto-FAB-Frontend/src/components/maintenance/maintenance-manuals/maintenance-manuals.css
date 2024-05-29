@@ -1,76 +1,90 @@
-.maintenance-aeronave-container {
-    width: 90%;
-    margin: 40px auto;
+.maintenance-manuals-container {
+    width: 100%;
+    min-height: 95vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #171A4A;
+    color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.maintenance-manuals-container .maintenance-aeronave-container {
+    width: 80%;
+    margin: 0 auto;
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #f0f0f0;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
 }
 
-.maintenance-aeronave-content-cards {
+.maintenance-manuals-container .maintenance-aeronave-content-cards {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
 }
 
-.maintenance-card {
+.maintenance-manuals-container .maintenance-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow-x: scroll;
     display: flex;
     width: 100%;
     text-align: left;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    border: solid 1px transparent;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.maintenance-card-image {
-    width: 150px;
-    height: 150px;
+.maintenance-manuals-container .maintenance-card:hover{
+    border: #000 1px solid;
+    margin-left: 20px;
+}
+
+.maintenance-manuals-container .maintenance-card-image {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     flex-shrink: 0;
+    margin-left: 15px;
 }
 
-.maintenance-card-description {
-    padding: 15px;
+.maintenance-manuals-container .maintenance-card-description {
+    padding: 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
 }
 
-.maintenance-card-description h2 {
+.maintenance-manuals-container .maintenance-card-description h2 {
     font-size: 18px;
     color: #207DA4;
-    margin: 5px 0; /* Ajusta los márgenes para reducir el espacio entre elementos */
+    margin: 0;
 }
 
-.maintenance-card-description h3 {
-    font-size: 16px; /* Puedes ajustar el tamaño para mayor consistencia */
-    color: black;
-    margin: 5px 0; /* Ajusta los márgenes para reducir el espacio entre elementos */
-}
-
-.maintenance-card-description p {
-    font-size: 14px;
+.maintenance-manuals-container .maintenance-card-description h3 {
+    font-size: 16px;
     color: red;
-    margin: 5px 0; /* Ajusta los márgenes para reducir el espacio entre elementos */
+    margin: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1047px) {
-    .aeronave-base .aeronave-container {
-        width: 750px;
-    }
+.maintenance-manuals-container .maintenance-card-description h4 {
+    font-size: 15px;
+    color: #207DA4;
+    margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .aeronave-base .aeronave-container {
-        width: 370px;
-    }
+.maintenance-manuals-container .maintenance-card-description p {
+    font-size: 14px;
+    color: black;
+    margin: 0;
 }
 
-.maintenance-aeronave-main {
+.maintenance-manuals-container .maintenance-aeronave-main {
     width: 100%;
     min-height: 95vh;
     padding: 20px;
@@ -81,50 +95,34 @@
     border-radius: 10px;
 }
 
-.back-link {
+.maintenance-manuals-container .back-link {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    
-  }
-
-  .back-link h1 {
-    margin-left: 210px; /* Ajusta el margen izquierdo según sea necesario */
-  }
-  
-  .back-link h1 {
-    margin-left: 10px; /* Space between icon and text */
-    font-size: 24px; /* Text size */
-  }
-  
-.maintenance-aeronave-base {
-    width: 100%;
-    min-height: 95vh;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #171A4A;
-    color: white;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: inherit;
 }
 
-.maintenance-footer-image {
-    margin-left: 900px;
-}
-
-.maintenance-aeronave-header-principal {
-    text-align: center;
-    font-size: 8px;
-    margin-left: 100px;
-}
-.header-container {
+.maintenance-manuals-container .header-container {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Ajusta el espacio debajo del encabezado si es necesario */
+    margin-bottom: 20px;
 }
 
-.main-title {
-    margin-left: 10px; /* Ajusta el espacio entre el ícono y el texto */
-    font-size: 24px; /* Tamaño del texto */
-    color: inherit; /* Hereda el color del contenedor padre */
+.maintenance-manuals-container .main-title {
+    margin-left: 10px;
+    font-size: 24px;
+    color: inherit;
+}
+
+.maintenance-manuals-container footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    margin-top: 32px;
+}
+
+.maintenance-manuals-container footer span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
