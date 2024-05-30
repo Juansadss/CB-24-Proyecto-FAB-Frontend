@@ -7,22 +7,17 @@
   align-items: center;
   font-weight: bold;
 }
+
 .search-add-container {
   display: flex;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 50px;
-  
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.inputs{
-  margin-left: 100px;
-}
-.button-see{
-  margin-left: 160px;
-}
+
 .search-container {
-  display: flex; /* Utilizamos flexbox para alinear los elementos */
-  align-items: center; /* Centramos verticalmente los elementos */
+  display: flex;
+  align-items: center;
 }
 
 .search-box {
@@ -34,7 +29,7 @@
   color: #333;
   background-color: #fff;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin-right: 0px; /* Espacio entre el input y el botón */
+  margin-right: 0px;
   margin-left: 300px;
 }
 
@@ -70,19 +65,24 @@
   color: #000;
 }
 
-.recruiment-container {
-  height: 88vh;
-  width: 95%;
+
+body{
+  background-color: white;
+}
+
+.recruiment-container2 {
+  height: 88px;
+  width: 1050px;
   border-radius: 10px;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: white;
   color: #000000;
   margin-top: 30px;
   margin-bottom: 30px;
   justify-content: space-between;
 }
 
-.recruiment-container table {
+.recruiment-container2 table {
   width: 750px;
   margin-left: 25px;
   border-collapse: collapse;
@@ -91,79 +91,7 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
-.search-add-container{
-  margin-left: 230px;
-}
-.sar-search-bar-item {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #090808;
-  border-radius: 8px;
-  height: 2rem;
-  padding-left: 0.5rem;
-  margin-left: 50px;
-}
-.sar-search-input {
-  border: none;
-  outline: none;
-  padding: 5px;
-  width: 150px;
-  margin-right: 10px;
-  appearance: none;
-  -webkit-appearance: none;
-}
 
-.sar-search-button {
-  height: 100%;  
-  background-color: #090808;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  font-size: 20px;
-  border-radius: 0 8px 8px 0;
-}
-
-.sar-search-button:hover{
-  background-color: #2a2a2a;
-  color: #eeeeee;
-}
-.recruiment-container th,
-.recruiment-container td {
-  text-align: center;
-  padding: 8px;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #14143e;
-}
-
-.recruiment-container th {
-  background-color: #14143e;
-}
-
-.recruiment-container tr:hover {
-  background-color: #393343;
-}
-
-.recruiment-container .edit-button {
-  color: #ffffff;
-  font-size: 20px;
-  margin-left: 15px;
-}
-
-.recruiment-container .delete-button {
-  color: #ffffff;
-  font-size: 20px;
-  margin-left: 15px;
-}
-
-.recruiment-container .goback-arrow {
-  color: #000000;
-  margin-right: 10px;
-  margin-left: 0;
-}
 .add-button {
   display: flex;
   align-items: center;
@@ -175,61 +103,127 @@
   padding: 10px 20px;
   color: #000000;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: 65px;
+  margin-left: 10px;
   margin-right: 20px;
 }
 
-.recruiment-container .add-button-icon {
-  margin-right: 0;
-  color: #000000;
+.button-add {
+  margin-left: -270px;
+  margin-right: 130px;
 }
 
-.recruiment-container {
-  position: relative;
+.sar-search-bar-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #090808;
+  border-radius: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
-.recruiment-container img {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
+.input-search {
+  margin-left: 90px;
 }
-.round-button {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+
+.sar-search-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+  margin-right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.sar-search-button {
+  height: 100%;
+  background-color: #090808;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+.sar-search-button:hover {
+  background-color: #2a2a2a;
+  color: #eeeeee;
+}
+
+.recruiment-container2 th,
+.recruiment-container2 td {
   text-align: center;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
+  padding: 8px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #14143e;
 }
 
-.round-button:hover {
-  background-color: #ccc;
+.recruiment-container2 th {
+  background-color: #14143e;
 }
-.additional-button {
-  background-color: #2f2c79;
-  color: white;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 20px;
-  cursor: pointer;
-  margin-left: 65px;
+
+.recruiment-container2 tr:hover {
+  background-color: #393343;
 }
-.see-button{
-  width: 170px; 
-  background-color: #2f2c79;
-  border-radius: 4px;
-  border: none;
-  color: white;
+
+.recruiment-container2 .edit-button {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.recruiment-container2 .delete-button {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.recruiment-container2 .round-button {
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 13px;
-  margin-left: 25px;
-  
+  font-size: 24px;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-left: -100px;
+}
+
+.see-button {
+  background-color: #8c8a8a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.see-button:hover {
+  background-color: #d3cece;
+}
+
+.see-button2 {
+  background-color: #070707;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-button2:hover {
+  background-color: #575656;
+}
+
+.goback-arrow {
+  margin-right: 8px;
 }

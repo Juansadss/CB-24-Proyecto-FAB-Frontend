@@ -12,13 +12,12 @@
   align-items: center;
   margin-top: 60px;
   margin-bottom: 50px;
-  
 }
-.inputs{
-  margin-left: 100px;
-}
-.button-see{
-  margin-left: 160px;
+.text{
+  color: black;
+  font-size: 20px;
+  display: inline;
+  margin-top: -10px;
 }
 .search-container {
   display: flex; /* Utilizamos flexbox para alinear los elementos */
@@ -72,10 +71,10 @@
 
 .recruiment-container {
   height: 88vh;
-  width: 95%;
+  width: 1050px;
   border-radius: 10px;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: white;
   color: #000000;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -83,7 +82,7 @@
 }
 
 .recruiment-container table {
-  width: 750px;
+  width: 760px;
   margin-left: 25px;
   border-collapse: collapse;
   margin-top: 20px;
@@ -91,8 +90,23 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
-.search-add-container{
-  margin-left: 230px;
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  color: #000000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.button-add{
+  margin-left: -270px;
+  margin-right: 130px;
 }
 .sar-search-bar-item {
   display: flex;
@@ -102,7 +116,11 @@
   border-radius: 8px;
   height: 2rem;
   padding-left: 0.5rem;
-  margin-left: 50px;
+  margin-left: 10px;
+ 
+}
+.space{
+  margin-left: -130px;
 }
 .sar-search-input {
   border: none;
@@ -164,6 +182,7 @@
   margin-right: 10px;
   margin-left: 0;
 }
+
 .add-button {
   display: flex;
   align-items: center;
@@ -230,6 +249,20 @@
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 13px;
-  margin-left: 25px;
-  
+  margin-left: 450px;
 }
+.see-button2{
+  width: 170px; 
+  background-color: #2f2c79;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  margin-left: 50px;
+}
+
+

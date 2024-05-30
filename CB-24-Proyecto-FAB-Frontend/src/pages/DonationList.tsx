@@ -1,11 +1,11 @@
-import PersonalListComponent from "../components/personal/PersonalListComponent";
-export default function Personal() {
+import DonationListComponent from "../components/donationComponent/DonationListComponent";
+export default function Donation() {
   return (
     <>
       <div className="min-h-full">
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            <PersonalListComponent />
+            <DonationListComponent/>
           </div>
         </main>
       </div>

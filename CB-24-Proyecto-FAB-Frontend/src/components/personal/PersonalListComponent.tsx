@@ -1,9 +1,15 @@
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { AiOutlineTool } from "react-icons/ai";
+import { TbManualGearbox } from "react-icons/tb";
+import { MdOutlineWarehouse } from "react-icons/md";
+import { LuCross } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import "./Recruiment-List.css";
 import LayoutSar from "../layout-sar/layout-sar";
+import { FaPlus } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search";
 
@@ -20,7 +26,7 @@ interface Option {
   label: string;
 }
 
-export default function RecruimentListComponent() {
+export default function PersonalListComponent() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -45,7 +51,7 @@ export default function RecruimentListComponent() {
     },
   ];
 
-  const filteredAiships = recruiment.filter((recruiments) =>
+  const filteredRecruiments = recruiment.filter((recruiments) =>
     recruiments.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -58,45 +64,51 @@ export default function RecruimentListComponent() {
   return (
     <>
       <LayoutSar>
-        <div className="recruiment-container">
+        <div className="recruiment-container2">
           {/* Title */}
           <div className="title-container">
             <h1>
               <Link to={"/menu-principal"}>
                 <IoIosArrowBack className="goback-arrow" />
               </Link>
-              <span className="title-text">LISTA DE RECLUTAMIENTO</span>
+              <span className="title-text">LISTA DE PERSONAL</span>
             </h1>
           </div>
-          <div className="inputs">
-            <div className="search-add-container ">
+          {/* Search Box and Add Button */}
+          <div className="search-add-container">
+            <div className="button-add">
+              <button className="add-button">
+                <FaPlus className="add-button-icon" />
+              </button>
+            </div>
+            <div className="input-search">
               <div className="sar-search-bar-item">
                 <input
                   type="text"
                   placeholder="Buscar..."
                   className="sar-search-input"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <button className="sar-search-button">
                   <FaMagnifyingGlass />
                 </button>
               </div>
-
-              <DropdownInputSearch options={options} />
-            </div> 
+            </div>
+            <DropdownInputSearch options={options} />
           </div>
-
           {/* Pilot Table */}
           <table>
             <thead>
               <tr>
                 <th>NOMBRE COMPLETO</th>
                 <th>CI</th>
-                <th>ETAPA</th>
+                <th>GRADO</th>
                 <th>DETALLES</th>
               </tr>
             </thead>
             <tbody>
-              {filteredAiships.map((recruiments) => (
+              {filteredRecruiments.map((recruiments) => (
                 <tr key={recruiments.id}>
                   <td>{recruiments.name}</td>
                   <td>{recruiments.ci}</td>
@@ -104,14 +116,15 @@ export default function RecruimentListComponent() {
                   <td>
                     <Link to={""} className="round-button">
                       ⁝
-                    </Link>{" "}
+                    </Link>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <div className="button-see">
-            <button className="see-button">Ver Formulario</button>
+          <div className="buttons">
+            <button className="see-button">Ver Reclutamiento</button>
+            <button className="see-button2">Ver voluntarios baja</button>
           </div>
         </div>
       </LayoutSar>

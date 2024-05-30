@@ -7,8 +7,9 @@ import { LuCross } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import "../main-menu/main-menu/main-menu.css";
+import { FaPlus } from "react-icons/fa";
 import "./PersonalInformation-List.css";
+import LayoutSar from "../layout-sar/layout-sar";
 
 export default function PersonalInfListComponent() {
   const [firstName, setFirstName] = useState("");
@@ -99,314 +100,348 @@ export default function PersonalInfListComponent() {
   const handleArchivoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setArchivo(e.target.value);
   };
-
+  const [formData, setFormData] = useState({
+    nombres: "",
+    apellidos: "",
+    ci: "",
+    fechaNacimiento: "",
+    domicilio: "",
+    gruposanguineo: "",
+    optarLibretaMilitar: false,
+    carnetIdentidad: null,
+    certificadoNacimiento: null,
+  });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    const isCheckbox = (e.target as HTMLInputElement).type === "checkbox";
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: isCheckbox ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
   return (
     <>
-      <div className="main-menu-container">
-        <div className="main-menu-options">
-          <Link className="card" to={"/"}>
-            <TbManualGearbox />
-            <span>Operaciones</span>
-          </Link>
-          <Link className="card" to={"/"}>
-            <AiOutlineTool />
-            <span>Mantenimiento</span>
-          </Link>
-          <Link className="card" to={"/"}>
-            <MdOutlineWarehouse />
-            <span>Almacenes</span>
-          </Link>
-          <Link className="card" to={"/"}>
-            <LuCross />
-            <span>SAR FAB</span>
-          </Link>
-        </div>
-      </div>
-      <div className="personal-container">
-        <div className="title-container">
-          <h1>
-            <Link to={"/menu-principal"}>
-              <IoIosArrowBack className="goback-arrow" />
-            </Link>
-            <span className="title-text">PERSONAL</span>
-          </h1>
-          <h1>
-            <Link to={"/menu-principal"}>
-              <IoIosArrowBack className="goback-arrow" />
-            </Link>
-            <span className="title-text">Filacion Personal</span>
-          </h1>
-        </div>
-        <div className="label-inf">
-          <label className="labels">Faltas: 2</label>
-          <label className="labels2">Permisos: 1</label>
-        </div>
-        <div className="input-container">
-          <label className="dates">DATOS PERSONALES</label>
-          <label htmlFor="firstName">Nombres:</label>
-          <input
-            type="text"
-            id="firstName"
-            placeholder="Nombres"
-            value={firstName}
-            onChange={handleFirstNameChange}
-          />
-          <label htmlFor="lastName">Apellidos:</label>
-          <input
-            type="text"
-            id="lastName"
-            placeholder="Apellidos"
-            value={lastName}
-            onChange={handleLastNameChange}
-          />
-        </div>
-        <label className="label-grade" htmlFor="grado">
-          Grado:
-        </label>
-        <label className="label-date" htmlFor="fechaNacimiento">
-          Fecha de Nacimiento:
-        </label>
-        <div className="input-container5">
-          <select id="grado" className="input-select" value={grado} onChange={handleGradoChange}>
-            <option value="grado1">Grado 1</option>
-            <option value="grado2">Grado 2</option>
-            <option value="grado3">Grado 3</option>
-          </select>
-
-          <input
-            type="date"
-            className="input-date"
-            id="fechaNacimiento"
-            value={fechaNacimiento}
-            onChange={handleFechaNacimientoChange}
-          />
-        </div>
-       
-        <label className="label-grade" htmlFor="department">
-          Departamento:
-        </label>
-        <label className="label-ci" htmlFor="fechaNacimiento">
-          C.I.:
-        </label>
-        <div className="input-container5">
-        <div>
-            <select className="input-select"
-              id="department"
-              value={department}
-              onChange={handleDepartmentChange}>
-              <option value="department1">Cochabamba</option>
-              <option value="department2">La Paz</option>
-              <option value="department3">Oruro</option>
-              <option value="department4">Santa Cruz</option>
-              <option value="department5">Chuquisaca</option>
-              <option value="department6">Potosi</option>
-              <option value="department7">Beni</option>
-              <option value="department8">Tarija</option>
-              <option value="department9">Pando</option>
-            </select>
+      <LayoutSar>
+        <div className="personal-container">
+          <div className="title-container">
+            <h1>
+              <Link to={"/menu-principal"}>
+                <IoIosArrowBack className="goback-arrow" />
+              </Link>
+              <span className="title-text">PERSONAL</span>
+            </h1>
+            <h1>
+              <Link to={"/menu-principal"}>
+                <IoIosArrowBack className="goback-arrow" />
+              </Link>
+              <span className="title-text">Filación Personal</span>
+            </h1>
           </div>
-          <div>
-            <input
-              type="number"
-              id="ci"
-              placeholder="CI"
-              className="input-ci"
-              value={ci}
-              onChange={handleCiChange}
-            />
+          <div className="label-inf">
+            <label className="labels">Faltas: 2</label>
+            <label className="labels2">Permisos: 1</label>
+          </div>
+          <div className="input-container">
+            <label className="dates">DATOS PERSONALES</label>
+
+            <div className="form-group">
+              <label>Nombres:</label>
+              <input
+                type="text"
+                name="nombres"
+                onChange={handleChange}
+                value={formData.nombres}
+              />
+            </div>
+            <div className="form-group">
+              <label>Apellidos:</label>
+              <input
+                type="text"
+                name="apellidos"
+                onChange={handleChange}
+                value={formData.apellidos}
+              />
+            </div>
           </div>
           
-        </div>
-        
-        <label className="label-grade" htmlFor="domicilio">
-          Domicilio:
-        </label>
-        <div>
-          <input
-            type="text"
-            id="domicilio"
-            placeholder="Domicilio"
-            className="input-domicilio"
-            value={domicilio}
-            onChange={handleDomicilioChange}
-          />
-        </div>
-        <label className="label-grade" htmlFor="firstName">
-          Telefono:
-        </label>
-        <label className="label-cel" htmlFor="firstName">
-          Celular:
-        </label>
-        <label className="label-ocup" htmlFor="firstName">
-          Ocupacion:
-        </label>
-        <div className="inputs-3">
-          <input
-            type="number"
-            id="telefono"
-            placeholder="Teléfono"
-            className="input-telefono"
-            value={telefono}
-            onChange={handleTelefonoChange}
-          />
-          <input
-            type="number"
-            id="celular"
-            placeholder="Celular"
-            className="input-celular"
-            value={celular}
-            onChange={handleCelularChange}
-          />
-          <input
-            type="text"
-            id="ocupacion"
-            placeholder="Ocupación"
-            className="input-ocupacion"
-            value={ocupacion}
-            onChange={handleOcupacionChange}
-          />
-        </div>
-        <label className="label-grade" htmlFor="firstName">
-          Grupo Sanguíneo:
-        </label>
-        <label className="label-rel" htmlFor="firstName">
-          Religión:
-        </label>
-        <label className="label-correo" htmlFor="firstName">
-          Correo:
-        </label>
-        <div className="inputs-3">
-          <input
-            type="text"
-            id="grupoSanguineo"
-            placeholder="Grupo Sanguíneo"
-            className="input-grupo-sanguineo"
-            value={grupoSanguineo}
-            onChange={handleGrupoSanguineoChange}
-          />
-          <input
-            type="text"
-            id="religion"
-            placeholder="Religión"
-            className="input-religion"
-            value={religion}
-            onChange={handleReligionChange}
-          />
-          <input
-            type="text"
-            id="correo"
-            placeholder="Correo"
-            className="input-correo"
-            value={correo}
-            onChange={handleCorreoChange}
-          />
-        </div>
-        <div className="input-container2">
-          <label htmlFor="firstName">Alergias:</label>
-          <input
-            type="text"
-            id="firstName"
-            placeholder="Alergias"
-            value={alergia}
-            onChange={handleAlergiaChange}
-          />
-        </div>
-        <div className="input-container2">
-          <label htmlFor="señas">Señas Particulares:</label>
-          <input
-            type="text"
-            id="señas"
-            placeholder="Señas Particulares"
-            value={señas}
-            onChange={handleSeñasChange}
-          />
-        </div>
-        <div className="input-container2">
-          <label htmlFor="curso">Ultimo Curso Aprobado:</label>
-          <input
-            type="text"
-            id="curso"
-            placeholder="Ultimo Curso Aprobado"
-            value={curso}
-            onChange={handleCursoChange}
-          />
-        </div>
-        <div>
-          <label className="caso">EN CASO DE EMERGENCIA</label>
-          <div className="input-container2">
-            <label htmlFor="llamar">Llamar o avisar a:</label>
+          <label className="label-grado" htmlFor="grado">
+            Grado:
+          </label>
+          <label className="label-date" htmlFor="fechaNacimiento">
+            Fecha de Nacimiento:
+          </label>
+          <div className="input-container5">
+            <select
+              id="grado"
+              className="input-select"
+              value={grado}
+              onChange={handleGradoChange}
+            >
+              <option value="grado1">Grado 1</option>
+              <option value="grado2">Grado 2</option>
+              <option value="grado3">Grado 3</option>
+            </select>
+
             <input
-              type="text"
-              id="llamar"
-              placeholder="Llamar o avisar a"
-              value={llamar}
-              onChange={handleLlamarChange}
-            />
-            <label htmlFor="parentezco">Parentezco:</label>
-            <input
-              type="text"
-              id="parentezco"
-              placeholder="Parentezco"
-              value={parentezco}
-              onChange={handleParentezcoChange}
-            />
-            <label htmlFor="direccion">Direccion:</label>
-            <input
-              type="text"
-              id="direccion"
-              placeholder="Direccion"
-              value={direccion}
-              onChange={handleDireccionChange}
+              type="date"
+              className="input-date"
+              id="fechaNacimiento"
+              value={fechaNacimiento}
+              onChange={handleFechaNacimientoChange}
             />
           </div>
-        </div>
-        <label className="label-grade" htmlFor="telefono">
-          Teléfono:
-        </label>
-        <label className="label-celular" htmlFor="celular">
-          Celular:
-        </label>
-        <div className="input-container3">
-          <input
-            type="number"
-            id="telefono"
-            placeholder="Teléfono"
-            className="input-telefono"
-            value={telefono}
-            onChange={handleTelefonoChange}
-          />
 
-          <input
-            type="number"
-            id="celular"
-            placeholder="Celular"
-            className="input-celular"
-            value={celular}
-            onChange={handleCelularChange}
-          />
-        </div>
-        <label className="label-grade" htmlFor="curso">
-          Ultimo Curso Aprobado:
-        </label>
-        <div className="input-container4">
-          <input
-            type="file"
-            id="archivo"
-            className="input-archivo"
-            onChange={handleArchivoChange}
-          />
-          <button className="btn-icon">
-            <FontAwesomeIcon icon={faEye} />
-          </button>
-        </div>
+          <label className="label-grado" htmlFor="department">
+            Departamento:
+          </label>
+          <label className="label-ci" htmlFor="fechaNacimiento">
+            C.I.:
+          </label>
+          <div className="input-container5">
+            <div>
+              <select
+                className="input-select"
+                id="department"
+                value={department}
+                onChange={handleDepartmentChange}
+              >
+                <option value="department1">Cochabamba</option>
+                <option value="department2">La Paz</option>
+                <option value="department3">Oruro</option>
+                <option value="department4">Santa Cruz</option>
+                <option value="department5">Chuquisaca</option>
+                <option value="department6">Potosi</option>
+                <option value="department7">Beni</option>
+                <option value="department8">Tarija</option>
+                <option value="department9">Pando</option>
+              </select>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="ci"
+                className="input-ci"
+                value={ci}
+                onChange={handleCiChange}
+              />
+            </div>
+          </div>
+          <div className="input-container">
+            <div className="form-group ">
+              <label>Domicilio:</label>
+              <input
+                type="text"
+                name="domicilio"
+                onChange={handleChange}
+                className="input-domicilio"
+                value={formData.domicilio}
+              />
+            </div>
+          </div>
 
-        <div>
-          <button className="additional-button">Reporte de Guardias</button>
-          <button className="additional-button">Reporte de Asistencias</button>
-          <button className="additional-button">Reporte de Cursos</button>
-          <button className="additional-button">Reporte de Operativos</button>
+          <label className="label-grado" htmlFor="firstName">
+            Teléfono:
+          </label>
+          <label className="label-cel" htmlFor="firstName">
+            Celular:
+          </label>
+          <label className="label-ocup" htmlFor="firstName">
+            Ocupación:
+          </label>
+          <div className="inputs-3">
+            <input
+              type="number"
+              id="telefono"
+              className="input-telefono"
+              value={telefono}
+              onChange={handleTelefonoChange}
+            />
+            <input
+              type="number"
+              id="celular"
+             
+              className="input-celular"
+              value={celular}
+              onChange={handleCelularChange}
+            />
+            <input
+              type="text"
+              id="ocupacion"
+              
+              className="input-ocupacion"
+              value={ocupacion}
+              onChange={handleOcupacionChange}
+            />
+          </div>
+          <div className="label-group">
+            <label className="label-grado" htmlFor="firstName">
+              Grupo Sanguíneo:
+            </label>
+            <label className="label-rel" htmlFor="firstName">
+              Religión:
+            </label>
+            <label className="label-correo" htmlFor="firstName">
+              Correo:
+            </label>
+          </div>
+
+          <div className="inputs-3">
+            <input
+              type="text"
+              id="grupoSanguineo"
+              
+              className="input-grupo-sanguineo"
+              value={grupoSanguineo}
+              onChange={handleGrupoSanguineoChange}
+            />
+            <input
+              type="text"
+              id="religion"
+              
+              className="input-religion"
+              value={religion}
+              onChange={handleReligionChange}
+            />
+            <input
+              type="text"
+              id="correo"
+              
+              className="input-correo"
+              value={correo}
+              onChange={handleCorreoChange}
+            />
+          </div>
+          <div className="input-container">
+            <div className="form-group ">
+              <label>Alergía:</label>
+              <input
+                type="text"
+                name="domicilio"
+                onChange={handleChange}
+                className="input-domicilio"
+                value={formData.domicilio}
+              />
+            </div>
+          </div>
+          <div className="input-container">
+            <div className="form-group input-señas">
+              <label>Señas Particulares:</label>
+              <input
+                type="text"
+                name="domicilio"
+                onChange={handleChange}
+                className="input-domicilio"
+                value={formData.domicilio}
+              />
+            </div>
+          </div>
+          <div className="input-container">
+            <div className="form-group input-señas">
+              <label>Último Curso Aprobado:</label>
+              <input
+                type="text"
+                name="domicilio"
+                onChange={handleChange}
+                className="input-domicilio"
+                value={formData.domicilio}
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="caso">EN CASO DE EMERGENCIA</label>
+            <div className="input-container">
+              <div className="form-group input-señas">
+                <label>Llamar o avisar a:</label>
+                <input
+                  type="text"
+                  name="domicilio"
+                  onChange={handleChange}
+                  className="input-domicilio"
+                  value={formData.domicilio}
+                />
+              </div>
+            </div>
+            <div className="input-container">
+              <div className="form-group input-señas">
+                <label>Parentezco:</label>
+                <input
+                  type="text"
+                  name="domicilio"
+                  onChange={handleChange}
+                  className="input-domicilio"
+                  value={formData.domicilio}
+                />
+              </div>
+            </div>
+            <div className="input-container">
+              <div className="form-group input-señas">
+                <label>Dirección:</label>
+                <input
+                  type="text"
+                  name="domicilio"
+                  onChange={handleChange}
+                  className="input-domicilio"
+                  value={formData.domicilio}
+                />
+              </div>
+            </div>
+            
+             
+              
+          </div>
+          <label className="label-grado" htmlFor="telefono">
+            Teléfono:
+          </label>
+          <label className="label-celular" htmlFor="celular">
+            Celular:
+          </label>
+          <div className="input-container3">
+            <input
+              type="number"
+              id="telefono"
+             
+              className="input-telefono"
+              value={telefono}
+              onChange={handleTelefonoChange}
+            />
+
+            <input
+              type="number"
+              id="celular"
+              
+              className="input-celular"
+              value={celular}
+              onChange={handleCelularChange}
+            />
+          </div>
+          <label className="label-grado" htmlFor="curso">
+            Fecha de vencimiento de Chequeo Médico:
+          </label>
+          <div className="input-container4">
+            <input
+              type="file"
+              id="archivo"
+              className="input-archivo"
+              onChange={handleArchivoChange}
+            />
+            <button className="btn-icon">
+              <FontAwesomeIcon icon={faEye} />
+            </button>
+          </div>
+
+          <div>
+            <button className="additional-button">Reporte de Guardias</button>
+            <button className="additional-button">
+              Reporte de Asistencias
+            </button>
+            <button className="additional-button">Reporte de Cursos</button>
+            <button className="additional-button">Reporte de Operativos</button>
+          </div>
         </div>
-      </div>
+      </LayoutSar>
     </>
   );
 }
