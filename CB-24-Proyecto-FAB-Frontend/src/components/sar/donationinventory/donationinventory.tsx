@@ -37,15 +37,22 @@ const DonationInventory = () => {
         console.log({ institucion: formData.institucion, items });
     };
 
+    const handleBackClick = () => {
+        // Implementa la función para manejar el botón de regreso
+    };
+
     return (
         <LayoutSar>
             <div className="donationinventory-container">
                 <form className="donationinventory-form" onSubmit={handleSubmit}>
-                    <h3>INVENTARIO &gt; Donación</h3>
+                    <div className="donationinventory-header">
+                        <button onClick={handleBackClick} className="icon-button-back">&lt;</button>
+                        <span className="main-title">INVENTARIO</span>
+                        <span className="sub-title"> &gt; Donación</span>
+                    </div>
                     <div className="form-group">
                         <label>Institución:</label>
                         <select name="institucion" onChange={handleChange} value={formData.institucion}>
-                            <option value="">Seleccione...</option>
                             <option value="Alcaldia">Alcaldía de Cochabamba</option>
                             <option value="FuerzaAerea">Fuerza Aérea</option>
                         </select>
@@ -55,7 +62,6 @@ const DonationInventory = () => {
                         <div className="form-group">
                             <label>Tipo:</label>
                             <select name="tipo" onChange={handleChange} value={formData.tipo}>
-                                <option value="">Seleccione...</option>
                                 <option value="Pala">Pala</option>
                                 <option value="Pico">Pico</option>
                                 <option value="Martillo">Martillo</option>
@@ -73,7 +79,7 @@ const DonationInventory = () => {
                                 <tr>
                                     <th>Tipo</th>
                                     <th>Cantidad</th>
-                                    <th></th>
+                                    <th>Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,7 +88,7 @@ const DonationInventory = () => {
                                         <td>{item.tipo}</td>
                                         <td>{item.cantidad}</td>
                                         <td>
-                                            <button type="button" className="icon-button" onClick={() => handleRemoveItem(index)}>
+                                            <button type="button" className="icon-button-trash" onClick={() => handleRemoveItem(index)}>
                                                 🗑️
                                             </button>
                                         </td>

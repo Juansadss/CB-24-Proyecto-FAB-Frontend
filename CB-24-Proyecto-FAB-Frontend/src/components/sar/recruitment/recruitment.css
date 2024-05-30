@@ -9,7 +9,7 @@
 }
 
 .recruitment-form {
-    background-color: #f0f0f0;
+    background-color: #EEEEEE;
     padding: 2rem;
     border-radius: 1px;
     width: 100%;
@@ -92,7 +92,7 @@
 .recruitment-form button {
     padding: 0.7rem;
     margin-top: 1rem;
-    background-color: #171A4A;
+    background-color: #2F2C79;
     color: #ffffff;
     border: none;
     border-radius: 5px;

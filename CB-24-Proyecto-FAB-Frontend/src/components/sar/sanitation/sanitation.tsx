@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './sanitation.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { useNavigate } from 'react-router-dom';
 
 const SanitationForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -10,7 +11,13 @@ const SanitationForm: React.FC = () => {
         tratamiento: ''
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const navigate = useNavigate();
+
+    const handleBackClick = () => {
+        navigate(-1);
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
@@ -26,11 +33,15 @@ const SanitationForm: React.FC = () => {
     return (
         <LayoutSar>
             <div className="sanitation-form-container">
-                <h3>SANIDAD &gt; Crear Tratamiento</h3> 
                 <form className="sanitation-form" onSubmit={handleSubmit}>
+                    <div className="sanitation-header">
+                        <button onClick={handleBackClick}>&lt;</button>
+                        <span className="main-title">SANIDAD</span>
+                        <span className="sub-title">&gt; Crear Tratamiento</span>
+                    </div>
                     <h2>DATOS PERSONALES</h2>
                     <div className="form-group">
-                        <label>Fecha</label>
+                        <label>Fecha de Diagnóstico:</label>
                         <input type="date" name="fecha" onChange={handleChange} value={formData.fecha} />
                     </div>
                     <div className="form-group">
@@ -42,14 +53,14 @@ const SanitationForm: React.FC = () => {
                             <option value="Paciente 3">Paciente 3</option>
                         </select>
                     </div>
-                    <h2>DATOS MEDICOS</h2>
+                    <h2>DATOS MÉDICOS</h2>
                     <div className="form-group">
-                        <label>Diagnostico:</label>
-                        <input type="text" name="diagnostico" onChange={handleChange} value={formData.diagnostico} />
+                        <label>Diagnóstico:</label>
+                        <textarea name="diagnostico" onChange={handleChange} value={formData.diagnostico} />
                     </div>
                     <div className="form-group">
                         <label>Tratamiento:</label>
-                        <input type="text" name="tratamiento" onChange={handleChange} value={formData.tratamiento} />
+                        <textarea name="tratamiento" onChange={handleChange} value={formData.tratamiento} />
                     </div>
                     <div className="form-group-buttons">
                         <button type="submit" className="registrar-button">Registrar</button>

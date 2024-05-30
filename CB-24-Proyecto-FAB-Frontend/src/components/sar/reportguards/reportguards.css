@@ -1,18 +1,36 @@
 .reportguards-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     padding: 20px;
     background-color: #ffffff;
     min-height: 100vh;
     width: 100%;
 }
 
-.reportguards-container h3 {
-    color: #000000;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+.reportguards-header {
+    display: flex;
+    align-items: center;
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.reportguards-header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reportguards-header .main-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.reportguards-header .sub-title {
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .reportguards-content {
@@ -20,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 60px; 
+    margin-top: 20px;
 }
 
 .reportguards-form {
@@ -37,6 +55,15 @@
 
 .reportguards-form .form-group {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.reportguards-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
 .reportguards-form input[type="date"],
@@ -45,39 +72,45 @@
     border: 1.5px solid #333;
     border-radius: 5px;
     font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box; 
+    width: calc(100% - 12px); 
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.reportguards-form .form-group select {
+    height: 40px; 
 }
 
 .reportguards-table {
     width: 100%;
     max-width: 800px;
     border-collapse: collapse;
-    background-color: #171A4A;
+    background-color: #171a4a;
     border-radius: 7px;
     overflow: hidden;
+    text-align: center;
 }
 
 .reportguards-table th,
 .reportguards-table td {
     padding: 0.75rem;
-    text-align: left;
     color: #fff;
+    text-align: center;
 }
 
 .reportguards-table th {
-    background-color: #171A4A;
+    background-color: #171a4a;
     font-weight: bold;
 }
 
 .reportguards-table tbody tr {
-    background-color: #24365C;
+    background-color: #24365c;
 }
 
 .reportguards-table tbody tr:nth-child(even) {
-    background-color: #1A2C48;
+    background-color: #1a2c48;
 }
 
 .reportguards-table tbody tr:hover {
-    background-color: #2C4878;
+    background-color: #2c4878;
 }

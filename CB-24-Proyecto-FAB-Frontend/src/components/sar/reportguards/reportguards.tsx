@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './reportguards.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import '../search-bar-styles.css'
 
 const ReportGuards = () => {
     const [formData, setFormData] = useState({
@@ -22,18 +24,28 @@ const ReportGuards = () => {
         console.log(formData);
     };
 
+    const handleBackClick = () => {
+        console.log('Back button clicked');
+    };
+
     return (
         <LayoutSar>
             <div className="reportguards-container">
-                <h3>Personal &gt; Reporte personal &gt; Guardias &gt; Jose Fernando</h3>
+                <div className="reportguards-header">
+                    <button onClick={handleBackClick}>&lt;</button>
+                    <span className="main-title">Personal</span>
+                    <span className="sub-title"> &gt; Reporte personal &gt; Guardias &gt; Jose Fernando</span>
+                </div>
                 <div className="reportguards-content">
                     <form className="reportguards-form" onSubmit={handleSubmit}>
                         <div className="form-group-row">
                             <div className="form-group">
-                                <input type="date" name="fecha" onChange={handleChange} value={formData.fecha} />
+                                <label htmlFor="fecha">Fecha de Turno:</label>
+                                <input type="date" name="fecha" id="fecha" onChange={handleChange} value={formData.fecha} />
                             </div>
                             <div className="form-group">
-                                <select name="turno" onChange={handleChange} value={formData.turno}>
+                                <label htmlFor="turno">Horario de Turno:</label>
+                                <select name="turno" id="turno" onChange={handleChange} value={formData.turno}>
                                     <option value="">Turno</option>
                                     <option value="Manana">Mañana</option>
                                     <option value="Tarde">Tarde</option>
@@ -41,11 +53,18 @@ const ReportGuards = () => {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <select name="estado" onChange={handleChange} value={formData.estado}>
+                                <label htmlFor="estado">Estado:</label>
+                                <select name="estado" id="estado" onChange={handleChange} value={formData.estado}>
                                     <option value="">Estado</option>
                                     <option value="Completada">Completada</option>
                                     <option value="Falto">Falto</option>
                                 </select>
+                            </div>
+                            <div className="sar-search-bar-item">
+                                <input type="text" placeholder="Buscar..." className="sar-search-input" />
+                                <button className="sar-search-button">
+                                <FaMagnifyingGlass />
+                                </button>
                             </div>
                         </div>
                     </form>
