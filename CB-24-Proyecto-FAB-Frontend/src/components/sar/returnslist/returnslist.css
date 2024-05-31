@@ -18,9 +18,9 @@
 .returnslist-header button {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    padding: 0;
+    font-size: 3rem;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 .returnslist-header .main-title {
@@ -51,7 +51,6 @@
     display: flex;
     gap: 1rem;
     width: 100%;
-    align-items: center;
 }
 
 .returnslist-form .form-group {
@@ -78,22 +77,6 @@
 
 .returnslist-form .form-group-row .form-group {
     flex: 1;
-}
-
-.returnslist-form button {
-    background-color: #24365C;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    margin: 0;
 }
 
 .returnslist-form button:hover {
@@ -140,7 +123,7 @@
     padding: 0;
     margin: 0;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 3rem; /* Adjusted to match the icon-button in GuardManagement */
     height: 40px;
     width: 40px;
     display: flex;

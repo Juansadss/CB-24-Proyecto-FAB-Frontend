@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import './returnslist.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import '../search-bar-styles.css'
+import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search";
+import DatePicker from 'react-datepicker';
+import { FaCalendarAlt } from "react-icons/fa";
+import 'react-datepicker/dist/react-datepicker.css';
+import { CiSquarePlus } from "react-icons/ci";
 
-const ReturnsList = () => {
-    const [formData, setFormData] = useState({
-        institucion: '',
-        fechaInicio: '',
-        fechaFin: ''
-    });
+const options = [
+    { value: 'opcion1', label: 'Alcaldía de Cochabamba' },
+    { value: 'opcion2', label: 'Fuerza Aérea' },
+];
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+const handleBackClick = () => {
+    console.log('Back button clicked');
+};
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
+export default function ReturnsList() {
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
 
-    const handleBackClick = () => {
-        // Logic for going back
-        console.log('Back button clicked');
+    const handleDateChange = (date: Date | null) => {
+        setStartDate(date);
+        console.log('Fecha seleccionada:', date);
     };
 
     return (
@@ -36,24 +36,42 @@ const ReturnsList = () => {
                     <span className="sub-title"> &gt; Devoluciones</span>
                 </div>
                 <div className="returnslist-content">
-                    <form className="returnslist-form" onSubmit={handleSubmit}>
+                    <form className="returnslist-form">
                         <div className="form-group-row">
+                        <div className="donationlist-header">
+                                <button ><CiSquarePlus /></button>
+                            </div>
                             <div className="form-group">
                                 <label>Institución</label>
-                                <select name="institucion" onChange={handleChange} value={formData.institucion}>
-                                    <option value="Alcaldia">Alcaldía de Cochabamba</option>
-                                    <option value="FuerzaAerea">Fuerza Aérea</option>
-                                </select>
+                                <DropdownInputSearch options={options} />
                             </div>
                             <div className="form-group">
-                                <label>Fecha de Donación</label>
-                                <input type="date" name="fechaInicio" onChange={handleChange} value={formData.fechaInicio} />
+                                <label htmlFor="donation-date">Fecha de Donacion:</label>
+                                <div className="sar-search-bar-item">
+                                    <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
                             </div>
                             <div className="form-group">
-                                <label>Fecha de Devolución</label>
-                                <input type="date" name="fechaFin" onChange={handleChange} value={formData.fechaFin} />
+                                <label htmlFor="return-date">Fecha de Devolución</label>
+                                <div className="sar-search-bar-item">
+                                    <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
                             </div>
-                            <button type="button" className="icon-button">+</button>
+                            <div className="form-group">
+                                <label htmlFor="search">Buscador:</label>
+                                <div className="sar-search-bar-item">
+                                    <input type="text" placeholder="Buscar..." className="sar-search-input" />
+                                    <button className="sar-search-button">
+                                        <FaMagnifyingGlass />
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                     <table className="returnslist-table">
@@ -85,5 +103,3 @@ const ReturnsList = () => {
         </LayoutSar>
     );
 };
-
-export default ReturnsList;

@@ -3,30 +3,35 @@ import './reportguards.css';
 import LayoutSar from '../layout-sar/layout-sar';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import '../search-bar-styles.css'
+import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search";
+import DatePicker from 'react-datepicker';
+import { FaCalendarAlt } from "react-icons/fa";
+import 'react-datepicker/dist/react-datepicker.css';
 
-const ReportGuards = () => {
-    const [formData, setFormData] = useState({
-        fecha: '',
-        turno: '',
-        estado: ''
-    });
+    const options = [
+        { value: 'opcion1', label: 'Manaña' },
+        { value: 'opcion2', label: 'Tarde' },
+        { value: 'opcion3', label: 'Noche' },
+      ];
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
+      const options2 = [
+        { value: 'opcion1', label: 'Completada' },
+        { value: 'opcion2', label: 'Falta' },
+      ];
 
     const handleBackClick = () => {
         console.log('Back button clicked');
     };
+
+export default function ReportGuards() {
+        const [startDate, setStartDate] = useState<Date | null>(new Date());
+        const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
+      
+      
+        const handleDateChange = (date: Date | null) => {
+          setStartDate(date);
+          console.log('Fecha seleccionada:', date);
+        };
 
     return (
         <LayoutSar>
@@ -37,36 +42,35 @@ const ReportGuards = () => {
                     <span className="sub-title"> &gt; Reporte personal &gt; Guardias &gt; Jose Fernando</span>
                 </div>
                 <div className="reportguards-content">
-                    <form className="reportguards-form" onSubmit={handleSubmit}>
+                    <form className="reportguards-form" >
                         <div className="form-group-row">
                             <div className="form-group">
-                                <label htmlFor="fecha">Fecha de Turno:</label>
-                                <input type="date" name="fecha" id="fecha" onChange={handleChange} value={formData.fecha} />
+                                <label htmlFor="turno">Fecha de Turno:</label>
+                                <div className="sar-search-bar-item">
+                                    <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="turno">Horario de Turno:</label>
-                                <select name="turno" id="turno" onChange={handleChange} value={formData.turno}>
-                                    <option value="">Turno</option>
-                                    <option value="Manana">Mañana</option>
-                                    <option value="Tarde">Tarde</option>
-                                    <option value="Noche">Noche</option>
-                                </select>
+                                <DropdownInputSearch options={options} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="estado">Estado:</label>
-                                <select name="estado" id="estado" onChange={handleChange} value={formData.estado}>
-                                    <option value="">Estado</option>
-                                    <option value="Completada">Completada</option>
-                                    <option value="Falto">Falto</option>
-                                </select>
+                                <DropdownInputSearch options={options2} />
                             </div>
-                            <div className="sar-search-bar-item">
-                                <input type="text" placeholder="Buscar..." className="sar-search-input" />
-                                <button className="sar-search-button">
-                                <FaMagnifyingGlass />
-                                </button>
+                            <div className="form-group">
+                            <label htmlFor="estado">Buscador:</label>
+                                <div className="sar-search-bar-item">
+                                    <input type="text" placeholder="Buscar..." className="sar-search-input" />
+                                    <button className="sar-search-button">
+                                        <FaMagnifyingGlass />
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        </div> 
                     </form>
                     <table className="reportguards-table">
                         <thead>
@@ -105,4 +109,3 @@ const ReportGuards = () => {
     );
 };
 
-export default ReportGuards;
