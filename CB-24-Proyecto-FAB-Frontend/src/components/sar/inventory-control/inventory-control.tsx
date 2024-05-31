@@ -1,9 +1,16 @@
 import { useState } from "react";
 import LayoutSar from "../layout-sar/layout-sar";
 import "./inventory-control.css";
+import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+
+interface Option {
+  value: string;
+  label: string;
+}
 
 export default function InventoryControl() {
   const [activeTab, setActiveTab] = useState<string>('activos');
+  const [selectedTipo, setSelectedTipo] = useState<Option | null>(null);
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
@@ -14,7 +21,13 @@ export default function InventoryControl() {
     { tipo: 'Silla de metal', cantidad: 9 },
     { tipo: 'Catre de metal', cantidad: 9 }
   ];
-
+  const tipoOptions: Option[] = [
+    { value: 'Tipos', label: 'Sillas' },
+    { value: 'Tipos', label: 'Catres' }
+  ];
+  const handleTipoSelect = (option: Option) => {
+    setSelectedTipo(option);
+  };
   return (
     <LayoutSar>
       <div className="inventory-container">
@@ -30,11 +43,9 @@ export default function InventoryControl() {
               Insumos
             </button>
           </div>
-          <select className="inventory-type-select">
-            <option value="todos">Tipo</option>
-            <option value="sillas">Sillas</option>
-            <option value="catres">Catres</option>
-          </select>
+          <div className="inventory-control-controls-container">
+          <DropdownInputSearch label='Seleccione tipo de activos' options={tipoOptions} onOptionSelect={handleTipoSelect} />
+          </div>
         </div>
         <table className="inventory-table">
           <thead>

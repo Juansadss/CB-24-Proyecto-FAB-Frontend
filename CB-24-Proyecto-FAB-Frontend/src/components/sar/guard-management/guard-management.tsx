@@ -39,7 +39,7 @@ export default function GuardManagement() {
         <div className="guard-header">
           <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
           <form action="" className="sar-search-bar">
-            <DropdownInputSearch options={options} />
+            <DropdownInputSearch label='Seleccione turno' options={options} />
             <div className="sar-search-bar-item">
               <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
               <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>

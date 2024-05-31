@@ -1,20 +1,33 @@
 import { useState } from "react";
 import LayoutSar from "../layout-sar/layout-sar";
 import "./inventory-control-supplies.css";
+import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+
+interface Option {
+  value: string;
+  label: string;
+}
 
 export default function InventoryControl() {
   const [activeTab, setActiveTab] = useState<string>('activos');
+  const [selectedTipo, setSelectedTipo] = useState<Option | null>(null);
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
-
+  const tipoOptions: Option[] = [
+    { value: 'Tipos', label: 'Casco' },
+    { value: 'Tipos', label: 'Pala' },
+    { value: 'Tipos', label: 'Carretilla' }
+  ];
   const inventoryData = [
     { tipo: 'Casco de plastico', cantidad: 15, almacen: 15},
     { tipo: 'Pala', cantidad: 19, almacen: 7},
     { tipo: 'Carretilla', cantidad: 19,almacen: 5}
   ];
-
+  const handleTipoSelect = (option: Option) => {
+    setSelectedTipo(option);
+  };
   return (
     <LayoutSar>
       <div className="inventory-container">
@@ -30,12 +43,9 @@ export default function InventoryControl() {
               Insumos
             </button>
           </div>
-          <select className="inventory-supplies-type-select">
-            <option value="todos">Tipo de inventario</option>
-            <option value="Casco">Casco</option>
-            <option value="Pala">Pala</option>
-            <option value="Carretilla">Carretilla</option>
-          </select>
+          <div className="inventory-supplies-controls-container">
+            <DropdownInputSearch label='Seleccione tipo de insumos' options={tipoOptions} onOptionSelect={handleTipoSelect} />
+          </div>
         </div>
         <table className="inventory-supplies-table">
           <thead>

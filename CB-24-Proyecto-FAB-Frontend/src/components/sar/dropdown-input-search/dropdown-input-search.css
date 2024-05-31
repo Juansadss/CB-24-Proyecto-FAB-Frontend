@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    height: 2rem; 
+    margin: 5px;
 }
 
 .dropdown-Input-search .selected-option {
@@ -13,6 +15,21 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+    .dropdown-Input-search .selected-option p {
+        flex: 1;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
+
+.dropdown-Input-search-icon {
+    font-size: 20px;
+}
+
+.dropdown-Input-search-icon:hover {
+    color: #6E2121;
 }
 
 .dropdown-Input-search .options {
