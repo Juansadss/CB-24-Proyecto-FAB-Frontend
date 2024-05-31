@@ -12,11 +12,26 @@ import SanidadTratamiento from './components/sar/sanidad_tratamiento/sanidad_tra
 import InventoryControl from './components/sar/inventory-control/inventory-control.tsx';
 import InventoryControlSupplies from './components/sar/inventory-control-supplies/inventory-control-supplies.tsx'
 import InventoryControlList from './components/sar/inventory-control-list/inventory-control-list.tsx';
+import PersonalForm from './components/sar/personal/personal.tsx';
+import RecruitmentForm from './components/sar/recruitment/recruitment.tsx';
+import SanitationForm from './components/sar/sanitation/sanitation.tsx';
+import ReportGuards from './components/sar/reportguards/reportguards.tsx';
+import DonationList from './components/sar/donationlist/donationlist.tsx';
+import ReturnsList from './components/sar/returnslist/returnslist.tsx';
+import DonationInventory from './components/sar/donationinventory/donationinventory.tsx';
 
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path:  "/menu-principal",  element: <MainMenu /> },
   { path:  "/sar/gestion-guardias",  element: <GuardManagement /> },
+  { path:  "/sar/personal",  element: <PersonalForm /> },
+  { path:  "/sar/reclutamiento",  element: <RecruitmentForm /> },
+  { path:  "/sar/sanidad",  element: <SanitationForm /> },
+  { path:  "/sar/guardias",  element: <ReportGuards /> },
+  { path:  "/sar/donaciones",  element: <DonationList /> },
+  { path:  "/sar/devoluciones",  element: <ReturnsList /> },
+  { path:  "/sar/donaciones-inventario",  element: <DonationInventory /> },
+  
   { path:  "/sar/informacion-reclutamiento",  element: <RecruitmentInformation/> },
   { path:  "/sar/operaciones-lista",  element: <OperationsList/> },
   { path:  "/sar/crear-operaciones",  element: <OperationsCreate/> },
