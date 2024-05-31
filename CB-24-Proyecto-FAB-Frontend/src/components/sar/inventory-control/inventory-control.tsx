@@ -10,7 +10,7 @@ interface Option {
 
 export default function InventoryControl() {
   const [activeTab, setActiveTab] = useState<string>('activos');
-  const [selectedTipo, setSelectedTipo] = useState<Option | null>(null);
+  const [selectedType, setSelectedType] = useState<Option | null>(null);
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
@@ -21,12 +21,13 @@ export default function InventoryControl() {
     { tipo: 'Silla de metal', cantidad: 9 },
     { tipo: 'Catre de metal', cantidad: 9 }
   ];
-  const tipoOptions: Option[] = [
+  const typeOptions: Option[] = [
     { value: 'Tipos', label: 'Sillas' },
     { value: 'Tipos', label: 'Catres' }
   ];
-  const handleTipoSelect = (option: Option) => {
-    setSelectedTipo(option);
+  const handleTypeSelect = (option: Option) => {
+    setSelectedType(option);
+    console.log('Selected estado:', selectedType);
   };
   return (
     <LayoutSar>
@@ -44,7 +45,7 @@ export default function InventoryControl() {
             </button>
           </div>
           <div className="inventory-control-controls-container">
-          <DropdownInputSearch label='Seleccione tipo de activos' options={tipoOptions} onOptionSelect={handleTipoSelect} />
+          <DropdownInputSearch label='Seleccione tipo de activos' options={typeOptions} onOptionSelect={handleTypeSelect} />
           </div>
         </div>
         <table className="inventory-table">

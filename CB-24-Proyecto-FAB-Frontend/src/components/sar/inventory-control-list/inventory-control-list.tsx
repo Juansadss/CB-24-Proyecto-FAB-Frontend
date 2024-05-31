@@ -12,27 +12,27 @@ interface Option {
 
 export default function InventoryControlList() {
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [selectedEstado, setSelectedEstado] = useState<Option | null>(null);
-  const [selectedDonacion, setSelectedDonacion] = useState<Option | null>(null);
+  const [selectedState, setSelectedStatus] = useState<Option | null>(null);
+  const [selectedDonation, setSelectedDonation] = useState<Option | null>(null);
 
-  const estadoOptions: Option[] = [
+  const stateOptions: Option[] = [
     { value: 'Regular', label: 'Regular' },
     { value: 'Bueno', label: 'Bueno' },
     { value: 'Mal', label: 'Mal estado' }
   ];
 
-  const donacionOptions: Option[] = [
+  const donationOptions: Option[] = [
     { value: 'Donacion', label: 'Alcaldía' }
   ];
 
-  const handleEstadoSelect = (option: Option) => {
-    setSelectedEstado(option);
-    console.log('Selected estado:', option);
+  const handleStateSelect = (option: Option) => {
+    setSelectedStatus(option);
+    console.log('Selected estado:', selectedState);
   };
 
-  const handleDonacionSelect = (option: Option) => {
-    setSelectedDonacion(option);
-    console.log('Selected donación:', option);
+  const handleDonationSelect = (option: Option) => {
+    setSelectedDonation(option);
+    console.log('Selected donación:', selectedDonation);
   };
 
   const inventoryData = [
@@ -59,8 +59,8 @@ export default function InventoryControlList() {
               </button>
             </div>
           </div>
-            <DropdownInputSearch label='Seleccione un estado' options={estadoOptions} onOptionSelect={handleEstadoSelect} />
-            <DropdownInputSearch label='Seleccione tipo de donacion' options={donacionOptions} onOptionSelect={handleDonacionSelect} />
+            <DropdownInputSearch label='Seleccione un estado' options={stateOptions} onOptionSelect={handleStateSelect} />
+            <DropdownInputSearch label='Seleccione tipo de donacion' options={donationOptions} onOptionSelect={handleDonationSelect} />
         </div>
         <table className="inventory-list-table">
           <thead>
