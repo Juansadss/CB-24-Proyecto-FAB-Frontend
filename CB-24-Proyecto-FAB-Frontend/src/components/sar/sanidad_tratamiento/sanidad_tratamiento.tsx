@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './sanidad_tratamiento.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import DatePicker from 'react-datepicker';
+import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+import { CiSquarePlus } from 'react-icons/ci';
 
+const options = [
+    { value: 'opcion1', label: 'Opción 1' },
+    { value: 'opcion2', label: 'Opción 2' },
+    { value: 'opcion3', label: 'Opción 3' },
+];
 const SanidadTratamiento = () => {
-    const [formData, setFormData] = useState({
-        institucion: '',
-        fechaInicio: '',
-        fechaFin: ''
-    });
+    const [, setModalOpen] = useState(false);
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
+    const handleDateChange = (date: Date | null) => {
+        setStartDate(date);
+        console.log('Fecha seleccionada:', date);
     };
 
     return (
@@ -27,24 +28,24 @@ const SanidadTratamiento = () => {
             <div className="sanidad_tratamiento-container">
                 <h3>SANIDAD </h3>
                 <div className="sanidad_tratamiento-content">
-                    <form className="sanidad_tratamiento-form" onSubmit={handleSubmit}>
-                        <div className="form-group-row">
-
-                            <div className="form-group">
-                                <label><b>Tipo Operativo</b></label>
-                                <select name="institucion" onChange={handleChange} value={formData.institucion}>
-                                    <option value="">Tipo operativo</option>
-                                    <option value="Rescate">Rescate</option>
-                                    <option value="Medica">Seguridad médica</option>
-                                </select>
+                    <div className="guard-header">
+                        <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
+                        <form action="" className="sar-search-bar">
+                            <DropdownInputSearch options={options} />
+                            <div className="sar-search-bar-item">
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                    <FaCalendarAlt />
+                                </button>
                             </div>
-                            <div className="form-group">
-                                <label><b>Buscar</b></label>
-                                <input type="text" name="cantidad" placeholder='Buscar...' onChange={handleChange} />
+                            <div className="sar-search-bar-item">
+                                <input type="text" placeholder="Buscar..." className="sar-search-input" />
+                                <button className="sar-search-button">
+                                    <FaMagnifyingGlass />
+                                </button>
                             </div>
-                            <button className='sanidad_tratamiento-btnAgregar' type="button">Agregar</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                     <table className="sanidad_tratamiento-table">
                         <thead>
                             <tr>

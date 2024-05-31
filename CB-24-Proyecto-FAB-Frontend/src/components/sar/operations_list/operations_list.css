@@ -1,3 +1,22 @@
+
+.operations_list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+    .operations_list-header input[type="text"] {
+        margin-right: 10px;
+    }
+
+    .operations_list-header .icon-button{
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 3rem;
+        cursor: pointer;
+    }
 .operations_list-container {
     display: flex;
     flex-direction: column;

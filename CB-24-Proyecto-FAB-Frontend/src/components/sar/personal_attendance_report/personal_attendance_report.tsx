@@ -1,55 +1,50 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './personal_attendance_report.css';
 import LayoutSar from '../layout-sar/layout-sar';
-import { FaAngleLeft } from 'react-icons/fa6';
+import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+import { FaAngleLeft, FaCalendarAlt } from 'react-icons/fa';
+import DatePicker from 'react-datepicker';
+
+const tipo = [
+    { value: 'opcion1', label: 'Opción 1' },
+    { value: 'opcion2', label: 'Opción 2' },
+    { value: 'opcion3', label: 'Opción 3' },
+];
+const estado = [
+    { value: 'opcion1', label: 'Opción 1' },
+    { value: 'opcion2', label: 'Opción 2' },
+    { value: 'opcion3', label: 'Opción 3' },
+];
 
 const PersonalAttendanceReport = () => {
-    const [formData, setFormData] = useState({
-        estado: '',
-        fechaInicio: '',
-        fechaFin: ''
-    });
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
+
+    const handleDateChange = (date: Date | null) => {
+        setStartDate(date);
+        console.log('Fecha seleccionada:', date);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
 
     return (
         <LayoutSar>
             <div className="personalAttendanceReport-container">
                 <h3> <FaAngleLeft /> PERSONAL &gt; Reporte personal &gt; Asistencia &gt; Jose Fernando </h3>
                 <div className="personalAttendanceReport-content">
-                    <form className="personalAttendanceReport-form" onSubmit={handleSubmit}>
-                        <div className="form-group-row">
-                            <div className="form-group">
-                                <label><b>Fecha Inicio</b></label>
-                                <input type="date" name="cantidad" onChange={handleChange} />
+                    <div className="guard-header">
+                       
+                        <form action="" className="sar-search-bar">
+                            <DropdownInputSearch options={tipo} />
+                            <div className="sar-search-bar-item">
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                    <FaCalendarAlt />
+                                </button>
                             </div>
-                            <div className="form-group">
-                                <label><b>Fecha Final</b></label>
-                                <input type="date" name="cantidad" onChange={handleChange} />
-                            </div>
-                            <div className="form-group">
-                                <label><b>Estado</b></label>
-                                <select name="estado" onChange={handleChange} value={formData.estado}>
-                                    <option value="">Estado</option>
-                                    <option value="Presente">Presente</option>
-                                    <option value="Falto">Falto</option>
-                                    <option value="Permiso">Permiso</option>
-                                </select>
-                            </div>
-
-                        </div>
-                    </form>
+                            <DropdownInputSearch options={estado} />
+                        </form>
+                    </div>
                     <table className="personalAttendanceReport-table">
                         <thead>
                             <tr>

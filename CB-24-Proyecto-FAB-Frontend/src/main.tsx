@@ -17,6 +17,9 @@ import PersonalOperationsReport from './components/sar/personal_operations_repor
 
 
 
+
+
+
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path:  "/menu-principal",  element: <MainMenu /> },
@@ -29,6 +32,7 @@ const router = createBrowserRouter([
   { path:  "/sar/sanidad-tratamiento",  element: <SanidadTratamiento/> },
   { path:  "/sar/Personal-reporte-asistencia",  element: <PersonalAttendanceReport/> },
   { path:  "/sar/Personal-reporte-operaciones",  element: <PersonalOperationsReport/> },
+ 
 
 ]);
 

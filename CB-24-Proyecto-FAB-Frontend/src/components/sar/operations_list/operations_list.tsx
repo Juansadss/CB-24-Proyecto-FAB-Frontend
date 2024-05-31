@@ -1,27 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './operations_list.css';
 import LayoutSar from '../layout-sar/layout-sar';
-import { FaAngleLeft } from 'react-icons/fa6';
+import { FaAngleLeft, FaMagnifyingGlass } from 'react-icons/fa6';
+import { CiSquarePlus } from 'react-icons/ci';
+import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+
+
+const options = [
+    { value: 'Rescate', label: 'Rescate' },
+    { value: 'Seguridad Médica', label: 'Seguridad Médica' },
+    
+  ];
 
 const OperationsList = () => {
-    const [formData, setFormData] = useState({
-        institucion: '',
-        fechaInicio: '',
-        fechaFin: ''
-    });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
+    const [, setModalOpen] = useState(false);
 
     return (
         <LayoutSar>
@@ -29,24 +22,19 @@ const OperationsList = () => {
 
                 <h3> <FaAngleLeft /> LISTA DE OPERACIONES </h3>
                 <div className="operations_list-content">
-                    <form className="operations_list-form" onSubmit={handleSubmit}>
-                        <div className="form-group-row">
-                            <button type="button" >+</button>
-                            <div className="form-group">
-                                <label><b>Tipo Operaciones</b></label>
-                                <select name="institucion" onChange={handleChange} value={formData.institucion}>
-                                    <option value="">Tipo operativo</option>
-                                    <option value="Rescate">Rescate</option>
-                                    <option value="Medica">Seguridad médica</option>
-                                </select>
+                    <div className="guard-header">
+                        <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
+                        <form action="" className="sar-search-bar">
+                            <DropdownInputSearch options={options} />
+                            
+                            <div className="sar-search-bar-item">
+                                <input type="text" placeholder="Buscar..." className="sar-search-input" />
+                                <button className="sar-search-button">
+                                    <FaMagnifyingGlass />
+                                </button>
                             </div>
-                            <div className="form-group">
-                                <label><b>Buscar</b></label>
-                                <input type="text" name="cantidad" placeholder='Buscar...' onChange={handleChange} />
-                            </div>
-
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                     <table className="operations_list-table">
                         <thead>
                             <tr>
