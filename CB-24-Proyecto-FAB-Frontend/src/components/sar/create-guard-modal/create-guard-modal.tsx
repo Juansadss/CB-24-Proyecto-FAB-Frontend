@@ -21,7 +21,7 @@ export default function CreateGuardModal({ isOpen, onClose } : CreateGuardModalP
             <div className="modal-guard-content">
                 <div className="modal-guard-header">
                     <h2>
-                        <button className="icon-button" onClick={onClose}><FaAngleLeft /></button> Registrar guardia
+                        <button onClick={onClose}><FaAngleLeft /></button> Registrar guardia
                     </h2>                    
                 </div>
                 <div className="modal-guard-body">

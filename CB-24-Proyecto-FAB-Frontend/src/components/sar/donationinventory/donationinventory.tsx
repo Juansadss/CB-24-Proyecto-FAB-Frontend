@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './donationinventory.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaAngleLeft } from 'react-icons/fa';
 
 const DonationInventory = () => {
     const [formData, setFormData] = useState({
@@ -45,11 +46,10 @@ const DonationInventory = () => {
         <LayoutSar>
             <div className="donationinventory-container">
                 <form className="donationinventory-form" onSubmit={handleSubmit}>
-                    <div className="donationinventory-header">
-                        <button onClick={handleBackClick} className="icon-button-back">&lt;</button>
-                        <span className="main-title">INVENTARIO</span>
-                        <span className="sub-title"> &gt; Donación</span>
-                    </div>
+                    <h2 className="donationinventory-header">
+                        <button onClick={handleBackClick}><FaAngleLeft /></button>
+                        <b>INVENTARIO &gt; </b> <span> Donación</span> 
+                    </h2> 
                     <div className="form-group">
                         <label>Institución:</label>
                         <select name="institucion" onChange={handleChange} value={formData.institucion}>

@@ -2,6 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import './personal.css';
 import LayoutSar from '../layout-sar/layout-sar';
 import { useNavigate } from 'react-router-dom';
+import { FaAngleLeft } from 'react-icons/fa';
 
 const PersonalForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -54,17 +55,14 @@ const PersonalForm: React.FC = () => {
         e.preventDefault();
         console.log(formData);
     };
-
     return (
         <LayoutSar>
-            <div className="personal-form-container">
-                
+            <div className="personal-form-container">                
                 <div className="personal-form-wrapper">
-                <div className="personal-header">
-                    <button onClick={handleBackClick}>&lt;</button>
-                    <span className="main-title">PERSONAL</span>
-                    <span className="sub-title">&gt; Filiación personal</span>
-                </div>
+                    <h2 className="personal-header">
+                        <button onClick={handleBackClick}><FaAngleLeft /></button>
+                        <b>PERSONAL &gt; </b> <span>Filiación personal</span>
+                    </h2>
                     <form className="personal-form" onSubmit={handleSubmit}>
                         <h2>DATOS PERSONALES</h2>
                         <div className="form-group-row">

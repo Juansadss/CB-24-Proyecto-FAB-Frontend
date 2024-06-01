@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './reportguards.css';
 import LayoutSar from '../layout-sar/layout-sar';
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaAngleLeft, FaCalendarAlt } from "react-icons/fa";
 import '../search-bar-styles.css'
 import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search";
 import DatePicker from 'react-datepicker';
-import { FaCalendarAlt } from "react-icons/fa";
 import 'react-datepicker/dist/react-datepicker.css';
+import { CiSquarePlus } from 'react-icons/ci';
 
     const options = [
         { value: 'opcion1', label: 'Manaña' },
@@ -36,42 +36,42 @@ export default function ReportGuards() {
     return (
         <LayoutSar>
             <div className="reportguards-container">
-                <div className="reportguards-header">
-                    <button onClick={handleBackClick}>&lt;</button>
-                    <span className="main-title">Personal</span>
-                    <span className="sub-title"> &gt; Reporte personal &gt; Guardias &gt; Jose Fernando</span>
-                </div>
+                <h2 className="reportguards-header">
+                    <button onClick={handleBackClick}><FaAngleLeft /></button>
+                    <b>PERSONAL &gt; </b> <span>Reporte personal &gt; Guardias &gt; Jose Fernando</span>
+                </h2>
                 <div className="reportguards-content">
-                    <form className="reportguards-form" >
-                        <div className="form-group-row">
-                            <div className="form-group">
-                                <label htmlFor="turno">Fecha de Turno:</label>
+                    <div className="reportguards-actions">
+                        <button className="icon-button-reportguards"><CiSquarePlus /></button>
+                        <form action="" className="sar-search-bar">                             
+                            <div>
+                                <b>Fecha inicial:</b>
+                                <div className="sar-search-bar-item">
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
+                            </div> 
+                            <div>
+                                <b>Fecha final</b>
                                 <div className="sar-search-bar-item">
                                     <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
                                     <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
                                         <FaCalendarAlt />
                                     </button>
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="turno">Horario de Turno:</label>
-                                <DropdownInputSearch options={options} />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="estado">Estado:</label>
-                                <DropdownInputSearch options={options2} />
-                            </div>
-                            <div className="form-group">
-                            <label htmlFor="estado">Buscador:</label>
-                                <div className="sar-search-bar-item">
-                                    <input type="text" placeholder="Buscar..." className="sar-search-input" />
-                                    <button className="sar-search-button">
-                                        <FaMagnifyingGlass />
-                                    </button>
-                                </div>
-                            </div>
-                        </div> 
-                    </form>
+                            </div>   
+                            <div>
+                                <b>Turno</b>
+                                <DropdownInputSearch label='Seleccione un turno' options={options} />
+                            </div>  
+                            <div>
+                                <b>Estado</b>
+                                <DropdownInputSearch label='Seleccione un estado' options={options2} />
+                            </div>     
+                        </form> 
+                    </div>
                     <table className="reportguards-table">
                         <thead>
                             <tr>

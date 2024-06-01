@@ -37,7 +37,7 @@ export default function GuardManagement() {
       <div className="guard-container">
         <h2 className="guard-title">GUARDIA</h2>
         <div className="guard-header">
-          <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
+          <button className="icon-button-guard" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
           <form action="" className="sar-search-bar">
             <DropdownInputSearch label='Seleccione turno' options={options} />
             <div className="sar-search-bar-item">

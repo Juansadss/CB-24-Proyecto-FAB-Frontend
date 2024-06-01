@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './sanitation.css';
 import LayoutSar from '../layout-sar/layout-sar';
 import { useNavigate } from 'react-router-dom';
+import { FaAngleLeft } from 'react-icons/fa';
 
 const SanitationForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -34,12 +35,11 @@ const SanitationForm: React.FC = () => {
         <LayoutSar>
             <div className="sanitation-form-container">
                 <form className="sanitation-form" onSubmit={handleSubmit}>
-                    <div className="sanitation-header">
-                        <button onClick={handleBackClick}>&lt;</button>
-                        <span className="main-title">SANIDAD</span>
-                        <span className="sub-title">&gt; Crear Tratamiento</span>
-                    </div>
-                    <h2>DATOS PERSONALES</h2>
+                    <h2 className="sanitation-header">
+                        <button onClick={handleBackClick}><FaAngleLeft /></button>
+                        <b>SANIDAD &gt; </b> <span>Crear Tratamiento</span>
+                    </h2>
+                    <h3>DATOS PERSONALES</h3>
                     <div className="form-group">
                         <label>Fecha de Diagnóstico:</label>
                         <input type="date" name="fecha" onChange={handleChange} value={formData.fecha} />
@@ -53,7 +53,7 @@ const SanitationForm: React.FC = () => {
                             <option value="Paciente 3">Paciente 3</option>
                         </select>
                     </div>
-                    <h2>DATOS MÉDICOS</h2>
+                    <h3>DATOS MÉDICOS</h3>
                     <div className="form-group">
                         <label>Diagnóstico:</label>
                         <textarea name="diagnostico" onChange={handleChange} value={formData.diagnostico} />
