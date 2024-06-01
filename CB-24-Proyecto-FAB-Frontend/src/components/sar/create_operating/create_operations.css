@@ -1,171 +1,154 @@
-.create_operations_header {
+.create_operativo-form-container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    background-color: #ffffff; 
+    min-height: 100vh;
+    width: 100%;
 }
 
-.create_operations_btnReturn {
-    background-color: transparent; 
-    border: none; 
-    margin-right: 10px; 
-    font-size: 45px; 
-    padding: 5px 10px; 
+.create_operativo-form {
+    background-color: #f0f0f0; 
+    padding: 2rem;
+    border-radius: 1px;
+    width: 100%;
+    max-width: 1000px;
+    overflow-y: auto;
+    color: #000000;
 }
 
-.create_operations_btnReturn:hover {
-    transform: scale(1.2);
+.create_operativo-form h2, .create_operativo-form h3 {
+    color: #000000;
 }
 
-.create_operations_header_h2 {
-    margin-right: 10px; 
+.create_operativo-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
-.create_operations_body {
-    background-color: rgba(196, 193, 193, 0.7); /* Fondo oscuro con opacidad del 70% */
-    padding: 20px; /* Ajusta el espaciado interior según sea necesario */
-    
+.create_operativo-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
-.create_operations_Info_FileOne {
+.create_operativo-form .form-group {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-.create_operations_Info_FileOne button {
-    flex: 1; /* Hace que los botones ocupen todo el espacio disponible */
-    padding: 10px;
-    margin: 10px;
+.create_operativo-form .form-group-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.create_operations_Info_FileOne label {
+.create_operativo-form .form-group-row .form-group {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.create_operativo-form .form-group-row .form-group:last-child {
+    margin-right: 0;
+}
+
+.create_operativo-form label {
+    margin-bottom: 0.5rem;
+    color: #333;
     font-weight: bold;
-    width: 30%;
-    margin-left: 25px;
 }
 
-.create_operations_Info_FileOne select,
-.create_operations_Info_FileOne input[type="date"] {
-    padding: 10px; /* Aumenta el relleno para hacerlos más grandes */
-    border: 1px solid #ccc; /* Añade un borde */
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 15px;
-}
+.create_operativo-form input[type="text"],
+.create_operativo-form input[type="time"],
+.create_operativo-form input[type="date"]{
 
-/* Estilo adicional para el selector */
-.create_operations_Info_FileOne select {
-    appearance: none; /* Oculta el estilo de selección predeterminado */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>'); /* Añade una flecha personalizada */
-    background-position: right 10px top 50%; /* Posición de la flecha */
-    background-size: 12px; /* Tamaño de la flecha */
-    background-repeat: no-repeat; /* Evita la repetición de la flecha */
-    width: 70%;
-}
-
-/* Estilo adicional para el campo de fecha */
-.create_operations_Info_FileOne input[type="date"] {
-    appearance: none; /* Oculta el estilo predeterminado del campo de fecha */
-}
-.create_operations_Info_FileOne .create_operations_label {
-    display: block;
-    width: 30%;
-    margin-bottom: 5px;
-    margin-left: 25px;
-}
-
-.create_operations_Info_FileOne input[type="text"] {
-    width: 50%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border: 1.5px solid #333;
     border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-right: 50%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    height: 35px;
+    width: auto;
+}
+.create_operativo-form select {
+    padding: 0.5rem;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    height: 55px;
 }
 
-.create_operations_Info_FileOne input[type="time"] {
-    padding: 10px; /* Aumenta el relleno para hacerlos más grandes */
-    border: 1px solid #ccc; /* Añade un borde */
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 15px;
+.create_operativo-form input[type="file"] {
+    display: none; /* Oculta el input de archivo real */
 }
 
-.create_operations_Info_FileOne_center {
+.create_operativo-form .form-group.file-upload {
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: center; /* Centra horizontalmente los elementos */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.create_operations_Info_FileOne_center select {
-    appearance: none; /* Oculta el estilo de selección predeterminado */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>'); /* Añade una flecha personalizada */
-    background-position: right 10px top 50%; /* Posición de la flecha */
-    background-size: 12px; /* Tamaño de la flecha */
-    background-repeat: no-repeat; /* Evita la repetición de la flecha */
-    padding: 10px; /* Aumenta el relleno para hacerlos más grandes */
-    border: 1px solid #ccc; /* Añade un borde */
-    border-radius: 5px; /* Añade esquinas redondeadas */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
-    width: 50%; /* Ocupa todo el ancho disponible */
-    margin: 15px;
-    margin-left: 10px; /* Reduce el margen izquierdo */
+.create_operativo-form .form-group.file-upload label {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
-.create_operations_Info_FileOne_center label {
-    font-weight: bold;
-    width: 100px;
-}
-
-.create_operations_listbtnAgregar {
-    border-radius: 10px;
-    border: 2px solid black; /* Borde más grueso y de color negro */
-    padding: 1px; /* Espaciado interno */
-    margin: 1px auto;
-    color: #171A4A;
-    font-size: 44px; /* Tamaño de la letra del signo más (+) */
-    background-color: transparent; /* Fondo transparente */
-    width: 50px;
+.create_operativo-form .form-group.file-upload label img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
     height: 50px;
-    line-height: 40px; /* Centra el texto verticalmente */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-right: 30%;
-  }
-  
-  .create_operations_listbtnAgregar:hover {
-    background-color: #007bff; /* Cambia el color de fondo al pasar el cursor */
-    color: white; /* Cambia el color del texto al pasar el cursor */
-  }
-  .create_operations_Info_FileOne_center .centerlabel {
+}
+
+.create_operativo-form button {
+    padding: 0.7rem;
+    margin-top: 1rem;
+    background-color: #171A4A;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
     font-weight: bold;
-    width: 100px;
-    margin-left: 20%;
-}
-.create_operations_btnRegistrar{
-    
-    padding: 10px;
-    margin: 10px;
-    width: 40%;
+    width: 150px;
+    align-self: center;
 }
 
-.operations_table {
-    width: 80%; /* Ocupa todo el ancho disponible */
-    border-collapse: collapse; /* Combina los bordes de las celdas */
-    margin-bottom: 20px;
+.create_operativo-form button:hover {
+    background-color: #000;
+}
+.create_operativo-form .form-buttons {
+    margin-top: 1rem; /* Espacio entre la tabla y el botón registrar */
+    display: flex;
+    justify-content: center;
+}
+.create_operativo_icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
 }
 
-.operations_table th, .operations_table td {
-    border: 1px solid #ddd; /* Borde de las celdas */
-    padding: 8px; /* Espaciado interno */
-    text-align: left; /* Alineación del texto a la izquierda */
-    background-color:white;
+.create_operativo_center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.create_operativo-button:hover {
+    color: #ccc;
 }
 
-.operations_table th {
-    background-color: #171A4A; /* Color de fondo del encabezado */
-    color: white;
-    text-align: center;
+.create_operativo-form .form-buttons {
+    margin-top: 1rem; /* Espacio entre la tabla y el botón registrar */
+    display: flex;
+    justify-content: center;
 }

@@ -1,23 +1,4 @@
-
-.operations_list-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-  
-    .operations_list-header input[type="text"] {
-        margin-right: 10px;
-    }
-
-    .operations_list-header .icon-button{
-        background: none;
-        border: none;
-        padding: 0;
-        font-size: 3rem;
-        cursor: pointer;
-    }
-.operations_list-container {
+.personalAttendanceReport-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
@@ -27,14 +8,14 @@
     width: 100%;
 }
 
-.operations_list-container h3 {
+.personalAttendanceReport-container h3 {
     color: #000000;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 100%;
 }
 
-.operations_list-content {
+.personalAttendanceReport-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,25 +23,25 @@
     margin-top: 20px;
 }
 
-.operations_list-form {
+.personalAttendanceReport-form {
     width: 100%;
     max-width: 800px;
     margin-bottom: 20px;
 }
 
-.operations_list-form .form-group-row {
+.personalAttendanceReport-form .form-group-row {
     display: flex;
     gap: 1rem;
     width: 100%;
     align-items: center;
 }
 
-.operations_list-form .form-group {
+.personalAttendanceReport-form .form-group {
     flex: 1;
 }
 
-.operations_list-form input[type="text"],
-.operations_list-form select {
+.personalAttendanceReport-form input[type="date"],
+.personalAttendanceReport-form select {
     padding: 0.5rem;
     border: 1.5px solid #333;
     border-radius: 5px;
@@ -70,7 +51,7 @@
     height: 50px;
 }
 
-.operations_list-form button {
+.personalAttendanceReport-form button {
     margin: 0;
     padding: 0;
     border: none;
@@ -87,11 +68,11 @@
     
 }
 
-.operations_list-form button:hover {
+.personalAttendanceReport-form button:hover {
     background-color: #1A2C48;
 }
 
-.operations_list-table {
+.personalAttendanceReport-table {
     width: 100%;
     max-width: 800px;
     border-collapse: collapse;
@@ -100,31 +81,31 @@
     overflow: hidden;
 }
 
-.operations_list-table th,
-.operations_list-table td {
+.personalAttendanceReport-table th,
+.personalAttendanceReport-table td {
     padding: 0.75rem;
     text-align: left;
     color: #fff;
 }
 
-.operations_list-table th {
+.personalAttendanceReport-table th {
     background-color: #171A4A;
     font-weight: bold;
 }
 
-.operations_list-table tbody tr {
+.personalAttendanceReport-table tbody tr {
     background-color: #24365C;
 }
 
-.operations_list-table tbody tr:nth-child(even) {
+.personalAttendanceReport-table tbody tr:nth-child(even) {
     background-color: #1A2C48;
 }
 
-.operations_list-table tbody tr:hover {
+.personalAttendanceReport-table tbody tr:hover {
     background-color: #2C4878;
 }
 
-.operations_list-icon-button {
+.personalAttendanceReport-icon-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -134,7 +115,7 @@
     font-size: 1.5rem;
 }
 
-.operations_list-icon-button:hover {
+.personalAttendanceReport-icon-button:hover {
     color: #ccc;
 }
 
