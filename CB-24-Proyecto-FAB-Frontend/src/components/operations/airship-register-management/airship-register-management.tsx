@@ -9,8 +9,8 @@ export default function AirshipRegisterManagement() {
             {/* Botón de regreso */}
                 <div>
                     <h1>
-                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AEREONAVES
-                        <span className="small-text"> &gt; Registrar AereoNave</span>
+                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AERONAVES
+                        <span className="small-text"> &gt; Registrar AeroNave</span>
                     </h1>
                 </div>
                 
@@ -72,12 +72,37 @@ export default function AirshipRegisterManagement() {
                                 <label className="label-section"><strong>Origen de AeroNave:</strong></label>
                                 <input type="text" />
                             </div>
-                            
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Modelo de Motor:</strong></label>
+                                <input type="text" />
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Capacidad de Pasajeros:</strong></label>
+                                <input type="text" />
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Horas de Vuelo:</strong></label>
+                                <div className="time-inputs">
+                                    <input type="number" min="0" placeholder="Horas" />
+                                    <input type="number" min="0" max="59" placeholder="Minutos" />
+                                </div>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Horas de Mantenimiento:</strong></label>
+                                <div className="time-inputs">
+                                    <input type="number" min="0" placeholder="Horas" />
+                                    <input type="number" min="0" max="59" placeholder="Minutos" />
+                                </div>
+                            </div>
 
                         </div>
                         <br />
                         <div>
-                            <button className="register-button">Registrar AereoNave</button>
+                            <button className="register-button">Registrar AeroNave</button>
                         </div>
                         
                     </div>

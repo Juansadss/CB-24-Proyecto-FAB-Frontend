@@ -13,12 +13,12 @@ export default function AirshipManagement() {
     const [airshitDelete, setAirshitToDelete] = useState<number | null>(null);
 
     const aiships = [
-        { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
-        { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "W"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
-        { id: 4, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
-        { id: 5, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "P"},
-        { id: 6, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", combustible:"120.026   LTS",peso: "1361.0", estado: "W"},
+        { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
+        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 4, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 5, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 6, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
         
     ];
     const handleDeleteClick = (id: number) => {
@@ -42,7 +42,7 @@ export default function AirshipManagement() {
             {/* Title */}
             <div>
                 <h1>
-                    <Link to={"/menu-principal/menu-operaciones"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AEREONAVES
+                    <Link to={"/menu-principal/menu-operaciones"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AERONAVES
                 </h1>
             </div>
             
@@ -61,8 +61,11 @@ export default function AirshipManagement() {
                     <th>MODELO</th>
                     <th>VERSIÓN</th>
                     <th>SERIAL NR</th>
-                    <th>CAPACIDAD - COMBUSTIBLE </th>
+                    <th>MODELO DEL MOTOR </th>
+                    <th>CAPACIDAD DE COMBUSTIBLE </th>
+                    <th>CAPACIDAD DE PASAJEROS </th>
                     <th>PESO DEFINIDO</th>
+                    <th>HORAS DE VUELO</th>
                     <th>ESTADO</th>
                     <th>EDITAR | ELIMINAR</th>
                 </tr>
@@ -74,8 +77,11 @@ export default function AirshipManagement() {
                     <td>{airship.aereonave}</td>
                     <td>{airship.versation}</td>
                     <td>{airship.serial}</td>
+                    <td>{airship.modelomotor}</td>
                     <td>{airship.combustible}</td>
+                    <td>{airship.capacidadpasajero}</td>
                     <td>{airship.peso} Kg</td>
+                    <td>{airship.horasVuelo}</td>
                     <td>{airship.estado}</td>
                     <td>
                         <Link to={"/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-editar"}><FaEdit className="edit-button"/>           </Link>    

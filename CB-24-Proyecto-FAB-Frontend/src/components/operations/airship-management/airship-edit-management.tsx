@@ -16,6 +16,8 @@ export default function AirshipEditManagement() {
         combustible:"120.026   LTS",
         estado: "Whisky",
         origin: "Australia",
+        modeloMotor: "C-R124",
+        capacidadPasajero: "5",
        
       });
 
@@ -31,8 +33,8 @@ export default function AirshipEditManagement() {
             {/* Botón de regreso */}
                 <div>
                     <h1>
-                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AEREONAVES
-                        <span className="small-text"> &gt; Editar AereoNave</span>
+                        <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AERONAVES
+                        <span className="small-text"> &gt; Editar AeroNave</span>
                     </h1>
                 </div>
                 
@@ -94,7 +96,33 @@ export default function AirshipEditManagement() {
                                 <label className="label-section"><strong>Origen de AeroNave:</strong></label>
                                 <input type="text" name="origin" value={formData.origin} onChange={handleChange}/>
                             </div>
-                            
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Modelo de Motor:</strong></label>
+                                <input type="text" name="modeloMotor" value={formData.modeloMotor} onChange={handleChange}/>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Capacidad de Pasajeros:</strong></label>
+                                <input type="text" name="capacidadPasajero" value={formData.capacidadPasajero} onChange={handleChange}/>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Horas de Vuelo:</strong></label>
+                                <div className="time-inputs">
+                                    <input type="number" min="0" placeholder="Horas" />
+                                    <input type="number" min="0" max="59" placeholder="Minutos" />
+                                </div>
+                            </div>
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Horas de Mantenimiento:</strong></label>
+                                <div className="time-inputs">
+                                    <input type="number" min="0" placeholder="Horas" />
+                                    <input type="number" min="0" max="59" placeholder="Minutos" />
+                                </div>
+                            </div>
+
 
                         </div>
                         <br />
