@@ -33,7 +33,7 @@ export default function GuardManagement() {
   };
 
   return (
-    <LayoutSar>
+    <LayoutSar selectedOption="Guardias">
       <div className="guard-container">
         <h2 className="guard-title">GUARDIA</h2>
         <div className="guard-header">

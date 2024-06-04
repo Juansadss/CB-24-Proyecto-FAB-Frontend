@@ -7,37 +7,43 @@ import DropdownInputSearch from "../dropdown-input-search/dropdown-input-search"
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { CiSquarePlus } from 'react-icons/ci';
+import { useNavigate } from 'react-router-dom';
 
     const options = [
         { value: 'opcion1', label: 'Manaña' },
         { value: 'opcion2', label: 'Tarde' },
         { value: 'opcion3', label: 'Noche' },
-      ];
+    ];
 
-      const options2 = [
+    const options2 = [
         { value: 'opcion1', label: 'Completada' },
         { value: 'opcion2', label: 'Falta' },
-      ];
-
-    const handleBackClick = () => {
-        console.log('Back button clicked');
-    };
+    ];
 
 export default function ReportGuards() {
-        const [startDate, setStartDate] = useState<Date | null>(new Date());
-        const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
-      
-      
-        const handleDateChange = (date: Date | null) => {
-          setStartDate(date);
-          console.log('Fecha seleccionada:', date);
-        };
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [endDate, setEndDate] = useState<Date | null>(new Date());   
+
+    const handlestartDateChange = (date: Date | null) => {
+        setStartDate(date);
+        console.log("Fecha seleccionada:", date);
+    };
+
+    const handleEndDateChange = (date: Date | null) => {
+        setEndDate(date);
+        console.log("Fecha seleccionada:", date);
+    };
+
+    const [isStartDatePickerOpen, setisStartDatePickerOpen] = useState<boolean>(false);
+    const [isEndDatePickerOpen, setisEndDatePickerOpen] = useState<boolean>(false);
+
+    const goTo = useNavigate();
 
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption='Personal'>
             <div className="reportguards-container">
                 <h2 className="reportguards-header">
-                    <button onClick={handleBackClick}><FaAngleLeft /></button>
+                    <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
                     <b>PERSONAL &gt; </b> <span>Reporte personal &gt; Guardias &gt; Jose Fernando</span>
                 </h2>
                 <div className="reportguards-content">
@@ -47,8 +53,8 @@ export default function ReportGuards() {
                             <div>
                                 <b>Fecha inicial:</b>
                                 <div className="sar-search-bar-item">
-                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
-                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handlestartDateChange} onClickOutside={() => setisStartDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisStartDatePickerOpen(true)} open={isStartDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisStartDatePickerOpen(!isStartDatePickerOpen)}>
                                         <FaCalendarAlt />
                                     </button>
                                 </div>
@@ -56,12 +62,12 @@ export default function ReportGuards() {
                             <div>
                                 <b>Fecha final</b>
                                 <div className="sar-search-bar-item">
-                                    <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
-                                    <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
+                                    <DatePicker selected={endDate} dateFormat="dd/MM/yyyy" onChange={handleEndDateChange} onClickOutside={() => setisEndDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisEndDatePickerOpen(true)} open={isEndDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisEndDatePickerOpen(!isEndDatePickerOpen)}>
                                         <FaCalendarAlt />
                                     </button>
                                 </div>
-                            </div>   
+                            </div> 
                             <div>
                                 <b>Turno</b>
                                 <DropdownInputSearch label='Seleccione un turno' options={options} />

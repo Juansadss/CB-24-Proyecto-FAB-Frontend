@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './inventory_return.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaAngleLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const InventoryReturn = () => {
     const [formData, setFormData] = useState({
@@ -37,11 +39,16 @@ const InventoryReturn = () => {
         console.log({ institucion: formData.institucion, items });
     };
 
+    const goTo = useNavigate();
+
     return (
-        <LayoutSar>
+        <LayoutSar  selectedOption="Inventario">
             <div className="inventoryReturn-container">
                 <form className="inventoryReturn-form" onSubmit={handleSubmit}>
-                    <h3>INVENTARIO &gt; Devolución</h3>
+                    <h2 className="inventoryReturn-header">
+                        <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+                        <b>INVENTARIO &gt; </b> <span> Devolución</span> 
+                    </h2> 
                     <div className="form-group">
                         <label>Institución:</label>
                         <select name="institucion" onChange={handleChange} value={formData.institucion}>
@@ -92,7 +99,7 @@ const InventoryReturn = () => {
                         </table>
                     </div>
                     <div className="form-buttons">
-                        <button type="submit">Registrar</button>
+                        <button type="submit" onClick={() => goTo("/sar/inventario/devolucion-activo-fijo")}>Registrar</button>
                     </div>
                 </form>
             </div>

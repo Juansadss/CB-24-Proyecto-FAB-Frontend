@@ -38,7 +38,7 @@ const RecruitmentForm: React.FC = () => {
     };
 
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption="Personal">
             <div className="recruitment-form-container">
                 <h3>FORMULARIO DE RECLUTAMIENTO</h3> 
                 <form className="recruitment-form" onSubmit={handleSubmit}>

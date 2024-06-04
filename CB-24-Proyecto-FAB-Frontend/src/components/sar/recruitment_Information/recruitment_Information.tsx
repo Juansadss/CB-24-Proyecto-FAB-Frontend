@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import "./recruitment_Information.css";
 import LayoutSar from "../layout-sar/layout-sar";
-import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleLeft } from "react-icons/fa";
 
 export default function RecruitmentInformation() {
 
@@ -14,50 +14,48 @@ export default function RecruitmentInformation() {
     }
 
     return (
-        <LayoutSar>
-            <div className="recruitment_header">
-                <button className="recruitment_btnReturn"><FaAngleLeft /></button>
-                <h2 className="recruitment_header_h2">LISTA DE RECLUTAMIENTO</h2>
-                <span className="recruitment_barra">&gt;</span>
-                <label className="recruitment_header_h3"> Información postulante</label>
-            </div>
-            <div className="Recrutment_Info_Center-container">
-
-                <div className="Recrutment_Info_table-card">
-                    <div className="Recrutment_Info_card">
-
-                        <div className="Recrutment_Info_form-row">
-                            <label className="Recrutment_Info_label" htmlFor="nombre-completo">Nombre completo:</label>
-                            <span className="Recrutment_Info_value">Juan Pérez</span>
+        <LayoutSar selectedOption="Personal">
+            <div className="recrutmentInformation-container">
+                <h2 className="recrutmentInformation-header">
+                    <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+                    <b>RECLUTAMIENTO &gt; </b> <span>Información postulante</span>
+                </h2>
+                <div className="recrutmentInformation-card-container">
+                    <div className="recrutmentInformation-card-content">
+                        <div>
+                            <b>Nombre completo:</b>
+                            <span>Juan Pérez</span>
                         </div>
-                        <div className="Recrutment_Info_form-row">
-                            <label className="Recrutment_Info_label" htmlFor="ci">CI: </label>
-                            <label className="Recrutment_Info_value">4864545</label>
-                            <label className="Recrutment_Info_label" htmlFor="fecha-nacimiento">      Fecha de nacimiento:</label>
-                            <span className="Recrutment_Info_value">1/16/20</span>
+                        <div className="recrutmentInformation-row">
+                            <div>
+                                <b>CI:</b>
+                                <span>4864545</span>
+                            </div>   
+                            <div>
+                                <b>Fecha de nacimiento:</b>
+                                <span>01/16/20</span>
+                            </div>                        
                         </div>
-                        <div className="Recrutment_Info_form-row">
-                            <label className="Recrutment_Info_label" htmlFor="correo">Correo electrónico:</label>
-                            <span className="Recrutment_Info_value">juan@perez123.com</span>
+                        <div>
+                            <b>Correo electrónico:</b>
+                            <span>juan@perez123.com</span>
                         </div>
-                        <div className="Recrutment_Info_form-row">
-                            <label className="Recrutment_Info_label" htmlFor="libreta-militar">¿El postulante opta para la libreta militar?</label>
-                            <span className="Recrutment_Info_value">Sí</span>
+                        <div>
+                            <b>¿El postulante opta para la libreta militar?</b>
+                            <span>Sí</span>
                         </div>
-                        <div className="Recrutment_Info_FileOne">
-                            <button className="Recrutment_Info_btn btn-blue"> Ver fotocopia de carnet </button>
-                            <button className="Recrutment_Info_btn btn-blue"> Ver certificado de nacimiento </button>
+                        <div className="recrutmentInformation-documents-buttons">
+                            <button className="btn btn-blue"> Ver fotocopia de carnet </button>
+                            <button className="btn btn-blue"> Ver certificado de nacimiento </button>
                         </div>
-
                         <form onSubmit={handleSubmit}>
 
                         </form>
                     </div>
-                    <div className="Recrutment_Info_FileOne">
-                        <button className="Recrutment_Info_btnGreen"> Aprobar </button>
-                        <button className="Recrutment_Info_btnRed" > Rechazar </button>
+                    <div className="recrutmentInformation-actions">
+                        <button className="btn recrutmentInformation-approve"> Aprobar </button>
+                        <button className="btn recrutmentInformation-deny" > Rechazar </button>
                     </div>
-
                 </div>
             </div>
         </LayoutSar>

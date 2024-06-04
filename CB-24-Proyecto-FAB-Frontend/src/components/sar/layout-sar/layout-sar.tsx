@@ -12,9 +12,10 @@ import { useEffect, useRef, useState } from "react";
 import { CiLogout } from "react-icons/ci";
 
 interface LayoutSarProps {
-    children: React.ReactNode
+    children: React.ReactNode;
+    selectedOption: 'Personal' | 'Operaciones' | 'Guardias' | 'Inventario' | 'Sanidad' | 'Cursos';
 }
-export default function LayoutSar({children}:LayoutSarProps) {
+export default function LayoutSar({children, selectedOption}:LayoutSarProps) {
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,12 +51,12 @@ export default function LayoutSar({children}:LayoutSarProps) {
                     )}
                 </div>
                 <div className="sar-menu-items-container">
-                    <Link to="/projects-list" className="sar-menu-item"> <BsFillPersonLinesFill /> Voluntarios</Link>
-                    <Link to="/delivery-main-page" className="sar-menu-item"> <FaUsersGear />Operaciones</Link>
-                    <Link to="/depot-main-page" className="sar-menu-item"> <GrUserPolice />Guardias</Link>
-                    <Link to="/depot-main-page" className="sar-menu-item"> <HiOutlineClipboardList />Inventario</Link>
-                    <Link to="/depot-main-page" className="sar-menu-item"> <MdOutlineMedicalServices />Sanidad</Link>
-                    <Link to="/depot-main-page" className="sar-menu-item"> <GiOpenBook />Cursos</Link>
+                    <Link to="/sar/personal/lista" className={selectedOption=='Personal'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"} > <BsFillPersonLinesFill /> Personal</Link>
+                    <Link to="/sar/operaciones/lista" className={selectedOption=='Operaciones'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"}> <FaUsersGear />Operaciones</Link>
+                    <Link to="/sar/guardias/gestion-guardias" className={selectedOption=='Guardias'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"}> <GrUserPolice />Guardias</Link>
+                    <Link to="/sar/inventario/control" className={selectedOption=='Inventario'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"}> <HiOutlineClipboardList />Inventario</Link>
+                    <Link to="/sar/sanidad/lista" className={selectedOption=='Sanidad'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"}> <MdOutlineMedicalServices />Sanidad</Link>
+                    <Link to="/" className={selectedOption=='Cursos'?"sar-menu-item-selected sar-menu-item": "sar-menu-item"}> <GiOpenBook />Cursos</Link>
                 </div>             
             </div>
             <main id="modal-root">

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './create_operations.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaAngleLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const OperationsCreate = () => {
     const [formData, setFormData] = useState({
@@ -47,6 +49,9 @@ const OperationsCreate = () => {
             [name]: value
         }));
     };
+
+    const goTo = useNavigate();
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log(formData);
@@ -55,11 +60,13 @@ const OperationsCreate = () => {
         setItems(prevItems => prevItems.filter((_, i) => i !== index));
     };
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption='Operaciones'>
             <div className="create_operativo-form-container">
-                <form className="create_operativo-form" onSubmit={handleSubmit}>
-                    <h3>OPERACIONES &gt; Crear operativo</h3>
-
+                <h2 className="create_operativo-header">
+                    <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+                    <b>OPERACIONES &gt; </b> <span>Crear operativo</span>
+                </h2>
+                <form className="create_operativo-form" onSubmit={handleSubmit}>                    
                     <div className="form-group-row">
                         <div className="form-group">
                             <label>Tipo Operativo:</label>

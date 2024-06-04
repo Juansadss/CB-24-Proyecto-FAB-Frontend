@@ -1,39 +1,70 @@
-import { useState } from 'react';
 import './operations_list.css';
 import LayoutSar from '../layout-sar/layout-sar';
-import { FaAngleLeft, FaMagnifyingGlass } from 'react-icons/fa6';
+import DatePicker from "react-datepicker";
 import { CiSquarePlus } from 'react-icons/ci';
 import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const options = [
     { value: 'Rescate', label: 'Rescate' },
-    { value: 'Seguridad Médica', label: 'Seguridad Médica' },
-    
-  ];
+    { value: 'Seguridad Médica', label: 'Seguridad Médica' },   
+];
 
 const OperationsList = () => {
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [endDate, setEndDate] = useState<Date | null>(new Date());   
 
-    const [, setModalOpen] = useState(false);
+    const handlestartDateChange = (date: Date | null) => {
+        setStartDate(date);
+        console.log("Fecha seleccionada:", date);
+    };
+
+    const handleEndDateChange = (date: Date | null) => {
+        setEndDate(date);
+        console.log("Fecha seleccionada:", date);
+    };
+
+    const [isStartDatePickerOpen, setisStartDatePickerOpen] = useState<boolean>(false);
+    const [isEndDatePickerOpen, setisEndDatePickerOpen] = useState<boolean>(false);
+
+    const goTo = useNavigate()
 
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption='Operaciones'>
             <div className="operations_list-container">
-
-                <h3> <FaAngleLeft /> LISTA DE OPERACIONES </h3>
+                <h2 className="operations_list-header">
+                    <b>LISTA DE OPERACIONES</b>
+                </h2>
                 <div className="operations_list-content">
-                    <div className="guard-header">
-                        <button className="icon-button" onClick={() => setModalOpen(true)}><CiSquarePlus /></button>
+                    <div className="operations_list-actions">
+                        <button className="operations_list-add" onClick={() => goTo('/sar/operaciones/crear')}><CiSquarePlus /></button>
                         <form action="" className="sar-search-bar">
-                            <DropdownInputSearch options={options} />
-                            
-                            <div className="sar-search-bar-item">
-                                <input type="text" placeholder="Buscar..." className="sar-search-input" />
-                                <button className="sar-search-button">
-                                    <FaMagnifyingGlass />
-                                </button>
-                            </div>
-                        </form>
+                            <div>
+                                <b>Tipo</b>
+                                <DropdownInputSearch options={options} />
+                            </div>   
+                            <div>
+                                <b>Fecha inicial:</b>
+                                <div className="sar-search-bar-item">
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handlestartDateChange} onClickOutside={() => setisStartDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisStartDatePickerOpen(true)} open={isStartDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisStartDatePickerOpen(!isStartDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
+                            </div> 
+                            <div>
+                                <b>Fecha final</b>
+                                <div className="sar-search-bar-item">
+                                    <DatePicker selected={endDate} dateFormat="dd/MM/yyyy" onChange={handleEndDateChange} onClickOutside={() => setisEndDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisEndDatePickerOpen(true)} open={isEndDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisEndDatePickerOpen(!isEndDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
+                            </div>                         
+                        </form>  
                     </div>
                     <table className="operations_list-table">
                         <thead>

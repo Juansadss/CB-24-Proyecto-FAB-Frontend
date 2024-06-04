@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './donationinventory.css';
 import LayoutSar from '../layout-sar/layout-sar';
 import { FaAngleLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const DonationInventory = () => {
     const [formData, setFormData] = useState({
@@ -38,16 +39,14 @@ const DonationInventory = () => {
         console.log({ institucion: formData.institucion, items });
     };
 
-    const handleBackClick = () => {
-        // Implementa la función para manejar el botón de regreso
-    };
+    const goTo = useNavigate()
 
     return (
-        <LayoutSar>
+        <LayoutSar  selectedOption="Inventario">
             <div className="donationinventory-container">
                 <form className="donationinventory-form" onSubmit={handleSubmit}>
                     <h2 className="donationinventory-header">
-                        <button onClick={handleBackClick}><FaAngleLeft /></button>
+                        <button onClick={() => goTo(-1)} ><FaAngleLeft /></button>
                         <b>INVENTARIO &gt; </b> <span> Donación</span> 
                     </h2> 
                     <div className="form-group">
@@ -98,7 +97,7 @@ const DonationInventory = () => {
                         </table>
                     </div>
                     <div className="form-buttons">
-                        <button type="submit">Registrar</button>
+                        <button type="submit" onClick={() => goTo('/sar/inventario/donaciones/registro-activo-fijo')}>Registrar</button>
                     </div>
                 </form>
             </div>

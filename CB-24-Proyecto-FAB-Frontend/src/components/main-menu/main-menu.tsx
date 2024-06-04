@@ -21,7 +21,7 @@ export default function MainMenu() {
                     <MdOutlineWarehouse />
                     <span>Almacenes</span>
                 </Link>
-                <Link className="card" to={"/"}>
+                <Link className="card" to={"/sar/personal/lista"}>
                     <LuCross />
                     <span>SAR FAB</span>
                 </Link>

@@ -4,12 +4,8 @@ import LayoutSar from '../layout-sar/layout-sar';
 import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
 import { FaAngleLeft, FaCalendarAlt } from 'react-icons/fa';
 import DatePicker from 'react-datepicker';
+import { useNavigate } from 'react-router-dom';
 
-const tipo = [
-    { value: 'opcion1', label: 'Opción 1' },
-    { value: 'opcion2', label: 'Opción 2' },
-    { value: 'opcion3', label: 'Opción 3' },
-];
 const estado = [
     { value: 'opcion1', label: 'Opción 1' },
     { value: 'opcion2', label: 'Opción 2' },
@@ -18,32 +14,56 @@ const estado = [
 
 const PersonalAttendanceReport = () => {
     const [startDate, setStartDate] = useState<Date | null>(new Date());
-    const [isDatePickerOpen, setisDatePickerOpen] = useState<boolean>(false);
+    const [endDate, setEndDate] = useState<Date | null>(new Date());   
 
-
-    const handleDateChange = (date: Date | null) => {
+    const handlestartDateChange = (date: Date | null) => {
         setStartDate(date);
-        console.log('Fecha seleccionada:', date);
+        console.log("Fecha seleccionada:", date);
     };
 
+    const handleEndDateChange = (date: Date | null) => {
+        setEndDate(date);
+        console.log("Fecha seleccionada:", date);
+    };
+
+    const [isStartDatePickerOpen, setisStartDatePickerOpen] = useState<boolean>(false);
+    const [isEndDatePickerOpen, setisEndDatePickerOpen] = useState<boolean>(false);
+
+    const goTo = useNavigate();
 
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption='Personal'>
             <div className="personalAttendanceReport-container">
-                <h3> <FaAngleLeft /> PERSONAL &gt; Reporte personal &gt; Asistencia &gt; Jose Fernando </h3>
+                <h2 className="personalAttendanceReport-header">
+                    <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+                    <b>PERSONAL &gt; </b> <span> Reporte personal &gt; Asistencia &gt; Jose Fernando</span> 
+                </h2>
                 <div className="personalAttendanceReport-content">
-                    <div className="guard-header">
-                       
-                        <form action="" className="sar-search-bar">
-                            <DropdownInputSearch options={tipo} />
-                            <div className="sar-search-bar-item">
-                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handleDateChange} onClickOutside={() => setisDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisDatePickerOpen(true)} open={isDatePickerOpen} />
-                                <button className="sar-search-button" type="button" onClick={() => setisDatePickerOpen(!isDatePickerOpen)}>
-                                    <FaCalendarAlt />
-                                </button>
-                            </div>
-                            <DropdownInputSearch options={estado} />
-                        </form>
+                    <div className="personalAttendanceReport-actions">
+                        <form action="" className="sar-search-bar"> 
+                        <div>
+                                <b>Fecha inicial:</b>
+                                <div className="sar-search-bar-item">
+                                <DatePicker selected={startDate} dateFormat="dd/MM/yyyy" onChange={handlestartDateChange} onClickOutside={() => setisStartDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisStartDatePickerOpen(true)} open={isStartDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisStartDatePickerOpen(!isStartDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
+                            </div> 
+                            <div>
+                                <b>Fecha final</b>
+                                <div className="sar-search-bar-item">
+                                    <DatePicker selected={endDate} dateFormat="dd/MM/yyyy" onChange={handleEndDateChange} onClickOutside={() => setisEndDatePickerOpen(false)} className="sar-search-input" placeholderText="Seleccionar fecha" onInputClick={() => setisEndDatePickerOpen(true)} open={isEndDatePickerOpen} />
+                                    <button className="sar-search-button" type="button" onClick={() => setisEndDatePickerOpen(!isEndDatePickerOpen)}>
+                                        <FaCalendarAlt />
+                                    </button>
+                                </div>
+                            </div> 
+                            <div>
+                                <b>Estado</b>
+                                <DropdownInputSearch options={estado} />    
+                            </div>  
+                        </form>  
                     </div>
                     <table className="personalAttendanceReport-table">
                         <thead>

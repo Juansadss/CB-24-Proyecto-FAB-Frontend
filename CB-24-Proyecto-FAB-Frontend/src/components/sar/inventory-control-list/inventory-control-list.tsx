@@ -3,7 +3,10 @@ import LayoutSar from "../layout-sar/layout-sar";
 import "./inventory-control-list.css";
 import '../search-bar-styles.css';
 import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
-import { FaSearch } from 'react-icons/fa';
+import { FaAngleLeft, FaSearch } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
+import { IoEyeOutline } from "react-icons/io5";
+import ModalInventory from "../inventory-modal/inventory-modal";
 
 interface Option {
   value: string;
@@ -20,6 +23,8 @@ export default function InventoryControlList() {
     { value: 'Bueno', label: 'Bueno' },
     { value: 'Mal', label: 'Mal estado' }
   ];
+
+  const goTo = useNavigate();
 
   const donationOptions: Option[] = [
     { value: 'Donacion', label: 'Alcaldía' }
@@ -40,10 +45,15 @@ export default function InventoryControlList() {
     { descripcion: 'Silla color madera corriente color negro', estado: 'M', codigo: 'XXXXXXX', area: 'XXXXX' }
   ];
 
+  const [openModal, setOpenModal] = useState<boolean>(false)
+
   return (
-    <LayoutSar>
+    <LayoutSar  selectedOption="Inventario">
       <div className="inventory-list-container">
-        <h2 className="inventory-list-title"><b>INVENTARIO &gt;</b> Activos fijos <b>&gt;</b> silla de madera</h2>
+        <h2 className="inventory-list-header">
+            <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+            <b>INVENTARIO &gt; </b> <span>Activos fijos <b>&gt;</b> silla de madera</span>
+        </h2>
         <div className="inventory-list-controls-container">
           <div className="sar-search-bar">
             <div className="sar-search-bar-item">
@@ -79,12 +89,17 @@ export default function InventoryControlList() {
                 <td>{item.estado}</td>
                 <td>{item.codigo}</td>
                 <td>{item.area}</td>
-                <td><button className="inventory-list-btn-options"><i className="fas fa-eye"></i></button></td>
+                <td>
+                  <button className="inventory-list-btn-options" onClick={() => setOpenModal(true)}>
+                    <IoEyeOutline />
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
+        <ModalInventory isOpen={openModal} onClose={() => setOpenModal(false)} />
+      </div>      
     </LayoutSar>
   );
 }

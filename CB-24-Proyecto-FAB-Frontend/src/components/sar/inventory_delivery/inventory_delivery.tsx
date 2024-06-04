@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './inventory_delivery.css';
 import LayoutSar from '../layout-sar/layout-sar';
+import { FaAngleLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const InventoryDelivery = () => {
     const [formData, setFormData] = useState({
@@ -37,11 +39,16 @@ const InventoryDelivery = () => {
         console.log({ responsable: formData.responsable, items });
     };
 
+    const goTo = useNavigate();
+
     return (
-        <LayoutSar>
-            <div className="inventoryReturn-container">
-                <form className="inventoryReturn-form" onSubmit={handleSubmit}>
-                    <h3>INVENTARIO &gt; Entrega de insumos</h3>
+        <LayoutSar  selectedOption="Inventario">
+            <div className="inventoryDelivery-container">
+                <form className="inventoryDelivery-form" onSubmit={handleSubmit}>
+                    <h2 className="inventoryDelivery-header">
+                        <button onClick={() => goTo(-1)}><FaAngleLeft /></button>
+                        <b>INVENTARIO &gt; </b> <span> Entrega de insumos</span> 
+                    </h2> 
                     <div className="form-group">
                         <label>Responsable:</label>
                         <select name="responsable" onChange={handleChange} value={formData.responsable}>
@@ -81,8 +88,8 @@ const InventoryDelivery = () => {
                                     <tr key={index}>
                                         <td>{item.tipo}</td>
                                         <td>{item.cantidad}</td>
-                                        <td  className="inventoryReturn_center-button">
-                                            <button type="button" className="inventoryReturn_icon-button" onClick={() => handleRemoveItem(index)}>
+                                        <td  className="inventoryDelivery-button">
+                                            <button type="button" className="inventoryDelivery-button" onClick={() => handleRemoveItem(index)}>
                                                 🗑️
                                             </button>
                                         </td>

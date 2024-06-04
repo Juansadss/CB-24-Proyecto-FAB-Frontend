@@ -1,80 +1,42 @@
 .personalAttendanceReport-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    padding: 20px;
-    background-color: #ffffff;
-    min-height: 100vh;
-    width: 100%;
+    margin: 35px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff; 
 }
 
-.personalAttendanceReport-container h3 {
-    color: #000000;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+.personalAttendanceReport-header {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
     width: 100%;
+  }
+  
+  .personalAttendanceReport-header button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    margin-right: 10px;
+  }
+
+.personalAttendanceReport-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .personalAttendanceReport-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     margin-top: 20px;
 }
 
-.personalAttendanceReport-form {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-}
-
-.personalAttendanceReport-form .form-group-row {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    align-items: center;
-}
-
-.personalAttendanceReport-form .form-group {
-    flex: 1;
-}
-
-.personalAttendanceReport-form input[type="date"],
-.personalAttendanceReport-form select {
-    padding: 0.5rem;
-    border: 1.5px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    height: 50px;
-}
-
-.personalAttendanceReport-form button {
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #24365C;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    
-}
-
-.personalAttendanceReport-form button:hover {
-    background-color: #1A2C48;
-}
-
 .personalAttendanceReport-table {
     width: 100%;
-    max-width: 800px;
     border-collapse: collapse;
     background-color: #171A4A;
     border-radius: 7px;
@@ -118,5 +80,3 @@
 .personalAttendanceReport-icon-button:hover {
     color: #ccc;
 }
-
-

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './sanitation.css';
+import './sanitation-treatment-register.css';
 import LayoutSar from '../layout-sar/layout-sar';
 import { useNavigate } from 'react-router-dom';
 import { FaAngleLeft } from 'react-icons/fa';
 
-const SanitationForm: React.FC = () => {
+const TreatmentRegister: React.FC = () => {
     const [formData, setFormData] = useState({
         fecha: '',
         paciente: '',
@@ -32,7 +32,7 @@ const SanitationForm: React.FC = () => {
     };
 
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption='Sanidad'>
             <div className="sanitation-form-container">
                 <form className="sanitation-form" onSubmit={handleSubmit}>
                     <h2 className="sanitation-header">
@@ -71,4 +71,4 @@ const SanitationForm: React.FC = () => {
     );
 };
 
-export default SanitationForm;
+export default TreatmentRegister;

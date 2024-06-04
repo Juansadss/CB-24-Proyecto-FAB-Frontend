@@ -9,7 +9,7 @@
 }
 
 .inventoryReturn-form {
-    background-color: #f0f0f0;
+    background-color: #EEEEEE;
     padding: 2rem;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 10px;
@@ -18,14 +18,23 @@
     color: #000000;
 }
 
-.inventoryReturn-form h2, .inventoryReturn-form h3 {
-    color: #000000;
+.inventoryReturn-header {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.inventoryReturn-form h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
+    .inventoryReturn-header button {
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: end;
+        margin-right: 10px;
+    }
 
 .inventoryReturn-form .form-group {
     display: flex;
@@ -61,7 +70,7 @@
 
 .inventoryReturn-form button {
     padding: 0.7rem;
-    background-color: #24365C;
+    background-color: #2F2C79;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -71,9 +80,6 @@
     width: 100px;
 }
 
-.inventoryReturn-form button:hover {
-    background-color: #1A2C48;
-}
 
 .inventoryReturn-table {
     width: 80%;
@@ -88,12 +94,12 @@
 .inventoryReturn-table th,
 .inventoryReturn-table td {
     padding: 0.75rem;
-    text-align: left;
+    text-align: center;
     border: 1px solid #dddddd;
 }
 
 .inventoryReturn-table th {
-    background-color: #24365C;
+    background-color: #2F2C79;
     color: #ffffff;
     font-weight: bold;
 }
@@ -102,28 +108,24 @@
     background-color: #f2f2f2;
 }
 
-.inventoryReturn_center-button {
+.inventoryReturn-form .form-buttons {
+    margin-top: 1rem; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
 }
-.inventoryReturn_icon-button {
+
+
+.inventoryReturn-header button {
     background: none;
     border: none;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    color: #ffffff;
-    font-size: 1.2rem;
+    color: rgb(0, 0, 0)
+    
 }
 
-.inventoryReturn_icon-button:hover {
-    color: #ccc;
-}
-
-.inventoryReturn-form .form-buttons {
-    margin-top: 1rem; /* Espacio entre la tabla y el botón registrar */
-    display: flex;
-    justify-content: center;
+.inventoryReturn-form .icon-button-trash {
+    color: #ffffff; 
 }

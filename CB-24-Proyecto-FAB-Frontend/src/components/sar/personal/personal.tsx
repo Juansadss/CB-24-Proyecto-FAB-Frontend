@@ -56,7 +56,7 @@ const PersonalForm: React.FC = () => {
         console.log(formData);
     };
     return (
-        <LayoutSar>
+        <LayoutSar selectedOption="Personal">
             <div className="personal-form-container">                
                 <div className="personal-form-wrapper">
                     <h2 className="personal-header">

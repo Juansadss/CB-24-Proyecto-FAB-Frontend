@@ -1,35 +1,17 @@
-.operations_list-container {
+.sanation-list-container {
     margin: 35px;
     padding: 30px;
     border-radius: 10px;
     background-color: #ffffff; 
 }
 
-.operations_list-header {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-  
-  .operations_list-header button {
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: end;
-    margin-right: 10px;
-  }
-
-.operations_list-actions {
+.sanation-list-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
-    .operations_list-actions .operations_list-add {
+    .sanation-list-actions .sanation-list-add {
       display: flex;
       background: none;
       border: none;
@@ -39,44 +21,39 @@
       align-items: end;
     }
 
-.operations_list-content {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.operations_list-table {
-    width: 100%;
+.sanation-list-table {
     border-collapse: collapse;
     background-color: #171A4A;
     border-radius: 7px;
     overflow: hidden;
+    width: 100%;
 }
 
-.operations_list-table th,
-.operations_list-table td {
+.sanation-list-table th,
+.sanation-list-table td {
     padding: 0.75rem;
     text-align: left;
     color: #fff;
 }
 
-.operations_list-table th {
+.sanation-list-table th {
     background-color: #171A4A;
     font-weight: bold;
 }
 
-.operations_list-table tbody tr {
+.sanation-list-table tbody tr {
     background-color: #24365C;
 }
 
-.operations_list-table tbody tr:nth-child(even) {
+.sanation-list-table tbody tr:nth-child(even) {
     background-color: #1A2C48;
 }
 
-.operations_list-table tbody tr:hover {
+.sanation-list-table tbody tr:hover {
     background-color: #2C4878;
 }
 
-.operations_list-icon-button {
+.sanation-list-icon-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -86,6 +63,8 @@
     font-size: 1.5rem;
 }
 
-.operations_list-icon-button:hover {
+.sanation-list-icon-button:hover {
     color: #ccc;
 }
+
+
