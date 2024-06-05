@@ -13,11 +13,11 @@ export default function MainMenu() {
                     <TbManualGearbox />
                     <span>Operaciones</span>
                 </Link>
-                <Link className="card" to={"/"}>
+                <Link className="card" to={"/App"}>
                     <AiOutlineTool />
                     <span>Mantenimiento</span>
                 </Link>
-                <Link className="card" to={"/"}>
+                <Link className="card" to={"/"}>    
                     <MdOutlineWarehouse />
                     <span>Almacenes</span>
                 </Link>
