@@ -19,7 +19,7 @@ export default function RegisterPilotForm() {
                     <div className="register-pilot-content">
                         <div className="register-pilot-info-section">
                             <div className="register-pilot-label-input-container">
-                                <label className="label-section"><strong>Nombres:</strong></label>
+                                <label className="label-section"><strong>Nombre:</strong></label>
                                 <input type="text" />
                             </div>
                             
@@ -27,47 +27,65 @@ export default function RegisterPilotForm() {
                                 <label className="label-section"><strong>Apellido Paterno:</strong></label>
                                 <input type="text" />
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>CI:</strong></label>
+                                <label className="label-section"><strong>Apellido Materno:</strong></label>
                                 <input type="text" />
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Grado:</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Grado Militar:</strong></label>
+                                <select>
+                                    <option value="teniente">Teniente Coronel</option>
+                                    <option value="capitan">Capitán</option>
+                                    <option value="teniente">Teniente</option>
+                                    <option value="subteniente">Subteniente</option>
+                                    <option value="sargento">Sargento</option>
+                                </select>
                             </div>
+                            
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Peso:</strong></label>
-                                <input type="text" />
+                                <label className="label-section"><strong>Rol:</strong></label>
+                                <select>
+                                    <option value="Piloto">Piloto</option>
+                                    <option value="Copiloto">Copiloto</option>
+                                    <option value="Mecanico">Mecánico</option>
+                                </select>
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Altura:</strong></label>
+                                <label className="label-section"><strong>Número de Registro:</strong></label>
                                 <input type="text" />
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Género:</strong></label>
                                 <select>
-                                    <option value="hombre">Hombre</option>
-                                    <option value="mujer">Mujer</option>
+                                    <option value="H">Hombre</option>
+                                    <option value="M">Mujer</option>
                                 </select>
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Grupo Sanguineo:</strong></label>
+                                <label className="label-section"><strong>Número de Identificación:</strong></label>
                                 <input type="text" />
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Fecha de Nacimiento:</strong></label>
                                 <input type="date" />
                             </div>
+
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Telefono:</strong></label>
+                                <label className="label-section"><strong>Celular:</strong></label>
                                 <input type="text" />
                             </div>
                             

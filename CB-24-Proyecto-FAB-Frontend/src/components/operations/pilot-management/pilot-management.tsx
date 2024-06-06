@@ -13,9 +13,9 @@ export default function PilotManagement() {
     const [pilotToDelete, setPilotToDelete] = useState<number | null>(null);
 
     const pilots = [
-        { id: 1, ci: "P001", name: "Hugo Fernando", lastname: "Perez", birthdate: "1990-01-01", total_hours: "549", weight: "78", grade: "Sargento Segundo" },
-        { id: 2, ci: "P002", name: "Rodrigo", lastname: "Arnez", birthdate: "1992-05-15", total_hours: "949", weight: "68", grade: "Subteniente" },
-        { id: 3, ci: "P003", name: "David", lastname: "Peredo", birthdate: "1985-11-30", total_hours: "649", weight: "89", grade: "Capitan" },
+        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", role: "Piloto", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774" , flightHours: "523 Hrs"},
+        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", role: "Piloto", registrationNumber: "876367", identificationNumber: "028937847", mobileNumber:"68565384" , flightHours: "995 Hrs"},
+        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", role: "Piloto", registrationNumber: "1827372", identificationNumber: "274616123", mobileNumber:"78453997" , flightHours: "684 Hrs"},
         // Add more pilot objects as needed
       ];
 
@@ -58,29 +58,37 @@ export default function PilotManagement() {
             <table>
                 <thead>
                 <tr>
-                    <th>CI</th>
                     <th>Nombre</th>
                     <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
                     <th>Fecha Nacimiento</th>
-                    <th>Horas Totales</th>
-                    <th>Peso</th>
-                    <th>Grado</th>
-                    <th>Editar/Eliminar</th>
+                    <th>Género</th>
+                    <th>Grado Militar</th>
+                    <th>Rol</th>
+                    <th>N# Registro</th>
+                    <th>N# Identificación</th>
+                    <th>Celular</th>
+                    <th>Horas Vuelo</th>
+                    <th>Editar | Eliminar</th>
                 </tr>
                 </thead>
                 <tbody>
                 {pilots.map((pilot) => (
-                    <tr key={pilot.id}>
-                    <td>{pilot.ci}</td>
-                    <td>{pilot.name}</td>
-                    <td>{pilot.lastname}</td>
-                    <td>{pilot.birthdate}</td>
-                    <td>{pilot.total_hours} Horas</td>
-                    <td>{pilot.weight} kg</td>
-                    <td>{pilot.grade}</td>
+                    <tr key={pilot.pilotID}>
+                    <td>{pilot.firstName}</td>
+                    <td>{pilot.lastName}</td>
+                    <td>{pilot.middleName}</td>
+                    <td>{pilot.birthDate}</td>
+                    <td>{pilot.gender}</td>
+                    <td>{pilot.militaryRank}</td>
+                    <td>{pilot.role}</td>
+                    <td>{pilot.registrationNumber}</td>
+                    <td>{pilot.identificationNumber}</td>
+                    <td>{pilot.mobileNumber}</td>
+                    <td>{pilot.flightHours}</td>
                     <td>
                         <Link to={"/menu-principal/menu-operaciones/editar-piloto"}><FaEdit className="pilot-management-edit-button"/></Link>
-                        <button className="pilot-management-delete-button" onClick={() => handleDeleteClick(pilot.id)}><MdDelete /></button>
+                        <button className="pilot-management-delete-button" onClick={() => handleDeleteClick(pilot.pilotID)}><MdDelete /></button>
                     </td>
                     </tr>
                 ))}

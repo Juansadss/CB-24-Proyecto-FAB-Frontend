@@ -6,16 +6,7 @@ import { CiMenuKebab } from "react-icons/ci";
 
 export default function EditPilotForm() {
     const [formData, setFormData] = useState({
-        names: "Hugo Fernando",
-        lastName: "Perez",
-        ci: "P001",
-        grade: "Sargento Segundo",
-        weight: "78",
-        height: "175",
-        gender: "hombre",
-        bloodType: "O+",
-        birthDate: "1990-01-01",
-        cellphone: "12345678",
+        firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", role: "Piloto", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774",
       });
 
       const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -42,46 +33,58 @@ export default function EditPilotForm() {
                     <div className="edit-pilot-content">
                         <div className="edit-pilot-info-section">
                             <div className="edit-pilot-label-input-container">
-                                <label className="label-section"><strong>Nombres:</strong></label>
-                                <input type="text" name="names" value={formData.names} onChange={handleChange}/>
+                                <label className="label-section"><strong>Nombre:</strong></label>
+                                <input type="text" name="names" value={formData.firstName} onChange={handleChange}/>
                             </div>
                             
                             <div className="edit-pilot-label-input-container">
                                 <label className="label-section"><strong>Apellido Paterno:</strong></label>
                                 <input type="text" name="lastName" value={formData.lastName} onChange={handleChange}/>
                             </div>
+
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>CI:</strong></label>
-                                <input type="text" name="ci" value={formData.ci} onChange={handleChange}/>
+                                <label className="label-section"><strong>Apellido Materno:</strong></label>
+                                <input type="text" name="middleName" value={formData.middleName} onChange={handleChange}/>
                             </div>
+
                             <div className="edit-pilot-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Grado:</strong></label>
-                                <input type="text" name="grade" value={formData.grade} onChange={handleChange}/>
+                                <select name="militaryRank" value={formData.militaryRank} onChange={handleChange}>
+                                    <option value="TenienteCoronel">Teniente Coronel</option>
+                                    <option value="Capitan">Capitán</option>
+                                    <option value="Teniente">Teniente</option>
+                                    <option value="Subteniente">Subteniente</option>
+                                    <option value="sargento">Sargento</option>
+                                </select>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Peso:</strong></label>
-                                <input type="text" name="weight" value={formData.weight} onChange={handleChange}/>
+                                <label className="label-section"><strong>Rol:</strong></label>
+                                <select name="role" value={formData.role} onChange={handleChange}>
+                                    <option value="Piloto">Piloto</option>
+                                    <option value="Copiloto">Copiloto</option>
+                                    <option value="Mecanico">Mecánico</option>
+                                </select>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Altura:</strong></label>
-                                <input type="text" name="height" value={formData.height} onChange={handleChange}/>
+                                <label className="label-section"><strong>Número de Registro:</strong></label>
+                                <input type="text" name="registrationNumber" value={formData.registrationNumber} onChange={handleChange}/>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Género:</strong></label>
                                 <select name="gender" value={formData.gender} onChange={handleChange}>
-                                    <option value="hombre">Hombre</option>
-                                    <option value="mujer">Mujer</option>
+                                    <option value="H">Hombre</option>
+                                    <option value="M">Mujer</option>
                                 </select>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Grupo Sanguineo:</strong></label>
-                                <input type="text" name="bloodType" value={formData.bloodType} onChange={handleChange}/>
+                                <label className="label-section"><strong>Número de Identificación:</strong></label>
+                                <input type="text" name="identificationNumber" value={formData.identificationNumber} onChange={handleChange}/>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
@@ -90,8 +93,8 @@ export default function EditPilotForm() {
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Telefono:</strong></label>
-                                <input type="text" name="cellphone" value={formData.cellphone} onChange={handleChange}/>
+                                <label className="label-section"><strong>Celular:</strong></label>
+                                <input type="text" name="mobileNumber" value={formData.mobileNumber} onChange={handleChange}/>
                             </div>
                             
 

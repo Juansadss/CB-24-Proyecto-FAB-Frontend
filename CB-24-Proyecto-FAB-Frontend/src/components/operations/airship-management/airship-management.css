@@ -12,7 +12,7 @@
 }
 
 .airship-management-container table {
-    width: calc(110% - 250px); /* Reducir el ancho de la tabla */
+    width: 100%;/*calc(110% - 250px); /* Reducir el ancho de la tabla */
     margin: 50px auto; /* Centrar la tabla horizontalmente */
     border-collapse: collapse;
     margin-top: 30px;
@@ -22,7 +22,7 @@
 
 .airship-management-container th, .airship-management-container td {
     text-align: center;
-    
+    font-size: 12px;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     

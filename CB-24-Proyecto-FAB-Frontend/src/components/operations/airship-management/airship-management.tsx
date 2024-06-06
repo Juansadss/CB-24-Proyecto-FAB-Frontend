@@ -85,7 +85,7 @@ export default function AirshipManagement() {
                     <td>{airship.estado}</td>
                     <td>
                         <Link to={"/menu-principal/menu-operaciones/gestion-aereonave/gestion-aereonave-editar"}><FaEdit className="edit-button"/>           </Link>    
-                        <button className="pilot-management-delete-button" onClick={() => handleDeleteClick(airship.id)}><MdDelete /></button>
+                        <button className="delete-button" onClick={() => handleDeleteClick(airship.id)}><MdDelete /></button>
                     </td>
                     </tr>
                 ))}

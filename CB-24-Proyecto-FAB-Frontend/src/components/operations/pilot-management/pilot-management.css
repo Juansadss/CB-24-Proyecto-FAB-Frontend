@@ -8,24 +8,25 @@
   color: #000;
 }
 
-table {
+.pilot-management-container table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-th, td {
+.pilot-management-container th, .pilot-management-container td {
   text-align: center;
-  padding: 8px;
+  padding: 5px;
+  font-size: 11px;
   border-bottom: 1px solid #ddd; /* Add horizontal border */
 }
 
-th {
-  background-color: #f2f2f2; /* Gray background color for table header */
+.pilot-management-container th {
+  background-color: #10085c; /* Gray background color for table header */
 }
 
-tr:hover {
-  background-color: #f2f2f2; /* Light gray background color on hover */
+.pilot-management-container tr:hover {
+  background-color: #393343; /* Light gray background color on hover */
 }
 
 .pilot-management-edit-button{
