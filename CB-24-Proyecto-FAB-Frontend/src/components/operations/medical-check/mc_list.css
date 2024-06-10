@@ -171,3 +171,32 @@ tbody>tr:hover {
   .mc-black{
     color: #000;
   }
+
+  .mc-user-info-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mc-username {
+    /* Estilos existentes */
+    margin-left: 30px; /* Ajusta el valor según lo necesites */
+    font-size: 16px;
+    
+  }
+  
+  .mc-forma {
+    /* Estilos existentes */
+    font-size: 4px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: auto;
+  } 
+  
+  .mc-management-logo{
+    margin-right: 50px;
+    font-size: 50%;
+  }
+  
+  .mc-left{
+    margin-left: 10px;
+  }

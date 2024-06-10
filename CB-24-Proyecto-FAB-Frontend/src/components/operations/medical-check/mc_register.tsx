@@ -30,7 +30,7 @@ export default function McRegister (){
                                 <label>Personal</label>
                             </div>
                             <div className="mc-input-field">
-                                <input type="text"/>
+                                <input type="text" readOnly/>
                                 <label>Grado</label>
                             </div>
                         </div>
@@ -60,11 +60,14 @@ export default function McRegister (){
                     </form>
                 </div>
 
-                <div className="mc-footer-user">
-                    <label>USER76234</label>
-                    <a href="">
-                        <i className="material-icons"><CiMenuKebab/></i>
-                    </a>
+                <div className="mc-user-info-container">
+                    <span className="mc-username">USER76234</span>
+                    <button className="mc-forma">
+                        <CiMenuKebab fontSize={20} />
+                    </button>
+                    <div className="mc-management-logo">
+                        <img width={160} height={110}  src="/FAB.png" alt="FAB" />
+                    </div>
                 </div>
             </div>
         </div>

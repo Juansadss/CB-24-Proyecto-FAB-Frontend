@@ -45,11 +45,9 @@ export default function McList (){
                         </button>
                     </form>
                     <div className="mc-group-list">
-                        <p>Tipo personal</p>
-                        <button type="submit" className="mc-button-list">Ayudadores militares</button>
-                        <button type="submit" className="mc-button-list">Técnicos Abordo</button>
-                        <input className="mc-textInput-list" type="text"/>
-                        <button type="submit" className="mc-btn-icon-list">
+                        <p>Buscar personal </p>
+                        <input className="mc-left mc-textInput-list" type="text"/>
+                        <button type="submit" className="mc-left mc-btn-icon-list">
                             <img width={20} src="/search.png" alt="Search" />
                         </button>
                     </div>
@@ -103,12 +101,14 @@ export default function McList (){
                         </table>
                     </div>
                 </div>
-            
-                <div className="mc-footer-user-list">
-                    <label>USER76234</label>
-                    <a href="">
-                        <i className="material-icons"><CiMenuKebab/></i>
-                    </a>
+                <div className="mc-user-info-container">
+                    <span className="mc-username">USER76234</span>
+                    <button className="mc-forma">
+                        <CiMenuKebab fontSize={24} />
+                    </button>
+                    <div className="mc-management-logo">
+                        <img width={200} height={150}  src="/FAB.png" alt="FAB" />
+                    </div>
                 </div>
             </div>
         </div>
