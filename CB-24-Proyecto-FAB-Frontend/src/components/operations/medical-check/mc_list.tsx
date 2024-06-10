@@ -12,6 +12,13 @@ export default function McList (){
     const [showModal, setShowModal] = useState(false);
     const [mcDelete, setMcToDelete] = useState<number | null>(null);
 
+    const pilots = [
+        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", nextCheck: "10-04-2024", observations: "Ninguna"},
+        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", nextCheck: "03-02-2024",  observations: "Ninguna"},
+        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", nextCheck: "05-05-2024",  observations: "Ninguna"},
+        // Add more pilot objects as needed
+      ];
+
     const handleDeleteClick = (id: number) => {
         setMcToDelete(id);
         setShowModal(true);
@@ -65,38 +72,24 @@ export default function McList (){
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Cap. Av</td>
-                                    <td>XXXXXXXXX</td>
-                                    <td>C.A</td>
-                                    <td>P.A</td>
-                                    <td>10-10-23</td>
-                                    <td></td>
-                                    <td>
-                                        <p>
-                                            <Link className="mc-edit" to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
-                                        </p>
-                                        <p>
-                                            <button className="mc-delete" onClick={() => handleDeleteClick(1)}><MdDelete /></button>
-                                        </p>
-                                    </td>
+                            {pilots.map((pilot) => (
+                                <tr key={pilot.pilotID}>
+                                <td>{pilot.militaryRank}</td>
+                                <td>{pilot.firstName} {pilot.lastName} {pilot.middleName}</td>
+                                <td>C.A</td>
+                                <td>P.A</td>
+                                <td>{pilot.nextCheck}</td>
+                                <td>{pilot.observations}</td>
+                                <td>
+                                    <p>
+                                        <Link className="mc-edit" to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
+                                    </p>
+                                    <p>
+                                        <button className="mc-delete" onClick={() => handleDeleteClick(pilot.pilotID)}><MdDelete /></button>
+                                    </p>
+                                </td>
                                 </tr>
-                                <tr>
-                                    <td>Cap. Av</td>
-                                    <td>XXXXXXXXX</td>
-                                    <td>C.A</td>
-                                    <td>P.A</td>
-                                    <td>05-10-23</td>
-                                    <td></td>
-                                    <td>
-                                        <p>
-                                            <Link className="mc-edit" to={'/menu-principal/menu-operaciones/mc-editar'}><FaEdit/></Link>
-                                        </p>
-                                        <p>
-                                            <button className="mc-delete" onClick={() => handleDeleteClick(1)}><MdDelete /></button>
-                                        </p>
-                                    </td>
-                                </tr>
+                            ))}
                             </tbody>
                         </table>
                     </div>

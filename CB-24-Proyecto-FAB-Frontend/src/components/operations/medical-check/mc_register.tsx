@@ -23,14 +23,14 @@ export default function McRegister (){
                         <div className="mc-group">
                             <div className="mc-select-field">
                                 <select>
-                                    <option value="">Eduardo Perez</option>
-                                    <option value="">Carlos Vargas</option>
-                                    <option value="">Ronal Gonzales</option>
+                                    <option value="">Hugo Fernando Perez Oropeza</option>
+                                    <option value="">Rodrigo Arnez Ramirez</option>
+                                    <option value="">David Peredo Canedo</option>
                                 </select>
                                 <label>Personal</label>
                             </div>
                             <div className="mc-input-field">
-                                <input type="text" readOnly/>
+                                <input type="text" value="Teniente" readOnly/>
                                 <label>Grado</label>
                             </div>
                         </div>

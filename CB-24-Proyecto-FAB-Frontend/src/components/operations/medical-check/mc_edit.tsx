@@ -23,14 +23,14 @@ export default function McEdit (){
                         <div className="mc-group">
                             <div className="mc-select-field">
                                 <select>
-                                    <option value="">Eduardo Perez</option>
-                                    <option value="">Carlos Vargas</option>
-                                    <option value="">Ronal Gonzales</option>
+                                    <option value="">Hugo Fernando Perez Oropeza</option>
+                                    <option value="">Rodrigo Arnez Ramirez</option>
+                                    <option value="">David Peredo Canedo</option>
                                 </select>
                                 <label>Personal</label>
                             </div>
                             <div className="mc-input-field">
-                                <input type="text" readOnly/>
+                                <input type="text" value="Teniente" readOnly/>
                                 <label>Grado</label>
                             </div>
                         </div>
@@ -38,11 +38,11 @@ export default function McEdit (){
                         <h3 className="mc-title">CATEGORÍA</h3>
                         <div className="mc-group">
                             <div className="mc-input-field">
-                                <input type="text"/>
+                                <input value="C.A" type="text"/>
                                 <label>EC-145</label>
                             </div>
                             <div className="mc-input-field">
-                                <input type="text"/>
+                                <input value="P.A" type="text"/>
                                 <label>AS350 B3</label>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ export default function McEdit (){
                                 <label>Próximo Chequeo</label>
                             </div>
                             <div className="mc-text-field">
-                                <textarea rows={6} cols={17}></textarea>
+                                <textarea value="Ninguna" rows={6} cols={17}></textarea>
                                 <label>Observaciones</label>
                             </div>
                         </div>
