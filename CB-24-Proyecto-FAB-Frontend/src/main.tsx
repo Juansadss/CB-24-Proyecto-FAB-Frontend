@@ -5,10 +5,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 import Login from "./components/user/login/login.tsx";
 import MainMenu from "./components/main-menu/main-menu.tsx";
-import TableMain from "./components/maintenance/maintenance2/App.tsx";
-import Inspection from "./components/maintenance/maintenance2/Control/Inspection.jsx";
-import Inspection2 from "./components/maintenance/maintenance2/Control/Inspection2.jsx"; // Importa el componente de detalles
-//import App from './components/maintenance/maintenance2/App';
+
+
+import TableMain from "./components/maintenance/ControlInspections/App.tsx";
+import Inspection from "./components/maintenance/ControlInspections/Control/Inspection.jsx";
+import Inspection2 from "./components/maintenance/ControlInspections/Control/Inspection2.jsx";
+
+//import TableMain from "./components/maintenance/ControlComponents/App.tsx";
+// import Inspection from "./components/maintenance/ControlComponents/Control/Inspection.jsx";
+//import Inspection2 from "./components/maintenance/ControlComponents/Control/Inspection2.jsx";
 
 
 const router = createBrowserRouter([

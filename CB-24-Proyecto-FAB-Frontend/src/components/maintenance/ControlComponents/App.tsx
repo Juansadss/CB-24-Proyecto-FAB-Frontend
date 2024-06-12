@@ -31,9 +31,9 @@ import { capitalize } from "./utils";
 import "./styles.css";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
-  activo: "success",
-  Pausa: "danger",
-  Reparacion: "warning",
+  Programado: "success",
+  Proximo: "danger",
+  Retrasado: "warning",
 };
 
 const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
@@ -228,11 +228,11 @@ const handlePieceClick = (user) => {
                 <DropdownMenu>
                 <DropdownItem>
                   <Link to="/Inspection" >
-                    View
+                    Ver
                   </Link>
                 </DropdownItem>
-                  <DropdownItem>Edit</DropdownItem>
-                  <DropdownItem>Delete</DropdownItem>
+                  <DropdownItem>Editar</DropdownItem>
+                  <DropdownItem>Borrar</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </div>
@@ -421,7 +421,7 @@ const handlePieceClick = (user) => {
     <><>
       <h1 
       id="title1">
-        <b>MANTENIMIENTO</b> - Visualizacion de Inspeccion
+        <b>MANTENIMIENTO</b> - Control de Componentes
       </h1>
       <Table
         id="table1"
@@ -507,7 +507,7 @@ const handlePieceClick = (user) => {
      </div>
    </div>
  </div>
-      )};
+      )}
     </><footer> <img id="logoFoto" src="logo.png" alt="" /> </footer></>
   );
 }

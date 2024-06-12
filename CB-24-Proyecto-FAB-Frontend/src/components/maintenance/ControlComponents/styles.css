@@ -131,15 +131,15 @@ Table {
   background-color: darkred; 
 }
 
-.activo {
+.Programado {
   color: green;
 }
 
-.pausa {
+.Proximo {
   color: red;
 }
 
-.reparacion {
+.Retrasado {
   color: #f6a700;
 }
 
