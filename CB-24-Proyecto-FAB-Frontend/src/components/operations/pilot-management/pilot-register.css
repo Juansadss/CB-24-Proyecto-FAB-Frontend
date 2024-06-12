@@ -49,7 +49,7 @@
   font-size: 20px; /* Ajustar el tamaño de la fuente del label */
 }
 
-.register-pilot-label-input-container input, select {
+.register-pilot-label-input-container input, .register-pilot-label-input-container select {
   width: calc(90% - 20px); /* Ajustar el ancho del input */
   font-size: 18px; /* Aumentar el tamaño de la fuente del input */
   padding: 15px 2px; /* Agregar espacio vertical dentro del input */

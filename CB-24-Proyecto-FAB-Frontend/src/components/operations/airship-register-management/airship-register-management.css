@@ -28,8 +28,8 @@
     flex-direction: column; /* Mostrar elementos uno encima del otro */
     
   }
-  .register-airshit-label-input-container input, select {
-    width: calc(93% - 20px); /* Ajustar el ancho del input */
+  .register-airshit-label-input-container input, .register-airshit-label-input-container select {
+    width: calc(98% - 20px); /* Ajustar el ancho del input */
     font-size: 18px; /* Aumentar el tamaño de la fuente del input */
     padding: 15px 2px; /* Agregar espacio vertical dentro del input */
   }

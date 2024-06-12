@@ -6,6 +6,7 @@
   background-color: white;
   margin-top: 30px;
   color: #000;
+  overflow-y: auto;
 }
 
 .pilot-management-container .pilot-table {

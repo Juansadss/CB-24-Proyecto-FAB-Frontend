@@ -13,10 +13,9 @@ export default function PilotManagement() {
     const [pilotToDelete, setPilotToDelete] = useState<number | null>(null);
 
     const pilots = [
-        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", role: "Aviador", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774" , flightHours: "523 Hrs"},
-        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", role: "Coaviador", registrationNumber: "876367", identificationNumber: "028937847", mobileNumber:"68565384" , flightHours: "995 Hrs"},
-        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", role: "Instructor de Vuelo", registrationNumber: "1827372", identificationNumber: "274616123", mobileNumber:"78453997" , flightHours: "684 Hrs"},
-        // Add more pilot objects as needed
+        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774" , flightHours: "523 Hrs"},
+        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", registrationNumber: "876367", identificationNumber: "028937847", mobileNumber:"68565384" , flightHours: "995 Hrs"},
+        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", registrationNumber: "1827372", identificationNumber: "274616123", mobileNumber:"78453997" , flightHours: "684 Hrs"},
       ];
 
       const handleDeleteClick = (id: number) => {
@@ -67,7 +66,6 @@ export default function PilotManagement() {
                     <th>Fecha Nacimiento</th>
                     <th>Género</th>
                     <th>Grado Militar</th>
-                    <th>Función</th>
                     <th>N# Registro</th>
                     <th>N# Identificación</th>
                     <th>Celular</th>
@@ -82,7 +80,6 @@ export default function PilotManagement() {
                     <td>{pilot.birthDate}</td>
                     <td>{pilot.gender}</td>
                     <td>{pilot.militaryRank}</td>
-                    <td>{pilot.role}</td>
                     <td>{pilot.registrationNumber}</td>
                     <td>{pilot.identificationNumber}</td>
                     <td>{pilot.mobileNumber}</td>

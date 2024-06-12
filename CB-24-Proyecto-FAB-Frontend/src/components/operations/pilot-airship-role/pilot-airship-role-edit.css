@@ -1,4 +1,4 @@
-.register-pilotairship-container {
+.edit-pilotairship-container {
     height: 90vh;
     width: 95%;
     border-radius: 10px;
@@ -10,16 +10,16 @@
     overflow-y: auto;
   }
 
-  .register-pilotairship-container .small-text{
+  .edit-pilotairship-container .small-text{
     font-size: 20px;
   }
   
-  .register-pilotairship-container h1 {
+  .edit-pilotairship-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .register-pilotairship-form-container {
+  .edit-pilotairship-form-container {
     width: 90%; /* Cambiar el ancho según sea necesario */
     margin: 40px auto;
     border: 1px solid #f3e9e9;
@@ -29,13 +29,13 @@
     margin-bottom: 30px;
   }
   
-  .register-pilotairship-content {
+  .edit-pilotairship-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.register-pilotairship-info-section {
+.edit-pilotairship-info-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,30 +43,30 @@
     width: 100%;
 }
 
-.register-pilotairship-label-input-container {
+.edit-pilotairship-label-input-container {
     width: 80%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
   
-  .register-pilotairship-label-input-container label {
+  .edit-pilotairship-label-input-container label {
     font-size: 20px; /* Ajustar el tamaño de la fuente del label */
   }
   
-  .register-pilotairship-label-input-container input, select {
+  .edit-pilotairship-label-input-container input, select {
     width: 100%;
     font-size: 18px;
     padding: 15px;
     margin-top: 10px;
   }
   
-  .register-pilotairship-goback-arrow{
+  .edit-pilotairship-goback-arrow{
     color: #000;
     margin-right: 50px;
   }
   
-  .register-pilotairship-button {
+  .edit-pilotairship-button {
     color: white;
     background-color: #171A4A;
     padding: 10px 20px;
@@ -98,7 +98,7 @@
     margin-right: auto;
   }
   
-  .register-pilotairship-logo{
+  .edit-pilotairship-logo{
     margin-right: 50px;
   }
   

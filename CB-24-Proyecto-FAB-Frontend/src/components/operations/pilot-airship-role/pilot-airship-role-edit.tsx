@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import "./pilot-airship-role-register.css";
+import "./pilot-airship-role-edit.css";
 import { CiMenuKebab } from "react-icons/ci";
 
-export default function RegisterPilotAirshipForm() {
+export default function EditPilotAirshipForm() {
   return <>
-    <div className="register-pilotairship-container">
+    <div className="edit-pilotairship-container">
         <div>
             <h1>
-                <Link to={"/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos"}><IoIosArrowBack className="register-pilotairship-goback-arrow" /></Link><b>Funciones de Pilotos</b>
-                <span className="small-text"> &gt; Registrar Función de Piloto</span>
+                <Link to={"/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos"}><IoIosArrowBack className="edit-pilotairship-goback-arrow" /></Link><b>Funciones de Pilotos</b>
+                <span className="small-text"> &gt; Modificar Función de Piloto</span>
             </h1>
         </div>
 
       {/* Pilot Registration Form */}
-      <div className="register-pilotairship-form-container">
+      <div className="edit-pilotairship-form-container">
                     
-                    <div className="register-pilotairship-content">
-                        <div className="register-pilotairship-info-section">
-                            <div className="register-pilotairship-label-input-container">
+                    <div className="edit-pilotairship-content">
+                        <div className="edit-pilotairship-info-section">
+                            <div className="edit-pilotairship-label-input-container">
                                 <label className="label-section"><strong>Piloto:</strong></label>
                                 <select>
                                     <option value="">Hugo Fernando Perez Oropeza</option>
@@ -27,7 +27,7 @@ export default function RegisterPilotAirshipForm() {
                                 </select>
                             </div>
                             
-                            <div className="register-pilotairship-label-input-container">
+                            <div className="edit-pilotairship-label-input-container">
                                 <label className="label-section"><strong>Aeronave:</strong></label>
                                 <select>
                                     <option value="">FAB-754, AS 350 - B3</option>
@@ -39,7 +39,7 @@ export default function RegisterPilotAirshipForm() {
                                 </select>
                             </div>
                             
-                            <div className="register-pilotairship-label-input-container">
+                            <div className="edit-pilotairship-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Función:</strong></label>
                                 <select>x
@@ -52,7 +52,7 @@ export default function RegisterPilotAirshipForm() {
                         </div>
                         <br />
                         <div>
-                            <button className="register-pilotairship-button">Registrar Función</button>
+                            <button className="edit-pilotairship-button">Modificar Función</button>
                         </div>
                         
                     </div>
@@ -62,7 +62,7 @@ export default function RegisterPilotAirshipForm() {
                     <button className="forma">
                         <CiMenuKebab fontSize={24} />
                     </button>
-                    <div className="register-pilotairship-logo">
+                    <div className="edit-pilotairship-logo">
                         <img width={200} height={150}  src="/FAB.png" alt="FAB" />
                 </div>
             </div>

@@ -29,13 +29,13 @@ export default function PilotAirshipManagement() {
     ];
 
     const pilots_airships = [
-        { idPilot: 1, idAirship: 2, role: "Aviador"},
-        { idPilot: 1, idAirship: 4, role: "Instructor de Vuelo"},
-        { idPilot: 2, idAirship: 5, role: "Coaviador"},
-        { idPilot: 2, idAirship: 1, role: "Coaviador"},
-        { idPilot: 3, idAirship: 3, role: "Instructor de Vuelo"},
-        { idPilot: 3, idAirship: 1, role: "Aviador"},
-        { idPilot: 3, idAirship: 6, role: "Aviador"},
+        { id: 1,idPilot: 1, idAirship: 2, role: "Aviador"},
+        { id: 2, idPilot: 1, idAirship: 4, role: "Instructor de Vuelo"},
+        { id: 3, idPilot: 2, idAirship: 5, role: "Coaviador"},
+        { id: 4, idPilot: 2, idAirship: 1, role: "Coaviador"},
+        { id: 5, idPilot: 3, idAirship: 3, role: "Instructor de Vuelo"},
+        { id: 6, idPilot: 3, idAirship: 1, role: "Aviador"},
+        { id: 7, idPilot: 3, idAirship: 6, role: "Aviador"},
     ];
 
       const handleDeleteClick = (id: number) => {
@@ -60,7 +60,7 @@ export default function PilotAirshipManagement() {
             .filter(pa => pa.idPilot === pilot.pilotID)
             .map(pa => {
                 const airship = airships.find(a => a.id === pa.idAirship);
-                return { ...airship, role: pa.role };
+                return { ...airship, role: pa.role, pilotAirshipId: pa.id };
             });
 
         return {
@@ -83,7 +83,7 @@ export default function PilotAirshipManagement() {
             {/* Add New Pilot Button */}
             <div className="pilotairship-management-add-button-container">
                 <button>
-                    <Link to={"/menu-principal/menu-operaciones/registro-piloto"}><FaPlus className="pilotairship-management-add-button-icon" />
+                    <Link to={"/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos/registrar-funcion-piloto"}><FaPlus className="pilotairship-management-add-button-icon" />
                         
                     </Link>
                 </button>
@@ -101,15 +101,15 @@ export default function PilotAirshipManagement() {
                 </thead>
                 <tbody>
                 {pilotAirshipData.map((pilot) => (
-                            <tr key={pilot.pilotID}>
-                                <td>{pilot.firstName} {pilot.middleName} {pilot.lastName}</td>
-                                <td>{pilot.militaryRank}</td>
+                    <tr key={pilot.pilotID}>
+                        <td>{pilot.firstName} {pilot.middleName} {pilot.lastName}</td>
+                        <td>{pilot.militaryRank}</td>
                                 <td>
                                     <table className="smallTable">
                                         <tbody>
                                             {pilot.airships.map((airship, index) => (
                                                 <tr key={index}>
-                                                    <td>{airship.model} ({airship.matricula})</td>
+                                                    <td className="airship-role-cell">{airship.model} ({airship.matricula})</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -120,7 +120,7 @@ export default function PilotAirshipManagement() {
                                         <tbody>
                                             {pilot.airships.map((airship, index) => (
                                                 <tr key={index}>
-                                                    <td>{airship.role}</td>
+                                                    <td className="airship-role-cell">{airship.role}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -132,8 +132,8 @@ export default function PilotAirshipManagement() {
                                     {pilot.airships.map((airship, index) => (
                                                 <tr key={index}>
                                                     <td>
-                                                        <Link to={"/menu-principal/menu-operaciones/editar-piloto"}><FaEdit className="pilotairship-management-edit-button"/></Link>
-                                                        <button className="pilotairship-management-delete-button" onClick={() => handleDeleteClick(pilot.pilotID)}><MdDelete /></button>
+                                                        <Link to={"/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos/editar-funcion-piloto"}><FaEdit className="pilotairship-management-edit-button"/></Link>
+                                                        <button className="pilotairship-management-delete-button" onClick={() => handleDeleteClick(airship.pilotAirshipId)}><MdDelete /></button>
                                                     </td>
                                                 </tr>
                                     ))}
