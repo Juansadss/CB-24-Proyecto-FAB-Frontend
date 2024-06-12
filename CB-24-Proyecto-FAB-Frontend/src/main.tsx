@@ -14,6 +14,8 @@ import McList from './components/operations/medical-check/mc_list.tsx';
 import McRegister from './components/operations/medical-check/mc_register.tsx';
 import McEdit from './components/operations/medical-check/mc_edit.tsx';
 import AirshipEditManagement from './components/operations/airship-management/airship-edit-management.tsx';
+import PilotAirshipManagement from './components/operations/pilot-airship-role/pilot-airship-role-management.tsx';
+
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path:  "/menu-principal",  element: <MainMenu /> },
@@ -27,6 +29,7 @@ const router = createBrowserRouter([
   { path:  "/menu-principal/menu-operaciones/mc-registro",  element: <McRegister /> },
   { path:  "/menu-principal/menu-operaciones/mc-editar",  element: <McEdit /> },
   { path:  "/menu-principal/menu-operaciones/editar-piloto",  element: <EditPilotForm /> },
+  { path:  "/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos",  element: <PilotAirshipManagement /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

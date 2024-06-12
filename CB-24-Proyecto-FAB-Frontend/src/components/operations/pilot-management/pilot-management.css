@@ -8,24 +8,24 @@
   color: #000;
 }
 
-.pilot-management-container table {
+.pilot-management-container .pilot-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-.pilot-management-container th, .pilot-management-container td {
+.pilot-management-container .pilot-table th, .pilot-management-container .pilot-table td {
   text-align: center;
   padding: 5px;
   font-size: 11px;
   border-bottom: 1px solid #ddd; /* Add horizontal border */
 }
 
-.pilot-management-container th {
+.pilot-management-container .pilot-table th {
   background-color: #10085c; /* Gray background color for table header */
 }
 
-.pilot-management-container tr:hover {
+.pilot-management-container .pilot-table tr:hover {
   background-color: #393343; /* Light gray background color on hover */
 }
 
@@ -46,6 +46,10 @@
 .pilot-management-goback-arrow{
 color: #000;
 margin-right: 50px;
+}
+
+.pilot-management-add-button-container {
+ display: flex;
 }
 
 .pilot-management-add-button-container button {

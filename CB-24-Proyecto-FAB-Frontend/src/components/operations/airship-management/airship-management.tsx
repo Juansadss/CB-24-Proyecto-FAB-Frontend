@@ -13,12 +13,12 @@ export default function AirshipManagement() {
     const [airshitDelete, setAirshitToDelete] = useState<number | null>(null);
 
     const aiships = [
-        { id: 1, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
-        { id: 2, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
-        { id: 3, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
-        { id: 4, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
-        { id: 5, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
-        { id: 6, matricula: "FAB-754", aereonave: "AS 350", versation: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
+        { id: 1, matricula: "FAB-754", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 2, matricula: "FAB-755", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
+        { id: 3, matricula: "FAB-756", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 4, matricula: "FAB-757", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 5, matricula: "FAB-758", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "P"},
+        { id: 6, matricula: "FAB-759", model: "AS 350", version: "B3", serial: "4547", modelomotor:"C-R124", combustible:"120.026   LTS", capacidadpasajero:"5", peso: "1361.0", horasVuelo:"3", estado: "W"},
         
     ];
     const handleDeleteClick = (id: number) => {
@@ -74,8 +74,8 @@ export default function AirshipManagement() {
                 {aiships.map((airship) => (
                     <tr key={airship.id}>
                     <td>{airship.matricula}</td>
-                    <td>{airship.aereonave}</td>
-                    <td>{airship.versation}</td>
+                    <td>{airship.model}</td>
+                    <td>{airship.version}</td>
                     <td>{airship.serial}</td>
                     <td>{airship.modelomotor}</td>
                     <td>{airship.combustible}</td>

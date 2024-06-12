@@ -52,10 +52,15 @@ export default function PilotManagement() {
                         
                     </Link>
                 </button>
+                <button className="functionsButton">
+                    <Link to={"/menu-principal/menu-operaciones/gestion-pilotos/gestion-funciones-pilotos"}>Ver funciones de pilotos
+                        
+                    </Link>
+                </button>
             </div>
             
             {/* Pilot Table */}
-            <table>
+            <table className="pilot-table">
                 <thead>
                 <tr>
                     <th>Nombre Completo</th>
