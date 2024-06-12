@@ -61,11 +61,11 @@ export default function EditPilotForm() {
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Rol:</strong></label>
+                                <label className="label-section"><strong>Función:</strong></label>
                                 <select name="role" value={formData.role} onChange={handleChange}>
-                                    <option value="Piloto">Piloto</option>
-                                    <option value="Copiloto">Copiloto</option>
-                                    <option value="Mecanico">Mecánico</option>
+                                    <option value="Aviador">Aviador</option>
+                                    <option value="Coaviador">Coaviador</option>
+                                    <option value="Instructor">Instructor de Vuelo</option>
                                 </select>
                             </div>
                             <div className="edit-pilot-label-input-container">
