@@ -12,7 +12,7 @@ import Inspection from "./components/maintenance/ControlInspections/Control/Insp
 import Inspection2 from "./components/maintenance/ControlInspections/Control/Inspection2.jsx";
 
 //import TableMain from "./components/maintenance/ControlComponents/App.tsx";
-// import Inspection from "./components/maintenance/ControlComponents/Control/Inspection.jsx";
+//import Inspection from "./components/maintenance/ControlComponents/Control/Inspection.jsx";
 //import Inspection2 from "./components/maintenance/ControlComponents/Control/Inspection2.jsx";
 
 
