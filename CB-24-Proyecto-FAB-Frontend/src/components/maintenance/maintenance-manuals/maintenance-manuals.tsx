@@ -17,31 +17,34 @@ export default function MaintenanceManuals() {
                     <div className="maintenance-aeronave-content-cards">
                         <div className="maintenance-card">
                             <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
-                            <div className="maintenance-card-description">
-                                <h2>"E"ASB Control - Rotor mast - Check of the rotor mast oil pipe</h2>
-                                <h3>2017/05/19 - Rev 1</h3>
-                                <h4>[EC 130 - H130]</h4>
-                                <p>Ensuring that the main rotor mast bearing lubrication pipe is not obstructed. The purpose of Revision 1 of this ALERTSERVICE BULLETIN is to give details and an alternative method</p>
-                            </div>
+                            <Link to={'./'} target="_blank" className="maintenance-card-description">
+                                <h4>Sitio Web del Manual 1</h4>
+                                <Link to={'./'}>
+                                    https://www.google.com/
+                                </Link>
+                                <span>Dirigirse al Sitio Web Externo</span>
+                            </Link>
                         </div>
                         <div className="maintenance-card">
-                            <img src="/PDF.PNG" alt="Imagen 2" className="maintenance-card-image" />
-                            <div className="maintenance-card-description">
-                                <h2>"E"ASB Control - Rotor mast - Check of the rotor mast oil pipe</h2>
-                                <h3>2017/05/19 - Rev 1</h3>
-                                <h4>[EC 130 - H130]</h4>
-                                <p>Ensuring that the main rotor mast bearing lubrication pipe is not obstructed. The purpose of Revision 1 of this ALERTSERVICE BULLETIN is to give details and an alternative method</p>
-                            </div>
+                            <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
+                            <Link to={'./'} target="_blank" className="maintenance-card-description">
+                                <h4>Sitio Web del Manual 2</h4>
+                                <Link to={'./'}>
+                                    https://www.google.com/
+                                </Link>
+                                <span>Dirigirse al Sitio Web Externo</span>
+                            </Link>
                         </div>
                         <div className="maintenance-card">
-                            <img src="/PDF.PNG" alt="Imagen 3" className="maintenance-card-image" />
-                            <div className="maintenance-card-description">
-                                <h2>"E"ASB Control - Rotor mast - Check of the rotor mast oil pipe</h2>
-                                <h3>2017/05/19 - Rev 1</h3>
-                                <h4>[EC 130 - H130]</h4>
-                                <p>Ensuring that the main rotor mast bearing lubrication pipe is not obstructed. The purpose of Revision 1 of this ALERTSERVICE BULLETIN is to give details and an alternative method</p>
-                            </div>
-                        </div>
+                            <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
+                            <Link to={'./'} target="_blank" className="maintenance-card-description">
+                                <h4>Sitio Web del Manual 3</h4>
+                                <Link to={'./'}>
+                                    https://www.google.com/
+                                </Link>
+                                <span>Dirigirse al Sitio Web Externo</span>
+                            </Link>
+                        </div>              
                     </div>
                 </div>
                 <footer>

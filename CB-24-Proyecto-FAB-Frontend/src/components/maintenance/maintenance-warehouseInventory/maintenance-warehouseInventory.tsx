@@ -60,6 +60,20 @@ function MaintenanceWarehouseInventory() {
               <td>5</td>
               <td>Unidad</td>
             </tr>
+            <tr>
+              <td>TAIL GEARBOX</td>
+              <td>4639003013</td>
+              <td>Tail Gearbox</td>
+              <td>5</td>
+              <td>Unidad</td>
+            </tr>
+            <tr>
+              <td>TAIL GEARBOX</td>
+              <td>4639003013</td>
+              <td>Tail Gearbox</td>
+              <td>5</td>
+              <td>Unidad</td>
+            </tr>            
           </tbody>
         </table>
       </div>
