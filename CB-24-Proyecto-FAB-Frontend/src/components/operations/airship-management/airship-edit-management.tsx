@@ -7,11 +7,12 @@ import './airship-edit-management.css';
 export default function AirshipEditManagement() {
     const [formData, setFormDat] = useState({
         matricula: "FAB-754", 
-        aereonave: "AS 350",
+        aereonave: "AS 350 - B3",
         fabricante: "Nasa",
         peso: "1361.0",
+        pesovacio: "1260.0",
+        pesomaximo: "1100.0",
         serial: "4547", 
-        versation: "B3",
         manufactureDate: "1990-01-01",
         combustible:"120.026   LTS",
         estado: "Whisky",
@@ -63,25 +64,35 @@ export default function AirshipEditManagement() {
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Serial:</strong></label>
-                                <input type="text" name="serial" value={formData.serial} onChange={handleChange}/>
+                                <label className="label-section"><strong>Peso Máximo(Kg):</strong></label>
+                                <input type="text" name="pesovacio" value={formData.pesovacio} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Versión:</strong></label>
-                                <input type="text" name="versation" value={formData.versation} onChange={handleChange}/>
+                                <label className="label-section"><strong>Peso Vacío(Kg):</strong></label>
+                                <input type="text" name="pesomaximo" value={formData.pesomaximo} onChange={handleChange}/>
                             </div>
-                            <div className="register-airshit-label-input-container">
+                            <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Fecha de Fabricación:</strong></label>
-                                <input type="date" name="manufactureDate" value={formData.manufactureDate} onChange={handleChange}/>
+                                <label className="label-section"><strong>Serial:</strong></label>
+                                <input type="text" name="serial" value={formData.serial} onChange={handleChange}/>
                             </div>
                             <div className="label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Capacidad De Combustible:</strong></label>
                                 <input type="text" name="combustible" value={formData.combustible} onChange={handleChange}/>
                             </div>
+                            <div className="register-airshit-label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Fecha de Fabricación:</strong></label>
+                                <input type="date" name="manufactureDate" value={formData.manufactureDate} onChange={handleChange}/>
+                            </div>
                             
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
+                                <input type="text" name="origin" value={formData.origin} onChange={handleChange}/>
+                            </div>
                             
                             <div className="register-airshit-estado-label-input-container">
                                 <br />
@@ -91,11 +102,7 @@ export default function AirshipEditManagement() {
                                     <option value="noDisponible">Papa</option>
                                 </select>
                             </div>
-                            <div className="label-input-container">
-                                <br />
-                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
-                                <input type="text" name="origin" value={formData.origin} onChange={handleChange}/>
-                            </div>
+                            
                             <div className="label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Modelo de Motor:</strong></label>
@@ -125,11 +132,12 @@ export default function AirshipEditManagement() {
 
 
                         </div>
-                        <br />
+                        
                         <div>
                             <button className="edit-button">Realizar Cambio</button>
                         </div>
-                        
+                        <br />
+                        <br />
                     </div>
                 </div>
                 

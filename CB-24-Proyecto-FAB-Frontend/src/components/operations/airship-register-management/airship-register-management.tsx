@@ -39,12 +39,24 @@ export default function AirshipRegisterManagement() {
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Serial:</strong></label>
+                                <label className="label-section"><strong>Peso Máximo(Kg):</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Versión:</strong></label>
+                                <label className="label-section"><strong>Peso Vacío(Kg):</strong></label>
+                                <input type="text" />
+                            </div>
+                            
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Serial:</strong></label>
+                                <input type="text" />
+                            </div>
+                            
+                            <div className="label-input-container">
+                                <br />
+                                <label className="label-section"><strong>Capacidad De Combustible:</strong></label>
                                 <input type="text" />
                             </div>
                             <div className="register-airshit-label-input-container">
@@ -54,11 +66,9 @@ export default function AirshipRegisterManagement() {
                             </div>
                             <div className="label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Capacidad De Combustible:</strong></label>
+                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
                                 <input type="text" />
                             </div>
-                            
-                            
                             <div className="register-airshit-estado-label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Estado:</strong></label>
@@ -67,11 +77,7 @@ export default function AirshipRegisterManagement() {
                                     <option value="noDisponible">Papa</option>
                                 </select>
                             </div>
-                            <div className="label-input-container">
-                                <br />
-                                <label className="label-section"><strong>Origen de AeroNave:</strong></label>
-                                <input type="text" />
-                            </div>
+                            
                             <div className="label-input-container">
                                 <br />
                                 <label className="label-section"><strong>Modelo de Motor:</strong></label>
@@ -100,11 +106,12 @@ export default function AirshipRegisterManagement() {
                             </div>
 
                         </div>
-                        <br />
+                        
                         <div>
                             <button className="register-button">Registrar AeroNave</button>
                         </div>
-                        
+                        <br />
+                        <br />
                     </div>
                 </div>
                 

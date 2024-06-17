@@ -29,7 +29,7 @@
     
   }
   .register-airshit-label-input-container input, .register-airshit-label-input-container select {
-    width: calc(98% - 20px); /* Ajustar el ancho del input */
+    width: calc(95% - 20px); /* Ajustar el ancho del input */
     font-size: 18px; /* Aumentar el tamaño de la fuente del input */
     padding: 15px 2px; /* Agregar espacio vertical dentro del input */
   }
@@ -46,7 +46,7 @@
     padding: 15px 2px;
   }
   .register-airshit-estado-label-input-container {
-    width: calc(51% - 0px); /* Ajustar el ancho para un elemento en una fila */
+    width: calc(46% - 0px); /* Ajustar el ancho para un elemento en una fila */
     display: flex;
     flex-direction: column; /* Mostrar elementos uno encima del otro */
     
