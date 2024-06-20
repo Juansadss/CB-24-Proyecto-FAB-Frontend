@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useImperativeHandle, forwardRef } from 'react';
 import { FaChevronDown } from "react-icons/fa6";
 import '../guard-management/guard-management.css'; 
 import './dropdown-input-search.css'
@@ -11,19 +11,25 @@ interface Option {
 }
 
 interface DropdownInputSearchProps {
-  label?:string;
+  label?: string;
   options: Option[];
   onOptionSelect?: (option: Option) => void;
 }
 
-function DropdownInputSearch({ label = 'Seleccione una opcion', options, onOptionSelect }:DropdownInputSearchProps) {
+interface DropdownInputSearchHandle {
+  clear: () => void;
+}
+
+const DropdownInputSearch = forwardRef<DropdownInputSearchHandle, DropdownInputSearchProps>(({ label = 'Seleccione una opción', options, onOptionSelect }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const selectRef = useRef<HTMLDivElement>(null);
 
   const handleIconClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    setIsOpen(!isOpen);
+    if (options.length > 0) {
+      setIsOpen(!isOpen);
+    }    
   };
 
   const handleOptionClick = (option: Option) => {
@@ -32,11 +38,20 @@ function DropdownInputSearch({ label = 'Seleccione una opcion', options, onOptio
     onOptionSelect!(option);
   };
 
+  const handleClearOptionClick = () => {
+    setSelectedOption(null);
+    onOptionSelect!({value: '', label: ''});
+  };
+
   const handleClickOutside = (event: MouseEvent) => {
     if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
       setIsOpen(false);
     }
   };
+
+  useImperativeHandle(ref, () => ({
+    clear: handleClearOptionClick,
+  }));
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -50,7 +65,7 @@ function DropdownInputSearch({ label = 'Seleccione una opcion', options, onOptio
         <div className='sar-search-bar-item'>
         <div className="selected-option sar-search-input" >
                 <p onClick={() => setIsOpen(!isOpen)} title={selectedOption ? selectedOption.label : label} >{selectedOption ? selectedOption.label : label}</p>
-                {selectedOption&&<IoClose className='dropdown-Input-search-icon' onClick={() => setSelectedOption(null)} />}
+                {selectedOption&&<IoClose className='dropdown-Input-search-icon' onClick={handleClearOptionClick} />}
           </div>
             <button className="sar-search-button" onClick={handleIconClick}>
               <FaChevronDown />
@@ -67,6 +82,6 @@ function DropdownInputSearch({ label = 'Seleccione una opcion', options, onOptio
         )}
     </div>
   );
-};
+});
 
 export default DropdownInputSearch;

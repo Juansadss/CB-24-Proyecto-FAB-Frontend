@@ -23,6 +23,12 @@
     margin-right: 10px;
   }
 
+.operations_list-sar-operative-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .operations_list-actions {
     display: flex;
     justify-content: space-between;

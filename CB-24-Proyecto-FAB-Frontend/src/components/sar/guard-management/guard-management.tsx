@@ -12,9 +12,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { FaCalendarAlt } from "react-icons/fa";
 
 const options = [
-  { value: 'opcion1', label: 'Opción 1' },
-  { value: 'opcion2', label: 'Opción 2' },
-  { value: 'opcion3', label: 'Opción 3' },
+  { value: 'opcion1', label: 'Mañana' },
+  { value: 'opcion2', label: 'Tarde' },
+  { value: 'opcion3', label: 'Noche' },
 ];
 
 export default function GuardManagement() {
@@ -33,7 +33,7 @@ export default function GuardManagement() {
   };
 
   return (
-    <LayoutSar selectedOption="Guardias">
+    <LayoutSar selectedOption="Operaciones">
       <div className="guard-container">
         <h2 className="guard-title">GUARDIA</h2>
         <div className="guard-header">

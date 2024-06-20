@@ -31,6 +31,15 @@
     color: #000000;
 }
 
+.create_operativo-form .sar-opetative-type {
+    display: flex;
+    gap: 10px;
+}
+
+    .create_operativo-form .sar-opetative-type select {
+        flex: 1;
+    }
+
 .create_operativo-form h2, .create_operativo-form h3 {
     color: #000000;
 }

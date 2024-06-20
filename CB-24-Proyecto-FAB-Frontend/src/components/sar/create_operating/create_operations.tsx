@@ -4,6 +4,32 @@ import LayoutSar from '../layout-sar/layout-sar';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
+interface Option {
+    value: string;
+    label: string;
+}
+
+const categoria = [
+    { value: 'busqueda_y_rescate', label: 'Búsqueda y rescate' },
+    { value: 'defensa_civil', label: 'Defensa civil' },
+];
+
+const tiposBusquedaYRescate = [
+    { value: 'montana', label: 'Montaña' },
+    { value: 'estructuras_colapsadas', label: 'Estructuras colapsadas' },
+    { value: 'con_canes', label: 'Con canes' },
+    { value: 'aeronautico', label: 'Aeronáutico' },
+    { value: 'acuatico', label: 'Acuático' },
+];
+
+const tiposDefensaCivil = [
+    { value: 'incendios', label: 'Incendios' },
+    { value: 'inundaciones', label: 'Inundaciones' },
+    { value: 'mazamorras', label: 'Mazamorras' },
+    { value: 'deslizamiento', label: 'Deslizamiento' },
+    { value: 'sequias', label: 'Sequias' },
+];
+
 const OperationsCreate = () => {
     const [formData, setFormData] = useState({
         nombres: '',
@@ -38,6 +64,10 @@ const OperationsCreate = () => {
         { grado: 'Teniente', nombre: 'Juan Perez' },
         { grado: 'Capitan', nombre: 'Fulanito Quispe' }
     ]);
+
+    const [selectedCategoria, setSelectedCategoria] = useState<string | null>(null);
+    const [tipoOptions, setTipoOptions] = useState<Option[]>([]);
+
     const handleAddItem = () => {
         setItems(prevItems => [...prevItems, { grado: formData.grado, nombre: formData.personal }]);
         setFormData(prevState => ({ ...prevState, grado: '', nombre: '' }));
@@ -48,6 +78,22 @@ const OperationsCreate = () => {
             ...prevState,
             [name]: value
         }));
+    };
+
+    const handleCategoriaChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedValue = event.target.value;
+        setSelectedCategoria(selectedValue);
+
+        switch (selectedValue) {
+            case 'busqueda_y_rescate':
+            setTipoOptions(tiposBusquedaYRescate);
+            break;
+            case 'defensa_civil':
+            setTipoOptions(tiposDefensaCivil);
+            break;
+            default:
+            setTipoOptions([]);
+        }
     };
 
     const goTo = useNavigate();
@@ -70,11 +116,28 @@ const OperationsCreate = () => {
                     <div className="form-group-row">
                         <div className="form-group">
                             <label>Tipo Operativo:</label>
-                            <select name="grado" onChange={handleChange} value={formData.grado}>
-                                <option value="">Seleccione...</option>
-                                <option value="Grado 1">Rescate</option>
-                                <option value="Grado 2">Seguridad Médica</option>
-                            </select>
+                            <div className='sar-opetative-type'>
+                                <select name="Categoria" onChange={handleCategoriaChange} >
+                                    <option value="" disabled selected>
+                                        Seleccione una categoría
+                                    </option>
+                                    {categoria.map((item) => (
+                                        <option key={item.value} value={item.value}>
+                                            {item.label}
+                                        </option>
+                                    ))}
+                                </select>
+                                <select name="Tipo" disabled={!selectedCategoria}>
+                                    <option value="" disabled>
+                                        Seleccione un tipo
+                                    </option>
+                                    {tipoOptions.map((item) => (
+                                        <option key={item.value} value={item.value}>
+                                            {item.label}
+                                        </option>
+                                    ))}
+                                </select>  
+                            </div>                   
                         </div>
                         <div className="form-group">
                             <label>Fecha de operativo:</label>

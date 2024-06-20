@@ -55,9 +55,43 @@
         font-size: 2.5rem;
     }
 
+    .sar-menu-item span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 .sar-menu-item-selected {
     color: #ffffff;
     background-color: #171A4A;
+}
+
+.sar-sub-options {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    border-left: 2px solid #2F2C79;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+  
+.sar-sub-options.show {
+    max-height: 110px;
+}
+  
+.sar-sub-menu-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.sar-sub-menu-item:hover {
+    color: #ffffff;
+    background-color: #2F2C79;
 }
 
 .sar-main-container main {

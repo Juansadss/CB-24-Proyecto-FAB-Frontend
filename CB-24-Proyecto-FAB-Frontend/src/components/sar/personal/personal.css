@@ -142,3 +142,9 @@
 .personal-form button:hover {
     background-color: #000;
 }
+
+.personal-sar-documents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

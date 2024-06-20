@@ -28,6 +28,9 @@ export default function PersonalInformation() {
     direccion: 'Calle Falsa 123, Zona Central',
     telefonoEmergencia: '8424182',
     celularEmergencia: '72254321',
+    fechaVencimientoChequeoMedico: '2023-05-15',
+    fechaVencimientoSeguroAccidentes: '2023-06-15',
+    fechaVencimientoSalvoRiesgoNotariado: '2024-05-30',
     chequeoMedico: File 
   });
   const handleChange = (
@@ -169,8 +172,26 @@ export default function PersonalInformation() {
                 <IoEyeOutline />
               </button>
             </div>
+            <label className="label-grado" htmlFor="curso">
+              Fecha de vencimiento de Seguro contra accidentes:
+            </label>
+            <div className="medical-check-personal-info">
+              <input value="2001-05-15" type="date" id="archivo"  className="input-archivo" disabled/>
+              <button className="personal-info-icon-button">
+                <IoEyeOutline />
+              </button>
+            </div>
+            <label className="label-grado" htmlFor="curso">
+              Fecha de vencimiento de Salvo de riesgo notariado:
+            </label>
+            <div className="medical-check-personal-info">
+              <input value="2001-05-15" type="date" id="archivo"  className="input-archivo" disabled/>
+              <button className="personal-info-icon-button">
+                <IoEyeOutline />
+              </button>
+            </div>
             <div>
-              <button className="personal-info-report-button" onClick={() => goTo('/sar/reporte/personal/asistencia')}>Reporte de Guardias</button>
+              <button className="personal-info-report-button" onClick={() => goTo('/sar/reporte/guardias')}>Reporte de Guardias</button>
               <button className="personal-info-report-button" onClick={() => goTo('/sar/reporte/personal/asistencia')}>Reporte de Asistencias</button>
               <button className="personal-info-report-button" onClick={() => goTo('/sar/reporte/personal/operaciones')}>Reporte de Operativos</button>
             </div>

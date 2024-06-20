@@ -4,18 +4,45 @@ import DatePicker from "react-datepicker";
 import { CiSquarePlus } from 'react-icons/ci';
 import DropdownInputSearch from '../dropdown-input-search/dropdown-input-search';
 import { FaCalendarAlt } from 'react-icons/fa';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const categoria = [
+    { value: 'busqueda_y_rescate', label: 'Búsqueda y rescate' },
+    { value: 'defensa_civil', label: 'Defensa civil' },
+];
 
-const options = [
-    { value: 'Rescate', label: 'Rescate' },
-    { value: 'Seguridad Médica', label: 'Seguridad Médica' },   
+const tiposBusquedaYRescate = [
+    { value: 'montana', label: 'Montaña' },
+    { value: 'estructuras_colapsadas', label: 'Estructuras colapsadas' },
+    { value: 'con_canes', label: 'Con canes' },
+    { value: 'aeronautico', label: 'Aeronáutico' },
+    { value: 'acuatico', label: 'Acuático' },
+];
+
+const tiposDefensaCivil = [
+    { value: 'incendios', label: 'Incendios' },
+    { value: 'inundaciones', label: 'Inundaciones' },
+    { value: 'mazamorras', label: 'Mazamorras' },
+    { value: 'deslizamiento', label: 'Deslizamiento' },
+    { value: 'sequias', label: 'Sequias' },
 ];
 
 const OperationsList = () => {
     const [startDate, setStartDate] = useState<Date | null>(new Date());
     const [endDate, setEndDate] = useState<Date | null>(new Date());   
+    const [selectedCategory, setSelectedCategory] = useState<String | null>();
+    const [selectedType, setselectedType] = useState<String | null>();
+    const [isStartDatePickerOpen, setisStartDatePickerOpen] = useState<boolean>(false);
+    const [isEndDatePickerOpen, setisEndDatePickerOpen] = useState<boolean>(false);
+    const dropdownRef = useRef<any>(null);
+
+    const clearDropdown = () => {
+        if (dropdownRef.current) {
+        dropdownRef.current.clear();
+        }
+    };
+
 
     const handlestartDateChange = (date: Date | null) => {
         setStartDate(date);
@@ -25,18 +52,27 @@ const OperationsList = () => {
     const handleEndDateChange = (date: Date | null) => {
         setEndDate(date);
         console.log("Fecha seleccionada:", date);
-    };
-
-    const [isStartDatePickerOpen, setisStartDatePickerOpen] = useState<boolean>(false);
-    const [isEndDatePickerOpen, setisEndDatePickerOpen] = useState<boolean>(false);
+    };    
 
     const goTo = useNavigate()
+
+    const handleCategorySelect = (category:any) => {
+        setSelectedCategory(category.value);
+        setselectedType(null);
+        clearDropdown();
+        console.log(category)
+    };
+
+    const handleTypeSelect = (type:any) => {
+        setselectedType(type.value);
+        console.log(selectedType)
+    };
 
     return (
         <LayoutSar selectedOption='Operaciones'>
             <div className="operations_list-container">
                 <h2 className="operations_list-header">
-                    <b>LISTA DE OPERACIONES</b>
+                    <b>LISTA DE OPERATIVOS</b>
                 </h2>
                 <div className="operations_list-content">
                     <div className="operations_list-actions">
@@ -44,7 +80,10 @@ const OperationsList = () => {
                         <form action="" className="sar-search-bar">
                             <div>
                                 <b>Tipo</b>
-                                <DropdownInputSearch options={options} />
+                                <div className='operations_list-sar-operative-type'>
+                                    <DropdownInputSearch options={categoria} onOptionSelect={handleCategorySelect} />
+                                    <DropdownInputSearch ref={dropdownRef} options={selectedCategory === 'busqueda_y_rescate'? tiposBusquedaYRescate : selectedCategory === 'defensa_civil'? tiposDefensaCivil : []} onOptionSelect={handleTypeSelect} />
+                                </div>
                             </div>   
                             <div>
                                 <b>Fecha inicial:</b>

@@ -168,13 +168,29 @@ const PersonalForm: React.FC = () => {
                                 <input type="text" name="celularEmergencia" onChange={handleChange} value={formData.celularEmergencia} />
                             </div>
                         </div>
-                        <div className="form-group file-upload">
-                            <label htmlFor="chequeoMedico">
-                                <img src="/subiricon.png" alt="Subir Chequeo Médico" />
-                                Subir Chequeo Médico
-                            </label>
-                            <input type="file" id="chequeoMedico" name="chequeoMedico" onChange={handleFileChange} />
-                        </div>
+                        <div className='personal-sar-documents'>
+                            <div className="form-group file-upload">
+                                <label htmlFor="chequeoMedico">
+                                    <img src="/subiricon.png" alt="Subir Chequeo Médico" />
+                                    Subir Chequeo Médico
+                                </label>
+                                <input type="file" id="chequeoMedico" name="chequeoMedico" onChange={handleFileChange} />
+                            </div>
+                            <div className="form-group file-upload">
+                                <label htmlFor="chequeoMedico">
+                                    <img src="/subiricon.png" alt="Subir Chequeo Médico" />
+                                    Subir Seguro contra accidentes
+                                </label>
+                                <input type="file" id="chequeoMedico" name="chequeoMedico" onChange={handleFileChange} />
+                            </div>
+                            <div className="form-group file-upload">
+                                <label htmlFor="chequeoMedico">
+                                    <img src="/subiricon.png" alt="Subir Chequeo Médico" />
+                                    Subir salvo de riesgo notariado
+                                </label>
+                                <input type="file" id="chequeoMedico" name="chequeoMedico" onChange={handleFileChange} />
+                            </div>
+                        </div>                        
                         <button type="submit">Enviar</button>
                     </form>
                 </div>

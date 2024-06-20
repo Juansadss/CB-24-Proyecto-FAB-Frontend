@@ -8,14 +8,21 @@ import { FaAngleLeft, FaCalendarAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const tipo = [
-    { value: 'opcion1', label: 'Opción 1' },
-    { value: 'opcion2', label: 'Opción 2' },
-    { value: 'opcion3', label: 'Opción 3' },
+    { value: 'montana', label: 'Búsqueda y rescate - Montaña' },
+    { value: 'estructuras_colapsadas', label: 'Búsqueda y rescate - Estructuras colapsadas' },
+    { value: 'con_canes', label: 'Búsqueda y rescate - Con canes' },
+    { value: 'aeronautico', label: 'Búsqueda y rescate - Aeronáutico' },
+    { value: 'acuatico', label: 'Búsqueda y rescate - Acuático' },
+    { value: 'incendios', label: 'Defensa civil - Incendios' },
+    { value: 'inundaciones', label: 'Defensa civil - Inundaciones' },
+    { value: 'mazamorras', label: 'Defensa civil - Mazamorras' },
+    { value: 'deslizamiento', label: 'Defensa civil - Deslizamiento' },
+    { value: 'sequias', label: 'Defensa civil - Sequias' },
 ];
-const estado = [
-    { value: 'opcion1', label: 'Opción 1' },
-    { value: 'opcion2', label: 'Opción 2' },
-    { value: 'opcion3', label: 'Opción 3' },
+
+const localidad = [
+    { value: 'opcion1', label: 'Cochabamba' },
+    { value: 'opcion2', label: 'Tiquipaya' },
 ];
 
 const PersonalOperationsReport = () => {    
@@ -70,7 +77,7 @@ const PersonalOperationsReport = () => {
                         </div> 
                         <div>
                             <b>Localidad</b>
-                            <DropdownInputSearch options={estado} label='Seleccionar locatidad'/>
+                            <DropdownInputSearch options={localidad} label='Seleccionar locatidad'/>
                         </div> 
                     </form>
                     <table className="personalOperationsReport-table">
@@ -83,32 +90,32 @@ const PersonalOperationsReport = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Buqueda y rescate en montaña</td>
+                                <td>Búsqueda y rescate - Montaña</td>
                                 <td>20/06/24</td>
                                 <td>Cochabamba</td>
                             </tr>
                             <tr>
-                                <td>Buqueda y rescate en estruturas colapsadas</td>
+                                <td>Buqueda y rescate - Estruturas colapsadas</td>
                                 <td>10/06/24</td>
                                 <td>Cochabamba</td>
                             </tr>
                             <tr>
-                                <td>Buqueda y rescate en montaña</td>
+                                <td>Búsqueda y rescate - Montaña</td>
                                 <td>30/05/24</td>
                                 <td>Cochabamba</td>
                             </tr>
                             <tr>
-                                <td>Buqueda y rescate en incendios</td>
+                                <td>Buqueda y rescate - Incendios</td>
                                 <td>25//05/24</td>
                                 <td>Cochabamba</td>
                             </tr>
                             <tr>
-                                <td>Buqueda y rescate en inundaciones</td>
+                                <td>Buqueda y rescate - Inundaciones</td>
                                 <td>27/04/24</td>
                                 <td>Cochabamba</td>
                             </tr>
                             <tr>
-                                <td>Buqueda y rescate en montaña</td>
+                                <td>Búsqueda y rescate - Montaña</td>
                                 <td>04/02/24</td>
                                 <td>Cochabamba</td>
                             </tr>

@@ -7,9 +7,9 @@ import DatePicker from 'react-datepicker';
 import { useNavigate } from 'react-router-dom';
 
 const estado = [
-    { value: 'opcion1', label: 'Opción 1' },
-    { value: 'opcion2', label: 'Opción 2' },
-    { value: 'opcion3', label: 'Opción 3' },
+    { value: 'opcion1', label: 'Asistió' },
+    { value: 'opcion2', label: 'Falta' },
+    { value: 'opcion3', label: 'Permiso' },
 ];
 
 const PersonalAttendanceReport = () => {
@@ -75,15 +75,15 @@ const PersonalAttendanceReport = () => {
                         <tbody>
                             <tr>
                                 <td>10/10/24</td>
-                                <td>Presente</td>
+                                <td>Asistió</td>
                             </tr>
                             <tr>
                                 <td>09/10/24</td>
-                                <td>Presente</td>
+                                <td>Asistió</td>
                             </tr>
                             <tr>
                                 <td>08/10/24</td>
-                                <td>Falto</td>
+                                <td>Falta</td>
                             </tr>
                             <tr>
                                 <td>07/10/24</td>
@@ -91,15 +91,15 @@ const PersonalAttendanceReport = () => {
                             </tr>
                             <tr>
                                 <td>06/10/24</td>
-                                <td>Presente</td>
+                                <td>Asistió</td>
                             </tr>
                             <tr>
                                 <td>05/10/34</td>
-                                <td>Presente</td>
+                                <td>Asistió</td>
                             </tr>
                             <tr>
                                 <td>04/10/24</td>
-                                <td>Falto</td>
+                                <td>Falta</td>
                             </tr>
                         </tbody>
                     </table>
