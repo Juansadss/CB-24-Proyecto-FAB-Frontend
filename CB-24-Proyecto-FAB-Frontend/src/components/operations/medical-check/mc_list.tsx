@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
@@ -8,16 +8,47 @@ import { CiMenuKebab } from "react-icons/ci";
 import ConfirmationModal from "../pilot-management/pilot-confirmation-delete";
 import './mc_list.css'
 
+// Definimos la interfaz para el tipo de piloto
+interface Pilot {
+    pilotID: number;
+    firstName: string;
+    lastName: string;
+    middleName: string;
+    birthDate: string;
+    gender: string;
+    militaryRank: string;
+    nextCheck: string;
+    observations: string;
+    status?: 'normal' | 'por_vencer' | 'vencido';
+}
+
 export default function McList (){
     const [showModal, setShowModal] = useState(false);
     const [mcDelete, setMcToDelete] = useState<number | null>(null);
 
-    const pilots = [
-        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", nextCheck: "10-04-2024", observations: "Ninguna"},
-        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", nextCheck: "03-02-2024",  observations: "Ninguna"},
-        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", nextCheck: "05-05-2024",  observations: "Ninguna"},
-        // Add more pilot objects as needed
-      ];
+    const [pilots, setPilots] = useState<Pilot[]>([
+        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", nextCheck: "2024-06-21", observations: "Ninguna"},
+        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", nextCheck: "2024-06-03",  observations: "Ninguna"},
+        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", nextCheck: "2024-10-05",  observations: "Ninguna"},
+    ]);
+
+    useEffect(() => {
+        const currentDate = new Date();
+        const updatedPilots = pilots.map(pilot => {
+            const checkDate = new Date(pilot.nextCheck);
+            const daysDifference = Math.ceil((checkDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24));
+            
+            let status: 'normal' | 'por_vencer' | 'vencido' = 'normal';
+            if (daysDifference < 0) {
+                status = 'vencido';
+            } else if (daysDifference <= 30) {
+                status = 'por_vencer';
+            }
+            
+            return { ...pilot, status };
+        });
+        setPilots(updatedPilots);
+    }, []);
 
     const handleDeleteClick = (id: number) => {
         setMcToDelete(id);
@@ -73,12 +104,12 @@ export default function McList (){
                             </thead>
                             <tbody>
                             {pilots.map((pilot) => (
-                                <tr key={pilot.pilotID}>
+                                <tr key={pilot.pilotID} className={pilot.status ? `mc-row-${pilot.status}` : ''}>
                                 <td>{pilot.militaryRank}</td>
                                 <td>{pilot.firstName} {pilot.lastName} {pilot.middleName}</td>
                                 <td>C.A</td>
                                 <td>P.A</td>
-                                <td>{pilot.nextCheck}</td>
+                                <td>{new Date(pilot.nextCheck).toLocaleDateString()}</td>
                                 <td>{pilot.observations}</td>
                                 <td>
                                     <p>

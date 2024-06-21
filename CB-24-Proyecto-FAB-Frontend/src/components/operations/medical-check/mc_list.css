@@ -200,3 +200,26 @@ tbody>tr:hover {
   .mc-left{
     margin-left: 10px;
   }
+
+  tbody > tr.mc-row-por_vencer td {
+    background: rgba(255, 193, 7, 0.6);  /* Amarillo ámbar semitransparente */
+    color: #000;  /* Texto negro para mejor contraste */
+}
+
+tbody > tr.mc-row-por_vencer:hover td {
+    background: rgba(255, 193, 7, 0.8);  /* Un poco más opaco al hacer hover */
+}
+
+/* Estilos para las filas "vencidas" */
+tbody > tr.mc-row-vencido td {
+    background: rgba(220, 53, 69, 0.6);  /* Rojo oscuro semitransparente */
+    color: #fff;  /* Texto blanco para mejor contraste */
+}
+
+tbody > tr.mc-row-vencido:hover td {
+    background: rgba(220, 53, 69, 0.8);  /* Un poco más opaco al hacer hover */
+}
+tbody > tr.mc-row-por_vencer td,
+tbody > tr.mc-row-vencido td {
+    background: transparent;
+}
