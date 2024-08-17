@@ -31,7 +31,7 @@ export default function AirshipEditManagement() {
       };
     return (
         <div className="airship-edit-management-container">
-            {/* Botón de regreso */}
+            {/* Botón de regreso HOLA ANETT*/}
                 <div>
                     <h1>
                         <Link to={"/menu-principal/menu-operaciones/gestion-aereonave"}><IoIosArrowBack className="goback-arrow" /></Link>GESTIÓN AERONAVES
