@@ -6,7 +6,7 @@ import { CiMenuKebab } from "react-icons/ci";
 
 export default function EditPilotForm() {
     const [formData, setFormData] = useState({
-        firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", role: "Piloto", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774",
+        firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", email: 'hugo@gmail.com', gender: "H", militaryRank: "Teniente", role: "Piloto", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774",
       });
 
       const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -61,12 +61,8 @@ export default function EditPilotForm() {
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Función:</strong></label>
-                                <select name="role" value={formData.role} onChange={handleChange}>
-                                    <option value="Aviador">Aviador</option>
-                                    <option value="Coaviador">Coaviador</option>
-                                    <option value="Instructor">Instructor de Vuelo</option>
-                                </select>
+                                <label className="label-section"><strong>Correo:</strong></label>
+                                <input type="text" name="email" value={formData.email} onChange={handleChange}/>
                             </div>
                             <div className="edit-pilot-label-input-container">
                                 <br />

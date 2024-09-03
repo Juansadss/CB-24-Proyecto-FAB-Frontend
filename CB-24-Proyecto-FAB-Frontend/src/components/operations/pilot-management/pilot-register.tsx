@@ -48,12 +48,8 @@ export default function RegisterPilotForm() {
                             
                             <div className="register-pilot-label-input-container">
                                 <br />
-                                <label className="label-section"><strong>Función:</strong></label>
-                                <select>x
-                                    <option value="Aviador">Aviador</option>
-                                    <option value="Coaviador">Coaviador</option>
-                                    <option value="Instructor">Instructor de Vuelo</option>
-                                </select>
+                                <label className="label-section"><strong>Correo:</strong></label>
+                                <input type="text" />
                             </div>
 
                             <div className="register-pilot-label-input-container">

@@ -13,9 +13,9 @@ export default function PilotManagement() {
     const [pilotToDelete, setPilotToDelete] = useState<number | null>(null);
 
     const pilots = [
-        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", gender: "H", militaryRank: "Teniente", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774" , flightHours: "523 Hrs"},
-        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", gender: "H", militaryRank: "Subteniente", registrationNumber: "876367", identificationNumber: "028937847", mobileNumber:"68565384" , flightHours: "995 Hrs"},
-        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", gender: "H", militaryRank: "Capitán", registrationNumber: "1827372", identificationNumber: "274616123", mobileNumber:"78453997" , flightHours: "684 Hrs"},
+        { pilotID: 1, firstName: "Hugo Fernando", lastName: "Perez", middleName: "Oropeza", birthDate: "1990-08-25", email:'hugo@gmail.com', gender: "H", militaryRank: "Teniente", registrationNumber: "7263833", identificationNumber: "8274612431", mobileNumber:"74853774" , flightHours: "523 Hrs"},
+        { pilotID: 2, firstName: "Rodrigo", lastName: "Arnez", middleName: "Ramirez", birthDate: "1992-05-15", email:'rodri@gmail.com', gender: "H", militaryRank: "Subteniente", registrationNumber: "876367", identificationNumber: "028937847", mobileNumber:"68565384" , flightHours: "995 Hrs"},
+        { pilotID: 3, firstName: "David", lastName: "Peredo", middleName: "Canedo", birthDate: "1985-11-30", email:'david@gmail.com', gender: "H", militaryRank: "Capitán", registrationNumber: "1827372", identificationNumber: "274616123", mobileNumber:"78453997" , flightHours: "684 Hrs"},
       ];
 
       const handleDeleteClick = (id: number) => {
@@ -69,6 +69,7 @@ export default function PilotManagement() {
                     <th>N# Registro</th>
                     <th>N# Identificación</th>
                     <th>Celular</th>
+                    <th>Correo</th>
                     <th>Horas Vuelo</th>
                     <th>Editar | Eliminar</th>
                 </tr>
@@ -83,6 +84,7 @@ export default function PilotManagement() {
                     <td>{pilot.registrationNumber}</td>
                     <td>{pilot.identificationNumber}</td>
                     <td>{pilot.mobileNumber}</td>
+                    <td>{pilot.email}</td>
                     <td>{pilot.flightHours}</td>
                     <td>
                         <Link to={"/menu-principal/menu-operaciones/editar-piloto"}><FaEdit className="pilot-management-edit-button"/></Link>
