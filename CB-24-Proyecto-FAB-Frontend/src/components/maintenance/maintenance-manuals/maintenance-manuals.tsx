@@ -16,35 +16,29 @@ export default function MaintenanceManuals() {
                 <div className="maintenance-aeronave-container">
                     <div className="maintenance-aeronave-content-cards">
                         <div className="maintenance-card">
-                            <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
-                            <Link to={'./'} target="_blank" className="maintenance-card-description">
-                                <h4>Sitio Web del Manual 1</h4>
-                                <Link to={'./'}>
-                                    https://www.google.com/
-                                </Link>
-                                <span>Dirigirse al Sitio Web Externo</span>
+                            <img src="/Airbus_logo.webp" alt="Orion_logo" className="maintenance-card-image" />
+                            <Link to={'https://airbusworld.helicopters.airbus.com/#/home'} target="_blank" className="maintenance-card-description">
+                                <h4>Plataforma ORION</h4>
+                                https://airbusworld.helicopters.airbus.com/#/home
+                                <span>Dirigirse a plataforma ORION</span>
                             </Link>
                         </div>
                         <div className="maintenance-card">
-                            <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
-                            <Link to={'./'} target="_blank" className="maintenance-card-description">
-                                <h4>Sitio Web del Manual 2</h4>
-                                <Link to={'./'}>
-                                    https://www.google.com/
-                                </Link>
-                                <span>Dirigirse al Sitio Web Externo</span>
+                            <img src="/Safran_logo.webp" alt="Safran_logo" className="maintenance-card-image" />
+                            <Link to={'https://tools.safran-helicopter-engines.com/pg/en/home'} target="_blank" className="maintenance-card-description">
+                                <h4>Plataforma Motor SAFRAN TOOLS</h4>
+                                https://tools.safran-helicopter-engines.com/pg/en/home
+                                <span>Dirigirse a plataforma Motor SAFRAN TOOLS</span>
                             </Link>
                         </div>
                         <div className="maintenance-card">
-                            <img src="/PDF.PNG" alt="Imagen 1" className="maintenance-card-image" />
-                            <Link to={'./'} target="_blank" className="maintenance-card-description">
-                                <h4>Sitio Web del Manual 3</h4>
-                                <Link to={'./'}>
-                                    https://www.google.com/
-                                </Link>
-                                <span>Dirigirse al Sitio Web Externo</span>
+                            <img src="/Robinson_logo.webp" alt="Robinson_logo" className="maintenance-card-image" />
+                            <Link to={'https://shop.robinsonheli.com/'} target="_blank" className="maintenance-card-description">
+                                <h4>Plataforma Robinson R66</h4>
+                                https://shop.robinsonheli.com/
+                                <span>Dirigirse a plataforma Robinson R66</span>
                             </Link>
-                        </div>              
+                        </div>
                     </div>
                 </div>
                 <footer>

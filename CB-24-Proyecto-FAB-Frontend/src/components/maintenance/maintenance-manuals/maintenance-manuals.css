@@ -1,6 +1,6 @@
 .maintenance-manuals-container {
     width: 100%;
-    min-height: 95vh;
+    max-height: 95vh;
     padding: 20px;
     box-sizing: border-box;
     background-color: #171A4A;
@@ -12,6 +12,7 @@
     width: 80%;
     margin: 0 auto;
     border: 1px solid #ccc;
+    border-radius: 8px;
     padding: 20px;
     background-color: #f0f0f0;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,22 +31,21 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 120px;
     text-align: left;
     align-items: center;
     transition: all 0.2s ease-in-out;
     border: 2px solid transparent;
 }
 
-.maintenance-manuals-container .maintenance-card:hover{
+.maintenance-manuals-container .maintenance-card:hover {
     border: #171A4A 2px solid;
 }
 
 .maintenance-manuals-container .maintenance-card-image {
-    height: 75%;
+    height: 100%;
     object-fit: contain;
     flex-shrink: 0;
-    margin: 16px;
 }
 
 .maintenance-manuals-container .maintenance-card-description h4 {
@@ -67,23 +67,25 @@
     color: #000;
 }
 
-.maintenance-manuals-container .maintenance-card-description span{
+.maintenance-manuals-container .maintenance-card-description span {
+    display: flex;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    text-align: center;
+    text-align: left;
+    align-items: center;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
     right: 0;
+    bottom: 0;
+    width: 100%;
     padding: 16px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
 }
 
-.maintenance-manuals-container .maintenance-card-description:hover span{
-    transform: translateY(0);
+.maintenance-manuals-container .maintenance-card-description:hover span {
+    transform: translateX(50%);
 }
-
 
 .maintenance-manuals-container .maintenance-aeronave-main {
     width: 100%;
@@ -119,7 +121,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 32px;
-    margin-top: 32px;
+    margin-top: 8px;
 }
 
 .maintenance-manuals-container footer span {
