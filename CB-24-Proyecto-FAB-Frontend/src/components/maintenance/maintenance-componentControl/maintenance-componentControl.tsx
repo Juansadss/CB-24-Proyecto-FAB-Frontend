@@ -1,13 +1,56 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CiSquarePlus } from "react-icons/ci";
 import { GoArrowLeft } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
-import './maintenance-componentControl.css'
+import './maintenance-componentControl.css';
+
+interface Component {
+  name: string;
+  partNumber: string;
+  aircraft?: { model: string };
+  installationDate: string;
+  limit?: string;
+  margin?: string;
+  requirement?: string;
+  remaining?: string;
+}
 
 function MaintenanceComponentControl() {
   const [selectedType, setSelectedType] = useState<string>('Aeronave');
   const [selectedServiceTime, setSelectedServiceTime] = useState<string>('OTL');
+  const [components, setComponents] = useState<Component[]>([]); // State to store the fetched data
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Function to fetch data from the API
+    const fetchComponents = async () => {
+      try {
+        const response = await fetch('https://localhost:7149/api/Component', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setComponents(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchComponents();
+  }, []); // Empty dependency array means this effect runs once on component mount
 
   const handleTypeClick = (type: string) => {
     setSelectedType(type);
@@ -16,6 +59,9 @@ function MaintenanceComponentControl() {
   const handleServiceTimeClick = (serviceTime: string) => {
     setSelectedServiceTime(serviceTime);
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="maintenance-componentControl-container">
@@ -88,36 +134,18 @@ function MaintenanceComponentControl() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Battery Fit</td>
-              <td>N/A</td>
-              <td>FAB-004</td>
-              <td>01-05-2024</td>
-              <td>3200 FH</td>
-              <td>100 FH</td>
-              <td>3200 FH</td>
-              <td><span className="maintenance-componentControl-res">1200 fh</span></td>
-            </tr>
-            <tr>
-              <td>Portable Fire Extinguisher</td>
-              <td>HAL1-74-00</td>
-              <td>FAB-004</td>
-              <td>03-05-2024</td>
-              <td>3200 FH</td>
-              <td>0</td>
-              <td>800 FH</td>
-              <td><span className="maintenance-componentControl-res">770 fh</span></td>
-            </tr>
-            <tr>
-              <td>INSTRUMENT COOLING BLOWER MOTOR</td>
-              <td>JBS276-1</td>
-              <td>FAB-004</td>
-              <td>05-05-2024</td>
-              <td>72 M</td>
-              <td>15 FH</td>
-              <td>05-07-30</td>
-              <td><span className="maintenance-componentControl-res">900 fh</span></td>
-            </tr>
+            {components.map((component, index) => (
+              <tr key={index}>
+                <td>{component.name}</td>
+                <td>{component.partNumber || 'N/A'}</td>
+                <td>{component.aircraft?.model || 'N/A'}</td>
+                <td>{new Date(component.installationDate).toLocaleDateString()}</td>
+                <td>{component.limit || 'N/A'}</td>
+                <td>{component.margin || 'N/A'}</td>
+                <td>{component.requirement || 'N/A'}</td>
+                <td><span className="maintenance-componentControl-res">{component.remaining || 'N/A'}</span></td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -132,7 +160,7 @@ function MaintenanceComponentControl() {
         <img src="/FAB.png" width={150} height={100} />
       </footer>
     </div>
-  )
+  );
 }
 
-export default MaintenanceComponentControl
+export default MaintenanceComponentControl;
