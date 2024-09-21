@@ -15,7 +15,7 @@ export default function Login() {
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        goTo("/menu");
+        goTo("/almacenes");
     }
     
     return <>
