@@ -4,7 +4,6 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/user/login/login.tsx';
 import Prueba from './components/user/login/prueba.tsx';
-import IndexAlmacenes from "./components/Almacenes/IndexAlmacenes.tsx";
 import IndexAlmacenesExport from './components/Almacenes/IndexAlmacenes.tsx';
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },

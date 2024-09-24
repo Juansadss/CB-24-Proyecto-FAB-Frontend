@@ -1,30 +1,39 @@
-import React, { useState } from 'react';
-import './Styles/IndexAlmacenes.css'; 
+import './Styles/IndexAlmacenes.css';
 
-import logo from '../../assets/ImagesAlmacenes/Logo.jpg'; 
 import SlideBar from './CompTools/SlideBar';
- function IndexAlmacenes() {
-  const [isSidebarOpen, setSidebarOpen] = useState(true); 
+import { useState } from 'react';
+function IndexAlmacenes() {
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen);
-  };
+  const [compSelected, setCompSelected] = useState(0)
+
+
+
+
 
   return (
-    <div className="container">
-       
-   
-      <h1>Ingreso de Productos</h1>
-  
-  </div>
+    <div >
+
+      <h1>Inventario</h1>
+      <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }}>
+          <button className={"btnSwitch"+ `${compSelected==0?" btnSwitchSelected":""} `}>
+            Componentes
+          </button>
+          <button  className={"btnSwitch"+ `${compSelected==1?" btnSwitchSelected":""} `}>
+            Otros
+            </button>
+        </div>
+      </div>
+
+    </div>
   );
 }
 
-function IndexAlmacenesExport(){
-   return(
-  <SlideBar ContentComp={IndexAlmacenes} >
+function IndexAlmacenesExport() {
+  return (
+    <SlideBar ContentComp={IndexAlmacenes} menuItem='Inventario' >
 
-  </SlideBar>)
+    </SlideBar>)
 }
 
 export default IndexAlmacenesExport

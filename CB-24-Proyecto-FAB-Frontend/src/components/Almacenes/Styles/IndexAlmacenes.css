@@ -77,12 +77,28 @@ a {
     padding-bottom: 5px;
     text-align: left;
     margin-left: 20px;
+    transition: 0.2s;
 }
 a:hover{
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: 0.2s;
 }
+
+.selectedItem{
+   
+    background-color: #003366;
+   
+}
+
+.selectedItem a{
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+}
+
 
 .menu-toggle {
     background-color: var(--nav-background-color);
@@ -95,6 +111,7 @@ a:hover{
     top: 20px;
     left: 20px;
     z-index: 101;
+    transition: 0.2s;
 }
 
 .closedMenu {
@@ -102,6 +119,7 @@ a:hover{
     top: 10px;
     left: 10px;
     padding: 5px;
+    transition: 0.2s;
 }
 
 .content {
@@ -113,8 +131,38 @@ a:hover{
 
 .open {
     margin-left: 290px;
+    transition: 0.12s;
 }
 
 .closed {
     margin-left: 0;
+    transition: 0.1s;
+}
+
+
+
+
+.btnSwitch{
+    background-color: #dce3e7;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+
+}
+
+.btnSwitch:hover{
+    background-color: #003366;
+    color: white;
+    padding: 7px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+.btnSwitchSelected{
+    background-color: #003366;
+    color: white;
+    transition: 0.2s;
+    padding: 5px;
+
 }

@@ -7,10 +7,10 @@ import { FaLuggageCart } from "react-icons/fa";
 import { IoDocumentAttachSharp } from "react-icons/io5";
 import { IoIosExit } from 'react-icons/io';
 interface SlideProps {
-
+  menuItem: string,
   ContentComp: React.ComponentType
 }
-const SlideBar: React.FC<SlideProps> = ({ContentComp})=> {
+const SlideBar: React.FC<SlideProps> = ({ContentComp, menuItem})=> {
   const [isSidebarOpen, setSidebarOpen] = useState(true); 
 
   const toggleSidebar = () => {
@@ -32,12 +32,12 @@ const SlideBar: React.FC<SlideProps> = ({ContentComp})=> {
           </div>
         </div>
         <ul>
-        <li><a href="#"><MdOutlineInventory/> Inventario</a></li>
+        <li className={menuItem == "Inventario"? "selectedItem":""} ><a href="/almacenes"     ><MdOutlineInventory/> Inventario</a></li>
 
-          <li><a href="#"><IoDocumentAttachSharp/> Recepción de Material</a></li>
-          <li><a href="#"><IoIosExit></IoIosExit> Orden de Compra</a></li>
+          <li className={menuItem == "Recepción de Material"? "selectedItem":""}><a href="/prueba"><IoDocumentAttachSharp/> Recepción de Material</a></li>
+          <li className={menuItem == "Orden de Compra"? "selectedItem":""}><a href="#"><IoIosExit></IoIosExit> Orden de Compra</a></li>
          
-          <li><a href="#"><FaLuggageCart/> Registro de Salidas</a></li>
+          <li className={menuItem == "Registro de Salidas"? "selectedItem":""}><a href="#"><FaLuggageCart/> Registro de Salidas</a></li>
         </ul>
       </nav>
   
