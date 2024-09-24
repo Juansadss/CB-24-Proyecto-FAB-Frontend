@@ -22,7 +22,7 @@ const SlideBar: React.FC<SlideProps> = ({ContentComp, menuItem})=> {
      <button className={`menu-toggle ${isSidebarOpen?"":"closedMenu"}`} onClick={toggleSidebar}>
         ☰
       </button>
-      <nav className={`sidebar ${isSidebarOpen ? "open" : 'closed'}`}>
+      <nav className={`sidebar ${isSidebarOpen ? "open" : 'closed'} menu`}>
         <div className="header">
           <img src={logo} alt="Fuerza Aérea" className="logo" />
           <h1 className="title">Almacenes</h1>

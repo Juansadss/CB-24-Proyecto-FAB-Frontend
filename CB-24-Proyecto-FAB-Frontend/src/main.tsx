@@ -8,7 +8,8 @@ import IndexAlmacenesExport from './components/Almacenes/IndexAlmacenes.tsx';
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path: "/prueba", element: <Prueba /> },
-  { path: "/almacenes", element: <IndexAlmacenesExport /> }
+  { path: "/almacenes", element: <IndexAlmacenesExport /> },
+  
 
 ]);
 
