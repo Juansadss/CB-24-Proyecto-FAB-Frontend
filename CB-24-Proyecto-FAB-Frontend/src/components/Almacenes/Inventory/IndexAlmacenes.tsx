@@ -1,9 +1,11 @@
-import './Styles/IndexAlmacenes.css';
+import '../Styles/IndexAlmacenes.css';
+import "../Styles/GeneralStyles.css"
 
-import SlideBar from './CompTools/SlideBar';
+import SlideBar from '../CompTools/SlideBar';
 import { useState } from 'react';
 import { FaEye, FaSearch } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
+import { useNavigate, useNavigation } from 'react-router-dom';
 
 
 function IndexAlmacenes() {
@@ -152,11 +154,12 @@ function IndexAlmacenes() {
   const [compSelected, setCompSelected] = useState(0)
 
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const offset = currentPage * itemsPerPage;
   const currentItems = items.slice(offset, offset + itemsPerPage);
   const pageCount = Math.ceil(items.length / itemsPerPage);
+  const n = useNavigate();
 
   const handlePageClick = (data: { selected: number }) => {
     const selectedPage = data.selected;
@@ -164,7 +167,14 @@ function IndexAlmacenes() {
   };
 
 
+  const goToNext = (id:string)=>{
+      n("/almacenes/inventory/component");
+  }
 
+  const switchChanged=()=>{
+    n("/almacenes/other");
+
+  }
   return (
     <div >
 
@@ -174,7 +184,7 @@ function IndexAlmacenes() {
           <button className={"btnSwitch" + `${compSelected == 0 ? " btnSwitchSelected" : ""} `}>
             Componentes
           </button>
-          <button className={"btnSwitch" + `${compSelected == 1 ? " btnSwitchSelected" : ""} `}>
+          <button className={"btnSwitch" + `${compSelected == 1 ? " btnSwitchSelected" : ""} `} onClick={switchChanged}>
             Otros
           </button>
         </div>
@@ -210,7 +220,7 @@ function IndexAlmacenes() {
                   {item.cantidad}
                 </td>
                 <td>
-                  <button className='eyeButton'>
+                  <button className='eyeButton' onClick={()=>goToNext(item.id+"")}>
                     <FaEye color='white'></FaEye>
                   </button>
 
