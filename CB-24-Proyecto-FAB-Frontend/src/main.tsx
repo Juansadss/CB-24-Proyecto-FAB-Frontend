@@ -5,10 +5,13 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/user/login/login.tsx';
 import Prueba from './components/user/login/prueba.tsx';
 import IndexAlmacenesExport from './components/Almacenes/IndexAlmacenes.tsx';
+import Tipo_DetalleExport from './components/Almacenes/Control_Inventario/Tipo_Detalle.tsx';
+
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path: "/prueba", element: <Prueba /> },
-  { path: "/almacenes", element: <IndexAlmacenesExport /> }
+  { path: "/orden", element: <IndexAlmacenesExport /> },
+  { path: "/almacenes", element: <Tipo_DetalleExport /> }//ojo
 
 ]);
 

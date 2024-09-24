@@ -31,7 +31,7 @@ function IndexAlmacenes() {
 
 function IndexAlmacenesExport() {
   return (
-    <SlideBar ContentComp={IndexAlmacenes} menuItem='Inventario' >
+    <SlideBar ContentComp={IndexAlmacenes} menuItem='Orden' >
 
     </SlideBar>)
 }
