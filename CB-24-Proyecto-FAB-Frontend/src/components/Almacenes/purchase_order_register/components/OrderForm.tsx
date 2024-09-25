@@ -36,6 +36,7 @@ const OrderForm = ({}) => {
         >
           <option value="Aceite de turbina">Aceite de turbina</option>
           <option value="Otro tipo">Otro tipo</option>
+          <option value="Otro tipo">Otro tipo2</option>
           {}
         </select>
         <input
