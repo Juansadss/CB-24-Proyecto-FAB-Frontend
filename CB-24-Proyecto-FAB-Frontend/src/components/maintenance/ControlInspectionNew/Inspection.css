@@ -1,15 +1,16 @@
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1047px) {
     .maintenance-alerts-container .alerts-table {
-        overflow-x: auto;
+        overflow-x: scroll;
+        width: 90%; /* Asegura que no ocupe toda la pantalla */
     }
 }
 
 /* Moviles */
 @media screen and (max-width: 768px) {
     .maintenance-alerts-container .alerts-table {
-        overflow-x: auto;
-        width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+        overflow-x: scroll;
+        width: 100%; /* Ocupa el ancho del contenedor en móviles */
     }
 }
 
@@ -28,7 +29,7 @@
     font-weight: bold;
     justify-content: space-between;
     font-size: 16pt;
-    align-items: center; /* Asegura que el contenido esté alineado verticalmente */
+    align-items: center;
 }
 
 .maintenance-alerts-container .history-button {
@@ -43,25 +44,26 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    margin-right: 16px; /* Ajusta la posición del botón */
+    margin-right: 16px; /* Ajuste de separación */
 }
 
 .maintenance-alerts-container main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    width: 100%; 
 }
 
 .maintenance-alerts-container .alerts-table {
     background-color: #171A4A;
     border-radius: 8px;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 90%; /* Vuelve a ser 80% para centrarse */
+    max-width: 1200px; /* Evita que la tabla se expanda más allá de este límite */
     color: #fff;
-    margin: 32px;
+    margin: 32px auto; /* Centra la tabla */
     padding: 16px;
     height: 60vh;
-    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    overflow-x: auto;
 }
 
 .maintenance-alerts-container .alert-row {
@@ -94,7 +96,7 @@
     padding: 8px;
     border-left: 1px #fff solid;
     border-right: 1px #fff solid;
-    text-align: center; /* Centra el contenido de las celdas */
+    text-align: center;
 }
 
 .maintenance-alerts-container tr:hover {
@@ -105,10 +107,8 @@
 .maintenance-alerts-container footer {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Asegura que el contenido esté alineado verticalmente */
+    align-items: center;
     padding: 0 32px;
-    background-color: #171A4A;
-    color: white;
 }
 
 .maintenance-alerts-container footer span {
