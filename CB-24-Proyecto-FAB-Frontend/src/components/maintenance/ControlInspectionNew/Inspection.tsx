@@ -14,7 +14,7 @@ export default function Inspection() {
                     </Link>
                     MANTENIMIENTO - Alertas
                 </span>
-                <Link className="history-button" to={"/menu-principal/mantenimiento/alertas/historial-alertas"}>
+                <Link className="history-button" to={"/InsertInspection"}>
                     <LiaHistorySolid fontSize={28} />Historial
                 </Link>
             </header>
