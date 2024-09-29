@@ -1,84 +1,92 @@
-.OptionMenu {
+.OptionMenu{
     cursor: pointer;
     color: black;
     transition: 0.1s;
 }
-
-.OptionMenu:hover {
+.OptionMenu:hover{
     color: rgb(100, 99, 99);
     transition: 0.1s;
 }
 
-.parTable {
+.parTable{
     max-height: 370px !important;
-    overflow-y: hidden;
+    overflow-y:hidden;
     margin-top: 30px;
     height: 100%;
 }
-
-.generalTable {
+.generalTable2{
     width: 100%;
     align-self: center;
     border-radius: 7px;
     border-collapse: collapse;
 }
 
-.generalTable thead {
+.generalTable2 thead{
     background-color: #003366;
     color: white;
 }
 
-.generalTable td {
+.generalTable2 td{
     border: 1px solid black;
-    padding: 12px;
+    padding: 6px;
 }
 
-.generalTable th {
+.generalTable2 th{
     border: 1px solid black;
 }
 
-.generalTable th, .generalTable td {
+.generalTable2 th, td{
     text-align: center;
-    padding: 2px;
-    color: white !important;
+    padding: 1px;
+    color: rgb(0, 0, 0);
 }
 
-.eyeButton {
+.generalTable2 th {
+    color: rgb(255, 255, 255);
+}
+
+.generalTable2 tr{
+    cursor: pointer;
+}
+.eyeButton{
     background-color: transparent;
     border: 0px;
     transition: 0.2s;
 }
-
-.eyeButton:hover {
+.eyeButton:hover{
     padding: 5px;
     transition: 0.2s;
     cursor: pointer;
 }
 
-.generalTable tr:nth-child(odd) {
-    background-color: #033a70;
+.generalTable2 tr:nth-child(odd) {
+    background-color: #f2f7fb;
 }
 
-.generalTable tr:nth-child(even) {
-    background-color: #023669;
+.generalTable2 tr:nth-child(even) {
+    background-color: #fcfdff;
 }
 
-.generalTable tr:hover {
+.generalTable2 tr:hover {
     background-color: #136ac0;
 }
 
-.upSelect {
+.trSelected {
+    color: white;
+    background-color: #134c84 !important;
+}
+.upSelect{
     width: 200px;
 }
 
-.generalSelect {
+.generalSelect{
     border-radius: 6px;
     transition: 0.1s;
     background-color: white;
     width: 200px;
 }
 
-.generalSelect:hover {
+.generalSelect:hover{
     border-radius: 8px;
     padding: 2px;
     transition: 0.1s;
@@ -118,30 +126,38 @@
 }
 
 @media (max-width: 768px) {
-    .generalTable {
-        font-size: 14px;
+    .generalTable2 {
+        font-size: 13px;
+        overflow-x:scroll;
     }
 
-    .generalTable th, .generalTable td {
+    .generalTable2 th, .generalTable2 td {
         padding: 4px;
+    }
+    .parTable{
+        width: 200px !important;
+        overflow-x:visible !important;
+        
     }
 
     .pagination a {
         padding: 4px 6px;
         font-size: 10px;
     }
-
-    .navigator {
+    .navigator{
         font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .generalTable {
-        font-size: 12px;
+    .parTable{
+        overflow-x:visible !important;
+    }
+    .generalTable2 {
+        font-size: 10px;
     }
 
-    .generalTable th, .generalTable td {
+    .generalTable2 th, .generalTable2 td {
         padding: 2px;
     }
 
@@ -149,8 +165,36 @@
         padding: 3px 5px;
         font-size: 9px;
     }
-
-    .navigator {
+    .navigator{
         font-size: 10px;
     }
+
+}
+
+.inputs2{
+    max-width: 92px;
+}
+
+@media (max-width: 768px) {
+    .labels {
+        font-size: 14px;
+    }
+
+    .inputs, .inputs2, .generalSelect {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .labels {
+        font-size: 12px;
+    }
+
+    .inputs, .inputs2, .generalSelect {
+        font-size: 12px;
+    }
+}
+
+.incomeTable :hover{
+
 }

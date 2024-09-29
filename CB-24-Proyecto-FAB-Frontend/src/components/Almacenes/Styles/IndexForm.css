@@ -1,0 +1,174 @@
+.ordenCompra body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; 
+  padding: 20px;
+}
+.ordenCompra{
+  width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+}
+.ordenCompra h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ordenCompra form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 450px; 
+  margin: 0 auto; 
+}
+
+.ordenCompra form div {
+  margin-bottom: 15px;
+}
+
+.ordenCompra label {
+  margin-right: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.ordenCompra #cantidad {
+  margin-left: 600px;
+}
+
+.ordenCompra input, .ordenCompra select {
+  padding: 8px;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 350px;
+}
+
+.ordenCompra input[type="number"] {
+ 
+  width: 170px;
+}
+
+.ordenCompra button[name='agregar'] {
+  margin-left: auto; 
+  margin-right: 200px;
+}
+
+.ordenCompra .tipo-cantidad-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px; 
+}
+
+.ordenCompra .tipo-cantidad-container select {
+  width: 150px; 
+}
+
+.ordenCompra .tipo-cantidad-container input[type="number"] {
+  width: 100px; 
+}
+
+.ordenCompra button {
+  background-color: #003366; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ordenCompra button:hover {
+  background-color: #002244;
+}
+
+.ordenCompra table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 20px;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.ordenCompra th, .ordenCompra td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.ordenCompra th {
+  background-color: #003366;
+  color: white;
+}
+
+.ordenCompra td button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.ordenCompra td button:hover {
+  background-color: #d93636;
+}
+
+.ordenCompra #registrar {
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ordenCompra #registrar:hover {
+  background-color: #002244;
+}
+
+
+
+.divCont{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 768px) {
+  
+.divCont{
+  display:block
+ 
+}
+}
+
+@media (max-width: 480px) {
+    
+.divCont{
+  display:block
+ 
+}
+
+.ordenCompra input[type="number"] {
+ 
+  width: 70px;
+}
+}
+
+.divForm{
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center !important;
+ /* background-color: #002244;*/
+  align-items: center;
+  margin-top: 10px;
+}

@@ -9,6 +9,10 @@ import InventoryComponentExport from './components/Almacenes/Inventory/Inventory
 import InventoryComponentDetailExport from './components/Almacenes/Inventory/InventoryComponentDetail.tsx';
 import IndexAlmacenesLubricantesExport from './components/Almacenes/Inventory/IndexAlmacenesLubricantes.tsx';
 import InventoryComponentOhterExport from './components/Almacenes/Inventory/InventoryComponentOther.tsx';
+import OrderFormExport from './components/Almacenes/purchase_order_register/components/OrderForm.tsx';
+import PendientesRecepcionExport from './components/Almacenes/Recepción/PendientesRecepción.tsx';
+import PendientesRecepcionOtrosExport from './components/Almacenes/Recepción/PendientesRecepcionOtros.tsx';
+
 const router = createBrowserRouter([
   { path:  "/",  element: <Login /> },
   { path: "/prueba", element: <Prueba /> },
@@ -19,7 +23,9 @@ const router = createBrowserRouter([
 
   { path: "/almacenes/inventory/component/detail", element: <InventoryComponentDetailExport /> },
   { path: "/almacenes/other", element: <IndexAlmacenesLubricantesExport /> },
-
+  { path: "/almacenes/OrdenCompra", element: <OrderFormExport /> },
+  { path: "/almacenes/recepcion/pendientes", element: <PendientesRecepcionExport /> },
+  { path: "/almacenes/recepcion/pendientesOtros", element: <PendientesRecepcionOtrosExport /> }
 
 
 ]);
