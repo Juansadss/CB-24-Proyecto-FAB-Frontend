@@ -10,6 +10,7 @@ import MainMenu from "./components/main-menu/main-menu.tsx";
 import TableMain from "./components/maintenance/ControlInspectionNew/Inspection.tsx";
 import Inspection from "./components/maintenance/ControlInspections/Control/Inspection.jsx";
 import Inspection2 from "./components/maintenance/ControlInspections/Control/Inspection2.jsx";
+import InsertInspection from "./components/maintenance/ControlInspectionNew/InsertInspection.tsx";
 
 //import TableMain from "./components/maintenance/ControlComponents/App.tsx";
 //import Inspection from "./components/maintenance/ControlComponents/Control/Inspection.jsx";
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
   { path: "/menu-principal", element: <MainMenu /> },
   { path: "/App", element: <TableMain /> },
   { path: "/Inspection", element: <Inspection/> },
-  { path: "/Inspection2", element: <Inspection2 />}
+  { path: "/Inspection2", element: <Inspection2 />},
+  { path: "/InsertInspection", element: < InsertInspection/>}
 ]);
 
 
