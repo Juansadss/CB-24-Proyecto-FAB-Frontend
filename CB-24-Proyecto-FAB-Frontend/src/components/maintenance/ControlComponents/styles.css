@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#root {
+  display:block;
+  padding: 35px;
+}
+
+:root{
+    background-color: white;
+}
+
+Table {
+    background-color: #171A4A;
+    color: white;
+}
+.bg-blue-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 26 46);
+}
+.text-default-600 {
+    --tw-text-opacity: 1;
+    color: hsl(240deg 35.89% 87.72%);
+}
+.bg-foreground {
+    --tw-bg-opacity: 1;
+    background-color: hsl(235.38deg 65.12% 11.15%);
+}
+#title1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+#logoFoto{
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px; 
+    height: auto;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00004d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #002366;
+  z-index: 1000;
+  width: 90%;
+  max-width: 900px;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.dialog-content {
+  margin-top: 20px;
+  
+}
+
+.dialog-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.dialog-header {
+  position: absolute;
+  top: 30px;   /* Ajusta el espacio desde la parte superior según sea necesario */
+  right: 20px; /* Ajusta el espacio desde el borde derecho según sea necesario */
+}
+
+
+.dialog-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dialog-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f2c79;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-buttons button:hover {
+  background-color: #302c9b;
+}
+.TableColumn {
+  color: #007bff; 
+}
+.custom-column {
+  color: white; 
+  background-color:  #171A4A; 
+  
+}
+.custom-table {
+  background-color: white;
+  border-collapse: collapse; 
+}
+
+.custom-table-cell {
+  color: black; 
+  background-color: white;
+  border: 1px solid #ddd; 
+  padding: 8px; 
+}
+
+.close-button {
+  background-color: red;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  border-radius: 30%; 
+}
+
+.close-button:hover {
+  background-color: darkred; 
+}
+
+.Programado {
+  color: green;
+}
+
+.Proximo {
+  color: red;
+}
+
+.Retrasado {
+  color: #f6a700;
+}
+
+.checkbox-container {
+  display: inline-block;
+  width: 24px; 
+  height: 24px; 
+  cursor: pointer;
+  vertical-align: middle; 
+}
+
+.checkbox-input {
+  display: none; 
+}
+
+.checkmark {
+  display: inline-block;
+  width: 100%; 
+  height: 100%; 
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+.checkbox-input:checked + .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: '\2713'; 
+  display: none;
+  text-align: center;
+  line-height: 24px; 
+  font-size: 14px; 
+}
+
+.checkbox-input:checked + .checkmark:after {
+  display: block; 
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: right; 
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8); 
+}
+
+#logoFoto {
+  width: 90px; 
+  height: auto;
+}

@@ -1,0 +1,126 @@
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1047px) {
+    .maintenance-alerts-container .alerts-table {
+        overflow-x: auto;
+    }
+}
+
+/* Moviles */
+@media screen and (max-width: 768px) {
+    .maintenance-alerts-container .alerts-table {
+        overflow-x: auto;
+        width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    }
+}
+
+.maintenance-alerts-container {
+    height: 90%;
+    width: 95%;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #eee;
+    color: #000;
+}
+
+.maintenance-alerts-container header {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    justify-content: space-between;
+    font-size: 16pt;
+    align-items: center; /* Asegura que el contenido esté alineado verticalmente */
+}
+
+.maintenance-alerts-container .history-button {
+    display: flex;
+    gap: 8px;
+    background-color: #171A4A;
+    color: #fff;
+    font-size: 16pt;
+    padding: 8px 32px 8px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 16px; /* Ajusta la posición del botón */
+}
+
+.maintenance-alerts-container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.maintenance-alerts-container .alerts-table {
+    background-color: #171A4A;
+    border-radius: 8px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    color: #fff;
+    margin: 32px;
+    padding: 16px;
+    height: 60vh;
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+}
+
+.maintenance-alerts-container .alert-row {
+    max-height: 100px;
+}
+
+.maintenance-alerts-container .date-column {
+    width: 15%;
+    text-align: center;
+}
+
+.maintenance-alerts-container .message-column {
+    width: 65%;
+    min-width: 300px;
+}
+
+.maintenance-alerts-container .read-column {
+    width: 20%;
+    text-align: center;
+}
+
+.maintenance-alerts-container thead th {
+    padding: 8px 0;
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+    text-align: center;
+}
+
+.maintenance-alerts-container td {
+    padding: 8px;
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+    text-align: center; /* Centra el contenido de las celdas */
+}
+
+.maintenance-alerts-container tr:hover {
+    background-color: #2B2E65;
+    transition: all 0.2s ease-in-out;
+}
+
+.maintenance-alerts-container footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Asegura que el contenido esté alineado verticalmente */
+    padding: 0 32px;
+    background-color: #171A4A;
+    color: white;
+}
+
+.maintenance-alerts-container footer span {
+    display: flex;
+    align-items: center;
+}
+
+.maintenance-alerts-container footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-left: 16px;
+}
