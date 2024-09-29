@@ -7,7 +7,7 @@ import Login from "./components/user/login/login.tsx";
 import MainMenu from "./components/main-menu/main-menu.tsx";
 
 
-import TableMain from "./components/maintenance/ControlInspections/App.tsx";
+import TableMain from "./components/maintenance/ControlInspectionNew/Inspection.tsx";
 import Inspection from "./components/maintenance/ControlInspections/Control/Inspection.jsx";
 import Inspection2 from "./components/maintenance/ControlInspections/Control/Inspection2.jsx";
 
