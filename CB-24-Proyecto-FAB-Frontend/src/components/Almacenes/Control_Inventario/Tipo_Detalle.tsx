@@ -10,8 +10,10 @@ const Tipo_Detalle = () => {
 
   // Datos de la tabla
   const inventoryData = [
-    { partNumber: 'xxxxxxxx', quantity: 10, expirationDate: 'DD/MM/AAAA' },
-    { partNumber: 'xxxxxxxx', quantity: 5, expirationDate: 'DD/MM/AAAA' }
+    { partNumber: '1243256', quantity: 10, expirationDate: 'DD/MM/AAAA' },
+    { partNumber: '43565654', quantity: 5, expirationDate: 'DD/MM/AAAA' },
+    { partNumber: '1243256', quantity: 8, expirationDate: 'DD/MM/AAAA' },
+    { partNumber: '43565654', quantity: 6, expirationDate: 'DD/MM/AAAA' }
   ];
 
   // Busqueda

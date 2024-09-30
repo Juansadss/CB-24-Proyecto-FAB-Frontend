@@ -32,12 +32,12 @@ const SlideBar: React.FC<SlideProps> = ({ContentComp, menuItem})=> {
           </div>
         </div>
         <ul>
-        <li className={menuItem == "Inventario"? "selectedItem":""} ><a href="/almacenes"     ><MdOutlineInventory/> Inventario</a></li>
+        <li className={menuItem == "Inventario"? "selectedItem":""} ><a href="/almacenes"><MdOutlineInventory/> Inventario</a></li>
 
           <li className={menuItem == "Recepción de Material"? "selectedItem":""}><a href="/prueba"><IoDocumentAttachSharp/> Recepción de Material</a></li>
           <li className={menuItem == "Orden de Compra"? "selectedItem":""}><a href="#"><IoIosExit></IoIosExit> Orden de Compra</a></li>
          
-          <li className={menuItem == "Registro de Salidas"? "selectedItem":""}><a href="#"><FaLuggageCart/> Registro de Salidas</a></li>
+          <li className={menuItem == "Registro de Salidas"? "selectedItem":""}><a href="orden_de_salida"><FaLuggageCart/> Registro de Salidas</a></li>
         </ul>
       </nav>
   

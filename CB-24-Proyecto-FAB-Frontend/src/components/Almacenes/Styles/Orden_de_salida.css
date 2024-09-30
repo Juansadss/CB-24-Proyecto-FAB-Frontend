@@ -1,0 +1,111 @@
+.inventory-container {
+    padding: 50px; 
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+    color: #080a0c; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    margin: 20px auto; 
+    max-width: 900px;
+    width: 100%; 
+    height: 500px;
+    overflow: auto; 
+  }
+  .add-button {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .add-button:hover {
+    background-color: #eef0f0;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 20px; 
+  }
+  
+  
+    
+  .headerh3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+    overflow: hidden;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    color: #040608; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+
+  
+  .search-bar button:hover {
+    background-color: #05070a;
+  }
+  
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #003366;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .inventory-table th, .inventory-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  
+  .inventory-table th {
+    background-color: #003366;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .inventory-table tr:nth-child(even) {
+    background-color: #003366;
+  }
+  
+  .inventory-table tr:nth-child(odd) {
+    background-color: #003366;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #143ef8;
+    font-size: 18px;
+  }
+  .buttonEye {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e9eaee;
+    font-size: 18px;
+
+  }
+ 
+  button:hover {
+    color: #03060a;
+  }
+  
