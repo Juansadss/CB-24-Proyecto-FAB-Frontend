@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
-import { LiaHistorySolid } from "react-icons/lia";
+
+import { AiOutlinePlus } from "react-icons/ai"; // Importa el nuevo ícono
 import './Inspection.css';
 
 export default function Inspection() {
@@ -15,7 +16,7 @@ export default function Inspection() {
                     MANTENIMIENTO - Alertas
                 </span>
                 <Link className="history-button" to={"/InsertInspection"}>
-                    <LiaHistorySolid fontSize={28} />Historial
+                <AiOutlinePlus fontSize={28} />Insetar inspección
                 </Link>
             </header>
             <main>

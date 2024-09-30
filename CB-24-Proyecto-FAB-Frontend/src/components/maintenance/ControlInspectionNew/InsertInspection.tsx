@@ -89,12 +89,12 @@ export default function InsertInspection() {
                                 type="text" 
                                 id="inspectionMargen" 
                                 name="inspectionMargen" 
-                                placeholder="Margen" 
+                                placeholder="margen" 
                                 required 
                             />
                         </div>
 
-                        <button type="submit" className="submit-button">Guardar Inspección</button>
+                        <button type="submit" className="form-button">Guardar Inspección</button>
                     </form>
                 </div>
             </main>
